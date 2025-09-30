@@ -1,0 +1,13 @@
+ADI/raw_traffic/*.npy
+*.pyc
+*.vscode
+*.cpython-38.pyc
+bacon/threatrulemanager/lib/mspltranslationplugins/__pycache__/*.cpython-38.pyc
+.idea/
+venv
+test/report/*
+bacon/offline_detection/traffic/*
+
+test.env
+
+**/data/*.txt

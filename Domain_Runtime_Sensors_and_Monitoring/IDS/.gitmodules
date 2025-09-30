@@ -1,0 +1,6 @@
+[submodule "fedlpy_client"]
+	path = fedlpy_client
+	url = https://ci-cysec.eng.it/gitlab/ERATOSTHENES/wp4/linade
+[submodule "tmb"]
+	path = tmb
+	url = https://CI-CySec.eng.it/gitlab/ERATOSTHENES/trust-manager-and-broker.git

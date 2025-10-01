@@ -1,0 +1,6 @@
+C:/Dev/DEMO-CERTIFY-BOOTSTRAPPING/Middlewares/ST/STM32_Cellular/Samples/Custom/Src/custom_client.c:95:21:custom_client_cmd_help	8	static
+C:/Dev/DEMO-CERTIFY-BOOTSTRAPPING/Middlewares/ST/STM32_Cellular/Samples/Custom/Src/custom_client.c:126:21:custom_client_cmd	64	static
+C:/Dev/DEMO-CERTIFY-BOOTSTRAPPING/Middlewares/ST/STM32_Cellular/Samples/Custom/Src/custom_client.c:200:13:custom_client_notif_cb	32	static
+C:/Dev/DEMO-CERTIFY-BOOTSTRAPPING/Middlewares/ST/STM32_Cellular/Samples/Custom/Src/custom_client.c:247:13:custom_client_thread	664	dynamic,bounded
+C:/Dev/DEMO-CERTIFY-BOOTSTRAPPING/Middlewares/ST/STM32_Cellular/Samples/Custom/Src/custom_client.c:280:6:custom_client_init	8	static
+C:/Dev/DEMO-CERTIFY-BOOTSTRAPPING/Middlewares/ST/STM32_Cellular/Samples/Custom/Src/custom_client.c:301:6:custom_client_start	16	static

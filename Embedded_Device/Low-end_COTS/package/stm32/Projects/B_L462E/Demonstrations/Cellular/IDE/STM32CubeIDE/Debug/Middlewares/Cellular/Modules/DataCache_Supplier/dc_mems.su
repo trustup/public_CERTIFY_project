@@ -1,0 +1,9 @@
+C:/dev/DEMO-CERTIFY-BOOTSTRAPPING-v3/Middlewares/ST/STM32_Cellular/Modules/DataCache_Supplier/Src/dc_mems.c:538:13:mems_init_sensors	8	static
+C:/dev/DEMO-CERTIFY-BOOTSTRAPPING-v3/Middlewares/ST/STM32_Cellular/Modules/DataCache_Supplier/Src/dc_mems.c:852:16:mems_get_pressure_datas	32	static
+C:/dev/DEMO-CERTIFY-BOOTSTRAPPING-v3/Middlewares/ST/STM32_Cellular/Modules/DataCache_Supplier/Src/dc_mems.c:914:16:mems_get_humidity_datas	32	static
+C:/dev/DEMO-CERTIFY-BOOTSTRAPPING-v3/Middlewares/ST/STM32_Cellular/Modules/DataCache_Supplier/Src/dc_mems.c:975:16:mems_get_temperature_datas	32	static
+C:/dev/DEMO-CERTIFY-BOOTSTRAPPING-v3/Middlewares/ST/STM32_Cellular/Modules/DataCache_Supplier/Src/dc_mems.c:379:13:StartMemsDclibTask	8	static
+C:/dev/DEMO-CERTIFY-BOOTSTRAPPING-v3/Middlewares/ST/STM32_Cellular/Modules/DataCache_Supplier/Src/dc_mems.c:203:13:mems_cmd_help	16	static
+C:/dev/DEMO-CERTIFY-BOOTSTRAPPING-v3/Middlewares/ST/STM32_Cellular/Modules/DataCache_Supplier/Src/dc_mems.c:224:21:mems_cmd	104	static,ignoring_inline_asm
+C:/dev/DEMO-CERTIFY-BOOTSTRAPPING-v3/Middlewares/ST/STM32_Cellular/Modules/DataCache_Supplier/Src/dc_mems.c:478:6:dc_mems_init	32	static
+C:/dev/DEMO-CERTIFY-BOOTSTRAPPING-v3/Middlewares/ST/STM32_Cellular/Modules/DataCache_Supplier/Src/dc_mems.c:516:6:dc_mems_start	16	static

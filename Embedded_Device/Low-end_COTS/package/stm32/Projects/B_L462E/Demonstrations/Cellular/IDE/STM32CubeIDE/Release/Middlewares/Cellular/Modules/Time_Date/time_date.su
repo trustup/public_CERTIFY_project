@@ -1,0 +1,3 @@
+C:/Dev/DEMO-CERTIFY-BOOTSTRAPPING/Middlewares/ST/STM32_Cellular/Modules/Time_Date/Src/time_date.c:267:19:timedate_set	40	static
+C:/Dev/DEMO-CERTIFY-BOOTSTRAPPING/Middlewares/ST/STM32_Cellular/Modules/Time_Date/Src/time_date.c:92:19:timedate_set_from_http	48	static
+C:/Dev/DEMO-CERTIFY-BOOTSTRAPPING/Middlewares/ST/STM32_Cellular/Modules/Time_Date/Src/time_date.c:333:19:timedate_get	48	static

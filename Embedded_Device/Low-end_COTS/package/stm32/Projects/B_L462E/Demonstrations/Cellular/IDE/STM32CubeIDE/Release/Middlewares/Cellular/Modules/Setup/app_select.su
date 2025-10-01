@@ -1,0 +1,3 @@
+C:/Dev/DEMO-CERTIFY-BOOTSTRAPPING/Middlewares/ST/STM32_Cellular/Modules/Setup/Src/app_select.c:129:6:app_select_init	0	static
+C:/Dev/DEMO-CERTIFY-BOOTSTRAPPING/Middlewares/ST/STM32_Cellular/Modules/Setup/Src/app_select.c:147:9:app_select_record	8	static
+C:/Dev/DEMO-CERTIFY-BOOTSTRAPPING/Middlewares/ST/STM32_Cellular/Modules/Setup/Src/app_select.c:170:6:app_select_start	40	static

@@ -1,0 +1,14 @@
+C:/Dev/DEMO-CERTIFY-BOOTSTRAPPING/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rng.c:345:13:HAL_RNG_MspInit	1
+C:/Dev/DEMO-CERTIFY-BOOTSTRAPPING/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rng.c:155:19:HAL_RNG_Init	6
+C:/Dev/DEMO-CERTIFY-BOOTSTRAPPING/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rng.c:360:13:HAL_RNG_MspDeInit	1
+C:/Dev/DEMO-CERTIFY-BOOTSTRAPPING/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rng.c:268:19:HAL_RNG_DeInit	2
+C:/Dev/DEMO-CERTIFY-BOOTSTRAPPING/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rng.c:637:19:HAL_RNG_GenerateRandomNumber	5
+C:/Dev/DEMO-CERTIFY-BOOTSTRAPPING/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rng.c:691:19:HAL_RNG_GenerateRandomNumber_IT	3
+C:/Dev/DEMO-CERTIFY-BOOTSTRAPPING/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rng.c:726:10:HAL_RNG_GetRandomNumber	2
+C:/Dev/DEMO-CERTIFY-BOOTSTRAPPING/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rng.c:745:10:HAL_RNG_GetRandomNumber_IT	2
+C:/Dev/DEMO-CERTIFY-BOOTSTRAPPING/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rng.c:858:10:HAL_RNG_ReadLastRandomNumber	1
+C:/Dev/DEMO-CERTIFY-BOOTSTRAPPING/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rng.c:876:13:HAL_RNG_ReadyDataCallback	1
+C:/Dev/DEMO-CERTIFY-BOOTSTRAPPING/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rng.c:892:13:HAL_RNG_ErrorCallback	1
+C:/Dev/DEMO-CERTIFY-BOOTSTRAPPING/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rng.c:786:6:HAL_RNG_IRQHandler	5
+C:/Dev/DEMO-CERTIFY-BOOTSTRAPPING/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rng.c:926:22:HAL_RNG_GetState	1
+C:/Dev/DEMO-CERTIFY-BOOTSTRAPPING/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rng.c:936:10:HAL_RNG_GetError	1

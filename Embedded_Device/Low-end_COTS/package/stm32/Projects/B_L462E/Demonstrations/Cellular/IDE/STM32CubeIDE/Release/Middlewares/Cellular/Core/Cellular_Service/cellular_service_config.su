@@ -1,0 +1,3 @@
+C:/Dev/DEMO-CERTIFY-BOOTSTRAPPING/Middlewares/ST/STM32_Cellular/Core/Cellular_Service/Src/cellular_service_config.c:225:19:cst_get_cid_value	0	static
+C:/Dev/DEMO-CERTIFY-BOOTSTRAPPING/Middlewares/ST/STM32_Cellular/Core/Cellular_Service/Src/cellular_service_config.c:808:13:CST_local_setup_handler	432	static
+C:/Dev/DEMO-CERTIFY-BOOTSTRAPPING/Middlewares/ST/STM32_Cellular/Core/Cellular_Service/Src/cellular_service_config.c:1014:13:CST_config_init	8	static

@@ -1,0 +1,4 @@
+C:/Dev/DEMO-CERTIFY-BOOTSTRAPPING/Middlewares/ST/STM32_Cellular/Interface/Cellular_Mngt/Src/cellular_mngt.c:311:6:cellular_init	40	static
+C:/Dev/DEMO-CERTIFY-BOOTSTRAPPING/Middlewares/ST/STM32_Cellular/Interface/Cellular_Mngt/Src/cellular_mngt.c:352:6:cellular_start	8	static
+C:/Dev/DEMO-CERTIFY-BOOTSTRAPPING/Middlewares/ST/STM32_Cellular/Interface/Cellular_Mngt/Src/cellular_mngt.c:393:6:cellular_modem_start	8	static
+C:/Dev/DEMO-CERTIFY-BOOTSTRAPPING/Middlewares/ST/STM32_Cellular/Interface/Cellular_Mngt/Src/cellular_mngt.c:405:6:cellular_set_default_setup_config	8	static

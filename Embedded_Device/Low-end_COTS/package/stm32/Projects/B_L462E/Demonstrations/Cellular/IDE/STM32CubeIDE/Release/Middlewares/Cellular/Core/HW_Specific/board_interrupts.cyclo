@@ -1,0 +1,4 @@
+C:/Dev/DEMO-CERTIFY-BOOTSTRAPPING/Projects/B_L462E/Demonstrations/Cellular/STM32_Cellular/Target/board_interrupts.c:43:6:HAL_GPIO_EXTI_Callback	2
+C:/Dev/DEMO-CERTIFY-BOOTSTRAPPING/Projects/B_L462E/Demonstrations/Cellular/STM32_Cellular/Target/board_interrupts.c:70:6:HAL_UART_RxCpltCallback	3
+C:/Dev/DEMO-CERTIFY-BOOTSTRAPPING/Projects/B_L462E/Demonstrations/Cellular/STM32_Cellular/Target/board_interrupts.c:95:6:HAL_UART_TxCpltCallback	2
+C:/Dev/DEMO-CERTIFY-BOOTSTRAPPING/Projects/B_L462E/Demonstrations/Cellular/STM32_Cellular/Target/board_interrupts.c:103:6:HAL_UART_ErrorCallback	2

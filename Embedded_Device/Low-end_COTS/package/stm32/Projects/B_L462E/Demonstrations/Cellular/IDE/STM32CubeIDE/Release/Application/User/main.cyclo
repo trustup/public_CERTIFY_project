@@ -1,0 +1,4 @@
+C:/Dev/DEMO-CERTIFY-BOOTSTRAPPING/Projects/B_L462E/Demonstrations/Cellular/Core/Src/main.c:146:6:SystemClock_Config	5
+C:/Dev/DEMO-CERTIFY-BOOTSTRAPPING/Projects/B_L462E/Demonstrations/Cellular/Core/Src/main.c:76:5:main	1
+C:/Dev/DEMO-CERTIFY-BOOTSTRAPPING/Projects/B_L462E/Demonstrations/Cellular/Core/Src/main.c:246:6:HAL_TIM_PeriodElapsedCallback	2
+C:/Dev/DEMO-CERTIFY-BOOTSTRAPPING/Projects/B_L462E/Demonstrations/Cellular/Core/Src/main.c:263:6:Error_Handler	1

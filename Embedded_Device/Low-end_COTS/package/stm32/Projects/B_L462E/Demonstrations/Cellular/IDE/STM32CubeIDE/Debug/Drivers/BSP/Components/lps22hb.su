@@ -1,0 +1,6 @@
+C:/dev/DEMO-CERTIFY-BOOTSTRAPPING-v3/Drivers/BSP/Components/lps22hb/lps22hb.c:99:7:LPS22HB_P_ReadPressure	24	static
+C:/dev/DEMO-CERTIFY-BOOTSTRAPPING-v3/Drivers/BSP/Components/lps22hb/lps22hb.c:152:7:LPS22HB_T_ReadTemp	24	static
+C:/dev/DEMO-CERTIFY-BOOTSTRAPPING-v3/Drivers/BSP/Components/lps22hb/lps22hb.c:185:13:LPS22HB_Init	8	static
+C:/dev/DEMO-CERTIFY-BOOTSTRAPPING-v3/Drivers/BSP/Components/lps22hb/lps22hb.c:73:6:LPS22HB_P_Init	8	static
+C:/dev/DEMO-CERTIFY-BOOTSTRAPPING-v3/Drivers/BSP/Components/lps22hb/lps22hb.c:142:6:LPS22HB_T_Init	8	static
+C:/dev/DEMO-CERTIFY-BOOTSTRAPPING-v3/Drivers/BSP/Components/lps22hb/lps22hb.c:82:9:LPS22HB_P_ReadID	8	static

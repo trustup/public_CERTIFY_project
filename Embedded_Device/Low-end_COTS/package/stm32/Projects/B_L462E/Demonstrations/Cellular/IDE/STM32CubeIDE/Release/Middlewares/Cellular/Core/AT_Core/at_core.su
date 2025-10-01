@@ -1,0 +1,11 @@
+C:/Dev/DEMO-CERTIFY-BOOTSTRAPPING/Middlewares/ST/STM32_Cellular/Core/AT_Core/Src/at_core.c:571:13:msgReceivedCallback	8	static
+C:/Dev/DEMO-CERTIFY-BOOTSTRAPPING/Middlewares/ST/STM32_Cellular/Core/AT_Core/Src/at_core.c:1146:13:ATCoreTaskBody	40	static,ignoring_inline_asm
+C:/Dev/DEMO-CERTIFY-BOOTSTRAPPING/Middlewares/ST/STM32_Cellular/Core/AT_Core/Src/at_core.c:599:13:msgSentCallback	8	static
+C:/Dev/DEMO-CERTIFY-BOOTSTRAPPING/Middlewares/ST/STM32_Cellular/Core/AT_Core/Src/at_core.c:123:14:AT_init	16	static
+C:/Dev/DEMO-CERTIFY-BOOTSTRAPPING/Middlewares/ST/STM32_Cellular/Core/AT_Core/Src/at_core.c:171:14:AT_open	24	static
+C:/Dev/DEMO-CERTIFY-BOOTSTRAPPING/Middlewares/ST/STM32_Cellular/Core/AT_Core/Src/at_core.c:251:14:AT_open_channel	16	static
+C:/Dev/DEMO-CERTIFY-BOOTSTRAPPING/Middlewares/ST/STM32_Cellular/Core/AT_Core/Src/at_core.c:304:14:AT_close_channel	8	static
+C:/Dev/DEMO-CERTIFY-BOOTSTRAPPING/Middlewares/ST/STM32_Cellular/Core/AT_Core/Src/at_core.c:334:13:AT_reset_context	8	static
+C:/Dev/DEMO-CERTIFY-BOOTSTRAPPING/Middlewares/ST/STM32_Cellular/Core/AT_Core/Src/at_core.c:376:13:AT_sendcmd	64	static
+C:/Dev/DEMO-CERTIFY-BOOTSTRAPPING/Middlewares/ST/STM32_Cellular/Core/AT_Core/Src/at_core.c:534:6:AT_internalEvent	8	static
+C:/Dev/DEMO-CERTIFY-BOOTSTRAPPING/Middlewares/ST/STM32_Cellular/Core/AT_Core/Src/at_core.c:1067:13:atcore_task_start	24	static

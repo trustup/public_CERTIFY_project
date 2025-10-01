@@ -1,0 +1,11 @@
+C:/Dev/DEMO-CERTIFY-BOOTSTRAPPING/Middlewares/ST/STM32_Cellular/Core/Cellular_Service/Src/cellular_service_utils.c:258:13:CST_location_info_callback	8	static
+C:/Dev/DEMO-CERTIFY-BOOTSTRAPPING/Middlewares/ST/STM32_Cellular/Core/Cellular_Service/Src/cellular_service_utils.c:246:13:CST_network_reg_callback	8	static
+C:/Dev/DEMO-CERTIFY-BOOTSTRAPPING/Middlewares/ST/STM32_Cellular/Core/Cellular_Service/Src/cellular_service_utils.c:269:13:CST_modem_event_callback	8	static
+C:/Dev/DEMO-CERTIFY-BOOTSTRAPPING/Middlewares/ST/STM32_Cellular/Core/Cellular_Service/Src/cellular_service_utils.c:636:7:CST_data_cache_cellular_info_set	40	static
+C:/Dev/DEMO-CERTIFY-BOOTSTRAPPING/Middlewares/ST/STM32_Cellular/Core/Cellular_Service/Src/cellular_service_utils.c:960:6:CST_config_fail	40	static
+C:/Dev/DEMO-CERTIFY-BOOTSTRAPPING/Middlewares/ST/STM32_Cellular/Core/Cellular_Service/Src/cellular_service_utils.c:885:13:CST_modem_define_pdn	96	static
+C:/Dev/DEMO-CERTIFY-BOOTSTRAPPING/Middlewares/ST/STM32_Cellular/Core/Cellular_Service/Src/cellular_service_utils.c:337:7:CST_modem_sim_init	440	static,ignoring_inline_asm
+C:/Dev/DEMO-CERTIFY-BOOTSTRAPPING/Middlewares/ST/STM32_Cellular/Core/Cellular_Service/Src/cellular_service_utils.c:1002:13:CST_set_signal_quality	24	static
+C:/Dev/DEMO-CERTIFY-BOOTSTRAPPING/Middlewares/ST/STM32_Cellular/Core/Cellular_Service/Src/cellular_service_utils.c:1065:6:CST_subscribe_modem_events	8	static
+C:/Dev/DEMO-CERTIFY-BOOTSTRAPPING/Middlewares/ST/STM32_Cellular/Core/Cellular_Service/Src/cellular_service_utils.c:1084:19:CST_get_autom_event	8	static,ignoring_inline_asm
+C:/Dev/DEMO-CERTIFY-BOOTSTRAPPING/Middlewares/ST/STM32_Cellular/Core/Cellular_Service/Src/cellular_service_utils.c:1169:23:CST_get_network_status	104	static

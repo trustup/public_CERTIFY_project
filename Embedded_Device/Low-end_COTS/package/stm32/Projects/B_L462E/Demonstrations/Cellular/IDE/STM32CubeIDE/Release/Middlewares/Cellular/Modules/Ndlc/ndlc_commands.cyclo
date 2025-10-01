@@ -1,0 +1,4 @@
+C:/Dev/DEMO-CERTIFY-BOOTSTRAPPING/Middlewares/ST/STM32_Cellular/Modules/Ndlc/Core/Src/ndlc_commands.c:38:6:NDLC_Initialization	1
+C:/Dev/DEMO-CERTIFY-BOOTSTRAPPING/Middlewares/ST/STM32_Cellular/Modules/Ndlc/Core/Src/ndlc_commands.c:43:6:NDLC_DeInitialization	1
+C:/Dev/DEMO-CERTIFY-BOOTSTRAPPING/Middlewares/ST/STM32_Cellular/Modules/Ndlc/Core/Src/ndlc_commands.c:54:9:NDLC_abort	2
+C:/Dev/DEMO-CERTIFY-BOOTSTRAPPING/Middlewares/ST/STM32_Cellular/Modules/Ndlc/Core/Src/ndlc_commands.c:80:9:NDLC_apdu	2

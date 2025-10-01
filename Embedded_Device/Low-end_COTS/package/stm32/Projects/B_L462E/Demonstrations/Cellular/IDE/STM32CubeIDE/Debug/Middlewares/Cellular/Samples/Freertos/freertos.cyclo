@@ -1,0 +1,6 @@
+C:/dev/DEMO-CERTIFY-BOOTSTRAPPING-v3/Middlewares/ST/STM32_Cellular/Samples/Freertos/Src/freertos.c:144:13:applications_init	1
+C:/dev/DEMO-CERTIFY-BOOTSTRAPPING-v3/Middlewares/ST/STM32_Cellular/Samples/Freertos/Src/freertos.c:180:13:utilities_init	1
+C:/dev/DEMO-CERTIFY-BOOTSTRAPPING-v3/Middlewares/ST/STM32_Cellular/Samples/Freertos/Src/freertos.c:197:13:applications_start	1
+C:/dev/DEMO-CERTIFY-BOOTSTRAPPING-v3/Middlewares/ST/STM32_Cellular/Samples/Freertos/Src/freertos.c:245:13:utilities_start	1
+C:/dev/DEMO-CERTIFY-BOOTSTRAPPING-v3/Middlewares/ST/STM32_Cellular/Samples/Freertos/Src/freertos.c:309:6:StartDefaultTask	1
+C:/dev/DEMO-CERTIFY-BOOTSTRAPPING-v3/Middlewares/ST/STM32_Cellular/Samples/Freertos/Src/freertos.c:259:6:MX_FREERTOS_Init	2

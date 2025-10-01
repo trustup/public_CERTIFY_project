@@ -1,0 +1,12 @@
+C:/Dev/DEMO-CERTIFY-BOOTSTRAPPING/Drivers/BSP/X_STMOD_PLUS_MODEMS/TYPE1SC/AT_modem_type1sc/Src/at_custom_modem_specific.c:2089:13:type1sc_modem_reset.constprop	1
+C:/Dev/DEMO-CERTIFY-BOOTSTRAPPING/Drivers/BSP/X_STMOD_PLUS_MODEMS/TYPE1SC/AT_modem_type1sc/Src/at_custom_modem_specific.c:133:6:ATCustom_TYPE1SC_init	1
+C:/Dev/DEMO-CERTIFY-BOOTSTRAPPING/Drivers/BSP/X_STMOD_PLUS_MODEMS/TYPE1SC/AT_modem_type1sc/Src/at_custom_modem_specific.c:264:9:ATCustom_TYPE1SC_checkEndOfMsgCallback	6
+C:/Dev/DEMO-CERTIFY-BOOTSTRAPPING/Drivers/BSP/X_STMOD_PLUS_MODEMS/TYPE1SC/AT_modem_type1sc/Src/at_custom_modem_specific.c:345:13:ATCustom_TYPE1SC_getCmd	155
+C:/Dev/DEMO-CERTIFY-BOOTSTRAPPING/Drivers/BSP/X_STMOD_PLUS_MODEMS/TYPE1SC/AT_modem_type1sc/Src/at_custom_modem_specific.c:1493:13:ATCustom_TYPE1SC_extractElement	11
+C:/Dev/DEMO-CERTIFY-BOOTSTRAPPING/Drivers/BSP/X_STMOD_PLUS_MODEMS/TYPE1SC/AT_modem_type1sc/Src/at_custom_modem_specific.c:1590:17:ATCustom_TYPE1SC_analyzeCmd	31
+C:/Dev/DEMO-CERTIFY-BOOTSTRAPPING/Drivers/BSP/X_STMOD_PLUS_MODEMS/TYPE1SC/AT_modem_type1sc/Src/at_custom_modem_specific.c:1830:17:ATCustom_TYPE1SC_analyzeParam	1
+C:/Dev/DEMO-CERTIFY-BOOTSTRAPPING/Drivers/BSP/X_STMOD_PLUS_MODEMS/TYPE1SC/AT_modem_type1sc/Src/at_custom_modem_specific.c:1849:17:ATCustom_TYPE1SC_terminateCmd	6
+C:/Dev/DEMO-CERTIFY-BOOTSTRAPPING/Drivers/BSP/X_STMOD_PLUS_MODEMS/TYPE1SC/AT_modem_type1sc/Src/at_custom_modem_specific.c:1892:13:ATCustom_TYPE1SC_get_rsp	6
+C:/Dev/DEMO-CERTIFY-BOOTSTRAPPING/Drivers/BSP/X_STMOD_PLUS_MODEMS/TYPE1SC/AT_modem_type1sc/Src/at_custom_modem_specific.c:1962:13:ATCustom_TYPE1SC_get_urc	1
+C:/Dev/DEMO-CERTIFY-BOOTSTRAPPING/Drivers/BSP/X_STMOD_PLUS_MODEMS/TYPE1SC/AT_modem_type1sc/Src/at_custom_modem_specific.c:1980:13:ATCustom_TYPE1SC_get_error	1
+C:/Dev/DEMO-CERTIFY-BOOTSTRAPPING/Drivers/BSP/X_STMOD_PLUS_MODEMS/TYPE1SC/AT_modem_type1sc/Src/at_custom_modem_specific.c:1998:13:ATCustom_TYPE1SC_hw_event	6

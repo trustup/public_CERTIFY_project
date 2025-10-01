@@ -1,0 +1,8 @@
+C:/Dev/DEMO-CERTIFY-BOOTSTRAPPING/Middlewares/ST/STM32_Cellular/Core/AT_Core/Src/sysctrl.c:60:18:SysCtrl_getDeviceDescriptor	24	static
+C:/Dev/DEMO-CERTIFY-BOOTSTRAPPING/Middlewares/ST/STM32_Cellular/Core/AT_Core/Src/sysctrl.c:91:18:SysCtrl_open_channel	8	static
+C:/Dev/DEMO-CERTIFY-BOOTSTRAPPING/Middlewares/ST/STM32_Cellular/Core/AT_Core/Src/sysctrl.c:113:18:SysCtrl_close_channel	8	static
+C:/Dev/DEMO-CERTIFY-BOOTSTRAPPING/Middlewares/ST/STM32_Cellular/Core/AT_Core/Src/sysctrl.c:135:18:SysCtrl_power_on	8	static
+C:/Dev/DEMO-CERTIFY-BOOTSTRAPPING/Middlewares/ST/STM32_Cellular/Core/AT_Core/Src/sysctrl.c:157:18:SysCtrl_power_off	8	static
+C:/Dev/DEMO-CERTIFY-BOOTSTRAPPING/Middlewares/ST/STM32_Cellular/Core/AT_Core/Src/sysctrl.c:179:18:SysCtrl_reset_device	8	static
+C:/Dev/DEMO-CERTIFY-BOOTSTRAPPING/Middlewares/ST/STM32_Cellular/Core/AT_Core/Src/sysctrl.c:202:18:SysCtrl_sim_select	16	static
+C:/Dev/DEMO-CERTIFY-BOOTSTRAPPING/Middlewares/ST/STM32_Cellular/Core/AT_Core/Src/sysctrl.c:224:6:SysCtrl_delay	0	static

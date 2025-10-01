@@ -1,0 +1,17 @@
+C:/Dev/DEMO-CERTIFY-BOOTSTRAPPING/Drivers/BSP/X_STMOD_PLUS_MODEMS/TYPE1SC/AT_modem_type1sc/Src/at_custom_modem_socket.c:96:13:fCmdBuild_PDNACT	24	static
+C:/Dev/DEMO-CERTIFY-BOOTSTRAPPING/Drivers/BSP/X_STMOD_PLUS_MODEMS/TYPE1SC/AT_modem_type1sc/Src/at_custom_modem_socket.c:126:13:fCmdBuild_SOCKETCMD_ALLOCATE	48	static
+C:/Dev/DEMO-CERTIFY-BOOTSTRAPPING/Drivers/BSP/X_STMOD_PLUS_MODEMS/TYPE1SC/AT_modem_type1sc/Src/at_custom_modem_socket.c:221:13:fCmdBuild_SOCKETCMD_ACTIVATE	16	static
+C:/Dev/DEMO-CERTIFY-BOOTSTRAPPING/Drivers/BSP/X_STMOD_PLUS_MODEMS/TYPE1SC/AT_modem_type1sc/Src/at_custom_modem_socket.c:249:13:fCmdBuild_SOCKETCMD_INFO	16	static
+C:/Dev/DEMO-CERTIFY-BOOTSTRAPPING/Drivers/BSP/X_STMOD_PLUS_MODEMS/TYPE1SC/AT_modem_type1sc/Src/at_custom_modem_socket.c:281:13:fCmdBuild_SOCKETCMD_DEACTIVATE	16	static
+C:/Dev/DEMO-CERTIFY-BOOTSTRAPPING/Drivers/BSP/X_STMOD_PLUS_MODEMS/TYPE1SC/AT_modem_type1sc/Src/at_custom_modem_socket.c:310:13:fCmdBuild_SOCKETCMD_DELETE	16	static
+C:/Dev/DEMO-CERTIFY-BOOTSTRAPPING/Drivers/BSP/X_STMOD_PLUS_MODEMS/TYPE1SC/AT_modem_type1sc/Src/at_custom_modem_socket.c:339:13:fCmdBuild_SOCKETDATA_SEND	48	static
+C:/Dev/DEMO-CERTIFY-BOOTSTRAPPING/Drivers/BSP/X_STMOD_PLUS_MODEMS/TYPE1SC/AT_modem_type1sc/Src/at_custom_modem_socket.c:421:13:fCmdBuild_SOCKETDATA_RECEIVE	16	static
+C:/Dev/DEMO-CERTIFY-BOOTSTRAPPING/Drivers/BSP/X_STMOD_PLUS_MODEMS/TYPE1SC/AT_modem_type1sc/Src/at_custom_modem_socket.c:446:13:fCmdBuild_DNSRSLV	16	static
+C:/Dev/DEMO-CERTIFY-BOOTSTRAPPING/Drivers/BSP/X_STMOD_PLUS_MODEMS/TYPE1SC/AT_modem_type1sc/Src/at_custom_modem_socket.c:470:13:fCmdBuild_PINGCMD	32	static
+C:/Dev/DEMO-CERTIFY-BOOTSTRAPPING/Drivers/BSP/X_STMOD_PLUS_MODEMS/TYPE1SC/AT_modem_type1sc/Src/at_custom_modem_socket.c:502:17:fRspAnalyze_PDNACT	8	static
+C:/Dev/DEMO-CERTIFY-BOOTSTRAPPING/Drivers/BSP/X_STMOD_PLUS_MODEMS/TYPE1SC/AT_modem_type1sc/Src/at_custom_modem_socket.c:515:17:fRspAnalyze_SOCKETCMD	32	static
+C:/Dev/DEMO-CERTIFY-BOOTSTRAPPING/Drivers/BSP/X_STMOD_PLUS_MODEMS/TYPE1SC/AT_modem_type1sc/Src/at_custom_modem_socket.c:653:17:fRspAnalyze_SOCKETDATA	48	static
+C:/Dev/DEMO-CERTIFY-BOOTSTRAPPING/Drivers/BSP/X_STMOD_PLUS_MODEMS/TYPE1SC/AT_modem_type1sc/Src/at_custom_modem_socket.c:847:17:fRspAnalyze_SOCKETEV	48	static
+C:/Dev/DEMO-CERTIFY-BOOTSTRAPPING/Drivers/BSP/X_STMOD_PLUS_MODEMS/TYPE1SC/AT_modem_type1sc/Src/at_custom_modem_socket.c:924:17:fRspAnalyze_DNSRSLV	104	static
+C:/Dev/DEMO-CERTIFY-BOOTSTRAPPING/Drivers/BSP/X_STMOD_PLUS_MODEMS/TYPE1SC/AT_modem_type1sc/Src/at_custom_modem_socket.c:1062:6:clear_ping_resp_struct	16	static
+C:/Dev/DEMO-CERTIFY-BOOTSTRAPPING/Drivers/BSP/X_STMOD_PLUS_MODEMS/TYPE1SC/AT_modem_type1sc/Src/at_custom_modem_socket.c:986:17:fRspAnalyze_PINGCMD	40	static

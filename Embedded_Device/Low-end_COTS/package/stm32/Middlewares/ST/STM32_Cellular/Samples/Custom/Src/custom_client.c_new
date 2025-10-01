@@ -1,0 +1,742 @@
+/**
+  ******************************************************************************
+  * @file    custom_client.c
+  * @author  MCD Application Team
+  * @brief   Custom Client Sample
+  ******************************************************************************
+  * @attention
+  *
+  * <h2><center>&copy; Copyright (c) 2019 STMicroelectronics.
+  * All rights reserved.</center></h2>
+  *
+  * This software component is licensed by ST under Ultimate Liberty license
+  * SLA0044, the "License"; You may not use this file except in compliance with
+  * the License. You may obtain a copy of the License at:
+  *                             www.st.com/SLA0044
+  *
+  ******************************************************************************
+  */
+
+/* Includes ------------------------------------------------------------------*/
+#include "custom_se_pkcs11.h"
+
+#if (USE_CUSTOM_CLIENT == 1)
+
+#include <stdbool.h>
+
+#include "custom_client.h"
+
+/* FreeRTOS include */
+#include "rtosal.h"
+
+/* Error management */
+#include "error_handler.h"
+
+/* Datacache includes */
+#include "dc_common.h"
+#include "cellular_datacache.h"
+
+#include "com_sockets_net_compat.h"
+
+/* To interact with Custom client through a Terminal connected to the target */
+#if ((USE_CMD_CONSOLE == 1) && (CUSTOM_CLIENT_CMD != 0U))
+#include "cmd.h"
+#endif /* (USE_CMD_CONSOLE == 1) && (CUSTOM_CLIENT_CMD != 0U) */
+
+/* Private defines -----------------------------------------------------------*/
+
+/* Private typedef -----------------------------------------------------------*/
+/* Private macros ------------------------------------------------------------*/
+/* Use Cellular trace system */
+#if (USE_TRACE_CUSTOM_CLIENT == 1U)
+#if (USE_PRINTF == 0U)
+#include "trace_interface.h"
+#define PRINT_APP(format, args...) \
+  TRACE_PRINT_FORCE(DBG_CHAN_CUSTOMCLIENT, DBL_LVL_P0, "" format, ## args)
+#define PRINT_INFO(format, args...) \
+  TRACE_PRINT(DBG_CHAN_CUSTOMCLIENT, DBL_LVL_P0, "CustClt: " format, ## args)
+#define PRINT_DBG(format, args...) \
+  TRACE_PRINT(DBG_CHAN_CUSTOMCLIENT, DBL_LVL_P1, "CustClt: " format "\n\r", ## args)
+#else
+#include <stdio.h>
+#define PRINT_APP(format, args...)   (void)printf("" format, ## args);
+#define PRINT_INFO(format, args...)  (void)printf("CustClt: " format, ## args);
+#define PRINT_DBG(format, args...)   (void)printf("CustClt: " format "\n\r", ## args);
+#endif  /* (USE_PRINTF == 0U) */
+#else /* USE_TRACE_CUSTOM_CLIENT == 0 */
+#if (USE_PRINTF == 0U)
+#include "trace_interface.h"
+#define PRINT_APP(format, args...) \
+  TRACE_PRINT_FORCE(DBG_CHAN_CUSTOMCLIENT, DBL_LVL_P0, "" format, ## args)
+#else
+#include <stdio.h>
+#define PRINT_APP(format, args...)   (void)printf("" format, ## args);
+#endif  /* (USE_PRINTF == 0U) */
+#define PRINT_INFO(...)  __NOP(); /* Nothing to do */
+#define PRINT_DBG(...)   __NOP(); /* Nothing to do */
+#endif /* USE_TRACE_CUSTOM_CLIENT == 1U */
+
+#define MSGLEN 96
+#define ENDL "\r\n"
+
+/* Private variables ---------------------------------------------------------*/
+static osMessageQId custom_client_queue; /* To communicate between datacache callback
+                                            and custom client main thread */
+/* Example : */
+static bool custom_client_modem_is_attached; /* Modem is attached true/false */
+
+//******************************************************
+// 						OUR customization
+static bool custom_connection_socket();
+//******************************************************
+
+#if ((USE_CMD_CONSOLE == 1) && (CUSTOM_CLIENT_CMD != 0U))
+static uint8_t *custom_client_cmd_label = ((uint8_t *)"custclt"); /* string used to interact with custom client
+                                                                    through a terminal */
+#endif /* (USE_CMD_CONSOLE == 1) && (CUSTOM_CLIENT_CMD != 0U) */
+
+/* Global variables ----------------------------------------------------------*/
+
+/* Private function prototypes -----------------------------------------------*/
+/* Callback used to treat datacache information */
+static void custom_client_notif_cb(dc_com_event_id_t dc_event_id, const void *p_private_gui_data);
+
+/* Declare custom client thread */
+static void custom_client_thread(void *p_argument);
+
+#if ((USE_CMD_CONSOLE == 1) && (CUSTOM_CLIENT_CMD != 0U))
+/* Functions used in case of module CMD activation */
+static cmd_status_t custom_client_cmd_help(uint8_t *cmd_p,
+                                           uint8_t *arg_p);
+static cmd_status_t custom_client_cmd(uint8_t *cmd_line_p);
+#endif /* (USE_CMD_CONSOLE == 1) && (CUSTOM_CLIENT_CMD != 0U) */
+
+/* Private functions ---------------------------------------------------------*/
+
+#if ((USE_CMD_CONSOLE == 1) && (CUSTOM_CLIENT_CMD != 0U))
+
+typedef struct
+{
+	char 	*host;
+	char 	*port;
+
+} custclient_cmd_params_t;
+
+typedef enum
+{
+  CUSTCLIENT_SLEEP      = 0x0000, /* No cmd to test */
+  CUSTCLIENT_INIT		= 0x1000, /* No cmd to test */
+  CUSTCLIENT_CONNECT    = 0x0001, /* connect to remote server */
+} custclient_cmd_value_t;
+
+static custclient_cmd_params_t g_cust_params = { 0 };
+
+/* State of CustClient process */
+static custclient_cmd_value_t custclient_process_flag;      /* default value : CUSTCLIENT_SLEEP */
+static custclient_cmd_value_t custclient_next_process_flag; /* default value : custclient_process_flag */
+
+
+/**
+  * @brief  help cmd management
+  * @param  -
+  * @retval -
+  */
+static cmd_status_t custom_client_cmd_help(uint8_t *cmd_p,
+                                           uint8_t *arg_p)
+{
+  cmd_status_t result;
+
+  if ((cmd_p != NULL)
+      && (arg_p != NULL))
+  {
+    result = CMD_SYNTAX_ERROR;
+    PRINT_APP("%s bad parameter %s !!!\n\r", cmd_p, arg_p)
+  }
+  else
+  {
+    result = CMD_OK;
+  }
+  /* Always print help even after an error */
+
+  CMD_print_help(custom_client_cmd_label);
+  PRINT_APP("%s help       : display all commands supported by %s\n\r",
+            (CRC_CHAR_t *)custom_client_cmd_label,
+            (CRC_CHAR_t *)custom_client_cmd_label)
+  /* Describe below all other custom client command supported */
+
+  return (result);
+}
+
+/**
+  * @brief  cmd management
+  * @param  -
+  * @retval true/false cmd can be executed / cmd can't be executed
+  */
+static bool custclient_cmd_processing(void)
+{
+  bool result;
+  result = false;
+
+  if (custclient_process_flag == CUSTCLIENT_SLEEP)
+  {
+    if (custclient_next_process_flag == CUSTCLIENT_SLEEP)
+    {
+      PRINT_APP("CustClt: Command requested ... "ENDL"")
+      result = true;
+    }
+    else
+    {
+      PRINT_APP("CustClt: Command already requested ... "ENDL"")
+    }
+  }
+  else
+  {
+    PRINT_APP("CustClt: Command already in progress ... "ENDL"")
+  }
+
+  return result;
+}
+
+
+/**
+  * @brief  cmd management
+  * @param  cmd_line_p - command parameters
+  * @retval cmd_status_t - status of cmd management
+  */
+static cmd_status_t custom_client_cmd(uint8_t *cmd_line_p)
+{
+  uint32_t argc;
+  uint8_t  *argv_p[10];
+  uint8_t  *cmd_p;
+  uint8_t len = 0;
+  cmd_status_t cmd_status;
+
+  cmd_status = CMD_OK;
+  PRINT_APP("\n\r")
+  cmd_p = (uint8_t *)strtok((CRC_CHAR_t *)cmd_line_p, " \t");
+
+  /* Check CMD is for custom client */
+  if (memcmp((CRC_CHAR_t *)cmd_p,
+             (CRC_CHAR_t *)custom_client_cmd_label,
+             crs_strlen(cmd_p))== 0)
+  {
+    /* parameters parsing */
+    for (argc = 0U; argc < 10U; argc++)
+    {
+      argv_p[argc] = (uint8_t *)strtok(NULL, " \t");
+      if (argv_p[argc] == NULL)
+      {
+        break;
+      }
+    }
+
+    if (argc == 0U)
+    {
+      /* No parameter in the command */
+      /* Add the treatment below or if it is an error then print help */
+      /* Example:
+         cmd_status = custom_client_cmd_help(NULL, NULL);
+      */
+    	if (custclient_cmd_processing() == true)
+    	{
+    		custclient_next_process_flag = CUSTCLIENT_SLEEP;
+    	}
+    }
+
+	else
+	{
+		len = (uint8_t)crs_strlen(argv_p[0]);
+		if (memcmp((CRC_CHAR_t *)argv_p[0],
+				"help",
+				crs_strlen(argv_p[0])) == 0)
+		{
+			cmd_status = custom_client_cmd_help(NULL, NULL);
+		}
+		else if (memcmp((CRC_CHAR_t *)argv_p[0], "connect", len) == 0)
+		{
+			/* cmd 'custom client connect': try to connect on address */
+			if (argc >= 3)
+			{
+				if (custclient_cmd_processing() == true)
+				{
+					g_cust_params.host = strdup(argv_p[1]);
+					g_cust_params.port = strdup(argv_p[2]);
+
+					if ((g_cust_params.host != NULL) && (g_cust_params.port != NULL))
+					{
+						custclient_next_process_flag = CUSTCLIENT_CONNECT;
+						cmd_status = CMD_OK;
+					}
+
+					else
+					{
+						if (g_cust_params.host ) free (g_cust_params.host );
+						if (g_cust_params.port ) free (g_cust_params.port );
+						PRINT_APP("connect: error to duplicate string"ENDL"");
+						cmd_status = CMD_SYNTAX_ERROR;
+					}
+				}
+			}
+		}
+	}
+
+
+
+
+//    else if (memcmp((CRC_CHAR_t *)argv_p[0],
+//                    "help",
+//                    crs_strlen(argv_p[0])) == 0)
+//    {
+//      cmd_status = custom_client_cmd_help(NULL, NULL);
+//    }else if (memcmp((CRC_CHAR_t *)argv_p[0],
+//                        "bootstrap",
+//                        crs_strlen(argv_p[0])) == 0)
+//        {
+//    	//certifyBootstrapDemo();
+//        }
+//    else /* Parameter provided is not recognized */
+//    {
+//      cmd_status = custom_client_cmd_help(cmd_p, argv_p[0]);
+//    }
+  }
+
+  return cmd_status;
+}
+#endif /* (USE_CMD_CONSOLE == 1) && (CUSTOM_CLIENT_CMD != 0U) */
+
+/**
+  * @brief  Callback called when a value in datacache changed
+  * @note   Managed datacache value changed
+  * @param  dc_event_id - value changed
+  * @note   -
+  * @param  p_private_gui_data - value provided at service subscription
+  * @note   Unused parameter
+  * @retval -
+  */
+static void custom_client_notif_cb(dc_com_event_id_t dc_event_id, const void *p_private_gui_data)
+{
+  UNUSED(p_private_gui_data);
+
+  /* remove next lines to use dc_event_id parameter */
+  UNUSED(dc_event_id);
+
+  /* According to dc_event_id value, due a specific treatment */
+  /* Example: Modem is attached to the network */
+
+  if (dc_event_id == DC_CELLULAR_NIFMAN_INFO)
+  {
+    dc_nifman_info_t dc_nifman_info;
+    (void)dc_com_read(&dc_com_db, DC_CELLULAR_NIFMAN_INFO,
+                      (void *)&dc_nifman_info,
+                      sizeof(dc_nifman_info));
+    if (dc_nifman_info.rt_state == DC_SERVICE_ON)
+    {
+      custom_client_modem_is_attached = true;
+      PRINT_APP("CustomClt: Network is UP\n\r")
+      (void)rtosalMessageQueuePut(custom_client_queue, (uint32_t)dc_event_id, 0U);
+    }
+    else
+    {
+      custom_client_modem_is_attached = false;
+      PRINT_APP("CustomClt: Network is DOWN\n\r")
+    }
+  }
+
+  /* treat other dc_event_id */
+  /*
+  else if (dc_event_id == xxx)
+  {
+  }
+  else
+  {
+    _NOP();
+  }
+  */
+}
+
+/**
+  * @brief  CustomClient thread
+  * @note   Infinite loop body
+  * @param  p_argument - parameter osThread
+  * @note   Unused parameter
+  * @retval -
+  */
+static void custom_client_thread(void *p_argument)
+{
+  UNUSED(p_argument);
+  uint32_t msg_queue;
+
+  for (;;)
+  {
+    /* Add below code of your application */
+    /* Example : */
+    /* Wait network is up to do something */
+
+    //uint32_t msg_queue = 0U;
+	  do
+	  	{
+	  		/* Is release wait connectivity */
+	  		if (custom_client_modem_is_attached == false)
+	  		{
+	  			/* Must retry later to close the handle */
+	  			(void)rtosalDelay(1000U);
+	  		}
+	  		else
+	  		{
+	  			if (custclient_process_flag == CUSTCLIENT_INIT)
+	  			{
+	  				custclient_process_flag = CUSTCLIENT_SLEEP;
+	  			}
+	  			msg_queue = 0U; /* Msg received from the queue */
+	  			/* Wait a new cmd */
+	  			(void)rtosalMessageQueueGet(custom_client_queue, &msg_queue, RTOSAL_WAIT_FOREVER);
+	  			/* Update comclient_process_flag value */
+	  			custclient_process_flag = custclient_next_process_flag; /* comclient_process_value could also be updated
+	  	                                                                   by the value put in message queue */
+	  		}
+	  	} while ((custclient_process_flag == CUSTCLIENT_SLEEP) || (custclient_process_flag == CUSTCLIENT_INIT));
+
+	  	PRINT_APP(""ENDL"<<< CustClt command in progress >>>"ENDL"")
+
+	  	if (CUSTCLIENT_CONNECT == custclient_process_flag)
+	  	{
+	  		/* get argument */
+	  		(void)rtosalMessageQueueGet(custom_client_queue, &msg_queue, RTOSAL_WAIT_FOREVER);
+	  		while (custom_client_modem_is_attached == true)
+	  		{
+	  			PRINT_INFO("Thread in processing\n\r")
+	  		    (void)rtosalDelay(5000U);
+	  		      custom_connection_socket();
+	  		    }
+  		    PRINT_INFO("Wait for application code\n\r")
+  		    (void)rtosalDelay(10000U);
+	  		free (g_cust_params.host);
+	  		free (g_cust_params.port);
+	  		g_cust_params.host = NULL;
+	  		g_cust_params.port = NULL;
+	  	}
+
+	  	/* Return to Sleep mode */
+	  	custclient_process_flag = CUSTCLIENT_SLEEP;
+	  	custclient_next_process_flag = CUSTCLIENT_SLEEP;
+  }
+}
+
+/* Functions Definition ------------------------------------------------------*/
+
+/**
+  * @brief  Initialization
+  * @note   Custom Client initialization
+  * @param  -
+  * @retval -
+  */
+void custom_client_init(void)
+{
+  /* Custom Client static initialization */
+
+  /* Example: */
+  custom_client_modem_is_attached = false;
+
+  /* CustomClient queue creation */
+  custom_client_queue = rtosalMessageQueueNew(NULL, 1U);
+  if (custom_client_queue == NULL)
+  {
+    ERROR_Handler(DBG_CHAN_CUSTOMCLIENT, 1, ERROR_FATAL);
+  }
+}
+
+/**
+  * @brief  Start
+  * @note   Custom Client start
+  * @param  -
+  * @retval -
+  */
+void custom_client_start(void)
+{
+  static osThreadId CustomClient_TaskHandle;
+
+  /* Cellular is now initialized
+    Registration to other components is now possible */
+
+  /* Registration to datacache */
+  (void)dc_com_register_gen_event_cb(&dc_com_db, custom_client_notif_cb, (void *) NULL);
+
+#if ((USE_CMD_CONSOLE == 1)  && (CUSTOM_CLIENT_CMD != 0U))
+  CMD_Declare(custom_client_cmd_label, custom_client_cmd, (uint8_t *)"customclient commands");
+#endif /* (USE_CMD_CONSOLE == 1) && (CUSTOM_CLIENT_CMD != 0U) */
+
+  /* Create CustomClient thread  */
+  CustomClient_TaskHandle = rtosalThreadNew((const rtosal_char_t *)"CustomCltThread", (os_pthread)custom_client_thread,
+                                            CUSTOMCLIENT_THREAD_PRIO, CUSTOMCLIENT_THREAD_STACK_SIZE, NULL);
+
+  if (CustomClient_TaskHandle == NULL)
+  {
+    ERROR_Handler(DBG_CHAN_CUSTOMCLIENT, 2, ERROR_FATAL);
+  }
+  else
+  {
+#if (USE_STACK_ANALYSIS == 1)
+    (void)stackAnalysis_addStackSizeByHandle(CustomClient_TaskHandle, CUSTOMCLIENT_THREAD_STACK_SIZE);
+#endif /* USE_STACK_ANALYSIS == 1 */
+  }
+}
+
+static bool custom_connection_socket()
+{
+	static CK_BYTE psk[32];
+	static CK_BYTE challenge[32];
+	static CK_BYTE salt[32];
+	static CK_BYTE info[] =
+	{
+	 0x65, 0x78, 0x61, 0x6D, 0x70, 0x6C, 0x65, 0x2E, 0x63, 0x6F, 0x6D
+	};
+
+	  bool 		result;
+	  int32_t 	id;                      /* Socket id = result of com_socket() */
+	  int32_t 	timeout = 20000;
+	  int32_t 	buf_snd_len, buf_rsp_len = 500;
+	  uint8_t   snd_buffer[] ={'H','e','l','l','o','\0'};
+
+	  uint8_t   snd_buffer2[] = { 'B', 'y','e','\0'};
+
+	  uint8_t	rsp_buffer[buf_rsp_len];
+	  uint32_t 	time_begin;
+	  uint32_t 	time_end;
+	  int32_t 	read_buf_size;
+	  uint32_t 	*p_snd_rcv_time = NULL;
+	  CK_RV rv;
+	  /* socket need to be created */
+	  result = false;
+
+		  /* Create a socket */
+	  PRINT_INFO("socket creation in progress...\n\r")
+
+	  id = com_socket(COM_AF_INET, COM_SOCK_STREAM, COM_IPPROTO_TCP);
+      if (id >= 0) /* no invalid value defined in network library */
+      {
+        /* Socket created, continue the process */
+    	  PRINT_INFO("socket create OK")
+
+		PRINT_DBG("socket setsockopt in progress.....\n\r")
+		if (com_setsockopt(id, COM_SOL_SOCKET, COM_SO_RCVTIMEO, &timeout, (int32_t)sizeof(timeout)) == COM_SOCKETS_ERR_OK)
+		{
+	          if (com_setsockopt(id, COM_SOL_SOCKET, COM_SO_SNDTIMEO, &timeout, (int32_t)sizeof(timeout))
+	              == COM_SOCKETS_ERR_OK)
+	          {
+	        	  PRINT_INFO("socket setsockopt OK\n\r")
+
+                com_sockaddr_in_t address;
+                address.sin_family      = (uint8_t)COM_AF_INET;
+                address.sin_port        = COM_HTONS(33000);	// Port : 33000
+                //address.sin_port        = COM_HTONS(7);	// Port : 33000
+                address.sin_addr.s_addr = COM_HTONL(0x10aaf0fd); //
+                //addlress.sin_addr.s_addr = 0x9b22d734;//IP Addr: 52.215.34.155
+                PRINT_INFO("socket connect request....\n\r");
+                if (com_connect(id, (com_sockaddr_t const *)&address, (int32_t)sizeof(com_sockaddr_in_t))
+                    == COM_SOCKETS_ERR_OK)
+                {
+                	PRINT_INFO("socket connect OK\n\r");
+				    PRINT_INFO("***Initializes the Cryptoki library ***\n\r");
+                	rv = csp_initialize();
+                	if(rv != CKR_OK && rv != CKR_CRYPTOKI_ALREADY_INITIALIZED)
+                	{
+                		PRINT_INFO("Initialization error  %d\n\r",rv);
+
+                	}
+                	PRINT_INFO("Initialization OK \n\r",rv);
+                	int32_t 	ret;
+
+                	/* Send data according to the socket protocol */
+                	buf_snd_len = (int32_t)crs_strlen((const uint8_t *)snd_buffer);
+                	PRINT_INFO("socket send data in progress....\n\r");
+                	PRINT_INFO("%s\n\r", snd_buffer);
+
+					time_begin = HAL_GetTick();
+                	ret = com_send(id, (const com_char_t *)snd_buffer, buf_snd_len, COM_MSG_WAIT);
+
+                	/* Data send ok ? */
+                	if (ret == buf_snd_len)
+                	{
+                		int32_t total_read_size = 0; /* data can be received in several packets */
+                		PRINT_INFO("socket send data OK\n\r");
+                		bool exit = false;
+                		do
+                		{
+                			PRINT_INFO("socket rcv data waiting....\n\r")
+                    		read_buf_size = com_recv(id, &rsp_buffer[total_read_size], (buf_rsp_len - total_read_size), COM_MSG_WAIT);
+                			if (read_buf_size < 0) /* Error during data reception ? */
+                			{
+                				exit = true;
+
+                			}
+                			else /* Some data received */
+                			{
+                				total_read_size += read_buf_size;
+//                				if (total_read_size < buf_snd_len)
+//                				{
+//                					PRINT_INFO("socket wait more data:%ld/%ld\n\r", total_read_size, buf_snd_len)
+//                				}
+                			}
+                		} while ((total_read_size < buf_snd_len)          /* still some data expected */
+                				&& ((buf_rsp_len - total_read_size) > 0) /* check still some memory in rsp buffer available */
+								&& (exit == false));                     /* no error during last reception */
+
+                		if(read_buf_size > 0)
+                		{
+                			memset(psk,0x00,32);
+                			memset(challenge,0x00,32);
+                			memcpy(psk,rsp_buffer,32);
+                			memcpy(challenge,rsp_buffer+32,32);
+                			PRINT_INFO("Importing the PSK into the secure element...\n\r");
+                			rv= csp_installPSK(psk);
+                			if(rv != CKR_OK)
+                			{
+                				PRINT_INFO("Importing the PSK error  %d\n\r",rv);
+
+                			}
+                			PRINT_INFO("PSK imported.\n");
+
+                			PRINT_INFO("Generate random...\n\r");
+                			rv= csp_generateRandom(salt, 32);
+                			if(rv != CKR_OK)
+                			{
+                				PRINT_INFO("Generate random error  %d\n\r",rv);
+
+                			}
+                			PRINT_INFO("Generate random OK.\n");
+                			/* bootstrapping */
+                			PRINT_APP("Deriving the PSK to produce the MSK...\n");
+                			rv=csp_deriveKey(pSKID, mSKID, salt, info, sizeof(info),HKDF_DERIVE);
+                			if(rv != CKR_OK)
+                			{
+                				PRINT_INFO("Deriving the PSK error  %d\n\r",rv);
+
+                			}
+                			PRINT_APP("MSK successfully derived.\n");
+
+                			PRINT_INFO("Signing the challenge...\n");
+                			rv=csp_sign(mSKID, challenge, 32,signature,HMAC);
+                			if(rv != CKR_OK)
+                			{
+                				PRINT_INFO("Signature error  %d\n\r",rv);
+
+                			}
+
+                			uint8_t pbuf[MSGLEN];
+retry:
+                			memset(pbuf,0x00,96);
+                			memcpy(pbuf,challenge,32);
+                			memcpy(pbuf+32,signature,32);
+                			memcpy(pbuf+64,salt,32);
+
+//                			PRINT_INFO("Sending challenge, signature, and salt...\n");
+//                			for(int i = 0; i < 96 ; i++) {
+//                				PRINT_APP("%02x", pbuf[i]);
+//                			}
+
+                			//snprintf(pbuf, 96, "%s%s%s", challenge, signature, salt);
+                			//send(sock, buffer, strlen(buffer), 0);
+                			memset(rsp_buffer,0x00,32);
+                			buf_snd_len = MSGLEN;
+
+                			PRINT_INFO("socket send data in progress....\n\r")
+
+							time_begin = HAL_GetTick();
+                			ret = com_send(id, (const com_char_t *)pbuf, buf_snd_len, COM_MSG_WAIT);
+                			/* Data send ok ? */
+                			if (ret == buf_snd_len)
+                			{
+                				int32_t total_read_size = 0; /* data can be received in several packets */
+                				PRINT_INFO("socket send data OK\n\r")
+                				bool exit = false;
+                				do
+                				{
+                					PRINT_INFO("socket rcv data waiting....\n\r")
+              	        			read_buf_size = com_recv(id, &rsp_buffer[total_read_size], (buf_rsp_len - total_read_size), COM_MSG_WAIT);
+                					if (read_buf_size < 0) /* Error during data reception ? */
+                					{
+                						exit = true;
+                					}
+                					else /* Some data received */
+                					{
+                						total_read_size += read_buf_size;
+//                						if (total_read_size < buf_snd_len)
+//                						{
+//                							PRINT_INFO("socket wait more data:%ld/%ld\n\r", total_read_size, buf_snd_len)
+//                						}
+
+                					}
+                				} while ((total_read_size < buf_snd_len)          /* still some data expected */
+                						&& ((buf_rsp_len - total_read_size) > 0) /* check still some memory in rsp buffer available */
+										&& (exit == false));                     /* no error during last reception */
+                				PRINT_INFO("Received response: %c %c\n\r",rsp_buffer[0],rsp_buffer[1]);
+                				if(rsp_buffer[0] == 0x4b && rsp_buffer[1] == 0x4f )
+                				{
+                					PRINT_INFO("socket re-send data\n\r");
+                					goto retry;
+                				}
+                			}
+                    	}
+                    	/********************************************/
+                		time_end = HAL_GetTick(); /* end of reception */
+                		PRINT_INFO("socket receive data exit\n\r")
+
+                		/* all data send have been received ? */
+                		if (buf_snd_len == total_read_size)
+                		{
+                			PRINT_INFO("socket rcv data %s\n\r", rsp_buffer)
+							  /* Check that data received are ok */
+							  if (memcmp((const void *)&snd_buffer[0], (const void *)&rsp_buffer[0], (size_t)buf_snd_len) == 0)
+							  {
+								  PRINT_INFO("socket rsp received OK\n\r")
+									result = true;
+								  if (p_snd_rcv_time != NULL)
+								  {
+									  *p_snd_rcv_time = time_end - time_begin;
+								  }
+
+								  if (com_closesocket(id) == COM_SOCKETS_ERR_OK)
+								  {
+									  PRINT_INFO("socket close OK\n\r")
+								  }
+								  else
+								  {
+									  PRINT_INFO("socket close NOK\n\r")
+								  }
+							  }
+							  else
+							  {
+								  /* Data received are ko, increase fault counters, request close socket */
+								  PRINT_INFO("socket rsp received NOK memcmp error\n\r")
+							  }
+                         }
+                	}
+                	result = true;
+                }
+                else
+                {
+                	PRINT_INFO("socket connect NOK closing the socket\n\r")
+                }
+	          }
+	          else
+	          {
+	        	  PRINT_INFO("socket setsockopt SNDTIMEO NOK\n\r")
+	          }
+		}
+		else
+		{
+			PRINT_INFO("socket setsockopt RCVTIMEO NOK\n\r")
+		}
+      }
+      else
+      {
+    	  PRINT_INFO("socket create NOK\n\r")
+      }
+
+ exit:
+	  return (result);
+}
+
+#endif /* USE_CUSTOM_CLIENT == 1 */
+
+/************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/

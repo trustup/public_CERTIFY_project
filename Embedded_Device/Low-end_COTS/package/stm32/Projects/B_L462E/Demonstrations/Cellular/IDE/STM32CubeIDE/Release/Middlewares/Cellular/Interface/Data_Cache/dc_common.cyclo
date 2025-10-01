@@ -1,0 +1,7 @@
+C:/Dev/DEMO-CERTIFY-BOOTSTRAPPING/Middlewares/ST/STM32_Cellular/Interface/Data_Cache/Src/dc_common.c:61:17:dc_com_register_serv	4
+C:/Dev/DEMO-CERTIFY-BOOTSTRAPPING/Middlewares/ST/STM32_Cellular/Interface/Data_Cache/Src/dc_common.c:103:17:dc_com_register_gen_event_cb	4
+C:/Dev/DEMO-CERTIFY-BOOTSTRAPPING/Middlewares/ST/STM32_Cellular/Interface/Data_Cache/Src/dc_common.c:135:17:dc_com_write	6
+C:/Dev/DEMO-CERTIFY-BOOTSTRAPPING/Middlewares/ST/STM32_Cellular/Interface/Data_Cache/Src/dc_common.c:182:17:dc_com_read	4
+C:/Dev/DEMO-CERTIFY-BOOTSTRAPPING/Middlewares/ST/STM32_Cellular/Interface/Data_Cache/Src/dc_common.c:204:6:dc_com_init	2
+C:/Dev/DEMO-CERTIFY-BOOTSTRAPPING/Middlewares/ST/STM32_Cellular/Interface/Data_Cache/Src/dc_common.c:220:6:dc_com_start	1
+C:/Dev/DEMO-CERTIFY-BOOTSTRAPPING/Middlewares/ST/STM32_Cellular/Interface/Data_Cache/Src/dc_common.c:233:17:dc_com_write_event	3

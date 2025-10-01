@@ -1,0 +1,6 @@
+#ifndef STPKCS11_CERTIFY_EXAMPLE_H
+#define STPKCS11_CERTIFY_EXAMPLE_H
+
+void certifyApiExample();
+
+#endif /* STPKCS11_CERTIFY_EXAMPLE_H */

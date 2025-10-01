@@ -1,0 +1,12 @@
+C:/Dev/DEMO-CERTIFY-BOOTSTRAPPING/Middlewares/ST/STM32_Cellular/Core/AT_Core/Src/at_modem_api.c:66:13:atcc_initParsers	16	static
+C:/Dev/DEMO-CERTIFY-BOOTSTRAPPING/Middlewares/ST/STM32_Cellular/Core/AT_Core/Src/at_modem_api.c:93:6:atcc_init	0	static
+C:/Dev/DEMO-CERTIFY-BOOTSTRAPPING/Middlewares/ST/STM32_Cellular/Core/AT_Core/Src/at_modem_api.c:104:34:atcc_checkEndOfMsgCallback	0	static
+C:/Dev/DEMO-CERTIFY-BOOTSTRAPPING/Middlewares/ST/STM32_Cellular/Core/AT_Core/Src/at_modem_api.c:117:13:atcc_getCmd	16	static
+C:/Dev/DEMO-CERTIFY-BOOTSTRAPPING/Middlewares/ST/STM32_Cellular/Core/AT_Core/Src/at_modem_api.c:134:13:atcc_extractElement	24	static
+C:/Dev/DEMO-CERTIFY-BOOTSTRAPPING/Middlewares/ST/STM32_Cellular/Core/AT_Core/Src/at_modem_api.c:156:17:atcc_analyzeCmd	16	static
+C:/Dev/DEMO-CERTIFY-BOOTSTRAPPING/Middlewares/ST/STM32_Cellular/Core/AT_Core/Src/at_modem_api.c:175:17:atcc_analyzeParam	16	static
+C:/Dev/DEMO-CERTIFY-BOOTSTRAPPING/Middlewares/ST/STM32_Cellular/Core/AT_Core/Src/at_modem_api.c:193:17:atcc_terminateCmd	16	static
+C:/Dev/DEMO-CERTIFY-BOOTSTRAPPING/Middlewares/ST/STM32_Cellular/Core/AT_Core/Src/at_modem_api.c:209:13:atcc_get_rsp	16	static
+C:/Dev/DEMO-CERTIFY-BOOTSTRAPPING/Middlewares/ST/STM32_Cellular/Core/AT_Core/Src/at_modem_api.c:225:13:atcc_get_urc	16	static
+C:/Dev/DEMO-CERTIFY-BOOTSTRAPPING/Middlewares/ST/STM32_Cellular/Core/AT_Core/Src/at_modem_api.c:241:13:atcc_get_error	16	static
+C:/Dev/DEMO-CERTIFY-BOOTSTRAPPING/Middlewares/ST/STM32_Cellular/Core/AT_Core/Src/at_modem_api.c:259:6:atcc_hw_event	0	static

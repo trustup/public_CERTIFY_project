@@ -1,0 +1,14 @@
+C:/Dev/DEMO-CERTIFY-BOOTSTRAPPING/Middlewares/ST/STM32_Cellular/Core/Ipc/Src/ipc_uart.c:70:14:IPC_UART_init	2
+C:/Dev/DEMO-CERTIFY-BOOTSTRAPPING/Middlewares/ST/STM32_Cellular/Core/Ipc/Src/ipc_uart.c:98:14:IPC_UART_deinit	1
+C:/Dev/DEMO-CERTIFY-BOOTSTRAPPING/Middlewares/ST/STM32_Cellular/Core/Ipc/Src/ipc_uart.c:121:14:IPC_UART_open	8
+C:/Dev/DEMO-CERTIFY-BOOTSTRAPPING/Middlewares/ST/STM32_Cellular/Core/Ipc/Src/ipc_uart.c:225:14:IPC_UART_close	8
+C:/Dev/DEMO-CERTIFY-BOOTSTRAPPING/Middlewares/ST/STM32_Cellular/Core/Ipc/Src/ipc_uart.c:299:14:IPC_UART_reset	2
+C:/Dev/DEMO-CERTIFY-BOOTSTRAPPING/Middlewares/ST/STM32_Cellular/Core/Ipc/Src/ipc_uart.c:330:14:IPC_UART_abort	3
+C:/Dev/DEMO-CERTIFY-BOOTSTRAPPING/Middlewares/ST/STM32_Cellular/Core/Ipc/Src/ipc_uart.c:351:14:IPC_UART_select	2
+C:/Dev/DEMO-CERTIFY-BOOTSTRAPPING/Middlewares/ST/STM32_Cellular/Core/Ipc/Src/ipc_uart.c:367:15:IPC_UART_get_other_channel	2
+C:/Dev/DEMO-CERTIFY-BOOTSTRAPPING/Middlewares/ST/STM32_Cellular/Core/Ipc/Src/ipc_uart.c:394:14:IPC_UART_send	2
+C:/Dev/DEMO-CERTIFY-BOOTSTRAPPING/Middlewares/ST/STM32_Cellular/Core/Ipc/Src/ipc_uart.c:420:14:IPC_UART_receive	5
+C:/Dev/DEMO-CERTIFY-BOOTSTRAPPING/Middlewares/ST/STM32_Cellular/Core/Ipc/Src/ipc_uart.c:548:6:IPC_UART_rearm_RX_IT	3
+C:/Dev/DEMO-CERTIFY-BOOTSTRAPPING/Middlewares/ST/STM32_Cellular/Core/Ipc/Src/ipc_uart.c:631:6:IPC_UART_RxCpltCallback	3
+C:/Dev/DEMO-CERTIFY-BOOTSTRAPPING/Middlewares/ST/STM32_Cellular/Core/Ipc/Src/ipc_uart.c:650:6:IPC_UART_TxCpltCallback	3
+C:/Dev/DEMO-CERTIFY-BOOTSTRAPPING/Middlewares/ST/STM32_Cellular/Core/Ipc/Src/ipc_uart.c:672:6:IPC_UART_ErrorCallback	1

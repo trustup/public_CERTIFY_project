@@ -1,0 +1,26 @@
+# Format Version
+2
+# HTTP (1 : enable  -- 0 : disable [default Value])
+0
+www.grovestreams.com
+## Dashboard API Key (GET)
+<Key to replace example of format 0f567621-b9d8-3865-97b9-f97b38b2xxxx >
+## Feed Put API Key  (PUT with auto-registration and request streams rights)
+<Key to replace example of format 58fc7f03-beef-341f-b22b-bb8b6b08xxxx >
+Sensors
+25
+1
+batlevel
+2
+siglevel
+5
+hum
+6
+temp
+7
+press
+0
+2
+1
+ledlight
+0

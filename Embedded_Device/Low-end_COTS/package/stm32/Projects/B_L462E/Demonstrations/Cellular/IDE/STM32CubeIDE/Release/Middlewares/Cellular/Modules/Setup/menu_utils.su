@@ -1,0 +1,13 @@
+C:/Dev/DEMO-CERTIFY-BOOTSTRAPPING/Middlewares/ST/STM32_Cellular/Modules/Setup/Src/menu_utils.c:127:9:menu_utils_get_char_timeout	16	static
+C:/Dev/DEMO-CERTIFY-BOOTSTRAPPING/Middlewares/ST/STM32_Cellular/Modules/Setup/Src/menu_utils.c:151:9:menu_utils_get_uart_char	16	static
+C:/Dev/DEMO-CERTIFY-BOOTSTRAPPING/Middlewares/ST/STM32_Cellular/Modules/Setup/Src/menu_utils.c:178:11:menu_utils_get_line	32	static
+C:/Dev/DEMO-CERTIFY-BOOTSTRAPPING/Middlewares/ST/STM32_Cellular/Modules/Setup/Src/menu_utils.c:239:6:menu_utils_get_string	32	static
+C:/Dev/DEMO-CERTIFY-BOOTSTRAPPING/Middlewares/ST/STM32_Cellular/Modules/Setup/Src/menu_utils.c:320:8:menu_utils_get_string_without_default_value	24	static
+C:/Dev/DEMO-CERTIFY-BOOTSTRAPPING/Middlewares/ST/STM32_Cellular/Modules/Setup/Src/menu_utils.c:353:6:menu_utils_set_sefault_value	16	static
+C:/Dev/DEMO-CERTIFY-BOOTSTRAPPING/Middlewares/ST/STM32_Cellular/Modules/Setup/Src/menu_utils.c:380:10:menu_utils_get_next_default_value	20	static
+C:/Dev/DEMO-CERTIFY-BOOTSTRAPPING/Middlewares/ST/STM32_Cellular/Modules/Setup/Src/menu_utils.c:408:10:menu_utils_copy_next_value	28	static
+C:/Dev/DEMO-CERTIFY-BOOTSTRAPPING/Middlewares/ST/STM32_Cellular/Modules/Setup/Src/menu_utils.c:436:10:menu_utils_replace_next_value	32	static
+C:/Dev/DEMO-CERTIFY-BOOTSTRAPPING/Middlewares/ST/STM32_Cellular/Modules/Setup/Src/menu_utils.c:472:10:menu_utils_insert_default_value	16	static
+C:/Dev/DEMO-CERTIFY-BOOTSTRAPPING/Middlewares/ST/STM32_Cellular/Modules/Setup/Src/menu_utils.c:495:6:menu_utils_flush_next_default_value	20	static
+C:/Dev/DEMO-CERTIFY-BOOTSTRAPPING/Middlewares/ST/STM32_Cellular/Modules/Setup/Src/menu_utils.c:517:6:menu_utils_get_new_config	0	static
+C:/Dev/DEMO-CERTIFY-BOOTSTRAPPING/Middlewares/ST/STM32_Cellular/Modules/Setup/Src/menu_utils.c:529:6:menu_utils_config_init	0	static

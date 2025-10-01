@@ -1,0 +1,13 @@
+C:/Dev/DEMO-CERTIFY-BOOTSTRAPPING/Middlewares/ST/STM32_Cellular/Core/AT_Core/Src/at_modem_socket.c:71:13:atcm_socket_reserve_modem_cid	8	static
+C:/Dev/DEMO-CERTIFY-BOOTSTRAPPING/Middlewares/ST/STM32_Cellular/Core/AT_Core/Src/at_modem_socket.c:95:13:atcm_socket_release_modem_cid	16	static
+C:/Dev/DEMO-CERTIFY-BOOTSTRAPPING/Middlewares/ST/STM32_Cellular/Core/AT_Core/Src/at_modem_socket.c:129:10:atcm_socket_get_modem_cid	8	static
+C:/Dev/DEMO-CERTIFY-BOOTSTRAPPING/Middlewares/ST/STM32_Cellular/Core/AT_Core/Src/at_modem_socket.c:152:13:atcm_socket_set_modem_cid	8	static
+C:/Dev/DEMO-CERTIFY-BOOTSTRAPPING/Middlewares/ST/STM32_Cellular/Core/AT_Core/Src/at_modem_socket.c:175:17:atcm_socket_get_socket_handle	8	static
+C:/Dev/DEMO-CERTIFY-BOOTSTRAPPING/Middlewares/ST/STM32_Cellular/Core/AT_Core/Src/at_modem_socket.c:202:13:atcm_socket_set_urc_data_pending	16	static
+C:/Dev/DEMO-CERTIFY-BOOTSTRAPPING/Middlewares/ST/STM32_Cellular/Core/AT_Core/Src/at_modem_socket.c:225:13:atcm_socket_set_urc_closed_by_remote	16	static
+C:/Dev/DEMO-CERTIFY-BOOTSTRAPPING/Middlewares/ST/STM32_Cellular/Core/AT_Core/Src/at_modem_socket.c:248:17:atcm_socket_get_hdle_urc_data_pending	8	static
+C:/Dev/DEMO-CERTIFY-BOOTSTRAPPING/Middlewares/ST/STM32_Cellular/Core/AT_Core/Src/at_modem_socket.c:274:17:atcm_socket_get_hdlr_urc_closed_by_remote	8	static
+C:/Dev/DEMO-CERTIFY-BOOTSTRAPPING/Middlewares/ST/STM32_Cellular/Core/AT_Core/Src/at_modem_socket.c:299:11:atcm_socket_remaining_urc_data_pending	8	static
+C:/Dev/DEMO-CERTIFY-BOOTSTRAPPING/Middlewares/ST/STM32_Cellular/Core/AT_Core/Src/at_modem_socket.c:322:11:atcm_socket_remaining_urc_closed_by_remote	8	static
+C:/Dev/DEMO-CERTIFY-BOOTSTRAPPING/Middlewares/ST/STM32_Cellular/Core/AT_Core/Src/at_modem_socket.c:343:11:atcm_socket_is_connected	16	static
+C:/Dev/DEMO-CERTIFY-BOOTSTRAPPING/Middlewares/ST/STM32_Cellular/Core/AT_Core/Src/at_modem_socket.c:361:13:atcm_socket_set_connected	16	static

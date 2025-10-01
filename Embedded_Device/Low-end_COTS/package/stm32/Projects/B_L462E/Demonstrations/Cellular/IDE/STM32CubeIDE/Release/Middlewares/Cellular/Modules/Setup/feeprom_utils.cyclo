@@ -1,0 +1,7 @@
+C:/Dev/DEMO-CERTIFY-BOOTSTRAPPING/Middlewares/ST/STM32_Cellular/Modules/Setup/Src/feeprom_utils.c:105:17:feeprom_utils_flash_write	4
+C:/Dev/DEMO-CERTIFY-BOOTSTRAPPING/Middlewares/ST/STM32_Cellular/Modules/Setup/Src/feeprom_utils.c:225:17:feeprom_utils_flash_erase	3
+C:/Dev/DEMO-CERTIFY-BOOTSTRAPPING/Middlewares/ST/STM32_Cellular/Modules/Setup/Src/feeprom_utils.c:156:17:feeprom_utils_find_bank	9
+C:/Dev/DEMO-CERTIFY-BOOTSTRAPPING/Middlewares/ST/STM32_Cellular/Modules/Setup/Src/feeprom_utils.c:258:10:feeprom_utils_setup_erase	2
+C:/Dev/DEMO-CERTIFY-BOOTSTRAPPING/Middlewares/ST/STM32_Cellular/Modules/Setup/Src/feeprom_utils.c:281:6:feeprom_utils_flash_erase_all	1
+C:/Dev/DEMO-CERTIFY-BOOTSTRAPPING/Middlewares/ST/STM32_Cellular/Modules/Setup/Src/feeprom_utils.c:298:10:feeprom_utils_save_config_flash	6
+C:/Dev/DEMO-CERTIFY-BOOTSTRAPPING/Middlewares/ST/STM32_Cellular/Modules/Setup/Src/feeprom_utils.c:358:10:feeprom_utils_read_config_flash	2

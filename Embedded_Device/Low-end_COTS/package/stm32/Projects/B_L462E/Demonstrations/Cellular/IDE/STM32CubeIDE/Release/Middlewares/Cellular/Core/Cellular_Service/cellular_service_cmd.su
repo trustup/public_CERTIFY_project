@@ -1,0 +1,10 @@
+C:/Dev/DEMO-CERTIFY-BOOTSTRAPPING/Middlewares/ST/STM32_Cellular/Core/Cellular_Service/Src/cellular_service_cmd.c:2014:13:CST_cellular_direct_cmd_callback	0	static
+C:/Dev/DEMO-CERTIFY-BOOTSTRAPPING/Middlewares/ST/STM32_Cellular/Core/Cellular_Service/Src/cellular_service_cmd.c:1555:14:CST_CMD_display_bitmap_name_altair	24	static
+C:/Dev/DEMO-CERTIFY-BOOTSTRAPPING/Middlewares/ST/STM32_Cellular/Core/Cellular_Service/Src/cellular_service_cmd.c:1570:13:CST_ModemHelpCmd	24	static
+C:/Dev/DEMO-CERTIFY-BOOTSTRAPPING/Middlewares/ST/STM32_Cellular/Core/Cellular_Service/Src/cellular_service_cmd.c:2025:13:cst_at_cmd_help	16	static
+C:/Dev/DEMO-CERTIFY-BOOTSTRAPPING/Middlewares/ST/STM32_Cellular/Core/Cellular_Service/Src/cellular_service_cmd.c:204:13:CST_HelpCmd	16	static
+C:/Dev/DEMO-CERTIFY-BOOTSTRAPPING/Middlewares/ST/STM32_Cellular/Core/Cellular_Service/Src/cellular_service_cmd.c:2038:21:cst_at_command_handle	8	static
+C:/Dev/DEMO-CERTIFY-BOOTSTRAPPING/Middlewares/ST/STM32_Cellular/Core/Cellular_Service/Src/cellular_service_cmd.c:1614:21:CST_ModemCmd	80	static
+C:/Dev/DEMO-CERTIFY-BOOTSTRAPPING/Middlewares/ST/STM32_Cellular/Core/Cellular_Service/Src/cellular_service_cmd.c:2074:21:CST_AtCmd	16	static
+C:/Dev/DEMO-CERTIFY-BOOTSTRAPPING/Middlewares/ST/STM32_Cellular/Core/Cellular_Service/Src/cellular_service_cmd.c:229:21:CST_cmd	88	static
+C:/Dev/DEMO-CERTIFY-BOOTSTRAPPING/Middlewares/ST/STM32_Cellular/Core/Cellular_Service/Src/cellular_service_cmd.c:2216:13:CST_cmd_cellular_service_start	8	static

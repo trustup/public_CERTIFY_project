@@ -1,0 +1,4 @@
+C:/Dev/DEMO-CERTIFY-BOOTSTRAPPING/Projects/B_L462E/Demonstrations/Cellular/Core/Src/spi.c:31:6:MX_SPI1_Init	8	static
+C:/Dev/DEMO-CERTIFY-BOOTSTRAPPING/Projects/B_L462E/Demonstrations/Cellular/Core/Src/spi.c:55:6:MX_SPI3_Init	8	static
+C:/Dev/DEMO-CERTIFY-BOOTSTRAPPING/Projects/B_L462E/Demonstrations/Cellular/Core/Src/spi.c:79:6:HAL_SPI_MspInit	48	static
+C:/Dev/DEMO-CERTIFY-BOOTSTRAPPING/Projects/B_L462E/Demonstrations/Cellular/Core/Src/spi.c:153:6:HAL_SPI_MspDeInit	8	static

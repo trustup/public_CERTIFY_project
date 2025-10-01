@@ -1,0 +1,10 @@
+C:/dev/DEMO-CERTIFY-BOOTSTRAPPING-v3/Middlewares/ST/STM32_Cellular/Core/Ipc/Src/ipc_rxfifo.c:438:13:RXFIFO_incrementTail	1
+C:/dev/DEMO-CERTIFY-BOOTSTRAPPING-v3/Middlewares/ST/STM32_Cellular/Core/Ipc/Src/ipc_rxfifo.c:474:13:RXFIFO_updateMsgHeader	1
+C:/dev/DEMO-CERTIFY-BOOTSTRAPPING-v3/Middlewares/ST/STM32_Cellular/Core/Ipc/Src/ipc_rxfifo.c:516:13:RXFIFO_rearm_RX_IT	1
+C:/dev/DEMO-CERTIFY-BOOTSTRAPPING-v3/Middlewares/ST/STM32_Cellular/Core/Ipc/Src/ipc_rxfifo.c:78:6:IPC_RXFIFO_init	1
+C:/dev/DEMO-CERTIFY-BOOTSTRAPPING-v3/Middlewares/ST/STM32_Cellular/Core/Ipc/Src/ipc_rxfifo.c:290:10:IPC_RXFIFO_getFreeBytes	3
+C:/dev/DEMO-CERTIFY-BOOTSTRAPPING-v3/Middlewares/ST/STM32_Cellular/Core/Ipc/Src/ipc_rxfifo.c:448:13:RXFIFO_incrementHead	2
+C:/dev/DEMO-CERTIFY-BOOTSTRAPPING-v3/Middlewares/ST/STM32_Cellular/Core/Ipc/Src/ipc_rxfifo.c:505:13:RXFIFO_prepareNextMsgHeader	2
+C:/dev/DEMO-CERTIFY-BOOTSTRAPPING-v3/Middlewares/ST/STM32_Cellular/Core/Ipc/Src/ipc_rxfifo.c:105:6:IPC_RXFIFO_writeCharacter	4
+C:/dev/DEMO-CERTIFY-BOOTSTRAPPING-v3/Middlewares/ST/STM32_Cellular/Core/Ipc/Src/ipc_rxfifo.c:322:6:IPC_RXFIFO_readMsgHeader_at_pos	2
+C:/dev/DEMO-CERTIFY-BOOTSTRAPPING-v3/Middlewares/ST/STM32_Cellular/Core/Ipc/Src/ipc_rxfifo.c:154:9:IPC_RXFIFO_read	4

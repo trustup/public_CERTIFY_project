@@ -1,0 +1,8 @@
+C:/Dev/DEMO-CERTIFY-BOOTSTRAPPING/Middlewares/ST/STM32_Cellular/Core/Cellular_Service/Src/cellular_service_int.c:72:6:csint_modem_reset_update_socket_state	5
+C:/Dev/DEMO-CERTIFY-BOOTSTRAPPING/Middlewares/ST/STM32_Cellular/Core/Cellular_Service/Src/cellular_service_int.c:116:6:csint_socket_init	1
+C:/Dev/DEMO-CERTIFY-BOOTSTRAPPING/Middlewares/ST/STM32_Cellular/Core/Cellular_Service/Src/cellular_service_int.c:149:17:csint_socket_allocateHandle	3
+C:/Dev/DEMO-CERTIFY-BOOTSTRAPPING/Middlewares/ST/STM32_Cellular/Core/Cellular_Service/Src/cellular_service_int.c:173:6:csint_socket_deallocateHandle	1
+C:/Dev/DEMO-CERTIFY-BOOTSTRAPPING/Middlewares/ST/STM32_Cellular/Core/Cellular_Service/Src/cellular_service_int.c:179:13:csint_socket_create	2
+C:/Dev/DEMO-CERTIFY-BOOTSTRAPPING/Middlewares/ST/STM32_Cellular/Core/Cellular_Service/Src/cellular_service_int.c:214:13:csint_socket_bind	2
+C:/Dev/DEMO-CERTIFY-BOOTSTRAPPING/Middlewares/ST/STM32_Cellular/Core/Cellular_Service/Src/cellular_service_int.c:244:13:csint_socket_configure	20
+C:/Dev/DEMO-CERTIFY-BOOTSTRAPPING/Middlewares/ST/STM32_Cellular/Core/Cellular_Service/Src/cellular_service_int.c:417:13:csint_socket_configure_remote	4

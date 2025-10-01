@@ -1,0 +1,4 @@
+C:/Dev/DEMO-CERTIFY-BOOTSTRAPPING/Middlewares/ST/STM32_Cellular/Core/Error/Src/error_handler.c:55:6:ERROR_Handler_Init	0	static
+C:/Dev/DEMO-CERTIFY-BOOTSTRAPPING/Middlewares/ST/STM32_Cellular/Core/Error/Src/error_handler.c:69:6:ERROR_Handler	40	static,ignoring_inline_asm
+C:/Dev/DEMO-CERTIFY-BOOTSTRAPPING/Middlewares/ST/STM32_Cellular/Core/Error/Src/error_handler.c:98:6:ERROR_Dump_All	40	static
+C:/Dev/DEMO-CERTIFY-BOOTSTRAPPING/Middlewares/ST/STM32_Cellular/Core/Error/Src/error_handler.c:119:6:ERROR_Dump_Last	24	static

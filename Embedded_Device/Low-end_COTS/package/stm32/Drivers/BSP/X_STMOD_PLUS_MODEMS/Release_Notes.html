@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Release Notes for X-CUBE-CELLULAR BSP Modems</title>
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+  </style>
+  <link rel="stylesheet" href="_htmresc/mini-st_2020.css" />
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+  <link rel="icon" type="image/x-icon" href="_htmresc/favicon.png" />
+</head>
+<body>
+<div class="row">
+<div class="col-sm-12 col-lg-4">
+<center>
+<h1 id="release-notes-for-x-cube-cellular-bsp-modems-cube-logo">Release Notes for <mark>X-CUBE-CELLULAR BSP Modems</mark> <a href="https://www.st.com/en/ecosystems/stm32cube-expansion-software.html" class="logo"><img src="_htmresc/Label_STM32CubeExpansion.png" alt="Cube logo" /></a></h1>
+<p>Copyright © 2020 STMicroelectronics<br />
+Microcontrollers Division - Application Team</p>
+<a href="https://www.st.com" class="logo"><img src="_htmresc/st_logo_2020.png" alt="ST logo" /></a>
+</center>
+<h1 id="license">License</h1>
+<p>This software package is licensed under ST license BSD-3-Clause (the “License”). You may not use this package except in compliance with the License. You may obtain a copy of the License at: <a href="https://opensource.org/licenses/BSD-3-Clause">BSD-3-Clause</a>.</p>
+<h1 id="purpose">Purpose</h1>
+<p>The <mark>X-CUBE-CELLULAR BSP Modems</mark> (part of the STM32 Cellular software expansion for STM32Cube)</p>
+<ul>
+<li>Enables connectivity over Cellular Network.</li>
+<li>The network access technology depends on the Cellular Modem used, it can be 2G, 3G but also LTE CatM or NBIoT (also known as NB).</li>
+<li>To ease support of new modems the SW architecture has splitted modem in Generic part of AT handler and custom parts (one per module/modem)</li>
+<li>This Release Note deals about the modem itself and the custom parts only, the Generic part of AT handler is part of the Cellular middleware</li>
+</ul>
+<p>Carefully read the information concerning the modem you are using because it could be necessary to update the modem FW.</p>
+<p>Note X-CUBE-CELLULAR V6.x onwards deliveries won’t support UG96 modem anymore.</p>
+</div>
+<section id="update-history" class="col-sm-12 col-lg-8">
+<h1>Update History</h1>
+<div class="collapse">
+<input type="checkbox" id="collapse-section2" aria-hidden="true"> <label for="collapse-section2" aria-hidden="true">V5.2.0 / 30-Sept-2020</label>
+<div>
+<h2 id="main-changes">Main Changes</h2>
+<p>This V5.2.0 adds the unofficial support of Murata T1SE module (Altair ALT1250 modem) and Sequans GMS01Q.</p>
+<p>Sequans module GMS01Q is the same as GM01Q but it has internal MFF2 SIM with Orange network.</p>
+<p>Previous verisons support the following modems:</p>
+<ul>
+<li>Quectel module UG96 with Intel modem (3G, won’t be supported anymore in next delivery)</li>
+<li>Quectel module BG96 with Qualcomm modem (LTE CatM, NBIoT and 2G Fallback)</li>
+<li>Sequans module GM01Q with Sequans modem (LTE CatM)</li>
+<li>Murata T1SC module (Altair 1250 modem) (Unofficial)</li>
+</ul>
+<h2 id="contents">Contents</h2>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Modem</th>
+<th style="text-align: center;">Version</th>
+<th style="text-align: left;">Comment</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Quectel UG96</td>
+<td style="text-align: center;">Factory version is UG96LNAR02A06E1G aka 02A06 it is the same used for tests</td>
+<td style="text-align: left;">Your FW version should be this one so no need to update</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Quectel BG96</td>
+<td style="text-align: center;">Factory version is BG96MAR02A06M1G, version used for tests is BG96MAR02A08M1G_01.012.01.012</td>
+<td style="text-align: left;">FW must be updated, see /Utilities/Modem_FW/BG96</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Sequans GM01Q</td>
+<td style="text-align: center;">Factory version are UE5.2.1.0 LR5.2.1.0-41159, version used for tests is UE5.2.1.0 LR5.2.1.0-48829</td>
+<td style="text-align: left;">Update in case you have issues, contact Sequans.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Sequans GMS01Q</td>
+<td style="text-align: center;">Do not change the FW version</td>
+<td style="text-align: left;">no</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Murata T1SC</td>
+<td style="text-align: center;">The modem FW version used for tests is RK_02_01_02_00_82</td>
+<td style="text-align: left;">Contact Murata (which provides the EVK) to update you modem FW if needed</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Murata T1SE</td>
+<td style="text-align: center;">Same as above</td>
+<td style="text-align: left;">Same as above</td>
+</tr>
+</tbody>
+</table>
+<h2 id="supported-devices-and-boards">Supported Devices and Boards</h2>
+<ul>
+<li>Quectel : UG96
+<ul>
+<li>P-L496G-CELL01 + (optionnaly)X-NUCLEO-IKS01A2</li>
+<li>32L496GDISCOVERY + (optionnaly)X-NUCLEO-IKS01A2 + MB1329B (with UG96)</li>
+</ul></li>
+<li>Quectel : BG96
+<ul>
+<li>P-L496G-CELL02 + (optionnaly)X-NUCLEO-IKS01A2</li>
+<li>32L496GDISCOVERY + (optionnaly)X-NUCLEO-IKS01A2 + MB1329B (with BG96)</li>
+<li>B-L475-IOT01A + X-NUCLEAO-STMODA1 + MB1329B (with BG96)</li>
+<li>STWIN + MB1329B (with BG96) (Unofficial configuration)</li>
+</ul></li>
+<li>Sequans : GM01Q
+<ul>
+<li>32L496GDISCOVERY + (optionnaly)X-NUCLEO-IKS01A2 + GM01Q-STMOD</li>
+<li>B-L475-IOT01A + X-NUCLEAO-STMODA1 + GM01Q-STMOD</li>
+<li>STWIN + GMS01Q-STMOD (Unofficial configuration)</li>
+</ul></li>
+<li>Murata : T1SC
+<ul>
+<li>32L496GDISCOVERY + (optionnaly)X-NUCLEO-IKS01A2 + EVK T1SC (Unofficial configuration)</li>
+</ul></li>
+<li>Murata : T1SE
+<ul>
+<li>B-L462E-CELL1 (Unofficial)</li>
+</ul></li>
+</ul>
+<p>Note:</p>
+<ul>
+<li>MB1329B is Quectel UG96 or BG96 module on STMod+ board (same PCB for 2 pin to pin compatible modules)</li>
+<li>MB1329B is the modem board included in P-L496G-CELL01 &amp; P-L496G-CELL02</li>
+<li>GM01Q-STMOD is Sequans GM01Q module on STMod+ board</li>
+<li>GMS01Q-STMOD is Sequans GMS01Q module on STMod+ board</li>
+<li>X-NUCLEO-IKS01A2 is a X-NUCLEO with sensors, optionnaly used with the sensorless Discovery L496</li>
+<li>EVK T1SC is a Murata board, an EValuation Kit</li>
+</ul>
+</div>
+</div>
+<div class="collapse">
+<input type="checkbox" id="collapse-section1" aria-hidden="true"> <label for="collapse-section1" aria-hidden="true">V5.1.0 / 24-Apr-2020</label>
+<div>
+<h2 id="main-changes-1">Main Changes</h2>
+<p>This V5.1.0 adds the support of Murata T1SC module (Altair ALT1250 modem)</p>
+<p>Previous verisons support the following modems:</p>
+<ul>
+<li>Quectel module UG96 with Intel modem (3G, won’t be supported anymore in next delivery)</li>
+<li>Quectel module BG96 with Qualcomm modem (LTE CatM, NBIoT and 2G Fallback)</li>
+<li>Sequans module GM01Q with Sequans modem (LTE CatM)</li>
+</ul>
+<h2 id="contents-1">Contents</h2>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Modem</th>
+<th style="text-align: center;">Version</th>
+<th style="text-align: left;">Comment</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Quectel UG96</td>
+<td style="text-align: center;">Factory version is UG96LNAR02A06E1G aka 02A06 it is the same used for tests</td>
+<td style="text-align: left;">Your FW version should be this one so no need to update</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Quectel BG96</td>
+<td style="text-align: center;">Factory version is BG96MAR02A06M1G, version used for tests is BG96MAR02A08M1G_01.012.01.012</td>
+<td style="text-align: left;">FW must be updated, see /Utilities/Modem_FW/BG96</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Sequans GM01Q</td>
+<td style="text-align: center;">Factory version are UE5.2.1.0 LR5.2.1.0-41159, version used for tests is UE5.2.1.0 LR5.2.1.0-41159</td>
+<td style="text-align: left;">Your FW version should be this one so no need to update</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Murata T1SC</td>
+<td style="text-align: center;">The modem FW version used for tests is RK_02_01_02_00_82</td>
+<td style="text-align: left;">Contact Murata (which provides the EVK) to update you modem FW if needed</td>
+</tr>
+</tbody>
+</table>
+<h2 id="supported-devices-and-boards-1">Supported Devices and Boards</h2>
+<ul>
+<li>Quectel : UG96
+<ul>
+<li>P-L496G-CELL01</li>
+<li>32L496GDISCOVERY + (optionnaly)X-NUCLEO-IKS01A2 + MB1329B (with UG96)</li>
+</ul></li>
+<li>Quectel : BG96
+<ul>
+<li>P-L496G-CELL02</li>
+<li>32L496GDISCOVERY + (optionnaly)X-NUCLEO-IKS01A2 + MB1329B (with BG96)</li>
+<li>B-L475-IOT01A + X-NUCLEAO-STMODA1 + MB1329B (with BG96)</li>
+</ul></li>
+<li>Sequans : GM01Q
+<ul>
+<li>32L496GDISCOVERY + (optionnaly)X-NUCLEO-IKS01A2 + GM01Q-STMOD</li>
+<li>B-L475-IOT01A + X-NUCLEAO-STMODA1 + GM01Q-STMOD</li>
+</ul></li>
+<li>Murata : T1SC
+<ul>
+<li>32L496GDISCOVERY + (optionnaly)X-NUCLEO-IKS01A2 + EVK T1SC</li>
+</ul></li>
+</ul>
+<p>Note:</p>
+<ul>
+<li>MB1329B is Quectel UG96 or BG96 module on STMod+ board (same PCB for 2 pin to pin compatible modules)</li>
+<li>GM01Q-STMOD is Sequans GM01Q module on STMod+ board</li>
+<li>X-NUCLEO-IKS01A2 is a X-NUCLEO with sensors, optionnaly used with the sensorless Discovery L496</li>
+<li>EVK T1SC is a Murata board, an EValuation Kit</li>
+</ul>
+</div>
+</div>
+</section>
+</div>
+<footer class="sticky">
+For complete documentation on <mark>STM32</mark> microcontrollers please visit <a href="http://www.st.com/stm32" class="uri">http://www.st.com/stm32</a>
+</footer>
+</body>
+</html>

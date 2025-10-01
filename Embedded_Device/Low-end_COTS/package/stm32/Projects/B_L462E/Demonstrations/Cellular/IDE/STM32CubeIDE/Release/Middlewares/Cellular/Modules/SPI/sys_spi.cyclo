@@ -1,0 +1,6 @@
+C:/Dev/DEMO-CERTIFY-BOOTSTRAPPING/Middlewares/ST/STM32_Cellular/Modules/SPI/Src/sys_spi.c:49:13:sys_spi_at_command	1
+C:/Dev/DEMO-CERTIFY-BOOTSTRAPPING/Middlewares/ST/STM32_Cellular/Modules/SPI/Src/sys_spi.c:97:6:sys_spi_power_on	3
+C:/Dev/DEMO-CERTIFY-BOOTSTRAPPING/Middlewares/ST/STM32_Cellular/Modules/SPI/Src/sys_spi.c:122:6:sys_spi_power_off	3
+C:/Dev/DEMO-CERTIFY-BOOTSTRAPPING/Middlewares/ST/STM32_Cellular/Modules/SPI/Src/sys_spi.c:146:6:sys_spi_acquire	2
+C:/Dev/DEMO-CERTIFY-BOOTSTRAPPING/Middlewares/ST/STM32_Cellular/Modules/SPI/Src/sys_spi.c:161:6:sys_spi_release	2
+C:/Dev/DEMO-CERTIFY-BOOTSTRAPPING/Middlewares/ST/STM32_Cellular/Modules/SPI/Src/sys_spi.c:174:6:sys_spi_init	2

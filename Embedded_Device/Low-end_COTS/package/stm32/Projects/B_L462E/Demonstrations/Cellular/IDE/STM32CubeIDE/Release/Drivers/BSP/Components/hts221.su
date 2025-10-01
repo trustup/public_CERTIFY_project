@@ -1,0 +1,5 @@
+C:/Dev/DEMO-CERTIFY-BOOTSTRAPPING/Drivers/BSP/Components/hts221/hts221.c:65:6:HTS221_H_Init	8	static
+C:/Dev/DEMO-CERTIFY-BOOTSTRAPPING/Drivers/BSP/Components/hts221/hts221.c:157:6:HTS221_T_Init	8	static
+C:/Dev/DEMO-CERTIFY-BOOTSTRAPPING/Drivers/BSP/Components/hts221/hts221.c:91:9:HTS221_H_ReadID	8	static
+C:/Dev/DEMO-CERTIFY-BOOTSTRAPPING/Drivers/BSP/Components/hts221/hts221.c:108:7:HTS221_H_ReadHumidity	32	static
+C:/Dev/DEMO-CERTIFY-BOOTSTRAPPING/Drivers/BSP/Components/hts221/hts221.c:184:7:HTS221_T_ReadTemp	32	static

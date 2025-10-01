@@ -1,0 +1,5 @@
+C:/Dev/DEMO-CERTIFY-BOOTSTRAPPING/Projects/B_L462E/Demonstrations/Cellular/Core/Src/tim.c:97:6:HAL_TIM_PWM_MspInit	8	static
+C:/Dev/DEMO-CERTIFY-BOOTSTRAPPING/Projects/B_L462E/Demonstrations/Cellular/Core/Src/tim.c:123:6:HAL_TIM_MspPostInit	32	static
+C:/Dev/DEMO-CERTIFY-BOOTSTRAPPING/Projects/B_L462E/Demonstrations/Cellular/Core/Src/tim.c:31:6:MX_TIM2_Init	48	static
+C:/Dev/DEMO-CERTIFY-BOOTSTRAPPING/Projects/B_L462E/Demonstrations/Cellular/Core/Src/tim.c:64:6:MX_TIM3_Init	48	static
+C:/Dev/DEMO-CERTIFY-BOOTSTRAPPING/Projects/B_L462E/Demonstrations/Cellular/Core/Src/tim.c:171:6:HAL_TIM_PWM_MspDeInit	0	static

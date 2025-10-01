@@ -1,0 +1,16 @@
+C:/Dev/DEMO-CERTIFY-BOOTSTRAPPING/Middlewares/ST/STM32_Cellular/Core/Trace/Src/trace_interface.c:376:13:traceIF_uartTransmit	1
+C:/Dev/DEMO-CERTIFY-BOOTSTRAPPING/Middlewares/ST/STM32_Cellular/Core/Trace/Src/trace_interface.c:346:13:ITM_Out	5
+C:/Dev/DEMO-CERTIFY-BOOTSTRAPPING/Middlewares/ST/STM32_Cellular/Core/Trace/Src/trace_interface.c:397:6:traceIF_trace_off	1
+C:/Dev/DEMO-CERTIFY-BOOTSTRAPPING/Middlewares/ST/STM32_Cellular/Core/Trace/Src/trace_interface.c:407:6:traceIF_trace_on	1
+C:/Dev/DEMO-CERTIFY-BOOTSTRAPPING/Middlewares/ST/STM32_Cellular/Core/Trace/Src/trace_interface.c:420:6:traceIF_itmPrint	5
+C:/Dev/DEMO-CERTIFY-BOOTSTRAPPING/Middlewares/ST/STM32_Cellular/Core/Trace/Src/trace_interface.c:118:13:CMD_ComponentEnableDisable	4
+C:/Dev/DEMO-CERTIFY-BOOTSTRAPPING/Middlewares/ST/STM32_Cellular/Core/Trace/Src/trace_interface.c:207:13:traceIF_cmd_Help	1
+C:/Dev/DEMO-CERTIFY-BOOTSTRAPPING/Middlewares/ST/STM32_Cellular/Core/Trace/Src/trace_interface.c:230:21:traceIF_cmd	13
+C:/Dev/DEMO-CERTIFY-BOOTSTRAPPING/Middlewares/ST/STM32_Cellular/Core/Trace/Src/trace_interface.c:453:6:traceIF_uartPrint	4
+C:/Dev/DEMO-CERTIFY-BOOTSTRAPPING/Middlewares/ST/STM32_Cellular/Core/Trace/Src/trace_interface.c:481:6:traceIF_itmPrintForce	2
+C:/Dev/DEMO-CERTIFY-BOOTSTRAPPING/Middlewares/ST/STM32_Cellular/Core/Trace/Src/trace_interface.c:502:6:traceIF_uartPrintForce	1
+C:/Dev/DEMO-CERTIFY-BOOTSTRAPPING/Middlewares/ST/STM32_Cellular/Core/Trace/Src/trace_interface.c:522:6:traceIF_hexPrint	5
+C:/Dev/DEMO-CERTIFY-BOOTSTRAPPING/Middlewares/ST/STM32_Cellular/Core/Trace/Src/trace_interface.c:580:6:traceIF_BufCharPrint	7
+C:/Dev/DEMO-CERTIFY-BOOTSTRAPPING/Middlewares/ST/STM32_Cellular/Core/Trace/Src/trace_interface.c:639:6:traceIF_BufHexPrint	4
+C:/Dev/DEMO-CERTIFY-BOOTSTRAPPING/Middlewares/ST/STM32_Cellular/Core/Trace/Src/trace_interface.c:668:6:traceIF_init	2
+C:/Dev/DEMO-CERTIFY-BOOTSTRAPPING/Middlewares/ST/STM32_Cellular/Core/Trace/Src/trace_interface.c:690:6:traceIF_start	1

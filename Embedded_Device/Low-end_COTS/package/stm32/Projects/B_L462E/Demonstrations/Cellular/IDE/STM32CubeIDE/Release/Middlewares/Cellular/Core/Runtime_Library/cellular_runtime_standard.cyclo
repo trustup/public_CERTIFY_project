@@ -1,0 +1,4 @@
+C:/Dev/DEMO-CERTIFY-BOOTSTRAPPING/Middlewares/ST/STM32_Cellular/Core/Runtime_Library/Src/cellular_runtime_standard.c:46:10:crs_itoa	8
+C:/Dev/DEMO-CERTIFY-BOOTSTRAPPING/Middlewares/ST/STM32_Cellular/Core/Runtime_Library/Src/cellular_runtime_standard.c:124:9:crs_atoi	4
+C:/Dev/DEMO-CERTIFY-BOOTSTRAPPING/Middlewares/ST/STM32_Cellular/Core/Runtime_Library/Src/cellular_runtime_standard.c:186:9:crs_atoi_hex	5
+C:/Dev/DEMO-CERTIFY-BOOTSTRAPPING/Middlewares/ST/STM32_Cellular/Core/Runtime_Library/Src/cellular_runtime_standard.c:239:10:crs_strlen	4

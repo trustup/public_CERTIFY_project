@@ -1,0 +1,3 @@
+C:/Dev/DEMO-CERTIFY-BOOTSTRAPPING/Middlewares/ST/STM32_Cellular/Interface/Com/Src/com_sockets_statistic.c:346:6:com_sockets_statistic_init	0	static,ignoring_inline_asm
+C:/Dev/DEMO-CERTIFY-BOOTSTRAPPING/Middlewares/ST/STM32_Cellular/Interface/Com/Src/com_sockets_statistic.c:359:6:com_sockets_statistic_update	0	static
+C:/Dev/DEMO-CERTIFY-BOOTSTRAPPING/Middlewares/ST/STM32_Cellular/Interface/Com/Src/com_sockets_statistic.c:371:6:com_sockets_statistic_display	0	static

@@ -1,0 +1,9 @@
+C:/Dev/DEMO-CERTIFY-BOOTSTRAPPING/Middlewares/ST/STM32_Cellular/Modules/Ndlc/Interface/Src/spi_ndlc.c:84:13:MX_LOC_SPI_Init	32	static
+C:/Dev/DEMO-CERTIFY-BOOTSTRAPPING/Middlewares/ST/STM32_Cellular/Modules/Ndlc/Interface/Src/spi_ndlc.c:60:13:print_buffer_line	32	static
+C:/Dev/DEMO-CERTIFY-BOOTSTRAPPING/Middlewares/ST/STM32_Cellular/Modules/Ndlc/Interface/Src/spi_ndlc.c:124:6:spi_ndlc_init	16	static
+C:/Dev/DEMO-CERTIFY-BOOTSTRAPPING/Middlewares/ST/STM32_Cellular/Modules/Ndlc/Interface/Src/spi_ndlc.c:165:6:spi_ndlc_deinit	16	static
+C:/Dev/DEMO-CERTIFY-BOOTSTRAPPING/Middlewares/ST/STM32_Cellular/Modules/Ndlc/Interface/Src/spi_ndlc.c:179:6:spi_ndlc_power	0	static
+C:/Dev/DEMO-CERTIFY-BOOTSTRAPPING/Middlewares/ST/STM32_Cellular/Modules/Ndlc/Interface/Src/spi_ndlc.c:219:9:spi_ndlc_atr	8	static
+C:/Dev/DEMO-CERTIFY-BOOTSTRAPPING/Middlewares/ST/STM32_Cellular/Modules/Ndlc/Interface/Src/spi_ndlc.c:237:9:spi_ndlc_transceive_apdu	24	static
+C:/Dev/DEMO-CERTIFY-BOOTSTRAPPING/Middlewares/ST/STM32_Cellular/Modules/Ndlc/Interface/Src/spi_ndlc.c:252:9:spi_ndlc_abort_apdu	0	static
+C:/Dev/DEMO-CERTIFY-BOOTSTRAPPING/Middlewares/ST/STM32_Cellular/Modules/Ndlc/Interface/Src/spi_ndlc.c:268:9:spi_ndlc_send_receive_phy	32	static

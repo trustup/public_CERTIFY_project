@@ -1,0 +1,12 @@
+../Middlewares/Cellular/Modules/PKCS11/Src/custom_se_pkcs11.c:62:9:csp_initialize	4
+../Middlewares/Cellular/Modules/PKCS11/Src/custom_se_pkcs11.c:99:9:csp_installPSK	2
+../Middlewares/Cellular/Modules/PKCS11/Src/custom_se_pkcs11.c:128:9:csp_terminate	3
+../Middlewares/Cellular/Modules/PKCS11/Src/custom_se_pkcs11.c:162:9:csp_sign	7
+../Middlewares/Cellular/Modules/PKCS11/Src/custom_se_pkcs11.c:246:9:csp_encrypt	7
+../Middlewares/Cellular/Modules/PKCS11/Src/custom_se_pkcs11.c:328:9:csp_decrypt	7
+../Middlewares/Cellular/Modules/PKCS11/Src/custom_se_pkcs11.c:410:9:csp_installCertificate	5
+../Middlewares/Cellular/Modules/PKCS11/Src/custom_se_pkcs11.c:448:9:csp_installMudURL	2
+../Middlewares/Cellular/Modules/PKCS11/Src/custom_se_pkcs11.c:477:9:csp_getCertificateValue	5
+../Middlewares/Cellular/Modules/PKCS11/Src/custom_se_pkcs11.c:552:9:csp_getMuDFileURL	5
+../Middlewares/Cellular/Modules/PKCS11/Src/custom_se_pkcs11.c:634:9:csp_deriveKey	6
+../Middlewares/Cellular/Modules/PKCS11/Src/custom_se_pkcs11.c:709:9:csp_generateRandom	4

@@ -1,0 +1,14 @@
+C:/dev/DEMO-CERTIFY-BOOTSTRAPPING-v3/Middlewares/ST/STM32_Cellular/Interface/Com/Src/com_icc.c:235:13:com_icc_is_icc_available	0	static
+C:/dev/DEMO-CERTIFY-BOOTSTRAPPING-v3/Middlewares/ST/STM32_Cellular/Interface/Com/Src/com_icc.c:308:24:com_icc_provide_icc_desc	24	static
+C:/dev/DEMO-CERTIFY-BOOTSTRAPPING-v3/Middlewares/ST/STM32_Cellular/Interface/Com/Src/com_icc.c:381:16:com_icc_use_icc_desc	24	static
+C:/dev/DEMO-CERTIFY-BOOTSTRAPPING-v3/Middlewares/ST/STM32_Cellular/Interface/Com/Src/com_icc.c:439:16:com_icc_delete_icc_desc	8	static
+C:/dev/DEMO-CERTIFY-BOOTSTRAPPING-v3/Middlewares/ST/STM32_Cellular/Interface/Com/Src/com_icc.c:289:13:com_icc_init_icc_desc	16	static
+C:/dev/DEMO-CERTIFY-BOOTSTRAPPING-v3/Middlewares/ST/STM32_Cellular/Interface/Com/Src/com_icc.c:248:13:com_icc_initialize_icc	8	static
+C:/dev/DEMO-CERTIFY-BOOTSTRAPPING-v3/Middlewares/ST/STM32_Cellular/Interface/Com/Src/com_icc.c:487:16:com_icc_generic_access_csim	40	static
+C:/dev/DEMO-CERTIFY-BOOTSTRAPPING-v3/Middlewares/ST/STM32_Cellular/Interface/Com/Src/com_icc.c:536:16:com_icc_generic_access_ndlc	40	static
+C:/dev/DEMO-CERTIFY-BOOTSTRAPPING-v3/Middlewares/ST/STM32_Cellular/Interface/Com/Src/com_icc.c:145:13:com_icc_datacache_cb	264	static,ignoring_inline_asm
+C:/dev/DEMO-CERTIFY-BOOTSTRAPPING-v3/Middlewares/ST/STM32_Cellular/Interface/Com/Src/com_icc.c:653:9:com_icc	8	static,ignoring_inline_asm
+C:/dev/DEMO-CERTIFY-BOOTSTRAPPING-v3/Middlewares/ST/STM32_Cellular/Interface/Com/Src/com_icc.c:733:9:com_icc_generic_access	32	static
+C:/dev/DEMO-CERTIFY-BOOTSTRAPPING-v3/Middlewares/ST/STM32_Cellular/Interface/Com/Src/com_icc.c:805:9:com_closeicc	8	static
+C:/dev/DEMO-CERTIFY-BOOTSTRAPPING-v3/Middlewares/ST/STM32_Cellular/Interface/Com/Src/com_icc.c:825:6:com_icc_init	8	static
+C:/dev/DEMO-CERTIFY-BOOTSTRAPPING-v3/Middlewares/ST/STM32_Cellular/Interface/Com/Src/com_icc.c:863:6:com_icc_start	8	static

@@ -1,0 +1,5 @@
+C:/Dev/DEMO-CERTIFY-BOOTSTRAPPING/Middlewares/Third_Party/LwIP/src/netif/ppp/vj.c:48:1:vj_compress_init	0	static
+C:/Dev/DEMO-CERTIFY-BOOTSTRAPPING/Middlewares/Third_Party/LwIP/src/netif/ppp/vj.c:160:1:vj_compress_tcp	72	static
+C:/Dev/DEMO-CERTIFY-BOOTSTRAPPING/Middlewares/Third_Party/LwIP/src/netif/ppp/vj.c:448:1:vj_uncompress_err	0	static
+C:/Dev/DEMO-CERTIFY-BOOTSTRAPPING/Middlewares/Third_Party/LwIP/src/netif/ppp/vj.c:459:1:vj_uncompress_uncomp	24	static
+C:/Dev/DEMO-CERTIFY-BOOTSTRAPPING/Middlewares/Third_Party/LwIP/src/netif/ppp/vj.c:497:1:vj_uncompress_tcp	48	static

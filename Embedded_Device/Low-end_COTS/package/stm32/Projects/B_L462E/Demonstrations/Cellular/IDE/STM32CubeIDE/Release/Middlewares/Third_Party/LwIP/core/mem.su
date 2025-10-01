@@ -1,0 +1,5 @@
+C:/Dev/DEMO-CERTIFY-BOOTSTRAPPING/Middlewares/Third_Party/LwIP/src/core/mem.c:516:1:mem_init	8	static
+C:/Dev/DEMO-CERTIFY-BOOTSTRAPPING/Middlewares/Third_Party/LwIP/src/core/mem.c:617:1:mem_free	32	static
+C:/Dev/DEMO-CERTIFY-BOOTSTRAPPING/Middlewares/Third_Party/LwIP/src/core/mem.c:699:1:mem_trim	48	static
+C:/Dev/DEMO-CERTIFY-BOOTSTRAPPING/Middlewares/Third_Party/LwIP/src/core/mem.c:831:1:mem_malloc	40	static
+C:/Dev/DEMO-CERTIFY-BOOTSTRAPPING/Middlewares/Third_Party/LwIP/src/core/mem.c:999:1:mem_calloc	16	static

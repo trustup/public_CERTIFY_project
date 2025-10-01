@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Release Notes for X-CUBE-CELLULAR Middleware</title>
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+  </style>
+  <link rel="stylesheet" href="_htmresc/mini-st_2020.css" />
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+  <link rel="icon" type="image/x-icon" href="_htmresc/favicon.png" />
+</head>
+<body>
+<div class="row">
+<div class="col-sm-12 col-lg-4">
+<center>
+<h1 id="release-notes-for-x-cube-cellular-middleware-cube-logo">Release Notes for <mark>X-CUBE-CELLULAR Middleware</mark> <a href="https://www.st.com/en/ecosystems/stm32cube-expansion-software.html" class="logo"><img src="_htmresc/Label_STM32CubeExpansion.png" alt="Cube logo" /></a></h1>
+<p>Copyright © 2020 STMicroelectronics<br />
+Microcontrollers Division - Application Team</p>
+<a href="https://www.st.com" class="logo"><img src="_htmresc/st_logo_2020.png" alt="ST logo" /></a>
+</center>
+<h1 id="license">License</h1>
+<p>This software package is licensed under ST license SLA0044 (the “License”). You may not use this package except in compliance with the License. You may obtain a copy of the License at: <a href="http://www.st.com/SLA0044">SLA0044</a>.</p>
+<h1 id="purpose">Purpose</h1>
+<p>Overview of the <mark>X-CUBE-CELLULAR Middleware</mark> (Core of the STM32 Cellular software expansion for STM32Cube)</p>
+<center>
+<a href="https://www.st.com" class="logo"><img src="_htmresc/archi_diagram.png" alt="ST logo" /></a>
+</center>
+<ul>
+<li><p>The Cellular Middleware is the SW stack which allows to drive cellular modems from STM32 MCU</p></li>
+<li><p>User can choose between IP stack in STM32 (LwIP) or in modem (called modem socket mode) thanks to a compiler switch</p></li>
+<li><p>AT is an AT command handler, it is splitted in 2 parts, core (modem agnostic part, generic) and custom (one dedicated part per modem)</p></li>
+<li><p>Upper layers API is composed of COM, Data Cache and Cellular APIs</p></li>
+<li><p>The Cellular Middleware is compliant with upper layer:Network library middleware</p></li>
+<li><p>Reminder: The Cellular middleware is compliant with MISRA-C®:2012 and checked against a static analysis tool to eliminate run-time errors. Reports are available on demand under NDA.</p></li>
+<li><p>Note the NIFMAN task has been integrated in Cellular service task</p></li>
+<li><p>Note UI Client has been added for L462</p></li>
+<li><p>List of references to user documents</p>
+<ul>
+<li><a href="https://wiki.st.com/stm32mcu/wiki/Cellular_LTE_CatM_/_NBIoT_overview">Cellular STMicroelectronics MCU Wiki</a> - ST Wiki dedicated to MCU, Cellular page</li>
+<li><a href="https://www.st.com/resource/en/data_brief/x-cube-cellular.pdf">DB3582</a> - Data Brief of the Cellular connectivity software expansion for STM32Cube</li>
+<li><a href="https://www.st.com/resource/en/user_manual/dm00610471-getting-started-with-the-xcubecellular-cellular-connectivity-expansion-package-for-stm32cube-stmicroelectronics.pdf">UM2567</a> - Getting started with the X-CUBE-CELLULAR cellular connectivity Expansion Package for STM32Cube</li>
+<li><a href="https://www.st.com/resource/en/user_manual/dm00511019-xcubecellular-cellular-connectivity-expansion-package-for-stm32cube-stmicroelectronics.pdf">UM2426</a> - X-CUBE-CELLULAR cellular connectivity Expansion Package for STM32Cube</li>
+</ul></li>
+</ul>
+</div>
+<section id="update-history" class="col-sm-12 col-lg-8">
+<h1>Update History</h1>
+<div class="collapse">
+<input type="checkbox" id="collapse-section3" aria-hidden="true"> <label for="collapse-section3" aria-hidden="true">V5.2.0 / 30-Sept-2020</label>
+<div>
+<h2 id="main-changes">Main Changes</h2>
+<p>This V5.2.0 adds the following features:</p>
+<ul>
+<li>Unofficial support of T1SE Discovery board</li>
+<li>Unofficial support of STWIN board</li>
+<li>Support of RTOSAL (CMSIS OS V1 / V2 Abstraction Layer)</li>
+<li>APN automatic selection</li>
+<li>LTE Bands &amp; Radio Access Technology selection</li>
+<li>COM_ICC Interface, renaming of COM_SIM and add the support of eSE – embedded Secure Element</li>
+<li>UI Client added for L462 to support Display and Led</li>
+<li>Cellperf integrated to Echo Client</li>
+</ul>
+<p>Note, if the user application uses printf functions, heap must be adapted to avoid crash</p>
+<p>In case of issues and no idea, keep in mind that fully reset the flash using STM32CubeProgrammer could help. Indeed mixing FW versions with different boot menu versions could lead to instabilities.</p>
+<p>For modem information see modems Release Note located here : Drivers\BSP\X_STMOD_PLUS_MODEMS\</p>
+<h2 id="bug-fixes">Bug fixes</h2>
+<ul>
+<li>Network registration sometime blocks</li>
+<li>Memory overwrite in TLS wrapper</li>
+<li>Change default timer for public delivery</li>
+<li>Minor fixes about MQTT application configuration</li>
+<li>MISRA, CodeSonar &amp; CodeReview corrections</li>
+</ul>
+<h2 id="known-limitations">Known Limitations</h2>
+<ul>
+<li>LwIP suspend/resume not stable (no pooling, no SIM access, no modem reboot detection …)</li>
+<li>MQTT in LwIP, sometime issue during handshake TLS</li>
+<li>Interfaces com_send, com_sendto or com_recv, com_recvfrom; even if application use MSG_DONTWAIT, application can be blocked on Mutex pre-emption if a command is already in progress at AT level.</li>
+<li>UDP in not-connected mode (normal UDP mode) is not yet supported by Sequans GM01Q modem FW (sendto and recvfrom not supported)</li>
+<li>For STM32CubeIDE in Lwip configuration, Warnings in ThirdParty Lwip (pppos.h)</li>
+<li>For MDK_ARM in LwIP, warning in Middlewares_Party.c</li>
+<li>Automatic APN selection is embedded but for applications (MQTT) that use Network_Library layer, APN must be set thanks to boot menu (like before)</li>
+</ul>
+<h2 id="memory-footprint">Memory footprint</h2>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Image decription</th>
+<th style="text-align: left;">Flash</th>
+<th style="text-align: left;">RAM</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Disco L496 – BG96 – LwIP</td>
+<td style="text-align: left;">217593</td>
+<td style="text-align: left;">94472</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Disco L496 – BG96 –Socket</td>
+<td style="text-align: left;">162091</td>
+<td style="text-align: left;">50405</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Disco L496 – UG96 – LwIP</td>
+<td style="text-align: left;">276816</td>
+<td style="text-align: left;">94172</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Disco L496 – UG96 –Socket</td>
+<td style="text-align: left;">201275</td>
+<td style="text-align: left;">50124</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Disco L496 – GM01Q – LwIP</td>
+<td style="text-align: left;">198049</td>
+<td style="text-align: left;">94304</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Disco L496 – GM01Q –Socket</td>
+<td style="text-align: left;">139251</td>
+<td style="text-align: left;">50237</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Disco L475 – GM01Q –Socket</td>
+<td style="text-align: left;">136811</td>
+<td style="text-align: left;">47045</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Disco L475 – BG96 –Socket</td>
+<td style="text-align: left;">159663</td>
+<td style="text-align: left;">47213</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Disco L496 – T1SC – LwIP</td>
+<td style="text-align: left;">205629</td>
+<td style="text-align: left;">94297</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Disco L496 – T1SC –Socket</td>
+<td style="text-align: left;">149999</td>
+<td style="text-align: left;">50230</td>
+</tr>
+</tbody>
+</table>
+<h2 id="hw-supported">HW supported</h2>
+<ul>
+<li>P-L496G-CELL01 + (optionnaly) X-NUCLEO-IKS01A2</li>
+<li>P-L496G-CELL02 + (optionnaly) X-NUCLEO-IKS01A2</li>
+<li>32L496GDISCOVERY + (optionnaly) X-NUCLEO-IKS01A2 + MB1329B (with UG96 or BG96)</li>
+<li>32L496GDISCOVERY + (optionnaly) X-NUCLEO-IKS01A2 + GM01Q-STMOD</li>
+<li>32L496GDISCOVERY + (optionnaly) X-NUCLEO-IKS01A2 + EVK T1SC (Unofficial)</li>
+<li>B-L475-IOT01A + X-NUCLEAO-STMODA1 + MB1329B (With BG96)</li>
+<li>B-L475-IOT01A + X-NUCLEAO-STMODA1 + GM01Q-STMOD</li>
+<li>STWIN + GMS01Q (Unofficial)</li>
+<li>STWIN + BG96 (Unofficial)</li>
+<li>B-L462E-CELL1 (Unoffical)</li>
+</ul>
+<p>Note:</p>
+<ul>
+<li>MB1329B is Quectel UG96 or BG96 module on STMod+ board (same board as modem one in P-L496G-CELL01/CELL02)</li>
+<li>GM01Q-STMOD is Sequans GM01Q/GMS01Q module on STMod+ board</li>
+<li>X-NUCLEO-IKS01A2 is a X-NUCLEO with sensors, optionnaly used with Discovery L496 which is sensorless</li>
+<li>EVK T1SC is a Murata board (EValuation Kit)</li>
+</ul>
+</div>
+</div>
+<div class="collapse">
+<input type="checkbox" id="collapse-section2" aria-hidden="true"> <label for="collapse-section2" aria-hidden="true">V5.1.0 / 24-Apr-2020</label>
+<div>
+<h2 id="main-changes-1">Main Changes</h2>
+<p>This V5.1.0 adds the following features:</p>
+<ul>
+<li>Support of T1SC EVK from Murata on Discovery L496</li>
+<li>New MQTT Client application with MbedTLS usage for mqtts</li>
+<li>New COM client application (For SIM through ISO interface from modem)</li>
+<li>New Custom client application, an empty skeleton application pre-integrated (easy way to integrate application code)</li>
+<li>Cellular Service Task reworked for improvements</li>
+<li>Directory tree improvement and r/w attribute in the delivery</li>
+<li>Regroup threads configuration into one file</li>
+</ul>
+<p>Note, if the user application uses printf functions, heap must be adapted to avoid crash</p>
+<p>In case of issues and no idea keep in mind that fully reset the flash using STM32CubeProgrammer could help. Indeed mixing FW versions with different boot menu versions could lead to instabilities.</p>
+<p>For modem information see modems Release Note located here : Drivers\BSP\X_STMOD_PLUS_MODEMS\</p>
+<h2 id="bug-fixes-1">Bug fixes</h2>
+<ul>
+<li>headers updated for a better .chm file</li>
+<li>FreeRTOS application init / start call to add</li>
+<li>Move cellular configuration in plt_cellular_config.h file</li>
+<li>Avoid setting trace off when help display</li>
+<li>trace on is not working is some cases</li>
+</ul>
+<h2 id="known-limitations-1">Known Limitations</h2>
+<ul>
+<li>T1SC with no HW flow control is not stable after running few hours</li>
+<li>LwIP suspend/resume not stable</li>
+<li>MQTT in LwIP, sometime issue during handshake TLS</li>
+<li>On GM01Q sometimes when multiple sockets are open simultaneously, it can stalled after about 1h (no issue with only 1 socket at a time)</li>
+<li>Modem FW version to check at boot</li>
+<li>Low Power in STM32 and Modem (PSM, eDRX feature)</li>
+<li>For Echo, HTTP, MQTT, Ping, menu, DC_emul … (not core of the Cellular MW) only nominal use cases are tested</li>
+<li>Interfaces com_send, com_sendto or com_recv, com_recvfrom; even if application use MSG_DONTWAIT, application can be blocked on Mutex pre-emption if a command is already in progress at AT level.</li>
+<li>Only one PING at a time (modem restriction applicable to LwIP too)</li>
+<li>UDP in not-connected mode is not yet supported by Sequans GM01Q modem</li>
+<li>when UART error callback is called, IPC should inform AT CORE that an error as occurred</li>
+<li>Network notifications with UNKNOWN status (CREG/CGREG/CEREG) must not be considered as error case</li>
+</ul>
+<h2 id="memory-footprint-1">Memory footprint</h2>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Image decription</th>
+<th style="text-align: left;">Flash</th>
+<th style="text-align: left;">RAM</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Disco L496 – BG96 – LwIP</td>
+<td style="text-align: left;">219070</td>
+<td style="text-align: left;">93274</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Disco L496 – BG96 - Socket</td>
+<td style="text-align: left;">163280</td>
+<td style="text-align: left;">49199</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Disco L496 – UG96 – LwIP</td>
+<td style="text-align: left;">277931</td>
+<td style="text-align: left;">92990</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Disco L496 – UG96 - Socket</td>
+<td style="text-align: left;">202940</td>
+<td style="text-align: left;">48934</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Disco L496 – GM01Q – LwIP</td>
+<td style="text-align: left;">203226</td>
+<td style="text-align: left;">93110</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Disco L496 – GM01Q - Socket</td>
+<td style="text-align: left;">143932</td>
+<td style="text-align: left;">49035</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Disco L475 – GM01Q - Socket</td>
+<td style="text-align: left;">141550</td>
+<td style="text-align: left;">47335</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Disco L475 – BG96 - Socket</td>
+<td style="text-align: left;">160934</td>
+<td style="text-align: left;">47499</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Disco L496 – T1SC – LwIP</td>
+<td style="text-align: left;">208182</td>
+<td style="text-align: left;">93107</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Disco L496 – T1SC - Socket</td>
+<td style="text-align: left;">152212</td>
+<td style="text-align: left;">49032</td>
+</tr>
+</tbody>
+</table>
+<h2 id="hw-supported-1">HW supported</h2>
+<ul>
+<li>P-L496G-CELL01 + (optionnaly) X-NUCLEO-IKS01A2</li>
+<li>P-L496G-CELL02 + (optionnaly) X-NUCLEO-IKS01A2</li>
+<li>32L496GDISCOVERY + (optionnaly) X-NUCLEO-IKS01A2 + MB1329B (with UG96 or BG96)</li>
+<li>32L496GDISCOVERY + (optionnaly) X-NUCLEO-IKS01A2 + GM01Q-STMOD</li>
+<li>32L496GDISCOVERY + (optionnaly) X-NUCLEO-IKS01A2 + EVK T1SC</li>
+<li>B-L475-IOT01A + X-NUCLEAO-STMODA1 + MB1329B (With BG96)</li>
+<li>B-L475-IOT01A + X-NUCLEAO-STMODA1 + GM01Q-STMOD</li>
+</ul>
+<p>Note:</p>
+<ul>
+<li>MB1329B is Quectel UG96 or BG96 module on STMod+ board (same board as modem one in P-L496G-CELL01/CELL02)</li>
+<li>GM01Q-STMOD is Sequans GM01Q module on STMod+ board</li>
+<li>X-NUCLEO-IKS01A2 is a X-NUCLEO with sensors, optionnaly used with Discovery L496 which is sensorless</li>
+<li>EVK T1SC is a Murata board (EValuation Kit)</li>
+</ul>
+</div>
+</div>
+<div class="collapse">
+<input type="checkbox" id="collapse-section1" aria-hidden="true"> <label for="collapse-section1" aria-hidden="true">V5.0.0 / 11-Oct-2019</label>
+<div>
+<h2 id="main-changes-2">Main Changes</h2>
+<p>This V5.0.0 adds the following features:</p>
+<ul>
+<li>Network Library layer added (above V4.0.0). The goal of this component is to standardize network API between Wi-Fi, Ethernet and cellular media.</li>
+<li>Existing features improvements</li>
+<li>Minor features added</li>
+<li>Boot menu and trace improvements</li>
+</ul>
+<p>Note, if the user application uses printf functions heap must be adapted to avoid crash</p>
+<p>For modem information see Supported modems Release Note</p>
+<p>Previous verion history:</p>
+<ul>
+<li>V1.1.1 (W1826) : Original delivery for P-L496G-CELL01 and CELL02 HWs + patches</li>
+<li>V2.0.0 (W1845) : Disco L475 IoT Node support added + features improvements</li>
+<li>V3.0.0 (W1907) : Sequans GM01Q module support added + features improvements + Echo client application</li>
+<li>V4.0.0 (W1921) : Maintenance release</li>
+</ul>
+<h2 id="bug-fixes-2">Bug fixes</h2>
+<ul>
+<li>Default application selected by menu</li>
+<li>Change pooling period in Grovestream provided blueprint</li>
+<li>Move to latest FreeRTOS version 10.2.1</li>
+<li>build issues with USE_PRINTF=1</li>
+</ul>
+<h2 id="known-limitations-2">Known Limitations</h2>
+<ul>
+<li>FreeRTOS configuration improvement for memory issues detections</li>
+<li>New optional boot mode and voucher read from menu</li>
+<li>Use Utilities/misc tools instead of sprintf</li>
+<li>Modem FW version to check at boot</li>
+<li>Low Power in STM32 and Modem (PSM, eDRX feature)</li>
+<li>For Echo, Http, Ping, menu, DC_emul … (not core of the Cellular MW) only nominal use cases are tested</li>
+<li>UG96 HW flow control is by default not activated, if activated could lead sometime to issues</li>
+<li>Interfaces com_send, com_sendto or com_recv, com_recvfrom; even if application use MSG_DONTWAIT, application can be blocked on Mutex pre-emption if a command is already in progress at AT level.</li>
+<li>Only one PING at a time (modem restriction applicable to LwIP too)</li>
+<li>UDP in not-connected mode is not yet supported by Sequans modem</li>
+</ul>
+<h2 id="memory-footprint-2">Memory footprint</h2>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Image decription</th>
+<th style="text-align: left;">Flash</th>
+<th style="text-align: left;">RAM</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Disco L496 - BG96 - LwIP</td>
+<td style="text-align: left;">202938</td>
+<td style="text-align: left;">88923</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Disco L496 - BG96 - Modem socket</td>
+<td style="text-align: left;">165404</td>
+<td style="text-align: left;">46301</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Disco L496 - UG96 - LwIP</td>
+<td style="text-align: left;">202938</td>
+<td style="text-align: left;">88923</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Disco L496 - UG96 - Modem socket</td>
+<td style="text-align: left;">146550</td>
+<td style="text-align: left;">46047</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Disco L496 - GM01Q - LwIP</td>
+<td style="text-align: left;">205708</td>
+<td style="text-align: left;">89015</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Disco L496 - GM01Q - Modem socket</td>
+<td style="text-align: left;">145884</td>
+<td style="text-align: left;">46137</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Disco IoT node - BG96 - Modem socket</td>
+<td style="text-align: left;">163364</td>
+<td style="text-align: left;">46273</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Disco IoT node - GM01Q - Modem socket</td>
+<td style="text-align: left;">143808</td>
+<td style="text-align: left;">46109</td>
+</tr>
+</tbody>
+</table>
+<h2 id="hw-supported-2">HW supported</h2>
+<ul>
+<li>P-L496G-CELL01</li>
+<li>P-L496G-CELL02</li>
+<li>32L496GDISCOVERY + (optionnaly)X-NUCLEO-IKS01A2 + MB1329B</li>
+<li>32L496GDISCOVERY + (optionnaly)X-NUCLEO-IKS01A2 + GM01Q-STMOD</li>
+<li>B-L475-IOT01A + X-NUCLEAO-STMODA1 + MB1329B</li>
+<li>B-L475-IOT01A + X-NUCLEAO-STMODA1 + GM01Q-STMOD</li>
+</ul>
+<p>Note:</p>
+<ul>
+<li>MB1329B is Quectel BG96 module on STMod+ board</li>
+<li>GM01Q-STMOD is Sequans GM01Q module on STMod+ board</li>
+<li>X-NUCLEO-IKS01A2 is a X-NUCLEO with sensors, optionnaly used with Discovery L496 which is sensorless</li>
+</ul>
+</div>
+</div>
+</section>
+</div>
+<footer class="sticky">
+For complete documentation on <mark>STM32</mark> microcontrollers please visit <a href="http://www.st.com/stm32" class="uri">http://www.st.com/stm32</a>
+</footer>
+</body>
+</html>

@@ -1,0 +1,7 @@
+C:/Dev/DEMO-CERTIFY-BOOTSTRAPPING/Middlewares/ST/STM32_Cellular/Interface/Com/Src/com_icc.c:381:16:com_icc_use_icc_desc	7
+C:/Dev/DEMO-CERTIFY-BOOTSTRAPPING/Middlewares/ST/STM32_Cellular/Interface/Com/Src/com_icc.c:145:13:com_icc_datacache_cb	8
+C:/Dev/DEMO-CERTIFY-BOOTSTRAPPING/Middlewares/ST/STM32_Cellular/Interface/Com/Src/com_icc.c:653:9:com_icc	10
+C:/Dev/DEMO-CERTIFY-BOOTSTRAPPING/Middlewares/ST/STM32_Cellular/Interface/Com/Src/com_icc.c:733:9:com_icc_generic_access	23
+C:/Dev/DEMO-CERTIFY-BOOTSTRAPPING/Middlewares/ST/STM32_Cellular/Interface/Com/Src/com_icc.c:805:9:com_closeicc	5
+C:/Dev/DEMO-CERTIFY-BOOTSTRAPPING/Middlewares/ST/STM32_Cellular/Interface/Com/Src/com_icc.c:825:6:com_icc_init	2
+C:/Dev/DEMO-CERTIFY-BOOTSTRAPPING/Middlewares/ST/STM32_Cellular/Interface/Com/Src/com_icc.c:863:6:com_icc_start	1

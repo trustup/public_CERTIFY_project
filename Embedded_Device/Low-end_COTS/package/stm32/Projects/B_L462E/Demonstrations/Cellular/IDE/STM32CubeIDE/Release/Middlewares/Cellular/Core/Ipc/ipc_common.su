@@ -1,0 +1,12 @@
+C:/Dev/DEMO-CERTIFY-BOOTSTRAPPING/Middlewares/ST/STM32_Cellular/Core/Ipc/Src/ipc_common.c:48:14:IPC_init	0	static
+C:/Dev/DEMO-CERTIFY-BOOTSTRAPPING/Middlewares/ST/STM32_Cellular/Core/Ipc/Src/ipc_common.c:90:14:IPC_deinit	0	static
+C:/Dev/DEMO-CERTIFY-BOOTSTRAPPING/Middlewares/ST/STM32_Cellular/Core/Ipc/Src/ipc_common.c:117:14:IPC_open	16	static
+C:/Dev/DEMO-CERTIFY-BOOTSTRAPPING/Middlewares/ST/STM32_Cellular/Core/Ipc/Src/ipc_common.c:167:14:IPC_close	0	static
+C:/Dev/DEMO-CERTIFY-BOOTSTRAPPING/Middlewares/ST/STM32_Cellular/Core/Ipc/Src/ipc_common.c:188:14:IPC_reset	0	static
+C:/Dev/DEMO-CERTIFY-BOOTSTRAPPING/Middlewares/ST/STM32_Cellular/Core/Ipc/Src/ipc_common.c:209:14:IPC_abort	0	static
+C:/Dev/DEMO-CERTIFY-BOOTSTRAPPING/Middlewares/ST/STM32_Cellular/Core/Ipc/Src/ipc_common.c:230:14:IPC_select	0	static
+C:/Dev/DEMO-CERTIFY-BOOTSTRAPPING/Middlewares/ST/STM32_Cellular/Core/Ipc/Src/ipc_common.c:251:15:IPC_get_other_channel	0	static
+C:/Dev/DEMO-CERTIFY-BOOTSTRAPPING/Middlewares/ST/STM32_Cellular/Core/Ipc/Src/ipc_common.c:263:14:IPC_send	0	static
+C:/Dev/DEMO-CERTIFY-BOOTSTRAPPING/Middlewares/ST/STM32_Cellular/Core/Ipc/Src/ipc_common.c:285:14:IPC_receive	0	static
+C:/Dev/DEMO-CERTIFY-BOOTSTRAPPING/Middlewares/ST/STM32_Cellular/Core/Ipc/Src/ipc_common.c:310:14:IPC_streamReceive	0	static
+C:/Dev/DEMO-CERTIFY-BOOTSTRAPPING/Middlewares/ST/STM32_Cellular/Core/Ipc/Src/ipc_common.c:339:6:IPC_DumpRXQueue	0	static,ignoring_inline_asm

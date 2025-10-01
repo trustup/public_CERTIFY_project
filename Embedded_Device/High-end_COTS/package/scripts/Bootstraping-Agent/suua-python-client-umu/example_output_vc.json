@@ -1,0 +1,30 @@
+{
+    "@context": [
+        "https://www.w3.org/2018/credentials/v1",
+        "https://www.w3.org/2018/credentials/examples/v1",
+        "https://ssiproject.inf.um.es/security/psms/v1",
+        "https://ssiproject.inf.um.es/poc/context/v1"
+    ],
+    "credentialSubject": {
+        "class": "TESTCLASS",
+        "mac": "12:23:45:67",
+        "name": "TESTNAME"
+    },
+    "expirationDate": "2024-03-23T13:25:29.881593715Z",
+    "id": "did:fabric:oEcvzmwExknEKBhYbsqhRaeB5yiS6KijuByW0F3tIBo7265211",
+    "issuanceDate": "2024-03-22T09:38:49.881593715Z",
+    "issuer": "did:fabric:oEcvzmwExknEKBhYbsqhRaeB5yiS6KijuByW0F3tIBo",
+    "proof": {
+        "created": "2024-03-22T09:38:49.903074282Z",
+        "proofPurpose": "assertionMethod",
+        "proofValue": "AAUbAgQO1E9/iXcKsgOESgwdrj1PcLdF66jDq4Ce55ymoNio+wI3gWK7B2w6XPw8rGkZ5ZACgiKIiwLaM0IEZeiLe8wq9TQ6M1M9PJD4xi/59pgNT7HEeZeTrvruODgsIPdhF0ET0YB3jT0U0diz/8cpxcwqiu+l5XvdQO6zTdP2IlZxK+b+rGM4roB4H+ATYg2CLLwZmo9VWswiN0dGiE2mYtgH1h6LV6f6T+gtW2uj4cS0F1XOEox5C/+cQtJPragYLN4EBxlVlLSkD5FAIU8BOtasTVEInnNdumWkStVVa3UikV9e9U2tpFyZ9hzLU3LOmkEXGDDRcixNFGA+ZPB9vBLWgm5axh2gdWe6I1Lw+lyV16tjurTXI2yVsS2zUPBHAKBZGXkxpExZKdfjp1IN1dxqUaKtDsrDejB2UuEbPjNcxqDWZiCHd/T8tDW3XHj8YskKBbN6oHwM2Lx1y5vbag4dRNFHxNVrnncvJl92TK9bPGyhSgm5I9qXWxp9LIRS1PelVXmYg4T20bCrwcJqfe/nEmBZ3QbBpTsi/lNA5t0zF8qob89YDQEVFHLs2Z7eVOXeAAAAAAAAAAAAAAAAAAAAAGoPAKgUokfDaNYYQk/A0gOmPHuUNl3QcVCbUh5otK1UAAAAAAAAAAAAAAAAAAAAAHNdFQkQS0oXaujeNIlzLL/zV58QDwzl+sz37IDbxmbSAAAAAAAAAAAAAAAAAAAAAFTvojEmxFVDzUi+vlZUixt2yAZJVDh+Vgn2I6qSuc/gAAAAAAAAAAAAAAAAAAAAAAodItuNjz43PLyQTykEPBtCPmcDBvkw/cxnDFQG3eDm",
+        "type": "PsmsBlsSignatureProof2022",
+        "verificationMethod": "did:fabric:oEcvzmwExknEKBhYbsqhRaeB5yiS6KijuByW0F3tIBo#wb0ewWZyWqST42KAzKovy50j-w17viwkCaXIwAcA2BU",
+        "nonce": "Tm9zIHNpZ25hIHNlcXVpbXVyLCBxdW9jdW1xdWUgbm9zIGR1Y3VudA=="
+    },
+    "type": [
+        "VerifiableCredential",
+        "PocCredential",
+        "VerifiablePresentation"
+    ]
+}

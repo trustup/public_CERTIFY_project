@@ -1,0 +1,7 @@
+/home/jose/optee/optee_examples/myexample/CMakeFiles/optee_example_myexample.dir
+/home/jose/optee/optee_examples/myexample/CMakeFiles/edit_cache.dir
+/home/jose/optee/optee_examples/myexample/CMakeFiles/rebuild_cache.dir
+/home/jose/optee/optee_examples/myexample/CMakeFiles/list_install_components.dir
+/home/jose/optee/optee_examples/myexample/CMakeFiles/install.dir
+/home/jose/optee/optee_examples/myexample/CMakeFiles/install/local.dir
+/home/jose/optee/optee_examples/myexample/CMakeFiles/install/strip.dir

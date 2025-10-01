@@ -1,0 +1,97 @@
+.TH ACEUNIT "1" "March 2023" "AceUnit 3.0" "User Commands"
+.SH NAME
+aceunit \- generate test fixtures from object files
+.SH SYNOPSIS
+.B aceunit
+[\fI\,OPTION\/\fR]... [\fI\,OBJECT_FILE\/\fR]...
+.SH DESCRIPTION
+.\" Add any additional description here
+.PP
+Scans object files for test cases and generates the fixtures code on stdout.
+.SH OPTIONS
+.TP
+\fB\-b\fR \fI\,BINARY\/\fR
+Use \fI\,BINARY\/\fR instead of the default for the selected tool.
+Example: \fB-b m68k-amigaos-objdump\fR
+.TP
+\fB\-h\fR
+Display help text and stop.
+.TP
+\fB\-n\fR \fI\,NAME\/\fR
+Use \fI\,NAME\/\fR instead of \fBfixtures\fR as the symbol name for the fixture table.
+.TP
+\fB\-p\fR \fI\,PATTERN\/\fR
+Prefix test functions with the specified \fI\,PATTERN\/\fR;
+\fI\,PATTERN\/\fR needs to be understood by grep.
+Example: \fB-p '[^_\\+_'\fR to allow any pattern prefix followed by an underscore.
+.TP
+\fB\-s\fR \fI\,PATTERN\/\fR
+Strip this prefix \fI\,PATTERN\/\fR from symbols before using them;
+\fI\,PATTERN\/\fR needs to be undestood by grep.
+Example: \fB-s _\fR to strip a leading underscore from the symbols names.
+.TP
+\fB\-t\fR \fI\,TOOL\/\fR
+Use \fI\,TOOL\/\fR for displaying the symbol table.
+Defaults to objdump.
+Built-in alternatives: nm, readelf.
+.TP
+\fB\-v\fR
+Print version information and stop.
+.SH DEPENDENCIES
+\fBaceunit\fR requires \fBobjdump\fR, \fBreadelf\fR, or \fBnm\fR to work.
+.SH EXAMPLES
+.TP
+\fBaceunit \-p '[^_]\+_' *_test.o >aceunit.c\fR
+scans all object files matching the pattern \fB*_test.o\fR and write the found fixtures to \fBaceunit.c\fR.
+.TP
+\fBaceunit \-t nm \-b m68k-amigaos-nm \-s _ *_test.o >aceunit.c\fR
+scans all object files matching the pattern \fB*_test.o\fR using \fBnm\fR with \fBm68k-amigaos-nm\fR as the binary, stripping leading \fB_\fR from the symbol names, and write the found fixtures to \fBaceunit.c\fR.
+.TP
+\fBaceunit \-t readelf a.o b.o c.o >aceunit.c\fR
+scans the object files \fBa.o\fR, \fBb.o\fR, and \fBc.o\fR and write the found fixtures to \fBaceunit.c\fR.
+.SH USAGE IN MAKEFILES
+.TP
+AceUnit can easily be used in a \fBMakefile\fR.  Here are some hints of how to do that.
+.SS Makefile Example
+.EX
+ACEUNIT:=aceunit
+
+\&.PHONY: all
+all: test
+
+testcases:=$(patsubst %.c,%.o,$(wildcard *_test.c))
+
+fixtures.c: $(testcases)
+	$(ACEUNIT) $(ACEUNIT_FLAGS) $^ >$@
+
+unittest: LOADLIBES+=-laceunit-setjmp
+unittest: $(testcases) $(objects) fixtures.o
+
+\&.PHONY: test
+test:
+	./unittest
+.EE
+.SH LIMITATIONS
+The \fBaceunit\fR program cannot operate on \fBstdin\fR.
+This is not really a limitation of AceUnit itself but rather a limitation of the downstream tools \fBnm\fR, \fBobjdump\fR, and \fBreadelf\fR.
+.SH AUTHOR
+Written by Christian Hujer.
+.SH "REPORTING BUGS"
+AceUnit online help: <https://nelkinda.com/products/aceunit/>
+.SH COPYRIGHT
+Copyright \(co 2007, 2023 Christian Hujer
+License BSD
+.br
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.
+.SH "SEE ALSO"
+\&\fBobjdump\fR\|(1),
+\&\fBreadelf\fR\|(1),
+\&\fBnm\fR\|(1),
+\&\fBabort\fR\|(3),
+\&\fBassert\fR\|(3),
+\&\fBlongjmp\fR\|(3),
+\&\fBsetjmp\fR\|(3),
+\&\fBfork\fR\|(2),
+\&\fBsignal\fR\|(2),
+Full documentation: <https://nelkinda.com/products/aceunit/>

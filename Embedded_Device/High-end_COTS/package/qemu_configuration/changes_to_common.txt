@@ -1,0 +1,2 @@
+HOSTFWD := ,hostfwd=tcp::4444-:4444,hostfwd=tcp::5025-:5025,hostfwd=tcp::4321-:4321
+QEMU_VIRTFS_AUTOMOUNT=y

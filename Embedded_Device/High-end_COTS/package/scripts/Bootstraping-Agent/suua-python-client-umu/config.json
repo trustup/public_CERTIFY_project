@@ -1,0 +1,12 @@
+{
+  "suua": {
+    "device_key": "e58b41c4252e2a2a2ac3a03940458cb214cf119dd312c1331915d92238b59cca",
+    "customer_key": "50c33604d74be9fde8683ed28112640e"
+  },
+  "device": {
+    "mac": "CC:12:CC:22:C4:16",
+    "firmware_version": "1.0",
+    "name": "demo-device-rb-123",
+    "rollout_id": 80
+  }
+}

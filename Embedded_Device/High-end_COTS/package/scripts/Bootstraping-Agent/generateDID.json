@@ -1,0 +1,20 @@
+{
+    "keys": [
+        {
+            "keyType": {
+                "keytype": "Ed25519VerificationKey2018"
+            },
+            "purpose": "Authentication"
+        },
+        {
+            "keyType": {
+                "keytype": "Bls12381G1Key2022",
+                "attrs": [
+                    "5"
+                ]
+            },
+            "purpose": "AssertionMethod"
+        }
+    ],
+    "name": "ee140554-1469-11f0-a19c-525400123456"
+}

@@ -1,0 +1,33 @@
+{
+    "credential": {
+        "@context": [
+            "https://www.w3.org/2018/credentials/v1",
+            "https://www.w3.org/2018/credentials/examples/v1",
+            "https://ssiproject.inf.um.es/security/psms/v1",
+            "https://ssiproject.inf.um.es/poc/context/v1"
+        ],
+        "credentialSubject": {
+            "class": "TESTCLASS",
+            "deviceDid": "TESTDID",
+            "mac": "CC:12:CC:22:C4:16",
+            "name": "demo-device-rb-123",
+            "pufId": "TESTPUFID"
+        },
+        "expirationDate": "2025-04-09T14:56:07.398349392Z",
+        "id": "did:fabric:NFWpd51REcbUE0bac43jORf6NspzHYJboOrORXGPuSI2873026",
+        "issuanceDate": "2025-04-08T11:09:27.398349392Z",
+        "issuer": "did:fabric:NFWpd51REcbUE0bac43jORf6NspzHYJboOrORXGPuSI",
+        "proof": {
+            "created": "2025-04-08T11:09:27.433321216Z",
+            "proofPurpose": "assertionMethod",
+            "proofValue": "BBmuYdnrfN8c7851VjNJTeiKxWCQEj2h6tH1dnOfjPQBeej6evOkxGUGqqn88qN9MRFpXRJg_5rf6VUWGdeh5IRKFPQknkV2GrmQAd0odf4zjGEBBpegRQ4jkqkKgKuAMQt9_yvUSdnceRx-RsvKMZ5iqH3rpKABWO9NFHquPFEQ5vFNXBI1sCkpUiJp6M5oihNc1cEy1-7gs5byiETyiab_1N-3yhVB8Wr1E72m18E_kbs3paCL5Wtq8yg9VVXzfQQVSVOa6mRbV4LflVMoOhEdfC218wMLL4zTKbQ78LK9nEtpfH9ZwcFPoZtX3i03igkXh86xMLd0rbcrrS_onhA0J3iA6SMvXKh2H3HmJaMgTpIU67DfvQob3GWVZE1WmVgXamETV3M9IttYSSIi6w0k8atPFyxcjNZXEd8Q_pVFXoVG4GXFMHLOwF6OkJC2Dg0K3QZmj50V3tYRAssxhtXd7UjmydrH9S-1lIamzx3ccc5s0j6QS_gWoKVr-6d_QSQCMUeh67RjafVwPW8XekeabFXN3HaUZshkVqYoqxt51YU384beND_OgYaNOtpQ2zc",
+            "type": "PsmsBlsSignature2022",
+            "verificationMethod": "did:fabric:NFWpd51REcbUE0bac43jORf6NspzHYJboOrORXGPuSI#XYuiEEiEocd3OrGkeyyzVE3tnbV0842KvuFYPtmRDZ4"
+        },
+        "type": [
+            "VerifiableCredential",
+            "PocCredential"
+        ]
+    },
+    "credStorageId": "did:fabric:NFWpd51REcbUE0bac43jORf6NspzHYJboOrORXGPuSI2873026"
+}

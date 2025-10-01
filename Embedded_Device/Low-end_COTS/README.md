@@ -1,63 +1,59 @@
-# [Component Name]
+# UC3 - Artwork Tracking
 
 ## Description
 
-[Provide a brief description of your component and its role within the specific CERTIFY domain.]
+This folder provides the code for the **artwork tracking use case**.
+UC3 leverages the **STM B-L462E-CELL1 development platform** for cellular IoT devices to:
+- Capture environmental sensor data from artworks.
+- Send the data to the **artwork tracking server**.
+- Integrate with other CERTIFY components, such as the **SIEM** and the **IDS**.
 
 ## Features
 
-List the main features of your component, for example:
-- [Feature 1: Brief description of what it does]
-- [Feature 2: Brief description of what it does]
-- [Feature 3: Brief description of what it does]
-- [Additional features as needed...]
+- **Environmental Sensor Data Collection**  
+  Collects sensor readings (e.g., temperature, humidity, etc.) from the STM board and transmits data over cellular networks.
+
+- **Integration with CERTIFY Ecosystem**  
+  Sends data to the artwork tracking server, SIEM, and IDS for monitoring and security analysis.  
 
 ## Usage
 
-Describe how to deploy and use your component:
+To deploy and use this component:
 
+- **Prerequisites and Dependencies**  
+  - STM B-L462E-CELL1 development board.  
+  - A SIM card and cellular connectivity.  
+  - Artwork tracking server running and accessible.  
+  - CERTIFY SIEM and IDS components.  
 
-Include:
-- Prerequisites and dependencies
-- Installation steps
-- Configuration options
-- Basic usage examples
-- Common operations
+- **Installation Steps**  
+  - Flash the provided code to the STM board.  
+  - Configure network credentials for cellular connectivity.  
+  - Connect the board to the server and verify communication.  
+
 
 ## Data
 
-The `data/` directory should contain:
-- [Data type 1: What kind of data should go here]
-- [Data type 2: What kind of data should go here]
-- [Additional data types as needed...]
+The `data/` directory contains:  
+- **ids_training_data_uc3.pcap** → Training data for the Network IDS.  
+- **snort_ids_logs.txt** → Example IDS logs generated from artwork tracking use case.  
+- **sample_artwork_tracking_logs.txt** → Sample sensor logs sent to the artwork tracking server.  
 
-Important: Document any specific data formats or structures required.
+> Sample data is provided in raw formats (PCAP for network traffic, TXT logs for IDS and artwork tracking system).  
 
 ## Package
 
-The `package/` directory should include:
-- Source code and/or executables
-- Deployment configurations
-- Installation scripts
-- Documentation
-- [Additional package contents as needed...]
-
-Specify any specific organization or structure requirements for your package.
+The `package/` directory includes:  
+- STM32 project code
 
 ## License
 
-This component is distributed under the terms of the project license agreement.
-[Include any additional component-specific licensing information]
+This component is distributed under the terms of the **project license agreement**. 
 
 ## Contact
 
-For project inquiries:
-- Project Coordinator: Antonio Skarmeta - skarmeta@um.es
-- Technical Coordinator: Stefano Sebastio - stefano.sebastio@collins.com
-- Repo Maintainer: Roberto Nardone - roberto.nardone@uniparthenope.it
+For project inquiries:  
+- Project Coordinator: **Antonio Skarmeta** - skarmeta@um.es  
+- Technical Coordinator: **Stefano Sebastio** - stefano.sebastio@collins.com  
+- Repo Maintainer: **Roberto Nardone** - roberto.nardone@uniparthenope.it
 
-## Notes
-
-- [Add any additional notes, warnings, or special considerations]
-- [Include information about known limitations or requirements]
-- [Add any other relevant information for implementers]

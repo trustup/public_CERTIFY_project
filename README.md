@@ -19,7 +19,7 @@ This repository contains the software components developed under the CERTIFY res
 
 ## Access
 
-This repository is private and shared with project reviewers for evaluation and feedback purposes.
+In line with CERTIFY’s Open Science approach, the project released its core software components to the public. These elements were prepared and published to support reuse, verification, and further research. This open release enables independent verification of the project outcomes, supports replication by researchers, and provides companies with a set of practical tools to integrate security features into their own systems. The use of permissive open-source licenses helps avoid vendor lock-in and encourages wider adoption and innovation in IoT security.
 
 ## Contact
 

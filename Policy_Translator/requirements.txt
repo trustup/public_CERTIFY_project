@@ -1,0 +1,5 @@
+bitarray==2.9.2
+dicttoxml==1.7.16
+pyangbind==0.8.5
+six==1.16.0
+xmltodict==0.13.0

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<mspl>
+  <name>
+    66179e1f-e0ba-4e32-b6eb-3601709059ef
+  </name>
+<configuration>
+<capability>
+  Filtering_L4
+</capability>
+<rule-set-configuration>
+  <name>
+    mspl_27b32eb9-904a-4c45-820b-ae5295bd674a
+</name>
+<configuration-rule>
+    <name>mud-128af1cb-ce22-4c0a-b1d7-ccfe4a3767b7-v1fr</name>
+    <isCNF>false</isCNF>
+    <external-data>
+      <priority>500</priority>
+    </external-data>
+    <configuration-action>
+      <filteringAction>
+        <filtering-action-type>ACCEPT</filtering-action-type>
+      </filteringAction>
+    </configuration-action>
+    <configuration-condition>
+      <filtering-configuration-condition>
+        <packet-filter-condition>
+          <source-port>502</source-port>
+        </packet-filter-condition>
+      </filtering-configuration-condition>
+    </configuration-condition>
+  </configuration-rule>
+  <configuration-rule>
+    <name>mud-128af1cb-ce22-4c0a-b1d7-ccfe4a3767b7-v1to</name>
+    <isCNF>false</isCNF>
+    <external-data>
+      <priority>500</priority>
+    </external-data>
+    <configuration-action>
+      <filteringAction>
+        <filtering-action-type>ACCEPT</filtering-action-type>
+      </filteringAction>
+    </configuration-action>
+    <configuration-condition>
+      <filtering-configuration-condition>
+        <packet-filter-condition>
+          <destination-port>502</destination-port>
+        </packet-filter-condition>
+      </filtering-configuration-condition>
+    </configuration-condition>
+  </configuration-rule>
+  <configuration-rule>
+    <name>mud-f361a0ed-562e-4e81-8893-3ab3e85218c3-v1to</name>
+    <isCNF>false</isCNF>
+    <external-data>
+      <priority>500</priority>
+    </external-data>
+    <configuration-action>
+      <filteringAction>
+        <filtering-action-type>ACCEPT</filtering-action-type>
+      </filteringAction>
+    </configuration-action>
+    <configuration-condition>
+      <filtering-configuration-condition>
+        <packet-filter-condition>
+          <destination-port>802</destination-port>
+        </packet-filter-condition>
+      </filtering-configuration-condition>
+    </configuration-condition>
+  </configuration-rule>
+  <configuration-rule>
+    <name>mud-f361a0ed-562e-4e81-8893-3ab3e85218c3-v1fr</name>
+    <isCNF>false</isCNF>
+    <external-data>
+      <priority>500</priority>
+    </external-data>
+    <configuration-action>
+      <filteringAction>
+        <filtering-action-type>ACCEPT</filtering-action-type>
+      </filteringAction>
+    </configuration-action>
+    <configuration-condition>
+      <filtering-configuration-condition>
+        <packet-filter-condition>
+          <source-port>802</source-port>
+        </packet-filter-condition>
+      </filtering-configuration-condition>
+    </configuration-condition>
+  </configuration-rule>
+
+</rule-set-configuration>
+</configuration>
+</mspl>

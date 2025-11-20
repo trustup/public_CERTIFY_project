@@ -1,0 +1,1099 @@
+INFO:root:Checking if some MUDFile content changes
+INFO:root:Checking TMUDFiles process complete
+INFO:root:TMUD Server is starting
+INFO:root:Subscribing to Kafka topic: TMM_THREATREQUEST
+INFO:root:Checking if some MUDFile content changes
+INFO:root:Checking TMUDFiles process complete
+INFO:root:TMUD Server is starting
+INFO:root:Subscribing to Kafka topic: TMM_THREATREQUEST
+INFO:root:Checking if some MUDFile content changes
+INFO:root:Checking TMUDFiles process complete
+INFO:root:Checking if some MUDFile content changes
+INFO:root:Checking TMUDFiles process complete
+INFO:root:Checking if some MUDFile content changes
+INFO:root:Checking TMUDFiles process complete
+INFO:root:Checking if some MUDFile content changes
+INFO:root:Checking TMUDFiles process complete
+INFO:root:Checking if some MUDFile content changes
+INFO:root:Checking TMUDFiles process complete
+INFO:root:Checking if some MUDFile content changes
+INFO:root:Checking TMUDFiles process complete
+INFO:root:Checking if some MUDFile content changes
+INFO:root:Checking TMUDFiles process complete
+INFO:root:Checking if some MUDFile content changes
+INFO:root:Checking TMUDFiles process complete
+INFO:root:Checking if some MUDFile content changes
+INFO:root:Checking TMUDFiles process complete
+INFO:root:TMUD Server is starting
+INFO:root:Subscribing to Kafka topic: TMM_THREATREQUEST
+INFO:root:Checking if some MUDFile content changes
+INFO:root:Checking TMUDFiles process complete
+INFO:root:TMUD Server is starting
+INFO:root:Subscribing to Kafka topic: TMM_THREATREQUEST
+INFO:root:Checking if some MUDFile content changes
+INFO:root:Checking TMUDFiles process complete
+INFO:root:TMUD Server is starting
+INFO:root:Subscribing to Kafka topic: TMM_THREATREQUEST
+INFO:root:Consumed record with key Null and value {"threatuuid": "dc1d67fc72015ea3f63484c7705ec0f1a018ef8e82c262b1b61b7368"}
+INFO:root:Received new message from kafka
+INFO:root:Message:
+{"threatuuid": "dc1d67fc72015ea3f63484c7705ec0f1a018ef8e82c262b1b61b7368"}
+INFO:root:Parsing message
+INFO:root:Checking if some MUDFile content changes
+INFO:root:Checking TMUDFiles process complete
+INFO:root:Consumed record with key Null and value {"threatuuid": "afcf19e3-750b-45ab-adce-b535afe1200d"}
+INFO:root:Received new message from kafka
+INFO:root:Message:
+{"threatuuid": "afcf19e3-750b-45ab-adce-b535afe1200d"}
+INFO:root:Parsing message
+INFO:root:None
+INFO:root:TMUD Server is closing
+INFO:root:Checking if some MUDFile content changes
+INFO:root:Checking TMUDFiles process complete
+INFO:root:TMUD Server is starting
+INFO:root:Subscribing to Kafka topic: TMM_THREATREQUEST
+INFO:root:Consumed record with key Null and value {"threatuuid": "afcf19e3-750b-45ab-adce-b535afe1200d"}
+INFO:root:Received new message from kafka
+INFO:root:Message:
+{"threatuuid": "afcf19e3-750b-45ab-adce-b535afe1200d"}
+INFO:root:Parsing message
+INFO:root:None
+INFO:root:TMUD Server is closing
+INFO:root:Checking if some MUDFile content changes
+INFO:root:Checking TMUDFiles process complete
+INFO:root:TMUD Server is starting
+INFO:root:Subscribing to Kafka topic: TMM_THREATREQUEST
+INFO:root:Consumed record with key Null and value {"threatuuid": "http://10.0.0.8:8091/afcf19e3-750b-45ab-adce-b535afe1200d"}
+INFO:root:Received new message from kafka
+INFO:root:Message:
+{"threatuuid": "http://10.0.0.8:8091/afcf19e3-750b-45ab-adce-b535afe1200d"}
+INFO:root:Parsing message
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 10.0.0.8:8091
+DEBUG:urllib3.connectionpool:http://10.0.0.8:8091 "GET /afcf19e3-750b-45ab-adce-b535afe1200d HTTP/1.1" 200 2080
+INFO:root:None
+INFO:root:TMUD Server is closing
+INFO:root:Checking if some MUDFile content changes
+INFO:root:Checking TMUDFiles process complete
+INFO:root:TMUD Server is starting
+INFO:root:Subscribing to Kafka topic: TMM_THREATREQUEST
+INFO:root:Consumed record with key Null and value {"threatuuid": "http://10.0.0.8:8091/afcf19e3-750b-45ab-adce-b535afe1200d"}
+INFO:root:Received new message from kafka
+INFO:root:Message:
+{"threatuuid": "http://10.0.0.8:8091/afcf19e3-750b-45ab-adce-b535afe1200d"}
+INFO:root:Parsing message
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 10.0.0.8:8091
+DEBUG:urllib3.connectionpool:http://10.0.0.8:8091 "GET /afcf19e3-750b-45ab-adce-b535afe1200d HTTP/1.1" 200 2108
+INFO:root:Translating tmudfile: http://10.0.0.8:8091/afcf19e3-750b-45ab-adce-b535afe1200d
+INFO:root:Transaltion from http://10.0.0.8:8091/afcf19e3-750b-45ab-adce-b535afe1200d -> ['<?xml version="1.0" encoding="utf-8"?>\n<mspl><name>mspl_afcf19e3-750b-45ab-adce-b535afe1200d</name><threatid>afcf19e3-750b-45ab-adce-b535afe1200d</threatid><type>software-mspl-type</type><models-affected>Log4j</models-affected><configuration><capability>software-protection</capability><rule-set-configuration><name>mspl_set_03be639a-53a8-4385-8df3-7b9a48331033</name><configuration-rule><name>Rule_aaee7b7e-a150-401e-b067-acaae1f9cadd</name><isCNF>false</isCNF><external-data><priority>500</priority></external-data><configuration-action><software-protection-action><software-protection-type>UPDATE</software-protection-type><software-fixed-version>2.16</software-fixed-version><software-fix-url>https://sr.certify.digital-worx.de/firmware/QmVJwv27ieRuya36ztgkRyP77ArbizmcuUajd52pf9wcYP</software-fix-url><software-fix-url>https://sr.certify.digital-worx.de/firmware/</software-fix-url></software-protection-action></configuration-action><configuration-condition><software-configuration-condition><software-identification-condition><software-id>QmVJwv27ieRuya36ztgkRyP77ArbizmcuUajd52pf9wcYP</software-id><software-name>Log4j</software-name><software-version>2.15.0</software-version></software-identification-condition></software-configuration-condition></configuration-condition></configuration-rule></rule-set-configuration></configuration></mspl>']
+INFO:root:Adding new TMUD to database
+INFO:root:Sending TMUD File in MSPL format to SIEM-SOAR
+INFO:root:None
+INFO:root:TMUD Server is closing
+INFO:root:Checking if some MUDFile content changes
+INFO:root:Checking TMUDFiles process complete
+INFO:root:TMUD Server is starting
+INFO:root:Subscribing to Kafka topic: TMM_THREATREQUEST
+INFO:root:None
+INFO:root:TMUD Server is closing
+INFO:root:Checking if some MUDFile content changes
+INFO:root:Checking TMUDFiles process complete
+INFO:root:TMUD Server is starting
+INFO:root:Subscribing to Kafka topic: TMM_THREATREQUEST
+INFO:root:Consumed record with key Null and value {"threatuuid": "http://10.0.0.8:8091/afcf19e3-750b-45ab-adce-b535afe1200d"}
+INFO:root:Received new message from kafka
+INFO:root:Message:
+{"threatuuid": "http://10.0.0.8:8091/afcf19e3-750b-45ab-adce-b535afe1200d"}
+INFO:root:Parsing message
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 10.0.0.8:8091
+DEBUG:urllib3.connectionpool:http://10.0.0.8:8091 "GET /afcf19e3-750b-45ab-adce-b535afe1200d HTTP/1.1" 200 2108
+INFO:root:Translating tmudfile: http://10.0.0.8:8091/afcf19e3-750b-45ab-adce-b535afe1200d
+INFO:root:Transaltion from http://10.0.0.8:8091/afcf19e3-750b-45ab-adce-b535afe1200d -> ['<?xml version="1.0" encoding="utf-8"?>\n<mspl><name>mspl_afcf19e3-750b-45ab-adce-b535afe1200d</name><threatid>afcf19e3-750b-45ab-adce-b535afe1200d</threatid><type>software-mspl-type</type><models-affected>Log4j</models-affected><configuration><capability>software-protection</capability><rule-set-configuration><name>mspl_set_03be639a-53a8-4385-8df3-7b9a48331033</name><configuration-rule><name>Rule_aaee7b7e-a150-401e-b067-acaae1f9cadd</name><isCNF>false</isCNF><external-data><priority>500</priority></external-data><configuration-action><software-protection-action><software-protection-type>UPDATE</software-protection-type><software-fixed-version>2.16</software-fixed-version><software-fix-url>https://sr.certify.digital-worx.de/firmware/QmVJwv27ieRuya36ztgkRyP77ArbizmcuUajd52pf9wcYP</software-fix-url><software-fix-url>https://sr.certify.digital-worx.de/firmware/</software-fix-url></software-protection-action></configuration-action><configuration-condition><software-configuration-condition><software-identification-condition><software-id>QmVJwv27ieRuya36ztgkRyP77ArbizmcuUajd52pf9wcYP</software-id><software-name>Log4j</software-name><software-version>2.15.0</software-version></software-identification-condition></software-configuration-condition></configuration-condition></configuration-rule></rule-set-configuration></configuration></mspl>']
+INFO:root:Adding new TMUD to database
+INFO:root:Sending TMUD File in MSPL format to SIEM-SOAR
+INFO:root:Consumed record with key Null and value {"threatuuid": "http://10.0.0.8:8091/afcf19e3-750b-45ab-adce-b535afe1200d"}
+INFO:root:Received new message from kafka
+INFO:root:Message:
+{"threatuuid": "http://10.0.0.8:8091/afcf19e3-750b-45ab-adce-b535afe1200d"}
+INFO:root:Parsing message
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 10.0.0.8:8091
+DEBUG:urllib3.connectionpool:http://10.0.0.8:8091 "GET /afcf19e3-750b-45ab-adce-b535afe1200d HTTP/1.1" 200 2108
+INFO:root:Translating tmudfile: http://10.0.0.8:8091/afcf19e3-750b-45ab-adce-b535afe1200d
+INFO:root:Transaltion from http://10.0.0.8:8091/afcf19e3-750b-45ab-adce-b535afe1200d -> ['<?xml version="1.0" encoding="utf-8"?>\n<mspl><name>mspl_afcf19e3-750b-45ab-adce-b535afe1200d</name><threatid>afcf19e3-750b-45ab-adce-b535afe1200d</threatid><type>software-mspl-type</type><models-affected>Log4j</models-affected><configuration><capability>software-protection</capability><rule-set-configuration><name>mspl_set_03be639a-53a8-4385-8df3-7b9a48331033</name><configuration-rule><name>Rule_aaee7b7e-a150-401e-b067-acaae1f9cadd</name><isCNF>false</isCNF><external-data><priority>500</priority></external-data><configuration-action><software-protection-action><software-protection-type>UPDATE</software-protection-type><software-fixed-version>2.16</software-fixed-version><software-fix-url>https://sr.certify.digital-worx.de/firmware/QmVJwv27ieRuya36ztgkRyP77ArbizmcuUajd52pf9wcYP</software-fix-url><software-fix-url>https://sr.certify.digital-worx.de/firmware/</software-fix-url></software-protection-action></configuration-action><configuration-condition><software-configuration-condition><software-identification-condition><software-id>QmVJwv27ieRuya36ztgkRyP77ArbizmcuUajd52pf9wcYP</software-id><software-name>Log4j</software-name><software-version>2.15.0</software-version></software-identification-condition></software-configuration-condition></configuration-condition></configuration-rule></rule-set-configuration></configuration></mspl>']
+INFO:root:Adding new TMUD to database
+INFO:root:Sending TMUD File in MSPL format to SIEM-SOAR
+INFO:root:None
+INFO:root:TMUD Server is closing
+INFO:root:Checking if some MUDFile content changes
+INFO:root:Checking TMUDFiles process complete
+INFO:root:TMUD Server is starting
+INFO:root:Subscribing to Kafka topic: TMM_THREATREQUEST
+INFO:root:Consumed record with key Null and value {"threatuuid": "http://10.0.0.8:8091/afcf19e3-750b-45ab-adce-b535afe1200d"}
+INFO:root:Received new message from kafka
+INFO:root:Message:
+{"threatuuid": "http://10.0.0.8:8091/afcf19e3-750b-45ab-adce-b535afe1200d"}
+INFO:root:Parsing message
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 10.0.0.8:8091
+DEBUG:urllib3.connectionpool:http://10.0.0.8:8091 "GET /afcf19e3-750b-45ab-adce-b535afe1200d HTTP/1.1" 200 2108
+INFO:root:Translating tmudfile: http://10.0.0.8:8091/afcf19e3-750b-45ab-adce-b535afe1200d
+INFO:root:Transaltion from http://10.0.0.8:8091/afcf19e3-750b-45ab-adce-b535afe1200d -> ['<?xml version="1.0" encoding="utf-8"?>\n<mspl><name>mspl_afcf19e3-750b-45ab-adce-b535afe1200d</name><threatid>afcf19e3-750b-45ab-adce-b535afe1200d</threatid><type>software-mspl-type</type><models-affected>Log4j</models-affected><configuration><capability>software-protection</capability><rule-set-configuration><name>mspl_set_03be639a-53a8-4385-8df3-7b9a48331033</name><configuration-rule><name>Rule_aaee7b7e-a150-401e-b067-acaae1f9cadd</name><isCNF>false</isCNF><external-data><priority>500</priority></external-data><configuration-action><software-protection-action><software-protection-type>UPDATE</software-protection-type><software-fixed-version>2.16</software-fixed-version><software-fix-url>https://sr.certify.digital-worx.de/firmware/QmVJwv27ieRuya36ztgkRyP77ArbizmcuUajd52pf9wcYP</software-fix-url><software-fix-url>https://sr.certify.digital-worx.de/firmware/</software-fix-url></software-protection-action></configuration-action><configuration-condition><software-configuration-condition><software-identification-condition><software-id>QmVJwv27ieRuya36ztgkRyP77ArbizmcuUajd52pf9wcYP</software-id><software-name>Log4j</software-name><software-version>2.15.0</software-version></software-identification-condition></software-configuration-condition></configuration-condition></configuration-rule></rule-set-configuration></configuration></mspl>']
+INFO:root:Adding new TMUD to database
+INFO:root:Sending TMUD File in MSPL format to SIEM-SOAR
+INFO:root:Consumed record with key Null and value {"threatuuid": "http://10.0.0.8:8091/afcf19e3-750b-45ab-adce-b535afe1200d"}
+INFO:root:Received new message from kafka
+INFO:root:Message:
+{"threatuuid": "http://10.0.0.8:8091/afcf19e3-750b-45ab-adce-b535afe1200d"}
+INFO:root:Parsing message
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 10.0.0.8:8091
+DEBUG:urllib3.connectionpool:http://10.0.0.8:8091 "GET /afcf19e3-750b-45ab-adce-b535afe1200d HTTP/1.1" 200 2108
+INFO:root:Translating tmudfile: http://10.0.0.8:8091/afcf19e3-750b-45ab-adce-b535afe1200d
+INFO:root:Transaltion from http://10.0.0.8:8091/afcf19e3-750b-45ab-adce-b535afe1200d -> ['<?xml version="1.0" encoding="utf-8"?>\n<mspl><name>mspl_afcf19e3-750b-45ab-adce-b535afe1200d</name><threatid>afcf19e3-750b-45ab-adce-b535afe1200d</threatid><type>software-mspl-type</type><models-affected>Log4j</models-affected><configuration><capability>software-protection</capability><rule-set-configuration><name>mspl_set_03be639a-53a8-4385-8df3-7b9a48331033</name><configuration-rule><name>Rule_aaee7b7e-a150-401e-b067-acaae1f9cadd</name><isCNF>false</isCNF><external-data><priority>500</priority></external-data><configuration-action><software-protection-action><software-protection-type>UPDATE</software-protection-type><software-fixed-version>2.16</software-fixed-version><software-fix-url>https://sr.certify.digital-worx.de/firmware/QmVJwv27ieRuya36ztgkRyP77ArbizmcuUajd52pf9wcYP</software-fix-url><software-fix-url>https://sr.certify.digital-worx.de/firmware/</software-fix-url></software-protection-action></configuration-action><configuration-condition><software-configuration-condition><software-identification-condition><software-id>QmVJwv27ieRuya36ztgkRyP77ArbizmcuUajd52pf9wcYP</software-id><software-name>Log4j</software-name><software-version>2.15.0</software-version></software-identification-condition></software-configuration-condition></configuration-condition></configuration-rule></rule-set-configuration></configuration></mspl>']
+INFO:root:Adding new TMUD to database
+INFO:root:Sending TMUD File in MSPL format to SIEM-SOAR
+INFO:root:Consumed record with key Null and value {"threatuuid": "http://10.0.0.8:8091/afcf19e3-750b-45ab-adce-b535afe1200d"}
+INFO:root:Received new message from kafka
+INFO:root:Message:
+{"threatuuid": "http://10.0.0.8:8091/afcf19e3-750b-45ab-adce-b535afe1200d"}
+INFO:root:Parsing message
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 10.0.0.8:8091
+DEBUG:urllib3.connectionpool:http://10.0.0.8:8091 "GET /afcf19e3-750b-45ab-adce-b535afe1200d HTTP/1.1" 200 2108
+INFO:root:Translating tmudfile: http://10.0.0.8:8091/afcf19e3-750b-45ab-adce-b535afe1200d
+INFO:root:Transaltion from http://10.0.0.8:8091/afcf19e3-750b-45ab-adce-b535afe1200d -> ['<?xml version="1.0" encoding="utf-8"?>\n<mspl><name>mspl_afcf19e3-750b-45ab-adce-b535afe1200d</name><threatid>afcf19e3-750b-45ab-adce-b535afe1200d</threatid><type>software-mspl-type</type><models-affected>Log4j</models-affected><configuration><capability>software-protection</capability><rule-set-configuration><name>mspl_set_03be639a-53a8-4385-8df3-7b9a48331033</name><configuration-rule><name>Rule_aaee7b7e-a150-401e-b067-acaae1f9cadd</name><isCNF>false</isCNF><external-data><priority>500</priority></external-data><configuration-action><software-protection-action><software-protection-type>UPDATE</software-protection-type><software-fixed-version>2.16</software-fixed-version><software-fix-url>https://sr.certify.digital-worx.de/firmware/QmVJwv27ieRuya36ztgkRyP77ArbizmcuUajd52pf9wcYP</software-fix-url><software-fix-url>https://sr.certify.digital-worx.de/firmware/</software-fix-url></software-protection-action></configuration-action><configuration-condition><software-configuration-condition><software-identification-condition><software-id>QmVJwv27ieRuya36ztgkRyP77ArbizmcuUajd52pf9wcYP</software-id><software-name>Log4j</software-name><software-version>2.15.0</software-version></software-identification-condition></software-configuration-condition></configuration-condition></configuration-rule></rule-set-configuration></configuration></mspl>']
+INFO:root:Adding new TMUD to database
+INFO:root:Sending TMUD File in MSPL format to SIEM-SOAR
+INFO:root:Checking if some MUDFile content changes
+INFO:root:Checking TMUDFiles process complete
+INFO:root:Checking if some MUDFile content changes
+INFO:root:Checking TMUDFiles process complete
+INFO:root:Checking if some MUDFile content changes
+INFO:root:Checking TMUDFiles process complete
+INFO:root:Checking if some MUDFile content changes
+INFO:root:Checking TMUDFiles process complete
+INFO:root:Checking if some MUDFile content changes
+INFO:root:Checking TMUDFiles process complete
+INFO:root:TMUD Server is starting
+INFO:root:Subscribing to Kafka topic: TMM_THREATREQUEST
+INFO:root:Checking if some MUDFile content changes
+INFO:root:Checking TMUDFiles process complete
+INFO:root:TMUD Server is starting
+INFO:root:Subscribing to Kafka topic: TMM_THREATREQUEST
+INFO:root:Consumed record with key Null and value {"threatuuid": "http://10.0.0.8:8091/"}
+INFO:root:Received new message from kafka
+INFO:root:Message:
+{"threatuuid": "http://10.0.0.8:8091/"}
+INFO:root:Parsing message
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 10.0.0.8:8091
+DEBUG:urllib3.connectionpool:http://10.0.0.8:8091 "GET / HTTP/1.1" 404 207
+INFO:root:Consumed record with key Null and value {"threatuuid": "http://10.0.0.8:8091/Test message content body for config id MtOon48BoNEFRnu9bv5v"}
+INFO:root:Received new message from kafka
+INFO:root:Message:
+{"threatuuid": "http://10.0.0.8:8091/Test message content body for config id MtOon48BoNEFRnu9bv5v"}
+INFO:root:Parsing message
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 10.0.0.8:8091
+DEBUG:urllib3.connectionpool:http://10.0.0.8:8091 "GET /Test%20message%20content%20body%20for%20config%20id%20MtOon48BoNEFRnu9bv5v HTTP/1.1" 404 207
+INFO:root:Consumed record with key Null and value {"threatuuid": "http://10.0.0.8:8091/afcf19e3-750b-45ab-adce-b535afe1200d"}
+INFO:root:Received new message from kafka
+INFO:root:Message:
+{"threatuuid": "http://10.0.0.8:8091/afcf19e3-750b-45ab-adce-b535afe1200d"}
+INFO:root:Parsing message
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 10.0.0.8:8091
+DEBUG:urllib3.connectionpool:http://10.0.0.8:8091 "GET /afcf19e3-750b-45ab-adce-b535afe1200d HTTP/1.1" 200 2108
+INFO:root:Translating tmudfile: http://10.0.0.8:8091/afcf19e3-750b-45ab-adce-b535afe1200d
+INFO:root:Transaltion from http://10.0.0.8:8091/afcf19e3-750b-45ab-adce-b535afe1200d -> ['<?xml version="1.0" encoding="utf-8"?>\n<mspl><name>mspl_afcf19e3-750b-45ab-adce-b535afe1200d</name><threatid>afcf19e3-750b-45ab-adce-b535afe1200d</threatid><type>software-mspl-type</type><models-affected>Log4j</models-affected><configuration><capability>software-protection</capability><rule-set-configuration><name>mspl_set_03be639a-53a8-4385-8df3-7b9a48331033</name><configuration-rule><name>Rule_aaee7b7e-a150-401e-b067-acaae1f9cadd</name><isCNF>false</isCNF><external-data><priority>500</priority></external-data><configuration-action><software-protection-action><software-protection-type>UPDATE</software-protection-type><software-fixed-version>2.16</software-fixed-version><software-fix-url>https://sr.certify.digital-worx.de/firmware/QmVJwv27ieRuya36ztgkRyP77ArbizmcuUajd52pf9wcYP</software-fix-url><software-fix-url>https://sr.certify.digital-worx.de/firmware/</software-fix-url></software-protection-action></configuration-action><configuration-condition><software-configuration-condition><software-identification-condition><software-id>QmVJwv27ieRuya36ztgkRyP77ArbizmcuUajd52pf9wcYP</software-id><software-name>Log4j</software-name><software-version>2.15.0</software-version></software-identification-condition></software-configuration-condition></configuration-condition></configuration-rule></rule-set-configuration></configuration></mspl>']
+INFO:root:Adding new TMUD to database
+INFO:root:Sending TMUD File in MSPL format to SIEM-SOAR
+INFO:root:Consumed record with key Null and value {"threatuuid": "http://10.0.0.8:8091/Test message content body for config id jtO1n48BoNEFRnu9lf5k"}
+INFO:root:Received new message from kafka
+INFO:root:Message:
+{"threatuuid": "http://10.0.0.8:8091/Test message content body for config id jtO1n48BoNEFRnu9lf5k"}
+INFO:root:Parsing message
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 10.0.0.8:8091
+DEBUG:urllib3.connectionpool:http://10.0.0.8:8091 "GET /Test%20message%20content%20body%20for%20config%20id%20jtO1n48BoNEFRnu9lf5k HTTP/1.1" 404 207
+INFO:root:Consumed record with key Null and value {"threatuuid": "http://10.0.0.8:8091/afcf19e3-750b-45ab-adce-b535afe1200d"}
+INFO:root:Received new message from kafka
+INFO:root:Message:
+{"threatuuid": "http://10.0.0.8:8091/afcf19e3-750b-45ab-adce-b535afe1200d"}
+INFO:root:Parsing message
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 10.0.0.8:8091
+DEBUG:urllib3.connectionpool:http://10.0.0.8:8091 "GET /afcf19e3-750b-45ab-adce-b535afe1200d HTTP/1.1" 200 2108
+INFO:root:Translating tmudfile: http://10.0.0.8:8091/afcf19e3-750b-45ab-adce-b535afe1200d
+INFO:root:Transaltion from http://10.0.0.8:8091/afcf19e3-750b-45ab-adce-b535afe1200d -> ['<?xml version="1.0" encoding="utf-8"?>\n<mspl><name>mspl_afcf19e3-750b-45ab-adce-b535afe1200d</name><threatid>afcf19e3-750b-45ab-adce-b535afe1200d</threatid><type>software-mspl-type</type><models-affected>Log4j</models-affected><configuration><capability>software-protection</capability><rule-set-configuration><name>mspl_set_03be639a-53a8-4385-8df3-7b9a48331033</name><configuration-rule><name>Rule_aaee7b7e-a150-401e-b067-acaae1f9cadd</name><isCNF>false</isCNF><external-data><priority>500</priority></external-data><configuration-action><software-protection-action><software-protection-type>UPDATE</software-protection-type><software-fixed-version>2.16</software-fixed-version><software-fix-url>https://sr.certify.digital-worx.de/firmware/QmVJwv27ieRuya36ztgkRyP77ArbizmcuUajd52pf9wcYP</software-fix-url><software-fix-url>https://sr.certify.digital-worx.de/firmware/</software-fix-url></software-protection-action></configuration-action><configuration-condition><software-configuration-condition><software-identification-condition><software-id>QmVJwv27ieRuya36ztgkRyP77ArbizmcuUajd52pf9wcYP</software-id><software-name>Log4j</software-name><software-version>2.15.0</software-version></software-identification-condition></software-configuration-condition></configuration-condition></configuration-rule></rule-set-configuration></configuration></mspl>']
+INFO:root:Adding new TMUD to database
+INFO:root:Sending TMUD File in MSPL format to SIEM-SOAR
+INFO:root:Consumed record with key Null and value {"threatuuid": "http://10.0.0.8:8091/afcf19e3-750b-45ab-adce-b535afe1200d"}
+INFO:root:Received new message from kafka
+INFO:root:Message:
+{"threatuuid": "http://10.0.0.8:8091/afcf19e3-750b-45ab-adce-b535afe1200d"}
+INFO:root:Parsing message
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 10.0.0.8:8091
+DEBUG:urllib3.connectionpool:http://10.0.0.8:8091 "GET /afcf19e3-750b-45ab-adce-b535afe1200d HTTP/1.1" 200 2108
+INFO:root:Translating tmudfile: http://10.0.0.8:8091/afcf19e3-750b-45ab-adce-b535afe1200d
+INFO:root:Transaltion from http://10.0.0.8:8091/afcf19e3-750b-45ab-adce-b535afe1200d -> ['<?xml version="1.0" encoding="utf-8"?>\n<mspl><name>mspl_afcf19e3-750b-45ab-adce-b535afe1200d</name><threatid>afcf19e3-750b-45ab-adce-b535afe1200d</threatid><type>software-mspl-type</type><models-affected>Log4j</models-affected><configuration><capability>software-protection</capability><rule-set-configuration><name>mspl_set_03be639a-53a8-4385-8df3-7b9a48331033</name><configuration-rule><name>Rule_aaee7b7e-a150-401e-b067-acaae1f9cadd</name><isCNF>false</isCNF><external-data><priority>500</priority></external-data><configuration-action><software-protection-action><software-protection-type>UPDATE</software-protection-type><software-fixed-version>2.16</software-fixed-version><software-fix-url>https://sr.certify.digital-worx.de/firmware/QmVJwv27ieRuya36ztgkRyP77ArbizmcuUajd52pf9wcYP</software-fix-url><software-fix-url>https://sr.certify.digital-worx.de/firmware/</software-fix-url></software-protection-action></configuration-action><configuration-condition><software-configuration-condition><software-identification-condition><software-id>QmVJwv27ieRuya36ztgkRyP77ArbizmcuUajd52pf9wcYP</software-id><software-name>Log4j</software-name><software-version>2.15.0</software-version></software-identification-condition></software-configuration-condition></configuration-condition></configuration-rule></rule-set-configuration></configuration></mspl>']
+INFO:root:Adding new TMUD to database
+INFO:root:Sending TMUD File in MSPL format to SIEM-SOAR
+INFO:root:Consumed record with key Null and value {"threatuuid": "http://10.0.0.8:8091/afcf19e3-750b-45ab-adce-b535afe1200d"}
+INFO:root:Received new message from kafka
+INFO:root:Message:
+{"threatuuid": "http://10.0.0.8:8091/afcf19e3-750b-45ab-adce-b535afe1200d"}
+INFO:root:Parsing message
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 10.0.0.8:8091
+DEBUG:urllib3.connectionpool:http://10.0.0.8:8091 "GET /afcf19e3-750b-45ab-adce-b535afe1200d HTTP/1.1" 200 2108
+INFO:root:Translating tmudfile: http://10.0.0.8:8091/afcf19e3-750b-45ab-adce-b535afe1200d
+INFO:root:Transaltion from http://10.0.0.8:8091/afcf19e3-750b-45ab-adce-b535afe1200d -> ['<?xml version="1.0" encoding="utf-8"?>\n<mspl><name>mspl_afcf19e3-750b-45ab-adce-b535afe1200d</name><threatid>afcf19e3-750b-45ab-adce-b535afe1200d</threatid><type>software-mspl-type</type><models-affected>Log4j</models-affected><configuration><capability>software-protection</capability><rule-set-configuration><name>mspl_set_03be639a-53a8-4385-8df3-7b9a48331033</name><configuration-rule><name>Rule_aaee7b7e-a150-401e-b067-acaae1f9cadd</name><isCNF>false</isCNF><external-data><priority>500</priority></external-data><configuration-action><software-protection-action><software-protection-type>UPDATE</software-protection-type><software-fixed-version>2.16</software-fixed-version><software-fix-url>https://sr.certify.digital-worx.de/firmware/QmVJwv27ieRuya36ztgkRyP77ArbizmcuUajd52pf9wcYP</software-fix-url><software-fix-url>https://sr.certify.digital-worx.de/firmware/</software-fix-url></software-protection-action></configuration-action><configuration-condition><software-configuration-condition><software-identification-condition><software-id>QmVJwv27ieRuya36ztgkRyP77ArbizmcuUajd52pf9wcYP</software-id><software-name>Log4j</software-name><software-version>2.15.0</software-version></software-identification-condition></software-configuration-condition></configuration-condition></configuration-rule></rule-set-configuration></configuration></mspl>']
+INFO:root:Adding new TMUD to database
+INFO:root:Sending TMUD File in MSPL format to SIEM-SOAR
+INFO:root:Consumed record with key Null and value {"threatuuid": "http://10.0.0.8:8091/afcf19e3-750b-45ab-adce-b535afe1200d"}
+INFO:root:Received new message from kafka
+INFO:root:Message:
+{"threatuuid": "http://10.0.0.8:8091/afcf19e3-750b-45ab-adce-b535afe1200d"}
+INFO:root:Parsing message
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 10.0.0.8:8091
+DEBUG:urllib3.connectionpool:http://10.0.0.8:8091 "GET /afcf19e3-750b-45ab-adce-b535afe1200d HTTP/1.1" 200 2108
+INFO:root:Translating tmudfile: http://10.0.0.8:8091/afcf19e3-750b-45ab-adce-b535afe1200d
+INFO:root:Transaltion from http://10.0.0.8:8091/afcf19e3-750b-45ab-adce-b535afe1200d -> ['<?xml version="1.0" encoding="utf-8"?>\n<mspl><name>mspl_afcf19e3-750b-45ab-adce-b535afe1200d</name><threatid>afcf19e3-750b-45ab-adce-b535afe1200d</threatid><type>software-mspl-type</type><models-affected>Log4j</models-affected><configuration><capability>software-protection</capability><rule-set-configuration><name>mspl_set_03be639a-53a8-4385-8df3-7b9a48331033</name><configuration-rule><name>Rule_aaee7b7e-a150-401e-b067-acaae1f9cadd</name><isCNF>false</isCNF><external-data><priority>500</priority></external-data><configuration-action><software-protection-action><software-protection-type>UPDATE</software-protection-type><software-fixed-version>2.16</software-fixed-version><software-fix-url>https://sr.certify.digital-worx.de/firmware/QmVJwv27ieRuya36ztgkRyP77ArbizmcuUajd52pf9wcYP</software-fix-url><software-fix-url>https://sr.certify.digital-worx.de/firmware/</software-fix-url></software-protection-action></configuration-action><configuration-condition><software-configuration-condition><software-identification-condition><software-id>QmVJwv27ieRuya36ztgkRyP77ArbizmcuUajd52pf9wcYP</software-id><software-name>Log4j</software-name><software-version>2.15.0</software-version></software-identification-condition></software-configuration-condition></configuration-condition></configuration-rule></rule-set-configuration></configuration></mspl>']
+INFO:root:Adding new TMUD to database
+INFO:root:Sending TMUD File in MSPL format to SIEM-SOAR
+INFO:root:Consumed record with key Null and value {"threatuuid": "http://10.0.0.8:8091/afcf19e3-750b-45ab-adce-b535afe1200d"}
+INFO:root:Received new message from kafka
+INFO:root:Message:
+{"threatuuid": "http://10.0.0.8:8091/afcf19e3-750b-45ab-adce-b535afe1200d"}
+INFO:root:Parsing message
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 10.0.0.8:8091
+DEBUG:urllib3.connectionpool:http://10.0.0.8:8091 "GET /afcf19e3-750b-45ab-adce-b535afe1200d HTTP/1.1" 200 2108
+INFO:root:Translating tmudfile: http://10.0.0.8:8091/afcf19e3-750b-45ab-adce-b535afe1200d
+INFO:root:Transaltion from http://10.0.0.8:8091/afcf19e3-750b-45ab-adce-b535afe1200d -> ['<?xml version="1.0" encoding="utf-8"?>\n<mspl><name>mspl_afcf19e3-750b-45ab-adce-b535afe1200d</name><threatid>afcf19e3-750b-45ab-adce-b535afe1200d</threatid><type>software-mspl-type</type><models-affected>Log4j</models-affected><configuration><capability>software-protection</capability><rule-set-configuration><name>mspl_set_03be639a-53a8-4385-8df3-7b9a48331033</name><configuration-rule><name>Rule_aaee7b7e-a150-401e-b067-acaae1f9cadd</name><isCNF>false</isCNF><external-data><priority>500</priority></external-data><configuration-action><software-protection-action><software-protection-type>UPDATE</software-protection-type><software-fixed-version>2.16</software-fixed-version><software-fix-url>https://sr.certify.digital-worx.de/firmware/QmVJwv27ieRuya36ztgkRyP77ArbizmcuUajd52pf9wcYP</software-fix-url><software-fix-url>https://sr.certify.digital-worx.de/firmware/</software-fix-url></software-protection-action></configuration-action><configuration-condition><software-configuration-condition><software-identification-condition><software-id>QmVJwv27ieRuya36ztgkRyP77ArbizmcuUajd52pf9wcYP</software-id><software-name>Log4j</software-name><software-version>2.15.0</software-version></software-identification-condition></software-configuration-condition></configuration-condition></configuration-rule></rule-set-configuration></configuration></mspl>']
+INFO:root:Adding new TMUD to database
+INFO:root:Sending TMUD File in MSPL format to SIEM-SOAR
+INFO:root:Checking if some MUDFile content changes
+INFO:root:Checking TMUDFiles process complete
+INFO:root:Consumed record with key Null and value {"threatuuid": "http://10.0.0.8:8091/afcf19e3-750b-45ab-adce-b535afe1200d"}
+INFO:root:Received new message from kafka
+INFO:root:Message:
+{"threatuuid": "http://10.0.0.8:8091/afcf19e3-750b-45ab-adce-b535afe1200d"}
+INFO:root:Parsing message
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 10.0.0.8:8091
+DEBUG:urllib3.connectionpool:http://10.0.0.8:8091 "GET /afcf19e3-750b-45ab-adce-b535afe1200d HTTP/1.1" 200 2108
+INFO:root:Translating tmudfile: http://10.0.0.8:8091/afcf19e3-750b-45ab-adce-b535afe1200d
+INFO:root:Transaltion from http://10.0.0.8:8091/afcf19e3-750b-45ab-adce-b535afe1200d -> ['<?xml version="1.0" encoding="utf-8"?>\n<mspl><name>mspl_afcf19e3-750b-45ab-adce-b535afe1200d</name><threatid>afcf19e3-750b-45ab-adce-b535afe1200d</threatid><type>software-mspl-type</type><models-affected>Log4j</models-affected><configuration><capability>software-protection</capability><rule-set-configuration><name>mspl_set_03be639a-53a8-4385-8df3-7b9a48331033</name><configuration-rule><name>Rule_aaee7b7e-a150-401e-b067-acaae1f9cadd</name><isCNF>false</isCNF><external-data><priority>500</priority></external-data><configuration-action><software-protection-action><software-protection-type>UPDATE</software-protection-type><software-fixed-version>2.16</software-fixed-version><software-fix-url>https://sr.certify.digital-worx.de/firmware/QmVJwv27ieRuya36ztgkRyP77ArbizmcuUajd52pf9wcYP</software-fix-url><software-fix-url>https://sr.certify.digital-worx.de/firmware/</software-fix-url></software-protection-action></configuration-action><configuration-condition><software-configuration-condition><software-identification-condition><software-id>QmVJwv27ieRuya36ztgkRyP77ArbizmcuUajd52pf9wcYP</software-id><software-name>Log4j</software-name><software-version>2.15.0</software-version></software-identification-condition></software-configuration-condition></configuration-condition></configuration-rule></rule-set-configuration></configuration></mspl>']
+INFO:root:Adding new TMUD to database
+INFO:root:Sending TMUD File in MSPL format to SIEM-SOAR
+INFO:root:Consumed record with key Null and value {"threatuuid": "http://10.0.0.8:8091/afcf19e3-750b-45ab-adce-b535afe1200d"}
+INFO:root:Received new message from kafka
+INFO:root:Message:
+{"threatuuid": "http://10.0.0.8:8091/afcf19e3-750b-45ab-adce-b535afe1200d"}
+INFO:root:Parsing message
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 10.0.0.8:8091
+DEBUG:urllib3.connectionpool:http://10.0.0.8:8091 "GET /afcf19e3-750b-45ab-adce-b535afe1200d HTTP/1.1" 200 2108
+INFO:root:Translating tmudfile: http://10.0.0.8:8091/afcf19e3-750b-45ab-adce-b535afe1200d
+INFO:root:Transaltion from http://10.0.0.8:8091/afcf19e3-750b-45ab-adce-b535afe1200d -> ['<?xml version="1.0" encoding="utf-8"?>\n<mspl><name>mspl_afcf19e3-750b-45ab-adce-b535afe1200d</name><threatid>afcf19e3-750b-45ab-adce-b535afe1200d</threatid><type>software-mspl-type</type><models-affected>Log4j</models-affected><configuration><capability>software-protection</capability><rule-set-configuration><name>mspl_set_03be639a-53a8-4385-8df3-7b9a48331033</name><configuration-rule><name>Rule_aaee7b7e-a150-401e-b067-acaae1f9cadd</name><isCNF>false</isCNF><external-data><priority>500</priority></external-data><configuration-action><software-protection-action><software-protection-type>UPDATE</software-protection-type><software-fixed-version>2.16</software-fixed-version><software-fix-url>https://sr.certify.digital-worx.de/firmware/QmVJwv27ieRuya36ztgkRyP77ArbizmcuUajd52pf9wcYP</software-fix-url><software-fix-url>https://sr.certify.digital-worx.de/firmware/</software-fix-url></software-protection-action></configuration-action><configuration-condition><software-configuration-condition><software-identification-condition><software-id>QmVJwv27ieRuya36ztgkRyP77ArbizmcuUajd52pf9wcYP</software-id><software-name>Log4j</software-name><software-version>2.15.0</software-version></software-identification-condition></software-configuration-condition></configuration-condition></configuration-rule></rule-set-configuration></configuration></mspl>']
+INFO:root:Adding new TMUD to database
+INFO:root:Sending TMUD File in MSPL format to SIEM-SOAR
+INFO:root:Consumed record with key Null and value {"threatuuid": "http://10.0.0.8:8091/afcf19e3-750b-45ab-adce-b535afe1200d"}
+INFO:root:Received new message from kafka
+INFO:root:Message:
+{"threatuuid": "http://10.0.0.8:8091/afcf19e3-750b-45ab-adce-b535afe1200d"}
+INFO:root:Parsing message
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 10.0.0.8:8091
+DEBUG:urllib3.connectionpool:http://10.0.0.8:8091 "GET /afcf19e3-750b-45ab-adce-b535afe1200d HTTP/1.1" 200 2108
+INFO:root:Translating tmudfile: http://10.0.0.8:8091/afcf19e3-750b-45ab-adce-b535afe1200d
+INFO:root:Transaltion from http://10.0.0.8:8091/afcf19e3-750b-45ab-adce-b535afe1200d -> ['<?xml version="1.0" encoding="utf-8"?>\n<mspl><name>mspl_afcf19e3-750b-45ab-adce-b535afe1200d</name><threatid>afcf19e3-750b-45ab-adce-b535afe1200d</threatid><type>software-mspl-type</type><models-affected>Log4j</models-affected><configuration><capability>software-protection</capability><rule-set-configuration><name>mspl_set_03be639a-53a8-4385-8df3-7b9a48331033</name><configuration-rule><name>Rule_aaee7b7e-a150-401e-b067-acaae1f9cadd</name><isCNF>false</isCNF><external-data><priority>500</priority></external-data><configuration-action><software-protection-action><software-protection-type>UPDATE</software-protection-type><software-fixed-version>2.16</software-fixed-version><software-fix-url>https://sr.certify.digital-worx.de/firmware/QmVJwv27ieRuya36ztgkRyP77ArbizmcuUajd52pf9wcYP</software-fix-url><software-fix-url>https://sr.certify.digital-worx.de/firmware/</software-fix-url></software-protection-action></configuration-action><configuration-condition><software-configuration-condition><software-identification-condition><software-id>QmVJwv27ieRuya36ztgkRyP77ArbizmcuUajd52pf9wcYP</software-id><software-name>Log4j</software-name><software-version>2.15.0</software-version></software-identification-condition></software-configuration-condition></configuration-condition></configuration-rule></rule-set-configuration></configuration></mspl>']
+INFO:root:Adding new TMUD to database
+INFO:root:Sending TMUD File in MSPL format to SIEM-SOAR
+INFO:root:Consumed record with key Null and value {"threatuuid": "http://10.0.0.8:8091/afcf19e3-750b-45ab-adce-b535afe1200d"}
+INFO:root:Received new message from kafka
+INFO:root:Message:
+{"threatuuid": "http://10.0.0.8:8091/afcf19e3-750b-45ab-adce-b535afe1200d"}
+INFO:root:Parsing message
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 10.0.0.8:8091
+DEBUG:urllib3.connectionpool:http://10.0.0.8:8091 "GET /afcf19e3-750b-45ab-adce-b535afe1200d HTTP/1.1" 200 2108
+INFO:root:Translating tmudfile: http://10.0.0.8:8091/afcf19e3-750b-45ab-adce-b535afe1200d
+INFO:root:Transaltion from http://10.0.0.8:8091/afcf19e3-750b-45ab-adce-b535afe1200d -> ['<?xml version="1.0" encoding="utf-8"?>\n<mspl><name>mspl_afcf19e3-750b-45ab-adce-b535afe1200d</name><threatid>afcf19e3-750b-45ab-adce-b535afe1200d</threatid><type>software-mspl-type</type><models-affected>Log4j</models-affected><configuration><capability>software-protection</capability><rule-set-configuration><name>mspl_set_03be639a-53a8-4385-8df3-7b9a48331033</name><configuration-rule><name>Rule_aaee7b7e-a150-401e-b067-acaae1f9cadd</name><isCNF>false</isCNF><external-data><priority>500</priority></external-data><configuration-action><software-protection-action><software-protection-type>UPDATE</software-protection-type><software-fixed-version>2.16</software-fixed-version><software-fix-url>https://sr.certify.digital-worx.de/firmware/QmVJwv27ieRuya36ztgkRyP77ArbizmcuUajd52pf9wcYP</software-fix-url><software-fix-url>https://sr.certify.digital-worx.de/firmware/</software-fix-url></software-protection-action></configuration-action><configuration-condition><software-configuration-condition><software-identification-condition><software-id>QmVJwv27ieRuya36ztgkRyP77ArbizmcuUajd52pf9wcYP</software-id><software-name>Log4j</software-name><software-version>2.15.0</software-version></software-identification-condition></software-configuration-condition></configuration-condition></configuration-rule></rule-set-configuration></configuration></mspl>']
+INFO:root:Adding new TMUD to database
+INFO:root:Sending TMUD File in MSPL format to SIEM-SOAR
+INFO:root:Checking if some MUDFile content changes
+INFO:root:Checking TMUDFiles process complete
+INFO:root:Checking if some MUDFile content changes
+INFO:root:Checking TMUDFiles process complete
+INFO:root:Checking if some MUDFile content changes
+INFO:root:Checking TMUDFiles process complete
+INFO:root:Checking if some MUDFile content changes
+INFO:root:Checking TMUDFiles process complete
+INFO:root:Checking if some MUDFile content changes
+INFO:root:Checking TMUDFiles process complete
+INFO:root:TMUD Server is starting
+INFO:root:Subscribing to Kafka topic: TMM_THREATREQUEST
+INFO:root:None
+INFO:root:Checking if some MUDFile content changes
+INFO:root:Checking TMUDFiles process complete
+INFO:root:TMUD Server is starting
+INFO:root:Subscribing to Kafka topic: TMM_THREATREQUEST
+INFO:root:None
+INFO:root:TMUD Server is closing
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8889
+ * Running on http://155.54.95.211:8889
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:root:Checking if some MUDFile content changes
+INFO:root:Checking TMUDFiles process complete
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8889
+ * Running on http://155.54.95.211:8889
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:root:Checking if some MUDFile content changes
+INFO:root:Checking TMUDFiles process complete
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8889
+ * Running on http://155.54.95.211:8889
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:root:Received new message from REST API
+INFO:root:Message:
+{'tmudurl': 'http://localhost:8091/afcf19e3-750b-45ab-adce-b535afe1200d'}
+INFO:root:Parsing message
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost:8091
+DEBUG:urllib3.connectionpool:http://localhost:8091 "GET /afcf19e3-750b-45ab-adce-b535afe1200d HTTP/1.1" 200 2108
+INFO:root:Translating tmudfile: http://localhost:8091/afcf19e3-750b-45ab-adce-b535afe1200d
+INFO:root:Transaltion from http://localhost:8091/afcf19e3-750b-45ab-adce-b535afe1200d -> ['<?xml version="1.0" encoding="utf-8"?>\n<mspl><name>mspl_afcf19e3-750b-45ab-adce-b535afe1200d</name><threatid>afcf19e3-750b-45ab-adce-b535afe1200d</threatid><type>software-mspl-type</type><models-affected>Log4j</models-affected><configuration><capability>software-protection</capability><rule-set-configuration><name>mspl_set_03be639a-53a8-4385-8df3-7b9a48331033</name><configuration-rule><name>Rule_aaee7b7e-a150-401e-b067-acaae1f9cadd</name><isCNF>false</isCNF><external-data><priority>500</priority></external-data><configuration-action><software-protection-action><software-protection-type>UPDATE</software-protection-type><software-fixed-version>2.16</software-fixed-version><software-fix-url>https://sr.certify.digital-worx.de/firmware/QmVJwv27ieRuya36ztgkRyP77ArbizmcuUajd52pf9wcYP</software-fix-url><software-fix-url>https://sr.certify.digital-worx.de/firmware/</software-fix-url></software-protection-action></configuration-action><configuration-condition><software-configuration-condition><software-identification-condition><software-id>QmVJwv27ieRuya36ztgkRyP77ArbizmcuUajd52pf9wcYP</software-id><software-name>Log4j</software-name><software-version>2.15.0</software-version></software-identification-condition></software-configuration-condition></configuration-condition></configuration-rule></rule-set-configuration></configuration></mspl>']
+INFO:root:Adding new TMUD to database
+INFO:root:Sending TMUD File in MSPL 
+INFO:werkzeug:127.0.0.1 - - [15/May/2025 11:19:31] "POST /tmud HTTP/1.1" 200 -
+INFO:root:Checking if some MUDFile content changes
+INFO:root:Checking TMUDFiles process complete
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8889
+ * Running on http://155.54.95.211:8889
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:root:Received new message from REST API
+INFO:root:Message:
+{'tmudurl': 'http://localhost:8091/afcf19e3-750b-45ab-adce-b535afe1200d'}
+INFO:root:Parsing message
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost:8091
+DEBUG:urllib3.connectionpool:http://localhost:8091 "GET /afcf19e3-750b-45ab-adce-b535afe1200d HTTP/1.1" 200 2108
+INFO:root:Translating tmudfile: http://localhost:8091/afcf19e3-750b-45ab-adce-b535afe1200d
+INFO:root:Transaltion from http://localhost:8091/afcf19e3-750b-45ab-adce-b535afe1200d -> ['<?xml version="1.0" encoding="utf-8"?>\n<mspl><name>mspl_afcf19e3-750b-45ab-adce-b535afe1200d</name><threatid>afcf19e3-750b-45ab-adce-b535afe1200d</threatid><type>software-mspl-type</type><models-affected>Log4j</models-affected><configuration><capability>software-protection</capability><rule-set-configuration><name>mspl_set_03be639a-53a8-4385-8df3-7b9a48331033</name><configuration-rule><name>Rule_aaee7b7e-a150-401e-b067-acaae1f9cadd</name><isCNF>false</isCNF><external-data><priority>500</priority></external-data><configuration-action><software-protection-action><software-protection-type>UPDATE</software-protection-type><software-fixed-version>2.16</software-fixed-version><software-fix-url>https://sr.certify.digital-worx.de/firmware/QmVJwv27ieRuya36ztgkRyP77ArbizmcuUajd52pf9wcYP</software-fix-url><software-fix-url>https://sr.certify.digital-worx.de/firmware/</software-fix-url></software-protection-action></configuration-action><configuration-condition><software-configuration-condition><software-identification-condition><software-id>QmVJwv27ieRuya36ztgkRyP77ArbizmcuUajd52pf9wcYP</software-id><software-name>Log4j</software-name><software-version>2.15.0</software-version></software-identification-condition></software-configuration-condition></configuration-condition></configuration-rule></rule-set-configuration></configuration></mspl>']
+INFO:root:Adding new TMUD to database
+INFO:root:Sending TMUD File in MSPL 
+INFO:werkzeug:127.0.0.1 - - [15/May/2025 15:13:29] "POST /tmud HTTP/1.1" 200 -
+INFO:root:Received new message from REST API
+INFO:root:Message:
+{'tmudurl': 'http://localhost:8091/afcf19e3-750b-45ab-adce-b535afe1200d'}
+INFO:root:Parsing message
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost:8091
+DEBUG:urllib3.connectionpool:http://localhost:8091 "GET /afcf19e3-750b-45ab-adce-b535afe1200d HTTP/1.1" 200 2108
+INFO:root:Translating tmudfile: http://localhost:8091/afcf19e3-750b-45ab-adce-b535afe1200d
+INFO:root:Transaltion from http://localhost:8091/afcf19e3-750b-45ab-adce-b535afe1200d -> ['<?xml version="1.0" encoding="utf-8"?>\n<mspl><name>mspl_afcf19e3-750b-45ab-adce-b535afe1200d</name><threatid>afcf19e3-750b-45ab-adce-b535afe1200d</threatid><type>software-mspl-type</type><models-affected>Log4j</models-affected><configuration><capability>software-protection</capability><rule-set-configuration><name>mspl_set_03be639a-53a8-4385-8df3-7b9a48331033</name><configuration-rule><name>Rule_aaee7b7e-a150-401e-b067-acaae1f9cadd</name><isCNF>false</isCNF><external-data><priority>500</priority></external-data><configuration-action><software-protection-action><software-protection-type>UPDATE</software-protection-type><software-fixed-version>2.16</software-fixed-version><software-fix-url>https://sr.certify.digital-worx.de/firmware/QmVJwv27ieRuya36ztgkRyP77ArbizmcuUajd52pf9wcYP</software-fix-url><software-fix-url>https://sr.certify.digital-worx.de/firmware/</software-fix-url></software-protection-action></configuration-action><configuration-condition><software-configuration-condition><software-identification-condition><software-id>QmVJwv27ieRuya36ztgkRyP77ArbizmcuUajd52pf9wcYP</software-id><software-name>Log4j</software-name><software-version>2.15.0</software-version></software-identification-condition></software-configuration-condition></configuration-condition></configuration-rule></rule-set-configuration></configuration></mspl>']
+INFO:root:Adding new TMUD to database
+INFO:root:Sending TMUD File in MSPL 
+INFO:werkzeug:127.0.0.1 - - [15/May/2025 15:16:51] "POST /tmud HTTP/1.1" 200 -
+INFO:root:Received new message from REST API
+INFO:root:Message:
+{'tmudurl': 'http://localhost:8091/afcf19e3-750b-45ab-adce-b535afe1200d'}
+INFO:root:Parsing message
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost:8091
+DEBUG:urllib3.connectionpool:http://localhost:8091 "GET /afcf19e3-750b-45ab-adce-b535afe1200d HTTP/1.1" 200 2108
+INFO:root:Translating tmudfile: http://localhost:8091/afcf19e3-750b-45ab-adce-b535afe1200d
+INFO:root:Transaltion from http://localhost:8091/afcf19e3-750b-45ab-adce-b535afe1200d -> ['<?xml version="1.0" encoding="utf-8"?>\n<mspl><name>mspl_afcf19e3-750b-45ab-adce-b535afe1200d</name><threatid>afcf19e3-750b-45ab-adce-b535afe1200d</threatid><type>software-mspl-type</type><models-affected>Log4j</models-affected><configuration><capability>software-protection</capability><rule-set-configuration><name>mspl_set_03be639a-53a8-4385-8df3-7b9a48331033</name><configuration-rule><name>Rule_aaee7b7e-a150-401e-b067-acaae1f9cadd</name><isCNF>false</isCNF><external-data><priority>500</priority></external-data><configuration-action><software-protection-action><software-protection-type>UPDATE</software-protection-type><software-fixed-version>2.16</software-fixed-version><software-fix-url>https://sr.certify.digital-worx.de/firmware/QmVJwv27ieRuya36ztgkRyP77ArbizmcuUajd52pf9wcYP</software-fix-url><software-fix-url>https://sr.certify.digital-worx.de/firmware/</software-fix-url></software-protection-action></configuration-action><configuration-condition><software-configuration-condition><software-identification-condition><software-id>QmVJwv27ieRuya36ztgkRyP77ArbizmcuUajd52pf9wcYP</software-id><software-name>Log4j</software-name><software-version>2.15.0</software-version></software-identification-condition></software-configuration-condition></configuration-condition></configuration-rule></rule-set-configuration></configuration></mspl>']
+INFO:root:Adding new TMUD to database
+INFO:root:Sending TMUD File in MSPL 
+INFO:werkzeug:127.0.0.1 - - [15/May/2025 15:22:24] "POST /tmud HTTP/1.1" 200 -
+INFO:root:Received new message from REST API
+INFO:root:Message:
+{'tmudurl': 'http://localhost:8091/afcf19e3-750b-45ab-adce-b535afe1200d'}
+INFO:root:Parsing message
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost:8091
+DEBUG:urllib3.connectionpool:http://localhost:8091 "GET /afcf19e3-750b-45ab-adce-b535afe1200d HTTP/1.1" 200 2108
+INFO:root:Translating tmudfile: http://localhost:8091/afcf19e3-750b-45ab-adce-b535afe1200d
+INFO:root:Transaltion from http://localhost:8091/afcf19e3-750b-45ab-adce-b535afe1200d -> ['<?xml version="1.0" encoding="utf-8"?>\n<mspl><name>mspl_afcf19e3-750b-45ab-adce-b535afe1200d</name><threatid>afcf19e3-750b-45ab-adce-b535afe1200d</threatid><type>software-mspl-type</type><models-affected>Log4j</models-affected><configuration><capability>software-protection</capability><rule-set-configuration><name>mspl_set_03be639a-53a8-4385-8df3-7b9a48331033</name><configuration-rule><name>Rule_aaee7b7e-a150-401e-b067-acaae1f9cadd</name><isCNF>false</isCNF><external-data><priority>500</priority></external-data><configuration-action><software-protection-action><software-protection-type>UPDATE</software-protection-type><software-fixed-version>2.16</software-fixed-version><software-fix-url>https://sr.certify.digital-worx.de/firmware/QmVJwv27ieRuya36ztgkRyP77ArbizmcuUajd52pf9wcYP</software-fix-url><software-fix-url>https://sr.certify.digital-worx.de/firmware/</software-fix-url></software-protection-action></configuration-action><configuration-condition><software-configuration-condition><software-identification-condition><software-id>QmVJwv27ieRuya36ztgkRyP77ArbizmcuUajd52pf9wcYP</software-id><software-name>Log4j</software-name><software-version>2.15.0</software-version></software-identification-condition></software-configuration-condition></configuration-condition></configuration-rule></rule-set-configuration></configuration></mspl>']
+INFO:root:Adding new TMUD to database
+INFO:root:Sending TMUD File in MSPL 
+INFO:werkzeug:127.0.0.1 - - [15/May/2025 15:24:30] "POST /tmud HTTP/1.1" 200 -
+INFO:root:Received new message from REST API
+INFO:root:Message:
+{'tmudurl': 'http://localhost:8091/afcf19e3-750b-45ab-adce-b535afe1200d'}
+INFO:root:Parsing message
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost:8091
+DEBUG:urllib3.connectionpool:http://localhost:8091 "GET /afcf19e3-750b-45ab-adce-b535afe1200d HTTP/1.1" 200 2108
+INFO:root:Translating tmudfile: http://localhost:8091/afcf19e3-750b-45ab-adce-b535afe1200d
+INFO:root:Transaltion from http://localhost:8091/afcf19e3-750b-45ab-adce-b535afe1200d -> ['<?xml version="1.0" encoding="utf-8"?>\n<mspl><name>mspl_afcf19e3-750b-45ab-adce-b535afe1200d</name><threatid>afcf19e3-750b-45ab-adce-b535afe1200d</threatid><type>software-mspl-type</type><models-affected>Log4j</models-affected><configuration><capability>software-protection</capability><rule-set-configuration><name>mspl_set_03be639a-53a8-4385-8df3-7b9a48331033</name><configuration-rule><name>Rule_aaee7b7e-a150-401e-b067-acaae1f9cadd</name><isCNF>false</isCNF><external-data><priority>500</priority></external-data><configuration-action><software-protection-action><software-protection-type>UPDATE</software-protection-type><software-fixed-version>2.16</software-fixed-version><software-fix-url>https://sr.certify.digital-worx.de/firmware/QmVJwv27ieRuya36ztgkRyP77ArbizmcuUajd52pf9wcYP</software-fix-url><software-fix-url>https://sr.certify.digital-worx.de/firmware/</software-fix-url></software-protection-action></configuration-action><configuration-condition><software-configuration-condition><software-identification-condition><software-id>QmVJwv27ieRuya36ztgkRyP77ArbizmcuUajd52pf9wcYP</software-id><software-name>Log4j</software-name><software-version>2.15.0</software-version></software-identification-condition></software-configuration-condition></configuration-condition></configuration-rule></rule-set-configuration></configuration></mspl>']
+INFO:root:Adding new TMUD to database
+INFO:root:Sending TMUD File in MSPL 
+INFO:werkzeug:127.0.0.1 - - [15/May/2025 15:25:02] "POST /tmud HTTP/1.1" 200 -
+INFO:root:Received new message from REST API
+INFO:root:Message:
+{'tmudurl': 'http://localhost:8091/afcf19e3-750b-45ab-adce-b535afe1200d'}
+INFO:root:Parsing message
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost:8091
+DEBUG:urllib3.connectionpool:http://localhost:8091 "GET /afcf19e3-750b-45ab-adce-b535afe1200d HTTP/1.1" 200 2108
+INFO:root:Translating tmudfile: http://localhost:8091/afcf19e3-750b-45ab-adce-b535afe1200d
+INFO:root:Transaltion from http://localhost:8091/afcf19e3-750b-45ab-adce-b535afe1200d -> ['<?xml version="1.0" encoding="utf-8"?>\n<mspl><name>mspl_afcf19e3-750b-45ab-adce-b535afe1200d</name><threatid>afcf19e3-750b-45ab-adce-b535afe1200d</threatid><type>software-mspl-type</type><models-affected>Log4j</models-affected><configuration><capability>software-protection</capability><rule-set-configuration><name>mspl_set_03be639a-53a8-4385-8df3-7b9a48331033</name><configuration-rule><name>Rule_aaee7b7e-a150-401e-b067-acaae1f9cadd</name><isCNF>false</isCNF><external-data><priority>500</priority></external-data><configuration-action><software-protection-action><software-protection-type>UPDATE</software-protection-type><software-fixed-version>2.16</software-fixed-version><software-fix-url>https://sr.certify.digital-worx.de/firmware/QmVJwv27ieRuya36ztgkRyP77ArbizmcuUajd52pf9wcYP</software-fix-url><software-fix-url>https://sr.certify.digital-worx.de/firmware/</software-fix-url></software-protection-action></configuration-action><configuration-condition><software-configuration-condition><software-identification-condition><software-id>QmVJwv27ieRuya36ztgkRyP77ArbizmcuUajd52pf9wcYP</software-id><software-name>Log4j</software-name><software-version>2.15.0</software-version></software-identification-condition></software-configuration-condition></configuration-condition></configuration-rule></rule-set-configuration></configuration></mspl>']
+INFO:root:Adding new TMUD to database
+INFO:root:Sending TMUD File in MSPL 
+INFO:werkzeug:127.0.0.1 - - [15/May/2025 15:26:26] "POST /tmud HTTP/1.1" 200 -
+INFO:root:Received new message from REST API
+INFO:root:Message:
+{'tmudurl': 'http://localhost:8091/afcf19e3-750b-45ab-adce-b535afe1200d'}
+INFO:root:Parsing message
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost:8091
+DEBUG:urllib3.connectionpool:http://localhost:8091 "GET /afcf19e3-750b-45ab-adce-b535afe1200d HTTP/1.1" 200 2108
+INFO:root:Translating tmudfile: http://localhost:8091/afcf19e3-750b-45ab-adce-b535afe1200d
+INFO:root:Transaltion from http://localhost:8091/afcf19e3-750b-45ab-adce-b535afe1200d -> ['<?xml version="1.0" encoding="utf-8"?>\n<mspl><name>mspl_afcf19e3-750b-45ab-adce-b535afe1200d</name><threatid>afcf19e3-750b-45ab-adce-b535afe1200d</threatid><type>software-mspl-type</type><models-affected>Log4j</models-affected><configuration><capability>software-protection</capability><rule-set-configuration><name>mspl_set_03be639a-53a8-4385-8df3-7b9a48331033</name><configuration-rule><name>Rule_aaee7b7e-a150-401e-b067-acaae1f9cadd</name><isCNF>false</isCNF><external-data><priority>500</priority></external-data><configuration-action><software-protection-action><software-protection-type>UPDATE</software-protection-type><software-fixed-version>2.16</software-fixed-version><software-fix-url>https://sr.certify.digital-worx.de/firmware/QmVJwv27ieRuya36ztgkRyP77ArbizmcuUajd52pf9wcYP</software-fix-url><software-fix-url>https://sr.certify.digital-worx.de/firmware/</software-fix-url></software-protection-action></configuration-action><configuration-condition><software-configuration-condition><software-identification-condition><software-id>QmVJwv27ieRuya36ztgkRyP77ArbizmcuUajd52pf9wcYP</software-id><software-name>Log4j</software-name><software-version>2.15.0</software-version></software-identification-condition></software-configuration-condition></configuration-condition></configuration-rule></rule-set-configuration></configuration></mspl>']
+INFO:root:Adding new TMUD to database
+INFO:root:Sending TMUD File in MSPL 
+INFO:werkzeug:127.0.0.1 - - [15/May/2025 15:31:41] "POST /tmud HTTP/1.1" 200 -
+INFO:root:Received new message from REST API
+INFO:root:Message:
+{'tmudurl': 'http://localhost:8091/afcf19e3-750b-45ab-adce-b535afe1200d'}
+INFO:root:Parsing message
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost:8091
+DEBUG:urllib3.connectionpool:http://localhost:8091 "GET /afcf19e3-750b-45ab-adce-b535afe1200d HTTP/1.1" 200 2108
+INFO:root:Translating tmudfile: http://localhost:8091/afcf19e3-750b-45ab-adce-b535afe1200d
+INFO:root:Transaltion from http://localhost:8091/afcf19e3-750b-45ab-adce-b535afe1200d -> ['<?xml version="1.0" encoding="utf-8"?>\n<mspl><name>mspl_afcf19e3-750b-45ab-adce-b535afe1200d</name><threatid>afcf19e3-750b-45ab-adce-b535afe1200d</threatid><type>software-mspl-type</type><models-affected>Log4j</models-affected><configuration><capability>software-protection</capability><rule-set-configuration><name>mspl_set_03be639a-53a8-4385-8df3-7b9a48331033</name><configuration-rule><name>Rule_aaee7b7e-a150-401e-b067-acaae1f9cadd</name><isCNF>false</isCNF><external-data><priority>500</priority></external-data><configuration-action><software-protection-action><software-protection-type>UPDATE</software-protection-type><software-fixed-version>2.16</software-fixed-version><software-fix-url>https://sr.certify.digital-worx.de/firmware/QmVJwv27ieRuya36ztgkRyP77ArbizmcuUajd52pf9wcYP</software-fix-url><software-fix-url>https://sr.certify.digital-worx.de/firmware/</software-fix-url></software-protection-action></configuration-action><configuration-condition><software-configuration-condition><software-identification-condition><software-id>QmVJwv27ieRuya36ztgkRyP77ArbizmcuUajd52pf9wcYP</software-id><software-name>Log4j</software-name><software-version>2.15.0</software-version></software-identification-condition></software-configuration-condition></configuration-condition></configuration-rule></rule-set-configuration></configuration></mspl>']
+INFO:root:Adding new TMUD to database
+INFO:root:Sending TMUD File in MSPL 
+INFO:werkzeug:127.0.0.1 - - [15/May/2025 15:34:42] "POST /tmud HTTP/1.1" 200 -
+INFO:root:Received new message from REST API
+INFO:root:Message:
+{'tmudurl': 'http://localhost:8091/afcf19e3-750b-45ab-adce-b535afe1200d'}
+INFO:root:Parsing message
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost:8091
+DEBUG:urllib3.connectionpool:http://localhost:8091 "GET /afcf19e3-750b-45ab-adce-b535afe1200d HTTP/1.1" 200 2108
+INFO:root:Translating tmudfile: http://localhost:8091/afcf19e3-750b-45ab-adce-b535afe1200d
+INFO:root:Transaltion from http://localhost:8091/afcf19e3-750b-45ab-adce-b535afe1200d -> ['<?xml version="1.0" encoding="utf-8"?>\n<mspl><name>mspl_afcf19e3-750b-45ab-adce-b535afe1200d</name><threatid>afcf19e3-750b-45ab-adce-b535afe1200d</threatid><type>software-mspl-type</type><models-affected>Log4j</models-affected><configuration><capability>software-protection</capability><rule-set-configuration><name>mspl_set_03be639a-53a8-4385-8df3-7b9a48331033</name><configuration-rule><name>Rule_aaee7b7e-a150-401e-b067-acaae1f9cadd</name><isCNF>false</isCNF><external-data><priority>500</priority></external-data><configuration-action><software-protection-action><software-protection-type>UPDATE</software-protection-type><software-fixed-version>2.16</software-fixed-version><software-fix-url>https://sr.certify.digital-worx.de/firmware/QmVJwv27ieRuya36ztgkRyP77ArbizmcuUajd52pf9wcYP</software-fix-url><software-fix-url>https://sr.certify.digital-worx.de/firmware/</software-fix-url></software-protection-action></configuration-action><configuration-condition><software-configuration-condition><software-identification-condition><software-id>QmVJwv27ieRuya36ztgkRyP77ArbizmcuUajd52pf9wcYP</software-id><software-name>Log4j</software-name><software-version>2.15.0</software-version></software-identification-condition></software-configuration-condition></configuration-condition></configuration-rule></rule-set-configuration></configuration></mspl>']
+INFO:root:Adding new TMUD to database
+INFO:root:Sending TMUD File in MSPL 
+INFO:werkzeug:127.0.0.1 - - [15/May/2025 15:36:51] "POST /tmud HTTP/1.1" 200 -
+INFO:root:Received new message from REST API
+INFO:root:Message:
+{'tmudurl': 'http://localhost:8091/afcf19e3-750b-45ab-adce-b535afe1200d'}
+INFO:root:Parsing message
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost:8091
+DEBUG:urllib3.connectionpool:http://localhost:8091 "GET /afcf19e3-750b-45ab-adce-b535afe1200d HTTP/1.1" 200 2108
+INFO:root:Translating tmudfile: http://localhost:8091/afcf19e3-750b-45ab-adce-b535afe1200d
+INFO:root:Transaltion from http://localhost:8091/afcf19e3-750b-45ab-adce-b535afe1200d -> ['<?xml version="1.0" encoding="utf-8"?>\n<mspl><name>mspl_afcf19e3-750b-45ab-adce-b535afe1200d</name><threatid>afcf19e3-750b-45ab-adce-b535afe1200d</threatid><type>software-mspl-type</type><models-affected>Log4j</models-affected><configuration><capability>software-protection</capability><rule-set-configuration><name>mspl_set_03be639a-53a8-4385-8df3-7b9a48331033</name><configuration-rule><name>Rule_aaee7b7e-a150-401e-b067-acaae1f9cadd</name><isCNF>false</isCNF><external-data><priority>500</priority></external-data><configuration-action><software-protection-action><software-protection-type>UPDATE</software-protection-type><software-fixed-version>2.16</software-fixed-version><software-fix-url>https://sr.certify.digital-worx.de/firmware/QmVJwv27ieRuya36ztgkRyP77ArbizmcuUajd52pf9wcYP</software-fix-url><software-fix-url>https://sr.certify.digital-worx.de/firmware/</software-fix-url></software-protection-action></configuration-action><configuration-condition><software-configuration-condition><software-identification-condition><software-id>QmVJwv27ieRuya36ztgkRyP77ArbizmcuUajd52pf9wcYP</software-id><software-name>Log4j</software-name><software-version>2.15.0</software-version></software-identification-condition></software-configuration-condition></configuration-condition></configuration-rule></rule-set-configuration></configuration></mspl>']
+INFO:root:Adding new TMUD to database
+INFO:root:Sending TMUD File in MSPL 
+INFO:werkzeug:127.0.0.1 - - [15/May/2025 15:37:03] "POST /tmud HTTP/1.1" 200 -
+INFO:root:Received new message from REST API
+INFO:root:Message:
+{'tmudurl': 'http://localhost:8091/afcf19e3-750b-45ab-adce-b535afe1200d'}
+INFO:root:Parsing message
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost:8091
+DEBUG:urllib3.connectionpool:http://localhost:8091 "GET /afcf19e3-750b-45ab-adce-b535afe1200d HTTP/1.1" 200 2108
+INFO:root:Translating tmudfile: http://localhost:8091/afcf19e3-750b-45ab-adce-b535afe1200d
+INFO:root:Transaltion from http://localhost:8091/afcf19e3-750b-45ab-adce-b535afe1200d -> ['<?xml version="1.0" encoding="utf-8"?>\n<mspl><name>mspl_afcf19e3-750b-45ab-adce-b535afe1200d</name><threatid>afcf19e3-750b-45ab-adce-b535afe1200d</threatid><type>software-mspl-type</type><models-affected>Log4j</models-affected><configuration><capability>software-protection</capability><rule-set-configuration><name>mspl_set_03be639a-53a8-4385-8df3-7b9a48331033</name><configuration-rule><name>Rule_aaee7b7e-a150-401e-b067-acaae1f9cadd</name><isCNF>false</isCNF><external-data><priority>500</priority></external-data><configuration-action><software-protection-action><software-protection-type>UPDATE</software-protection-type><software-fixed-version>2.16</software-fixed-version><software-fix-url>https://sr.certify.digital-worx.de/firmware/QmVJwv27ieRuya36ztgkRyP77ArbizmcuUajd52pf9wcYP</software-fix-url><software-fix-url>https://sr.certify.digital-worx.de/firmware/</software-fix-url></software-protection-action></configuration-action><configuration-condition><software-configuration-condition><software-identification-condition><software-id>QmVJwv27ieRuya36ztgkRyP77ArbizmcuUajd52pf9wcYP</software-id><software-name>Log4j</software-name><software-version>2.15.0</software-version></software-identification-condition></software-configuration-condition></configuration-condition></configuration-rule></rule-set-configuration></configuration></mspl>']
+INFO:root:Adding new TMUD to database
+INFO:root:Sending TMUD File in MSPL 
+INFO:werkzeug:127.0.0.1 - - [15/May/2025 15:37:50] "POST /tmud HTTP/1.1" 200 -
+INFO:root:Received new message from REST API
+INFO:root:Message:
+{'tmudurl': 'http://localhost:8091/afcf19e3-750b-45ab-adce-b535afe1200d'}
+INFO:root:Parsing message
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost:8091
+DEBUG:urllib3.connectionpool:http://localhost:8091 "GET /afcf19e3-750b-45ab-adce-b535afe1200d HTTP/1.1" 200 2108
+INFO:root:Translating tmudfile: http://localhost:8091/afcf19e3-750b-45ab-adce-b535afe1200d
+INFO:root:Transaltion from http://localhost:8091/afcf19e3-750b-45ab-adce-b535afe1200d -> ['<?xml version="1.0" encoding="utf-8"?>\n<mspl><name>mspl_afcf19e3-750b-45ab-adce-b535afe1200d</name><threatid>afcf19e3-750b-45ab-adce-b535afe1200d</threatid><type>software-mspl-type</type><models-affected>Log4j</models-affected><configuration><capability>software-protection</capability><rule-set-configuration><name>mspl_set_03be639a-53a8-4385-8df3-7b9a48331033</name><configuration-rule><name>Rule_aaee7b7e-a150-401e-b067-acaae1f9cadd</name><isCNF>false</isCNF><external-data><priority>500</priority></external-data><configuration-action><software-protection-action><software-protection-type>UPDATE</software-protection-type><software-fixed-version>2.16</software-fixed-version><software-fix-url>https://sr.certify.digital-worx.de/firmware/QmVJwv27ieRuya36ztgkRyP77ArbizmcuUajd52pf9wcYP</software-fix-url><software-fix-url>https://sr.certify.digital-worx.de/firmware/</software-fix-url></software-protection-action></configuration-action><configuration-condition><software-configuration-condition><software-identification-condition><software-id>QmVJwv27ieRuya36ztgkRyP77ArbizmcuUajd52pf9wcYP</software-id><software-name>Log4j</software-name><software-version>2.15.0</software-version></software-identification-condition></software-configuration-condition></configuration-condition></configuration-rule></rule-set-configuration></configuration></mspl>']
+INFO:root:Adding new TMUD to database
+INFO:root:Sending TMUD File in MSPL 
+INFO:werkzeug:127.0.0.1 - - [15/May/2025 15:39:41] "POST /tmud HTTP/1.1" 200 -
+INFO:root:Received new message from REST API
+INFO:root:Message:
+{'tmudurl': 'http://localhost:8091/afcf19e3-750b-45ab-adce-b535afe1200d'}
+INFO:root:Parsing message
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost:8091
+DEBUG:urllib3.connectionpool:http://localhost:8091 "GET /afcf19e3-750b-45ab-adce-b535afe1200d HTTP/1.1" 200 2108
+INFO:root:Translating tmudfile: http://localhost:8091/afcf19e3-750b-45ab-adce-b535afe1200d
+INFO:root:Transaltion from http://localhost:8091/afcf19e3-750b-45ab-adce-b535afe1200d -> ['<?xml version="1.0" encoding="utf-8"?>\n<mspl><name>mspl_afcf19e3-750b-45ab-adce-b535afe1200d</name><threatid>afcf19e3-750b-45ab-adce-b535afe1200d</threatid><type>software-mspl-type</type><models-affected>Log4j</models-affected><configuration><capability>software-protection</capability><rule-set-configuration><name>mspl_set_03be639a-53a8-4385-8df3-7b9a48331033</name><configuration-rule><name>Rule_aaee7b7e-a150-401e-b067-acaae1f9cadd</name><isCNF>false</isCNF><external-data><priority>500</priority></external-data><configuration-action><software-protection-action><software-protection-type>UPDATE</software-protection-type><software-fixed-version>2.16</software-fixed-version><software-fix-url>https://sr.certify.digital-worx.de/firmware/QmVJwv27ieRuya36ztgkRyP77ArbizmcuUajd52pf9wcYP</software-fix-url><software-fix-url>https://sr.certify.digital-worx.de/firmware/</software-fix-url></software-protection-action></configuration-action><configuration-condition><software-configuration-condition><software-identification-condition><software-id>QmVJwv27ieRuya36ztgkRyP77ArbizmcuUajd52pf9wcYP</software-id><software-name>Log4j</software-name><software-version>2.15.0</software-version></software-identification-condition></software-configuration-condition></configuration-condition></configuration-rule></rule-set-configuration></configuration></mspl>']
+INFO:root:Adding new TMUD to database
+INFO:root:Sending TMUD File in MSPL 
+INFO:werkzeug:127.0.0.1 - - [15/May/2025 15:39:42] "POST /tmud HTTP/1.1" 200 -
+INFO:root:Received new message from REST API
+INFO:root:Message:
+{'tmudurl': 'http://localhost:8091/afcf19e3-750b-45ab-adce-b535afe1200d'}
+INFO:root:Parsing message
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost:8091
+DEBUG:urllib3.connectionpool:http://localhost:8091 "GET /afcf19e3-750b-45ab-adce-b535afe1200d HTTP/1.1" 200 2108
+INFO:root:Translating tmudfile: http://localhost:8091/afcf19e3-750b-45ab-adce-b535afe1200d
+INFO:root:Transaltion from http://localhost:8091/afcf19e3-750b-45ab-adce-b535afe1200d -> ['<?xml version="1.0" encoding="utf-8"?>\n<mspl><name>mspl_afcf19e3-750b-45ab-adce-b535afe1200d</name><threatid>afcf19e3-750b-45ab-adce-b535afe1200d</threatid><type>software-mspl-type</type><models-affected>Log4j</models-affected><configuration><capability>software-protection</capability><rule-set-configuration><name>mspl_set_03be639a-53a8-4385-8df3-7b9a48331033</name><configuration-rule><name>Rule_aaee7b7e-a150-401e-b067-acaae1f9cadd</name><isCNF>false</isCNF><external-data><priority>500</priority></external-data><configuration-action><software-protection-action><software-protection-type>UPDATE</software-protection-type><software-fixed-version>2.16</software-fixed-version><software-fix-url>https://sr.certify.digital-worx.de/firmware/QmVJwv27ieRuya36ztgkRyP77ArbizmcuUajd52pf9wcYP</software-fix-url><software-fix-url>https://sr.certify.digital-worx.de/firmware/</software-fix-url></software-protection-action></configuration-action><configuration-condition><software-configuration-condition><software-identification-condition><software-id>QmVJwv27ieRuya36ztgkRyP77ArbizmcuUajd52pf9wcYP</software-id><software-name>Log4j</software-name><software-version>2.15.0</software-version></software-identification-condition></software-configuration-condition></configuration-condition></configuration-rule></rule-set-configuration></configuration></mspl>']
+INFO:root:Adding new TMUD to database
+INFO:root:Sending TMUD File in MSPL 
+INFO:werkzeug:127.0.0.1 - - [15/May/2025 15:41:38] "POST /tmud HTTP/1.1" 200 -
+INFO:root:Received new message from REST API
+INFO:root:Message:
+{'tmudurl': 'http://localhost:8091/afcf19e3-750b-45ab-adce-b535afe1200d'}
+INFO:root:Parsing message
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost:8091
+DEBUG:urllib3.connectionpool:http://localhost:8091 "GET /afcf19e3-750b-45ab-adce-b535afe1200d HTTP/1.1" 200 2108
+INFO:root:Translating tmudfile: http://localhost:8091/afcf19e3-750b-45ab-adce-b535afe1200d
+INFO:root:Transaltion from http://localhost:8091/afcf19e3-750b-45ab-adce-b535afe1200d -> ['<?xml version="1.0" encoding="utf-8"?>\n<mspl><name>mspl_afcf19e3-750b-45ab-adce-b535afe1200d</name><threatid>afcf19e3-750b-45ab-adce-b535afe1200d</threatid><type>software-mspl-type</type><models-affected>Log4j</models-affected><configuration><capability>software-protection</capability><rule-set-configuration><name>mspl_set_03be639a-53a8-4385-8df3-7b9a48331033</name><configuration-rule><name>Rule_aaee7b7e-a150-401e-b067-acaae1f9cadd</name><isCNF>false</isCNF><external-data><priority>500</priority></external-data><configuration-action><software-protection-action><software-protection-type>UPDATE</software-protection-type><software-fixed-version>2.16</software-fixed-version><software-fix-url>https://sr.certify.digital-worx.de/firmware/QmVJwv27ieRuya36ztgkRyP77ArbizmcuUajd52pf9wcYP</software-fix-url><software-fix-url>https://sr.certify.digital-worx.de/firmware/</software-fix-url></software-protection-action></configuration-action><configuration-condition><software-configuration-condition><software-identification-condition><software-id>QmVJwv27ieRuya36ztgkRyP77ArbizmcuUajd52pf9wcYP</software-id><software-name>Log4j</software-name><software-version>2.15.0</software-version></software-identification-condition></software-configuration-condition></configuration-condition></configuration-rule></rule-set-configuration></configuration></mspl>']
+INFO:root:Adding new TMUD to database
+INFO:root:Sending TMUD File in MSPL 
+INFO:werkzeug:127.0.0.1 - - [15/May/2025 15:44:21] "POST /tmud HTTP/1.1" 200 -
+INFO:root:Received new message from REST API
+INFO:root:Message:
+{'tmudurl': 'http://localhost:8091/afcf19e3-750b-45ab-adce-b535afe1200d'}
+INFO:root:Parsing message
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost:8091
+DEBUG:urllib3.connectionpool:http://localhost:8091 "GET /afcf19e3-750b-45ab-adce-b535afe1200d HTTP/1.1" 200 2108
+INFO:root:Translating tmudfile: http://localhost:8091/afcf19e3-750b-45ab-adce-b535afe1200d
+INFO:root:Transaltion from http://localhost:8091/afcf19e3-750b-45ab-adce-b535afe1200d -> ['<?xml version="1.0" encoding="utf-8"?>\n<mspl><name>mspl_afcf19e3-750b-45ab-adce-b535afe1200d</name><threatid>afcf19e3-750b-45ab-adce-b535afe1200d</threatid><type>software-mspl-type</type><models-affected>Log4j</models-affected><configuration><capability>software-protection</capability><rule-set-configuration><name>mspl_set_03be639a-53a8-4385-8df3-7b9a48331033</name><configuration-rule><name>Rule_aaee7b7e-a150-401e-b067-acaae1f9cadd</name><isCNF>false</isCNF><external-data><priority>500</priority></external-data><configuration-action><software-protection-action><software-protection-type>UPDATE</software-protection-type><software-fixed-version>2.16</software-fixed-version><software-fix-url>https://sr.certify.digital-worx.de/firmware/QmVJwv27ieRuya36ztgkRyP77ArbizmcuUajd52pf9wcYP</software-fix-url><software-fix-url>https://sr.certify.digital-worx.de/firmware/</software-fix-url></software-protection-action></configuration-action><configuration-condition><software-configuration-condition><software-identification-condition><software-id>QmVJwv27ieRuya36ztgkRyP77ArbizmcuUajd52pf9wcYP</software-id><software-name>Log4j</software-name><software-version>2.15.0</software-version></software-identification-condition></software-configuration-condition></configuration-condition></configuration-rule></rule-set-configuration></configuration></mspl>']
+INFO:root:Adding new TMUD to database
+INFO:root:Sending TMUD File in MSPL 
+INFO:werkzeug:127.0.0.1 - - [15/May/2025 15:45:18] "POST /tmud HTTP/1.1" 200 -
+INFO:root:Checking if some MUDFile content changes
+INFO:root:Checking TMUDFiles process complete
+INFO:root:Checking if some MUDFile content changes
+INFO:root:Checking TMUDFiles process complete
+INFO:root:Checking if some MUDFile content changes
+INFO:root:Checking TMUDFiles process complete
+INFO:root:Checking if some MUDFile content changes
+INFO:root:Checking TMUDFiles process complete
+INFO:root:Checking if some MUDFile content changes
+INFO:root:Checking TMUDFiles process complete
+INFO:root:Checking if some MUDFile content changes
+INFO:root:Checking TMUDFiles process complete
+INFO:root:Checking if some MUDFile content changes
+INFO:root:Checking TMUDFiles process complete
+INFO:root:Checking if some MUDFile content changes
+INFO:root:Checking TMUDFiles process complete
+INFO:root:Checking if some MUDFile content changes
+INFO:root:Checking TMUDFiles process complete
+INFO:root:Checking if some MUDFile content changes
+INFO:root:Checking TMUDFiles process complete
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8889
+ * Running on http://155.54.95.211:8889
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:root:Checking if some MUDFile content changes
+INFO:root:Checking TMUDFiles process complete
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8889
+ * Running on http://155.54.95.211:8889
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:root:Checking if some MUDFile content changes
+INFO:root:Checking TMUDFiles process complete
+INFO:root:Received new message from REST API
+INFO:root:Message:
+{'tmudurl': 'http://localhost:8091/afcf19e3-750b-45ab-adce-b535afe1200d'}
+INFO:root:Parsing message
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost:8091
+DEBUG:urllib3.connectionpool:http://localhost:8091 "GET /afcf19e3-750b-45ab-adce-b535afe1200d HTTP/1.1" 200 2108
+INFO:root:Translating tmudfile: http://localhost:8091/afcf19e3-750b-45ab-adce-b535afe1200d
+INFO:root:Transaltion from http://localhost:8091/afcf19e3-750b-45ab-adce-b535afe1200d -> ['<?xml version="1.0" encoding="utf-8"?>\n<mspl><name>mspl_afcf19e3-750b-45ab-adce-b535afe1200d</name><threatid>afcf19e3-750b-45ab-adce-b535afe1200d</threatid><type>software-mspl-type</type><models-affected>Log4j</models-affected><configuration><capability>software-protection</capability><rule-set-configuration><name>mspl_set_03be639a-53a8-4385-8df3-7b9a48331033</name><configuration-rule><name>Rule_aaee7b7e-a150-401e-b067-acaae1f9cadd</name><isCNF>false</isCNF><external-data><priority>500</priority></external-data><configuration-action><software-protection-action><software-protection-type>UPDATE</software-protection-type><software-fixed-version>2.16</software-fixed-version><software-fix-url>https://sr.certify.digital-worx.de/firmware/QmVJwv27ieRuya36ztgkRyP77ArbizmcuUajd52pf9wcYP</software-fix-url><software-fix-url>https://sr.certify.digital-worx.de/firmware/</software-fix-url></software-protection-action></configuration-action><configuration-condition><software-configuration-condition><software-identification-condition><software-id>QmVJwv27ieRuya36ztgkRyP77ArbizmcuUajd52pf9wcYP</software-id><software-name>Log4j</software-name><software-version>2.15.0</software-version></software-identification-condition></software-configuration-condition></configuration-condition></configuration-rule></rule-set-configuration></configuration></mspl>']
+INFO:root:Adding new TMUD to database
+INFO:root:Sending TMUD File in MSPL 
+INFO:werkzeug:127.0.0.1 - - [16/May/2025 11:05:33] "POST /tmud HTTP/1.1" 200 -
+INFO:root:Received new message from REST API
+INFO:root:Message:
+{'tmudurl': 'http://localhost:8091/afcf19e3-750b-45ab-adce-b535afe1200d'}
+INFO:root:Parsing message
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost:8091
+DEBUG:urllib3.connectionpool:http://localhost:8091 "GET /afcf19e3-750b-45ab-adce-b535afe1200d HTTP/1.1" 200 2108
+INFO:root:Translating tmudfile: http://localhost:8091/afcf19e3-750b-45ab-adce-b535afe1200d
+INFO:root:Transaltion from http://localhost:8091/afcf19e3-750b-45ab-adce-b535afe1200d -> ['<?xml version="1.0" encoding="utf-8"?>\n<mspl><name>mspl_afcf19e3-750b-45ab-adce-b535afe1200d</name><threatid>afcf19e3-750b-45ab-adce-b535afe1200d</threatid><type>software-mspl-type</type><models-affected>Log4j</models-affected><configuration><capability>software-protection</capability><rule-set-configuration><name>mspl_set_03be639a-53a8-4385-8df3-7b9a48331033</name><configuration-rule><name>Rule_aaee7b7e-a150-401e-b067-acaae1f9cadd</name><isCNF>false</isCNF><external-data><priority>500</priority></external-data><configuration-action><software-protection-action><software-protection-type>UPDATE</software-protection-type><software-fixed-version>2.16</software-fixed-version><software-fix-url>https://sr.certify.digital-worx.de/firmware/QmVJwv27ieRuya36ztgkRyP77ArbizmcuUajd52pf9wcYP</software-fix-url><software-fix-url>https://sr.certify.digital-worx.de/firmware/</software-fix-url></software-protection-action></configuration-action><configuration-condition><software-configuration-condition><software-identification-condition><software-id>QmVJwv27ieRuya36ztgkRyP77ArbizmcuUajd52pf9wcYP</software-id><software-name>Log4j</software-name><software-version>2.15.0</software-version></software-identification-condition></software-configuration-condition></configuration-condition></configuration-rule></rule-set-configuration></configuration></mspl>']
+INFO:root:Adding new TMUD to database
+INFO:root:Sending TMUD File in MSPL 
+INFO:werkzeug:127.0.0.1 - - [16/May/2025 11:09:10] "POST /tmud HTTP/1.1" 200 -
+INFO:root:Received new message from REST API
+INFO:root:Message:
+{'tmudurl': 'http://localhost:8091/afcf19e3-750b-45ab-adce-b535afe1200d'}
+INFO:root:Parsing message
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost:8091
+DEBUG:urllib3.connectionpool:http://localhost:8091 "GET /afcf19e3-750b-45ab-adce-b535afe1200d HTTP/1.1" 200 2108
+INFO:root:Translating tmudfile: http://localhost:8091/afcf19e3-750b-45ab-adce-b535afe1200d
+INFO:root:Transaltion from http://localhost:8091/afcf19e3-750b-45ab-adce-b535afe1200d -> ['<?xml version="1.0" encoding="utf-8"?>\n<mspl><name>mspl_afcf19e3-750b-45ab-adce-b535afe1200d</name><threatid>afcf19e3-750b-45ab-adce-b535afe1200d</threatid><type>software-mspl-type</type><models-affected>Log4j</models-affected><configuration><capability>software-protection</capability><rule-set-configuration><name>mspl_set_03be639a-53a8-4385-8df3-7b9a48331033</name><configuration-rule><name>Rule_aaee7b7e-a150-401e-b067-acaae1f9cadd</name><isCNF>false</isCNF><external-data><priority>500</priority></external-data><configuration-action><software-protection-action><software-protection-type>UPDATE</software-protection-type><software-fixed-version>2.16</software-fixed-version><software-fix-url>https://sr.certify.digital-worx.de/firmware/QmVJwv27ieRuya36ztgkRyP77ArbizmcuUajd52pf9wcYP</software-fix-url><software-fix-url>https://sr.certify.digital-worx.de/firmware/</software-fix-url></software-protection-action></configuration-action><configuration-condition><software-configuration-condition><software-identification-condition><software-id>QmVJwv27ieRuya36ztgkRyP77ArbizmcuUajd52pf9wcYP</software-id><software-name>Log4j</software-name><software-version>2.15.0</software-version></software-identification-condition></software-configuration-condition></configuration-condition></configuration-rule></rule-set-configuration></configuration></mspl>']
+INFO:root:Adding new TMUD to database
+INFO:root:Sending TMUD File in MSPL 
+INFO:werkzeug:127.0.0.1 - - [16/May/2025 11:13:13] "POST /tmud HTTP/1.1" 200 -
+INFO:root:Checking if some MUDFile content changes
+INFO:root:Checking TMUDFiles process complete
+INFO:root:Checking if some MUDFile content changes
+INFO:root:Checking TMUDFiles process complete
+INFO:root:Checking if some MUDFile content changes
+INFO:root:Checking TMUDFiles process complete
+ERROR:werkzeug:147.45.112.101 - - [16/May/2025 14:08:53] code 400, message Bad HTTP/0.9 request type ('\x03\x00\x00/*à\x00\x00\x00\x00\x00Cookie:')
+INFO:werkzeug:147.45.112.101 - - [16/May/2025 14:08:53] "[31m[1m\x03\x00\x00/*à\x00\x00\x00\x00\x00Cookie: mstshash=Administr[0m" 400 -
+ERROR:werkzeug:147.45.112.101 - - [16/May/2025 14:23:16] code 400, message Bad HTTP/0.9 request type ('\x03\x00\x00/*à\x00\x00\x00\x00\x00Cookie:')
+INFO:werkzeug:147.45.112.101 - - [16/May/2025 14:23:16] "[31m[1m\x03\x00\x00/*à\x00\x00\x00\x00\x00Cookie: mstshash=Administr[0m" 400 -
+INFO:root:Checking if some MUDFile content changes
+INFO:root:Checking TMUDFiles process complete
+INFO:root:Checking if some MUDFile content changes
+INFO:root:Checking TMUDFiles process complete
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8889
+ * Running on http://155.54.95.211:8889
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:root:Checking if some MUDFile content changes
+INFO:root:Checking TMUDFiles process complete
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8889
+ * Running on http://155.54.95.211:8889
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:root:Received new message from REST API
+INFO:root:Message:
+{'tmudurl': 'http://localhost:8091/afcf19e3-750b-45ab-adce-b535afe1200d'}
+INFO:root:Parsing message
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost:8091
+DEBUG:urllib3.connectionpool:http://localhost:8091 "GET /afcf19e3-750b-45ab-adce-b535afe1200d HTTP/1.1" 200 2108
+INFO:root:Translating tmudfile: http://localhost:8091/afcf19e3-750b-45ab-adce-b535afe1200d
+INFO:root:Transaltion from http://localhost:8091/afcf19e3-750b-45ab-adce-b535afe1200d -> ['<?xml version="1.0" encoding="utf-8"?>\n<mspl><name>mspl_afcf19e3-750b-45ab-adce-b535afe1200d</name><threatid>afcf19e3-750b-45ab-adce-b535afe1200d</threatid><type>software-mspl-type</type><models-affected>Log4j</models-affected><configuration><capability>software-protection</capability><rule-set-configuration><name>mspl_set_03be639a-53a8-4385-8df3-7b9a48331033</name><configuration-rule><name>Rule_aaee7b7e-a150-401e-b067-acaae1f9cadd</name><isCNF>false</isCNF><external-data><priority>500</priority></external-data><configuration-action><software-protection-action><software-protection-type>UPDATE</software-protection-type><software-fixed-version>2.16</software-fixed-version><software-fix-url>https://sr.certify.digital-worx.de/firmware/QmVJwv27ieRuya36ztgkRyP77ArbizmcuUajd52pf9wcYP</software-fix-url><software-fix-url>https://sr.certify.digital-worx.de/firmware/</software-fix-url></software-protection-action></configuration-action><configuration-condition><software-configuration-condition><software-identification-condition><software-id>QmVJwv27ieRuya36ztgkRyP77ArbizmcuUajd52pf9wcYP</software-id><software-name>Log4j</software-name><software-version>2.15.0</software-version></software-identification-condition></software-configuration-condition></configuration-condition></configuration-rule></rule-set-configuration></configuration></mspl>']
+INFO:root:Adding new TMUD to database
+INFO:root:Sending TMUD File in MSPL 
+INFO:werkzeug:127.0.0.1 - - [18/Jun/2025 08:55:00] "POST /tmud HTTP/1.1" 200 -
+INFO:root:Received new message from REST API
+INFO:root:Message:
+{'tmudurl': 'http://localhost:8091/cb4d19e3-f51b-15cd-1278-a53533312401'}
+INFO:root:Parsing message
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost:8091
+DEBUG:urllib3.connectionpool:http://localhost:8091 "GET /cb4d19e3-f51b-15cd-1278-a53533312401 HTTP/1.1" 200 2431
+INFO:root:Translating tmudfile: http://localhost:8091/cb4d19e3-f51b-15cd-1278-a53533312401
+INFO:root:Transaltion from http://localhost:8091/cb4d19e3-f51b-15cd-1278-a53533312401 -> ['<?xml version="1.0" encoding="utf-8"?>\n<mspl><name>mspl_cb4d19e3-f51b-15cd-1278-a53533312401</name><threatid>cb4d19e3-f51b-15cd-1278-a53533312401</threatid><type>software-mspl-type</type><models-affected>JumpServerSSH</models-affected><configuration><capability>software-protection</capability><rule-set-configuration><name>mspl_set_03be639a-53a8-4385-8df3-7b9a48331033</name><configuration-rule><name>Rule_aaee7b7e-a150-401e-b067-acaae1f9cadd</name><isCNF>false</isCNF><external-data><priority>500</priority></external-data><configuration-action><software-protection-action><software-protection-type>UPDATE</software-protection-type><software-fixed-version>2.16</software-fixed-version><software-fix-url>https://sr.certify.digital-worx.de/firmware/QmVJwv27ieRuya36ztgkRyP77ArbizmcuUajd52pf9wcYP</software-fix-url><software-fix-url>https://sr.certify.digital-worx.de/firmware/</software-fix-url></software-protection-action></configuration-action><configuration-condition><software-configuration-condition><software-identification-condition><software-id>QmVJwv27ieRuya36ztgkRyP77ArbizmcuUajd52pf9wcYP</software-id><software-name>JumpServerSSH</software-name><software-version>2.15.0</software-version></software-identification-condition></software-configuration-condition></configuration-condition></configuration-rule></rule-set-configuration></configuration></mspl>', '<?xml version="1.0" encoding="utf-8"?>\n<mspl><name>mspl_62eed5de-5710-49d5-b7a0-bb88433404cf</name><type>ipv4-mspl-type</type><configuration><capability>Filtering_L4</capability><rule-set-configuration><name>mspl_set_d3802715-2abd-440b-8220-aa1be8dcd7d5</name><configuration-rule><name>Rule_380ce769-ddd8-4ef3-b260-953a4ae3136b</name><isCNF>false</isCNF><external-data><priority>500</priority></external-data><configuration-action><filteringAction><filtering-action-type>DENY</filtering-action-type></filteringAction></configuration-action><configuration-condition><filtering-configuration-condition><packet-filter-condition><source-port>22</source-port></packet-filter-condition></filtering-configuration-condition></configuration-condition></configuration-rule></rule-set-configuration></configuration></mspl>']
+INFO:root:Adding new TMUD to database
+INFO:root:Sending TMUD File in MSPL 
+INFO:werkzeug:127.0.0.1 - - [18/Jun/2025 09:18:42] "POST /tmud HTTP/1.1" 200 -
+INFO:root:Received new message from REST API
+INFO:root:Message:
+{'tmudurl': 'http://localhost:8091/cb4d19e3-f51b-15cd-1278-a53533312401'}
+INFO:root:Parsing message
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost:8091
+DEBUG:urllib3.connectionpool:http://localhost:8091 "GET /cb4d19e3-f51b-15cd-1278-a53533312401 HTTP/1.1" 200 2431
+INFO:root:Translating tmudfile: http://localhost:8091/cb4d19e3-f51b-15cd-1278-a53533312401
+INFO:root:Transaltion from http://localhost:8091/cb4d19e3-f51b-15cd-1278-a53533312401 -> ['<?xml version="1.0" encoding="utf-8"?>\n<mspl><name>mspl_cb4d19e3-f51b-15cd-1278-a53533312401</name><threatid>cb4d19e3-f51b-15cd-1278-a53533312401</threatid><type>software-mspl-type</type><models-affected>JumpServerSSH</models-affected><configuration><capability>software-protection</capability><rule-set-configuration><name>mspl_set_03be639a-53a8-4385-8df3-7b9a48331033</name><configuration-rule><name>Rule_aaee7b7e-a150-401e-b067-acaae1f9cadd</name><isCNF>false</isCNF><external-data><priority>500</priority></external-data><configuration-action><software-protection-action><software-protection-type>UPDATE</software-protection-type><software-fixed-version>2.16</software-fixed-version><software-fix-url>https://sr.certify.digital-worx.de/firmware/QmVJwv27ieRuya36ztgkRyP77ArbizmcuUajd52pf9wcYP</software-fix-url><software-fix-url>https://sr.certify.digital-worx.de/firmware/</software-fix-url></software-protection-action></configuration-action><configuration-condition><software-configuration-condition><software-identification-condition><software-id>QmVJwv27ieRuya36ztgkRyP77ArbizmcuUajd52pf9wcYP</software-id><software-name>JumpServerSSH</software-name><software-version>2.15.0</software-version></software-identification-condition></software-configuration-condition></configuration-condition></configuration-rule></rule-set-configuration></configuration></mspl>', '<?xml version="1.0" encoding="utf-8"?>\n<mspl><name>mspl_62eed5de-5710-49d5-b7a0-bb88433404cf</name><type>ipv4-mspl-type</type><configuration><capability>Filtering_L4</capability><rule-set-configuration><name>mspl_set_d3802715-2abd-440b-8220-aa1be8dcd7d5</name><configuration-rule><name>Rule_380ce769-ddd8-4ef3-b260-953a4ae3136b</name><isCNF>false</isCNF><external-data><priority>500</priority></external-data><configuration-action><filteringAction><filtering-action-type>DENY</filtering-action-type></filteringAction></configuration-action><configuration-condition><filtering-configuration-condition><packet-filter-condition><source-port>22</source-port></packet-filter-condition></filtering-configuration-condition></configuration-condition></configuration-rule></rule-set-configuration></configuration></mspl>']
+INFO:root:Adding new TMUD to database
+INFO:root:Sending TMUD File in MSPL 
+INFO:werkzeug:127.0.0.1 - - [18/Jun/2025 09:21:07] "POST /tmud HTTP/1.1" 200 -
+INFO:root:Received new message from REST API
+INFO:root:Message:
+{'tmudurl': 'http://localhost:8091/cb4d19e3-f51b-15cd-1278-a53533312401'}
+INFO:root:Parsing message
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost:8091
+DEBUG:urllib3.connectionpool:http://localhost:8091 "GET /cb4d19e3-f51b-15cd-1278-a53533312401 HTTP/1.1" 200 2431
+INFO:root:Translating tmudfile: http://localhost:8091/cb4d19e3-f51b-15cd-1278-a53533312401
+INFO:root:Transaltion from http://localhost:8091/cb4d19e3-f51b-15cd-1278-a53533312401 -> ['<?xml version="1.0" encoding="utf-8"?>\n<mspl><name>mspl_cb4d19e3-f51b-15cd-1278-a53533312401</name><threatid>cb4d19e3-f51b-15cd-1278-a53533312401</threatid><type>software-mspl-type</type><models-affected>JumpServerSSH</models-affected><configuration><capability>software-protection</capability><rule-set-configuration><name>mspl_set_03be639a-53a8-4385-8df3-7b9a48331033</name><configuration-rule><name>Rule_aaee7b7e-a150-401e-b067-acaae1f9cadd</name><isCNF>false</isCNF><external-data><priority>500</priority></external-data><configuration-action><software-protection-action><software-protection-type>UPDATE</software-protection-type><software-fixed-version>2.16</software-fixed-version><software-fix-url>https://sr.certify.digital-worx.de/firmware/QmVJwv27ieRuya36ztgkRyP77ArbizmcuUajd52pf9wcYP</software-fix-url><software-fix-url>https://sr.certify.digital-worx.de/firmware/</software-fix-url></software-protection-action></configuration-action><configuration-condition><software-configuration-condition><software-identification-condition><software-id>QmVJwv27ieRuya36ztgkRyP77ArbizmcuUajd52pf9wcYP</software-id><software-name>JumpServerSSH</software-name><software-version>2.15.0</software-version></software-identification-condition></software-configuration-condition></configuration-condition></configuration-rule></rule-set-configuration></configuration></mspl>', '<?xml version="1.0" encoding="utf-8"?>\n<mspl><name>mspl_62eed5de-5710-49d5-b7a0-bb88433404cf</name><type>ipv4-mspl-type</type><configuration><capability>Filtering_L4</capability><rule-set-configuration><name>mspl_set_d3802715-2abd-440b-8220-aa1be8dcd7d5</name><configuration-rule><name>Rule_380ce769-ddd8-4ef3-b260-953a4ae3136b</name><isCNF>false</isCNF><external-data><priority>500</priority></external-data><configuration-action><filteringAction><filtering-action-type>DENY</filtering-action-type></filteringAction></configuration-action><configuration-condition><filtering-configuration-condition><packet-filter-condition><source-port>22</source-port></packet-filter-condition></filtering-configuration-condition></configuration-condition></configuration-rule></rule-set-configuration></configuration></mspl>']
+INFO:root:Adding new TMUD to database
+INFO:root:Sending TMUD File in MSPL 
+INFO:werkzeug:127.0.0.1 - - [18/Jun/2025 09:21:48] "POST /tmud HTTP/1.1" 200 -
+INFO:root:Received new message from REST API
+INFO:root:Message:
+{'tmudurl': 'http://localhost:8091/cb4d19e3-f51b-15cd-1278-a53533312401'}
+INFO:root:Parsing message
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost:8091
+DEBUG:urllib3.connectionpool:http://localhost:8091 "GET /cb4d19e3-f51b-15cd-1278-a53533312401 HTTP/1.1" 200 2431
+INFO:root:Translating tmudfile: http://localhost:8091/cb4d19e3-f51b-15cd-1278-a53533312401
+INFO:root:Transaltion from http://localhost:8091/cb4d19e3-f51b-15cd-1278-a53533312401 -> ['<?xml version="1.0" encoding="utf-8"?>\n<mspl><name>mspl_cb4d19e3-f51b-15cd-1278-a53533312401</name><threatid>cb4d19e3-f51b-15cd-1278-a53533312401</threatid><type>software-mspl-type</type><models-affected>JumpServerSSH</models-affected><configuration><capability>software-protection</capability><rule-set-configuration><name>mspl_set_03be639a-53a8-4385-8df3-7b9a48331033</name><configuration-rule><name>Rule_aaee7b7e-a150-401e-b067-acaae1f9cadd</name><isCNF>false</isCNF><external-data><priority>500</priority></external-data><configuration-action><software-protection-action><software-protection-type>UPDATE</software-protection-type><software-fixed-version>2.16</software-fixed-version><software-fix-url>https://sr.certify.digital-worx.de/firmware/QmVJwv27ieRuya36ztgkRyP77ArbizmcuUajd52pf9wcYP</software-fix-url><software-fix-url>https://sr.certify.digital-worx.de/firmware/</software-fix-url></software-protection-action></configuration-action><configuration-condition><software-configuration-condition><software-identification-condition><software-id>QmVJwv27ieRuya36ztgkRyP77ArbizmcuUajd52pf9wcYP</software-id><software-name>JumpServerSSH</software-name><software-version>2.15.0</software-version></software-identification-condition></software-configuration-condition></configuration-condition></configuration-rule></rule-set-configuration></configuration></mspl>', '<?xml version="1.0" encoding="utf-8"?>\n<mspl><name>mspl_62eed5de-5710-49d5-b7a0-bb88433404cf</name><type>ipv4-mspl-type</type><configuration><capability>Filtering_L4</capability><rule-set-configuration><name>mspl_set_d3802715-2abd-440b-8220-aa1be8dcd7d5</name><configuration-rule><name>Rule_380ce769-ddd8-4ef3-b260-953a4ae3136b</name><isCNF>false</isCNF><external-data><priority>500</priority></external-data><configuration-action><filteringAction><filtering-action-type>DENY</filtering-action-type></filteringAction></configuration-action><configuration-condition><filtering-configuration-condition><packet-filter-condition><source-port>22</source-port></packet-filter-condition></filtering-configuration-condition></configuration-condition></configuration-rule></rule-set-configuration></configuration></mspl>']
+INFO:root:Adding new TMUD to database
+INFO:root:Sending TMUD File in MSPL 
+INFO:werkzeug:127.0.0.1 - - [18/Jun/2025 09:21:59] "POST /tmud HTTP/1.1" 200 -
+INFO:root:Received new message from REST API
+INFO:root:Message:
+{'tmudurl': 'http://localhost:8091/cb4d19e3-f51b-15cd-1278-a53533312401'}
+INFO:root:Parsing message
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost:8091
+DEBUG:urllib3.connectionpool:http://localhost:8091 "GET /cb4d19e3-f51b-15cd-1278-a53533312401 HTTP/1.1" 200 2431
+INFO:root:Translating tmudfile: http://localhost:8091/cb4d19e3-f51b-15cd-1278-a53533312401
+INFO:root:Transaltion from http://localhost:8091/cb4d19e3-f51b-15cd-1278-a53533312401 -> ['<?xml version="1.0" encoding="utf-8"?>\n<mspl><name>mspl_cb4d19e3-f51b-15cd-1278-a53533312401</name><threatid>cb4d19e3-f51b-15cd-1278-a53533312401</threatid><type>software-mspl-type</type><models-affected>JumpServerSSH</models-affected><configuration><capability>software-protection</capability><rule-set-configuration><name>mspl_set_03be639a-53a8-4385-8df3-7b9a48331033</name><configuration-rule><name>Rule_aaee7b7e-a150-401e-b067-acaae1f9cadd</name><isCNF>false</isCNF><external-data><priority>500</priority></external-data><configuration-action><software-protection-action><software-protection-type>UPDATE</software-protection-type><software-fixed-version>2.16</software-fixed-version><software-fix-url>https://sr.certify.digital-worx.de/firmware/QmVJwv27ieRuya36ztgkRyP77ArbizmcuUajd52pf9wcYP</software-fix-url><software-fix-url>https://sr.certify.digital-worx.de/firmware/</software-fix-url></software-protection-action></configuration-action><configuration-condition><software-configuration-condition><software-identification-condition><software-id>QmVJwv27ieRuya36ztgkRyP77ArbizmcuUajd52pf9wcYP</software-id><software-name>JumpServerSSH</software-name><software-version>2.15.0</software-version></software-identification-condition></software-configuration-condition></configuration-condition></configuration-rule></rule-set-configuration></configuration></mspl>', '<?xml version="1.0" encoding="utf-8"?>\n<mspl><name>mspl_62eed5de-5710-49d5-b7a0-bb88433404cf</name><type>ipv4-mspl-type</type><configuration><capability>Filtering_L4</capability><rule-set-configuration><name>mspl_set_d3802715-2abd-440b-8220-aa1be8dcd7d5</name><configuration-rule><name>Rule_380ce769-ddd8-4ef3-b260-953a4ae3136b</name><isCNF>false</isCNF><external-data><priority>500</priority></external-data><configuration-action><filteringAction><filtering-action-type>DENY</filtering-action-type></filteringAction></configuration-action><configuration-condition><filtering-configuration-condition><packet-filter-condition><source-port>22</source-port></packet-filter-condition></filtering-configuration-condition></configuration-condition></configuration-rule></rule-set-configuration></configuration></mspl>']
+INFO:root:Adding new TMUD to database
+INFO:root:Sending TMUD File in MSPL 
+INFO:werkzeug:127.0.0.1 - - [18/Jun/2025 09:22:10] "POST /tmud HTTP/1.1" 200 -
+INFO:root:Received new message from REST API
+INFO:root:Message:
+{'tmudurl': 'http://localhost:8091/cb4d19e3-f51b-15cd-1278-a53533312401'}
+INFO:root:Parsing message
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost:8091
+DEBUG:urllib3.connectionpool:http://localhost:8091 "GET /cb4d19e3-f51b-15cd-1278-a53533312401 HTTP/1.1" 200 2431
+INFO:root:Translating tmudfile: http://localhost:8091/cb4d19e3-f51b-15cd-1278-a53533312401
+INFO:root:Transaltion from http://localhost:8091/cb4d19e3-f51b-15cd-1278-a53533312401 -> ['<?xml version="1.0" encoding="utf-8"?>\n<mspl><name>mspl_cb4d19e3-f51b-15cd-1278-a53533312401</name><threatid>cb4d19e3-f51b-15cd-1278-a53533312401</threatid><type>software-mspl-type</type><models-affected>JumpServerSSH</models-affected><configuration><capability>software-protection</capability><rule-set-configuration><name>mspl_set_03be639a-53a8-4385-8df3-7b9a48331033</name><configuration-rule><name>Rule_aaee7b7e-a150-401e-b067-acaae1f9cadd</name><isCNF>false</isCNF><external-data><priority>500</priority></external-data><configuration-action><software-protection-action><software-protection-type>UPDATE</software-protection-type><software-fixed-version>2.16</software-fixed-version><software-fix-url>https://sr.certify.digital-worx.de/firmware/QmVJwv27ieRuya36ztgkRyP77ArbizmcuUajd52pf9wcYP</software-fix-url><software-fix-url>https://sr.certify.digital-worx.de/firmware/</software-fix-url></software-protection-action></configuration-action><configuration-condition><software-configuration-condition><software-identification-condition><software-id>QmVJwv27ieRuya36ztgkRyP77ArbizmcuUajd52pf9wcYP</software-id><software-name>JumpServerSSH</software-name><software-version>2.15.0</software-version></software-identification-condition></software-configuration-condition></configuration-condition></configuration-rule></rule-set-configuration></configuration></mspl>', '<?xml version="1.0" encoding="utf-8"?>\n<mspl><name>mspl_62eed5de-5710-49d5-b7a0-bb88433404cf</name><type>ipv4-mspl-type</type><configuration><capability>Filtering_L4</capability><rule-set-configuration><name>mspl_set_d3802715-2abd-440b-8220-aa1be8dcd7d5</name><configuration-rule><name>Rule_380ce769-ddd8-4ef3-b260-953a4ae3136b</name><isCNF>false</isCNF><external-data><priority>500</priority></external-data><configuration-action><filteringAction><filtering-action-type>DENY</filtering-action-type></filteringAction></configuration-action><configuration-condition><filtering-configuration-condition><packet-filter-condition><source-port>22</source-port></packet-filter-condition></filtering-configuration-condition></configuration-condition></configuration-rule></rule-set-configuration></configuration></mspl>']
+INFO:root:Adding new TMUD to database
+INFO:root:Sending TMUD File in MSPL 
+INFO:werkzeug:127.0.0.1 - - [18/Jun/2025 09:22:15] "POST /tmud HTTP/1.1" 200 -
+INFO:root:Received new message from REST API
+INFO:root:Message:
+{'tmudurl': 'http://localhost:8091/cb4d19e3-f51b-15cd-1278-a53533312401'}
+INFO:root:Parsing message
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost:8091
+DEBUG:urllib3.connectionpool:http://localhost:8091 "GET /cb4d19e3-f51b-15cd-1278-a53533312401 HTTP/1.1" 200 2429
+INFO:root:Translating tmudfile: http://localhost:8091/cb4d19e3-f51b-15cd-1278-a53533312401
+INFO:root:Transaltion from http://localhost:8091/cb4d19e3-f51b-15cd-1278-a53533312401 -> ['<?xml version="1.0" encoding="utf-8"?>\n<mspl><name>mspl_cb4d19e3-f51b-15cd-1278-a53533312401</name><threatid>cb4d19e3-f51b-15cd-1278-a53533312401</threatid><type>software-mspl-type</type><models-affected>JumpServerSSH</models-affected><configuration><capability>software-protection</capability><rule-set-configuration><name>mspl_set_03be639a-53a8-4385-8df3-7b9a48331033</name><configuration-rule><name>Rule_aaee7b7e-a150-401e-b067-acaae1f9cadd</name><isCNF>false</isCNF><external-data><priority>500</priority></external-data><configuration-action><software-protection-action><software-protection-type>UPDATE</software-protection-type><software-fixed-version>2.16</software-fixed-version><software-fix-url>https://sr.certify.digital-worx.de/firmware/QmVJwv27ieRuya36ztgkRyP77ArbizmcuUajd52pf9wcYP</software-fix-url><software-fix-url>https://sr.certify.digital-worx.de/firmware/</software-fix-url></software-protection-action></configuration-action><configuration-condition><software-configuration-condition><software-identification-condition><software-id>QmVJwv27ieRuya36ztgkRyP77ArbizmcuUajd52pf9wcYP</software-id><software-name>JumpServerSSH</software-name><software-version>2.15.0</software-version></software-identification-condition></software-configuration-condition></configuration-condition></configuration-rule></rule-set-configuration></configuration></mspl>', '<?xml version="1.0" encoding="utf-8"?>\n<mspl><name>mspl_62eed5de-5710-49d5-b7a0-bb88433404cf</name><type>ipv4-mspl-type</type><configuration><capability>Filtering_L4</capability><rule-set-configuration><name>mspl_set_d3802715-2abd-440b-8220-aa1be8dcd7d5</name><configuration-rule><name>Rule_380ce769-ddd8-4ef3-b260-953a4ae3136b</name><isCNF>false</isCNF><external-data><priority>500</priority></external-data><configuration-action><filteringAction><filtering-action-type>DENY</filtering-action-type></filteringAction></configuration-action><configuration-condition><filtering-configuration-condition><packet-filter-condition><source-port>22</source-port></packet-filter-condition></filtering-configuration-condition></configuration-condition></configuration-rule></rule-set-configuration></configuration></mspl>']
+INFO:root:Adding new TMUD to database
+INFO:root:Sending TMUD File in MSPL 
+INFO:werkzeug:127.0.0.1 - - [18/Jun/2025 09:27:15] "POST /tmud HTTP/1.1" 200 -
+INFO:root:Received new message from REST API
+INFO:root:Message:
+{'tmudurl': 'http://localhost:8091/cb4d19e3-f51b-15cd-1278-a53533312401'}
+INFO:root:Parsing message
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost:8091
+DEBUG:urllib3.connectionpool:http://localhost:8091 "GET /cb4d19e3-f51b-15cd-1278-a53533312401 HTTP/1.1" 200 2429
+INFO:root:Translating tmudfile: http://localhost:8091/cb4d19e3-f51b-15cd-1278-a53533312401
+INFO:root:Transaltion from http://localhost:8091/cb4d19e3-f51b-15cd-1278-a53533312401 -> ['<?xml version="1.0" encoding="utf-8"?>\n<mspl><name>mspl_cb4d19e3-f51b-15cd-1278-a53533312401</name><threatid>cb4d19e3-f51b-15cd-1278-a53533312401</threatid><type>software-mspl-type</type><models-affected>JumpServerSSH</models-affected><configuration><capability>software-protection</capability><rule-set-configuration><name>mspl_set_03be639a-53a8-4385-8df3-7b9a48331033</name><configuration-rule><name>Rule_aaee7b7e-a150-401e-b067-acaae1f9cadd</name><isCNF>false</isCNF><external-data><priority>500</priority></external-data><configuration-action><software-protection-action><software-protection-type>UPDATE</software-protection-type><software-fixed-version>2.16</software-fixed-version><software-fix-url>https://sr.certify.digital-worx.de/firmware/QmVJwv27ieRuya36ztgkRyP77ArbizmcuUajd52pf9wcYP</software-fix-url><software-fix-url>https://sr.certify.digital-worx.de/firmware/</software-fix-url></software-protection-action></configuration-action><configuration-condition><software-configuration-condition><software-identification-condition><software-id>QmVJwv27ieRuya36ztgkRyP77ArbizmcuUajd52pf9wcYP</software-id><software-name>JumpServerSSH</software-name><software-version>2.15.0</software-version></software-identification-condition></software-configuration-condition></configuration-condition></configuration-rule></rule-set-configuration></configuration></mspl>', '<?xml version="1.0" encoding="utf-8"?>\n<mspl><name>mspl_62eed5de-5710-49d5-b7a0-bb88433404cf</name><type>ipv4-mspl-type</type><configuration><capability>Filtering_L4</capability><rule-set-configuration><name>mspl_set_d3802715-2abd-440b-8220-aa1be8dcd7d5</name><configuration-rule><name>Rule_380ce769-ddd8-4ef3-b260-953a4ae3136b</name><isCNF>false</isCNF><external-data><priority>500</priority></external-data><configuration-action><filteringAction><filtering-action-type>DENY</filtering-action-type></filteringAction></configuration-action><configuration-condition><filtering-configuration-condition><packet-filter-condition><source-port>22</source-port></packet-filter-condition></filtering-configuration-condition></configuration-condition></configuration-rule></rule-set-configuration></configuration></mspl>']
+INFO:root:Adding new TMUD to database
+INFO:root:Sending TMUD File in MSPL 
+INFO:werkzeug:127.0.0.1 - - [18/Jun/2025 09:29:19] "POST /tmud HTTP/1.1" 200 -
+INFO:root:Received new message from REST API
+INFO:root:Message:
+{'tmudurl': 'http://localhost:8091/cb4d19e3-f51b-15cd-1278-a53533312401'}
+INFO:root:Parsing message
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost:8091
+DEBUG:urllib3.connectionpool:http://localhost:8091 "GET /cb4d19e3-f51b-15cd-1278-a53533312401 HTTP/1.1" 200 2429
+INFO:root:Translating tmudfile: http://localhost:8091/cb4d19e3-f51b-15cd-1278-a53533312401
+INFO:root:Transaltion from http://localhost:8091/cb4d19e3-f51b-15cd-1278-a53533312401 -> ['<?xml version="1.0" encoding="utf-8"?>\n<mspl><name>mspl_cb4d19e3-f51b-15cd-1278-a53533312401</name><threatid>cb4d19e3-f51b-15cd-1278-a53533312401</threatid><type>software-mspl-type</type><models-affected>JumpServerSSH</models-affected><configuration><capability>software-protection</capability><rule-set-configuration><name>mspl_set_03be639a-53a8-4385-8df3-7b9a48331033</name><configuration-rule><name>Rule_aaee7b7e-a150-401e-b067-acaae1f9cadd</name><isCNF>false</isCNF><external-data><priority>500</priority></external-data><configuration-action><software-protection-action><software-protection-type>UPDATE</software-protection-type><software-fixed-version>2.16</software-fixed-version><software-fix-url>https://sr.certify.digital-worx.de/firmware/QmVJwv27ieRuya36ztgkRyP77ArbizmcuUajd52pf9wcYP</software-fix-url><software-fix-url>https://sr.certify.digital-worx.de/firmware/</software-fix-url></software-protection-action></configuration-action><configuration-condition><software-configuration-condition><software-identification-condition><software-id>QmVJwv27ieRuya36ztgkRyP77ArbizmcuUajd52pf9wcYP</software-id><software-name>JumpServerSSH</software-name><software-version>2.15.0</software-version></software-identification-condition></software-configuration-condition></configuration-condition></configuration-rule></rule-set-configuration></configuration></mspl>', '<?xml version="1.0" encoding="utf-8"?>\n<mspl><name>mspl_62eed5de-5710-49d5-b7a0-bb88433404cf</name><type>ipv4-mspl-type</type><configuration><capability>Filtering_L4</capability><rule-set-configuration><name>mspl_set_d3802715-2abd-440b-8220-aa1be8dcd7d5</name><configuration-rule><name>Rule_380ce769-ddd8-4ef3-b260-953a4ae3136b</name><isCNF>false</isCNF><external-data><priority>500</priority></external-data><configuration-action><filteringAction><filtering-action-type>DENY</filtering-action-type></filteringAction></configuration-action><configuration-condition><filtering-configuration-condition><packet-filter-condition><source-port>22</source-port></packet-filter-condition></filtering-configuration-condition></configuration-condition></configuration-rule></rule-set-configuration></configuration></mspl>']
+INFO:root:Adding new TMUD to database
+INFO:root:Sending TMUD File in MSPL 
+INFO:werkzeug:127.0.0.1 - - [18/Jun/2025 09:29:50] "POST /tmud HTTP/1.1" 200 -
+INFO:root:Received new message from REST API
+INFO:root:Message:
+{'tmudurl': 'http://localhost:8091/cb4d19e3-f51b-15cd-1278-a53533312401'}
+INFO:root:Parsing message
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost:8091
+DEBUG:urllib3.connectionpool:http://localhost:8091 "GET /cb4d19e3-f51b-15cd-1278-a53533312401 HTTP/1.1" 200 2429
+INFO:root:Translating tmudfile: http://localhost:8091/cb4d19e3-f51b-15cd-1278-a53533312401
+INFO:root:Transaltion from http://localhost:8091/cb4d19e3-f51b-15cd-1278-a53533312401 -> ['<?xml version="1.0" encoding="utf-8"?>\n<mspl><name>mspl_cb4d19e3-f51b-15cd-1278-a53533312401</name><threatid>cb4d19e3-f51b-15cd-1278-a53533312401</threatid><type>software-mspl-type</type><models-affected>JumpServerSSH</models-affected><configuration><capability>software-protection</capability><rule-set-configuration><name>mspl_set_03be639a-53a8-4385-8df3-7b9a48331033</name><configuration-rule><name>Rule_aaee7b7e-a150-401e-b067-acaae1f9cadd</name><isCNF>false</isCNF><external-data><priority>500</priority></external-data><configuration-action><software-protection-action><software-protection-type>UPDATE</software-protection-type><software-fixed-version>2.16</software-fixed-version><software-fix-url>https://sr.certify.digital-worx.de/firmware/QmVJwv27ieRuya36ztgkRyP77ArbizmcuUajd52pf9wcYP</software-fix-url><software-fix-url>https://sr.certify.digital-worx.de/firmware/</software-fix-url></software-protection-action></configuration-action><configuration-condition><software-configuration-condition><software-identification-condition><software-id>QmVJwv27ieRuya36ztgkRyP77ArbizmcuUajd52pf9wcYP</software-id><software-name>JumpServerSSH</software-name><software-version>2.15.0</software-version></software-identification-condition></software-configuration-condition></configuration-condition></configuration-rule></rule-set-configuration></configuration></mspl>', '<?xml version="1.0" encoding="utf-8"?>\n<mspl><name>mspl_62eed5de-5710-49d5-b7a0-bb88433404cf</name><type>ipv4-mspl-type</type><configuration><capability>Filtering_L4</capability><rule-set-configuration><name>mspl_set_d3802715-2abd-440b-8220-aa1be8dcd7d5</name><configuration-rule><name>Rule_380ce769-ddd8-4ef3-b260-953a4ae3136b</name><isCNF>false</isCNF><external-data><priority>500</priority></external-data><configuration-action><filteringAction><filtering-action-type>DENY</filtering-action-type></filteringAction></configuration-action><configuration-condition><filtering-configuration-condition><packet-filter-condition><source-port>22</source-port></packet-filter-condition></filtering-configuration-condition></configuration-condition></configuration-rule></rule-set-configuration></configuration></mspl>']
+INFO:root:Adding new TMUD to database
+INFO:root:Sending TMUD File in MSPL 
+INFO:werkzeug:127.0.0.1 - - [18/Jun/2025 09:30:17] "POST /tmud HTTP/1.1" 200 -
+INFO:root:Received new message from REST API
+INFO:root:Message:
+{'tmudurl': 'http://localhost:8091/cb4d19e3-f51b-15cd-1278-a53533312401'}
+INFO:root:Parsing message
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost:8091
+DEBUG:urllib3.connectionpool:http://localhost:8091 "GET /cb4d19e3-f51b-15cd-1278-a53533312401 HTTP/1.1" 200 2429
+INFO:root:Translating tmudfile: http://localhost:8091/cb4d19e3-f51b-15cd-1278-a53533312401
+INFO:root:Transaltion from http://localhost:8091/cb4d19e3-f51b-15cd-1278-a53533312401 -> ['<?xml version="1.0" encoding="utf-8"?>\n<mspl><name>mspl_cb4d19e3-f51b-15cd-1278-a53533312401</name><threatid>cb4d19e3-f51b-15cd-1278-a53533312401</threatid><type>software-mspl-type</type><models-affected>JumpServerSSH</models-affected><configuration><capability>software-protection</capability><rule-set-configuration><name>mspl_set_03be639a-53a8-4385-8df3-7b9a48331033</name><configuration-rule><name>Rule_aaee7b7e-a150-401e-b067-acaae1f9cadd</name><isCNF>false</isCNF><external-data><priority>500</priority></external-data><configuration-action><software-protection-action><software-protection-type>UPDATE</software-protection-type><software-fixed-version>2.16</software-fixed-version><software-fix-url>https://sr.certify.digital-worx.de/firmware/QmVJwv27ieRuya36ztgkRyP77ArbizmcuUajd52pf9wcYP</software-fix-url><software-fix-url>https://sr.certify.digital-worx.de/firmware/</software-fix-url></software-protection-action></configuration-action><configuration-condition><software-configuration-condition><software-identification-condition><software-id>QmVJwv27ieRuya36ztgkRyP77ArbizmcuUajd52pf9wcYP</software-id><software-name>JumpServerSSH</software-name><software-version>2.15.0</software-version></software-identification-condition></software-configuration-condition></configuration-condition></configuration-rule></rule-set-configuration></configuration></mspl>', '<?xml version="1.0" encoding="utf-8"?>\n<mspl><name>mspl_62eed5de-5710-49d5-b7a0-bb88433404cf</name><type>ipv4-mspl-type</type><configuration><capability>Filtering_L4</capability><rule-set-configuration><name>mspl_set_d3802715-2abd-440b-8220-aa1be8dcd7d5</name><configuration-rule><name>Rule_380ce769-ddd8-4ef3-b260-953a4ae3136b</name><isCNF>false</isCNF><external-data><priority>500</priority></external-data><configuration-action><filteringAction><filtering-action-type>DENY</filtering-action-type></filteringAction></configuration-action><configuration-condition><filtering-configuration-condition><packet-filter-condition><source-port>22</source-port></packet-filter-condition></filtering-configuration-condition></configuration-condition></configuration-rule></rule-set-configuration></configuration></mspl>']
+INFO:root:Adding new TMUD to database
+INFO:root:Sending TMUD File in MSPL 
+INFO:werkzeug:127.0.0.1 - - [18/Jun/2025 09:30:42] "POST /tmud HTTP/1.1" 200 -
+INFO:root:Received new message from REST API
+INFO:root:Message:
+{'tmudurl': 'http://localhost:8091/cb4d19e3-f51b-15cd-1278-a53533312401'}
+INFO:root:Parsing message
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost:8091
+DEBUG:urllib3.connectionpool:http://localhost:8091 "GET /cb4d19e3-f51b-15cd-1278-a53533312401 HTTP/1.1" 200 2429
+INFO:root:Translating tmudfile: http://localhost:8091/cb4d19e3-f51b-15cd-1278-a53533312401
+INFO:root:Transaltion from http://localhost:8091/cb4d19e3-f51b-15cd-1278-a53533312401 -> ['<?xml version="1.0" encoding="utf-8"?>\n<mspl><name>mspl_cb4d19e3-f51b-15cd-1278-a53533312401</name><threatid>cb4d19e3-f51b-15cd-1278-a53533312401</threatid><type>software-mspl-type</type><models-affected>JumpServerSSH</models-affected><configuration><capability>software-protection</capability><rule-set-configuration><name>mspl_set_03be639a-53a8-4385-8df3-7b9a48331033</name><configuration-rule><name>Rule_aaee7b7e-a150-401e-b067-acaae1f9cadd</name><isCNF>false</isCNF><external-data><priority>500</priority></external-data><configuration-action><software-protection-action><software-protection-type>UPDATE</software-protection-type><software-fixed-version>2.16</software-fixed-version><software-fix-url>https://sr.certify.digital-worx.de/firmware/QmVJwv27ieRuya36ztgkRyP77ArbizmcuUajd52pf9wcYP</software-fix-url><software-fix-url>https://sr.certify.digital-worx.de/firmware/</software-fix-url></software-protection-action></configuration-action><configuration-condition><software-configuration-condition><software-identification-condition><software-id>QmVJwv27ieRuya36ztgkRyP77ArbizmcuUajd52pf9wcYP</software-id><software-name>JumpServerSSH</software-name><software-version>2.15.0</software-version></software-identification-condition></software-configuration-condition></configuration-condition></configuration-rule></rule-set-configuration></configuration></mspl>', '<?xml version="1.0" encoding="utf-8"?>\n<mspl><name>mspl_62eed5de-5710-49d5-b7a0-bb88433404cf</name><type>ipv4-mspl-type</type><configuration><capability>Filtering_L4</capability><rule-set-configuration><name>mspl_set_d3802715-2abd-440b-8220-aa1be8dcd7d5</name><configuration-rule><name>Rule_380ce769-ddd8-4ef3-b260-953a4ae3136b</name><isCNF>false</isCNF><external-data><priority>500</priority></external-data><configuration-action><filteringAction><filtering-action-type>DENY</filtering-action-type></filteringAction></configuration-action><configuration-condition><filtering-configuration-condition><packet-filter-condition><source-port>22</source-port></packet-filter-condition></filtering-configuration-condition></configuration-condition></configuration-rule></rule-set-configuration></configuration></mspl>']
+INFO:root:Adding new TMUD to database
+INFO:root:Sending TMUD File in MSPL 
+INFO:werkzeug:127.0.0.1 - - [18/Jun/2025 09:31:21] "POST /tmud HTTP/1.1" 200 -
+INFO:root:Received new message from REST API
+INFO:root:Message:
+{'tmudurl': 'http://localhost:8091/cb4d19e3-f51b-15cd-1278-a53533312401'}
+INFO:root:Parsing message
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost:8091
+DEBUG:urllib3.connectionpool:http://localhost:8091 "GET /cb4d19e3-f51b-15cd-1278-a53533312401 HTTP/1.1" 200 2429
+INFO:root:Translating tmudfile: http://localhost:8091/cb4d19e3-f51b-15cd-1278-a53533312401
+INFO:root:Transaltion from http://localhost:8091/cb4d19e3-f51b-15cd-1278-a53533312401 -> ['<?xml version="1.0" encoding="utf-8"?>\n<mspl><name>mspl_cb4d19e3-f51b-15cd-1278-a53533312401</name><threatid>cb4d19e3-f51b-15cd-1278-a53533312401</threatid><type>software-mspl-type</type><models-affected>JumpServerSSH</models-affected><configuration><capability>software-protection</capability><rule-set-configuration><name>mspl_set_03be639a-53a8-4385-8df3-7b9a48331033</name><configuration-rule><name>Rule_aaee7b7e-a150-401e-b067-acaae1f9cadd</name><isCNF>false</isCNF><external-data><priority>500</priority></external-data><configuration-action><software-protection-action><software-protection-type>UPDATE</software-protection-type><software-fixed-version>2.16</software-fixed-version><software-fix-url>https://sr.certify.digital-worx.de/firmware/QmVJwv27ieRuya36ztgkRyP77ArbizmcuUajd52pf9wcYP</software-fix-url><software-fix-url>https://sr.certify.digital-worx.de/firmware/</software-fix-url></software-protection-action></configuration-action><configuration-condition><software-configuration-condition><software-identification-condition><software-id>QmVJwv27ieRuya36ztgkRyP77ArbizmcuUajd52pf9wcYP</software-id><software-name>JumpServerSSH</software-name><software-version>2.15.0</software-version></software-identification-condition></software-configuration-condition></configuration-condition></configuration-rule></rule-set-configuration></configuration></mspl>', '<?xml version="1.0" encoding="utf-8"?>\n<mspl><name>mspl_62eed5de-5710-49d5-b7a0-bb88433404cf</name><type>ipv4-mspl-type</type><configuration><capability>Filtering_L4</capability><rule-set-configuration><name>mspl_set_d3802715-2abd-440b-8220-aa1be8dcd7d5</name><configuration-rule><name>Rule_380ce769-ddd8-4ef3-b260-953a4ae3136b</name><isCNF>false</isCNF><external-data><priority>500</priority></external-data><configuration-action><filteringAction><filtering-action-type>DENY</filtering-action-type></filteringAction></configuration-action><configuration-condition><filtering-configuration-condition><packet-filter-condition><source-port>22</source-port></packet-filter-condition></filtering-configuration-condition></configuration-condition></configuration-rule></rule-set-configuration></configuration></mspl>']
+INFO:root:Adding new TMUD to database
+INFO:root:Sending TMUD File in MSPL 
+INFO:werkzeug:127.0.0.1 - - [18/Jun/2025 09:31:29] "POST /tmud HTTP/1.1" 200 -
+INFO:root:Received new message from REST API
+INFO:root:Message:
+{'tmudurl': 'http://localhost:8091/cb4d19e3-f51b-15cd-1278-a53533312401'}
+INFO:root:Parsing message
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost:8091
+DEBUG:urllib3.connectionpool:http://localhost:8091 "GET /cb4d19e3-f51b-15cd-1278-a53533312401 HTTP/1.1" 200 2429
+INFO:root:Translating tmudfile: http://localhost:8091/cb4d19e3-f51b-15cd-1278-a53533312401
+INFO:root:Transaltion from http://localhost:8091/cb4d19e3-f51b-15cd-1278-a53533312401 -> ['<?xml version="1.0" encoding="utf-8"?>\n<mspl><name>mspl_cb4d19e3-f51b-15cd-1278-a53533312401</name><threatid>cb4d19e3-f51b-15cd-1278-a53533312401</threatid><type>software-mspl-type</type><models-affected>JumpServerSSH</models-affected><configuration><capability>software-protection</capability><rule-set-configuration><name>mspl_set_03be639a-53a8-4385-8df3-7b9a48331033</name><configuration-rule><name>Rule_aaee7b7e-a150-401e-b067-acaae1f9cadd</name><isCNF>false</isCNF><external-data><priority>500</priority></external-data><configuration-action><software-protection-action><software-protection-type>UPDATE</software-protection-type><software-fixed-version>2.16</software-fixed-version><software-fix-url>https://sr.certify.digital-worx.de/firmware/QmVJwv27ieRuya36ztgkRyP77ArbizmcuUajd52pf9wcYP</software-fix-url><software-fix-url>https://sr.certify.digital-worx.de/firmware/</software-fix-url></software-protection-action></configuration-action><configuration-condition><software-configuration-condition><software-identification-condition><software-id>QmVJwv27ieRuya36ztgkRyP77ArbizmcuUajd52pf9wcYP</software-id><software-name>JumpServerSSH</software-name><software-version>2.15.0</software-version></software-identification-condition></software-configuration-condition></configuration-condition></configuration-rule></rule-set-configuration></configuration></mspl>', '<?xml version="1.0" encoding="utf-8"?>\n<mspl><name>mspl_62eed5de-5710-49d5-b7a0-bb88433404cf</name><type>ipv4-mspl-type</type><configuration><capability>Filtering_L4</capability><rule-set-configuration><name>mspl_set_d3802715-2abd-440b-8220-aa1be8dcd7d5</name><configuration-rule><name>Rule_380ce769-ddd8-4ef3-b260-953a4ae3136b</name><isCNF>false</isCNF><external-data><priority>500</priority></external-data><configuration-action><filteringAction><filtering-action-type>DENY</filtering-action-type></filteringAction></configuration-action><configuration-condition><filtering-configuration-condition><packet-filter-condition><source-port>22</source-port></packet-filter-condition></filtering-configuration-condition></configuration-condition></configuration-rule></rule-set-configuration></configuration></mspl>']
+INFO:root:Adding new TMUD to database
+INFO:root:Sending TMUD File in MSPL 
+INFO:werkzeug:127.0.0.1 - - [18/Jun/2025 09:32:56] "POST /tmud HTTP/1.1" 200 -
+INFO:root:Received new message from REST API
+INFO:root:Message:
+{'tmudurl': 'http://localhost:8091/cb4d19e3-f51b-15cd-1278-a53533312401'}
+INFO:root:Parsing message
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost:8091
+DEBUG:urllib3.connectionpool:http://localhost:8091 "GET /cb4d19e3-f51b-15cd-1278-a53533312401 HTTP/1.1" 200 2429
+INFO:root:Translating tmudfile: http://localhost:8091/cb4d19e3-f51b-15cd-1278-a53533312401
+INFO:root:Transaltion from http://localhost:8091/cb4d19e3-f51b-15cd-1278-a53533312401 -> ['<?xml version="1.0" encoding="utf-8"?>\n<mspl><name>mspl_cb4d19e3-f51b-15cd-1278-a53533312401</name><threatid>cb4d19e3-f51b-15cd-1278-a53533312401</threatid><type>software-mspl-type</type><models-affected>JumpServerSSH</models-affected><configuration><capability>software-protection</capability><rule-set-configuration><name>mspl_set_03be639a-53a8-4385-8df3-7b9a48331033</name><configuration-rule><name>Rule_aaee7b7e-a150-401e-b067-acaae1f9cadd</name><isCNF>false</isCNF><external-data><priority>500</priority></external-data><configuration-action><software-protection-action><software-protection-type>UPDATE</software-protection-type><software-fixed-version>2.16</software-fixed-version><software-fix-url>https://sr.certify.digital-worx.de/firmware/QmVJwv27ieRuya36ztgkRyP77ArbizmcuUajd52pf9wcYP</software-fix-url><software-fix-url>https://sr.certify.digital-worx.de/firmware/</software-fix-url></software-protection-action></configuration-action><configuration-condition><software-configuration-condition><software-identification-condition><software-id>QmVJwv27ieRuya36ztgkRyP77ArbizmcuUajd52pf9wcYP</software-id><software-name>JumpServerSSH</software-name><software-version>2.15.0</software-version></software-identification-condition></software-configuration-condition></configuration-condition></configuration-rule></rule-set-configuration></configuration></mspl>', '<?xml version="1.0" encoding="utf-8"?>\n<mspl><name>mspl_62eed5de-5710-49d5-b7a0-bb88433404cf</name><type>ipv4-mspl-type</type><configuration><capability>Filtering_L4</capability><rule-set-configuration><name>mspl_set_d3802715-2abd-440b-8220-aa1be8dcd7d5</name><configuration-rule><name>Rule_380ce769-ddd8-4ef3-b260-953a4ae3136b</name><isCNF>false</isCNF><external-data><priority>500</priority></external-data><configuration-action><filteringAction><filtering-action-type>DENY</filtering-action-type></filteringAction></configuration-action><configuration-condition><filtering-configuration-condition><packet-filter-condition><source-port>22</source-port></packet-filter-condition></filtering-configuration-condition></configuration-condition></configuration-rule></rule-set-configuration></configuration></mspl>']
+INFO:root:Adding new TMUD to database
+INFO:root:Sending TMUD File in MSPL 
+INFO:werkzeug:127.0.0.1 - - [18/Jun/2025 09:33:49] "POST /tmud HTTP/1.1" 200 -
+INFO:root:Checking if some MUDFile content changes
+INFO:root:Checking TMUDFiles process complete
+INFO:root:Received new message from REST API
+INFO:root:Message:
+{'tmudurl': 'http://localhost:8091/cb4d19e3-f51b-15cd-1278-a53533312401'}
+INFO:root:Parsing message
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost:8091
+DEBUG:urllib3.connectionpool:http://localhost:8091 "GET /cb4d19e3-f51b-15cd-1278-a53533312401 HTTP/1.1" 200 2615
+INFO:root:Translating tmudfile: http://localhost:8091/cb4d19e3-f51b-15cd-1278-a53533312401
+INFO:root:Transaltion from http://localhost:8091/cb4d19e3-f51b-15cd-1278-a53533312401 -> ['<?xml version="1.0" encoding="utf-8"?>\n<mspl><name>mspl_cb4d19e3-f51b-15cd-1278-a53533312401</name><threatid>cb4d19e3-f51b-15cd-1278-a53533312401</threatid><type>software-mspl-type</type><models-affected>JOpenSSH</models-affected><configuration><capability>software-protection</capability><rule-set-configuration><name>mspl_set_03be639a-53a8-4385-8df3-7b9a48331033</name><configuration-rule><name>Rule_aaee7b7e-a150-401e-b067-acaae1f9cadd</name><isCNF>false</isCNF><external-data><priority>500</priority></external-data><configuration-action><software-protection-action><software-protection-type>UPDATE</software-protection-type><software-fixed-version>2.16</software-fixed-version><software-fix-url>https://sr.certify.digital-worx.de/firmware/QmVJwv27ieRuya36ztgkRyP77ArbizmcuUajd52pf9wcYP</software-fix-url><software-fix-url>https://sr.certify.digital-worx.de/firmware/</software-fix-url></software-protection-action></configuration-action><configuration-condition><software-configuration-condition><software-identification-condition><software-id>QmVJwv27ieRuya36ztgkRyP77ArbizmcuUajd52pf9wcYP</software-id><software-name>OpenSSH</software-name><software-version>2.15.0</software-version></software-identification-condition></software-configuration-condition></configuration-condition></configuration-rule></rule-set-configuration></configuration></mspl>', '<?xml version="1.0" encoding="utf-8"?>\n<mspl><name>mspl_62eed5de-5710-49d5-b7a0-bb88433404cf</name><type>ipv4-mspl-type</type><configuration><capability>Filtering_L4</capability><rule-set-configuration><name>mspl_set_d3802715-2abd-440b-8220-aa1be8dcd7d5</name><configuration-rule><name>Rule_380ce769-ddd8-4ef3-b260-953a4ae3136b</name><isCNF>false</isCNF><external-data><priority>500</priority></external-data><configuration-action><filteringAction><filtering-action-type>DENY</filtering-action-type></filteringAction></configuration-action><configuration-condition><filtering-configuration-condition><packet-filter-condition><source-port>22</source-port></packet-filter-condition></filtering-configuration-condition></configuration-condition></configuration-rule></rule-set-configuration></configuration></mspl>']
+INFO:root:Adding new TMUD to database
+INFO:root:Sending TMUD File in MSPL 
+INFO:werkzeug:127.0.0.1 - - [18/Jun/2025 10:37:48] "POST /tmud HTTP/1.1" 200 -
+INFO:root:Received new message from REST API
+INFO:root:Message:
+{'tmudurl': 'http://localhost:8091/cb4d19e3-f51b-15cd-1278-a53533312401'}
+INFO:root:Parsing message
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost:8091
+DEBUG:urllib3.connectionpool:http://localhost:8091 "GET /cb4d19e3-f51b-15cd-1278-a53533312401 HTTP/1.1" 200 2615
+INFO:root:Translating tmudfile: http://localhost:8091/cb4d19e3-f51b-15cd-1278-a53533312401
+INFO:root:Transaltion from http://localhost:8091/cb4d19e3-f51b-15cd-1278-a53533312401 -> ['<?xml version="1.0" encoding="utf-8"?>\n<mspl><name>mspl_cb4d19e3-f51b-15cd-1278-a53533312401</name><threatid>cb4d19e3-f51b-15cd-1278-a53533312401</threatid><type>software-mspl-type</type><models-affected>JOpenSSH</models-affected><configuration><capability>software-protection</capability><rule-set-configuration><name>mspl_set_03be639a-53a8-4385-8df3-7b9a48331033</name><configuration-rule><name>Rule_aaee7b7e-a150-401e-b067-acaae1f9cadd</name><isCNF>false</isCNF><external-data><priority>500</priority></external-data><configuration-action><software-protection-action><software-protection-type>UPDATE</software-protection-type><software-fixed-version>2.16</software-fixed-version><software-fix-url>https://sr.certify.digital-worx.de/firmware/QmVJwv27ieRuya36ztgkRyP77ArbizmcuUajd52pf9wcYP</software-fix-url><software-fix-url>https://sr.certify.digital-worx.de/firmware/</software-fix-url></software-protection-action></configuration-action><configuration-condition><software-configuration-condition><software-identification-condition><software-id>QmVJwv27ieRuya36ztgkRyP77ArbizmcuUajd52pf9wcYP</software-id><software-name>OpenSSH</software-name><software-version>2.15.0</software-version></software-identification-condition></software-configuration-condition></configuration-condition></configuration-rule></rule-set-configuration></configuration></mspl>', '<?xml version="1.0" encoding="utf-8"?>\n<mspl><name>mspl_62eed5de-5710-49d5-b7a0-bb88433404cf</name><type>ipv4-mspl-type</type><configuration><capability>Filtering_L4</capability><rule-set-configuration><name>mspl_set_d3802715-2abd-440b-8220-aa1be8dcd7d5</name><configuration-rule><name>Rule_380ce769-ddd8-4ef3-b260-953a4ae3136b</name><isCNF>false</isCNF><external-data><priority>500</priority></external-data><configuration-action><filteringAction><filtering-action-type>DENY</filtering-action-type></filteringAction></configuration-action><configuration-condition><filtering-configuration-condition><packet-filter-condition><source-port>22</source-port></packet-filter-condition></filtering-configuration-condition></configuration-condition></configuration-rule></rule-set-configuration></configuration></mspl>']
+INFO:root:Adding new TMUD to database
+INFO:root:Sending TMUD File in MSPL 
+INFO:werkzeug:127.0.0.1 - - [18/Jun/2025 10:38:32] "POST /tmud HTTP/1.1" 200 -
+INFO:root:Received new message from REST API
+INFO:root:Message:
+{'tmudurl': 'http://localhost:8091/cb4d19e3-f51b-15cd-1278-a53533312401'}
+INFO:root:Parsing message
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost:8091
+DEBUG:urllib3.connectionpool:http://localhost:8091 "GET /cb4d19e3-f51b-15cd-1278-a53533312401 HTTP/1.1" 200 2615
+INFO:root:Translating tmudfile: http://localhost:8091/cb4d19e3-f51b-15cd-1278-a53533312401
+INFO:root:Transaltion from http://localhost:8091/cb4d19e3-f51b-15cd-1278-a53533312401 -> ['<?xml version="1.0" encoding="utf-8"?>\n<mspl><name>mspl_cb4d19e3-f51b-15cd-1278-a53533312401</name><threatid>cb4d19e3-f51b-15cd-1278-a53533312401</threatid><type>software-mspl-type</type><models-affected>JOpenSSH</models-affected><configuration><capability>software-protection</capability><rule-set-configuration><name>mspl_set_03be639a-53a8-4385-8df3-7b9a48331033</name><configuration-rule><name>Rule_aaee7b7e-a150-401e-b067-acaae1f9cadd</name><isCNF>false</isCNF><external-data><priority>500</priority></external-data><configuration-action><software-protection-action><software-protection-type>UPDATE</software-protection-type><software-fixed-version>2.16</software-fixed-version><software-fix-url>https://sr.certify.digital-worx.de/firmware/QmVJwv27ieRuya36ztgkRyP77ArbizmcuUajd52pf9wcYP</software-fix-url><software-fix-url>https://sr.certify.digital-worx.de/firmware/</software-fix-url></software-protection-action></configuration-action><configuration-condition><software-configuration-condition><software-identification-condition><software-id>QmVJwv27ieRuya36ztgkRyP77ArbizmcuUajd52pf9wcYP</software-id><software-name>OpenSSH</software-name><software-version>2.15.0</software-version></software-identification-condition></software-configuration-condition></configuration-condition></configuration-rule></rule-set-configuration></configuration></mspl>', '<?xml version="1.0" encoding="utf-8"?>\n<mspl><name>mspl_62eed5de-5710-49d5-b7a0-bb88433404cf</name><type>ipv4-mspl-type</type><configuration><capability>Filtering_L4</capability><rule-set-configuration><name>mspl_set_d3802715-2abd-440b-8220-aa1be8dcd7d5</name><configuration-rule><name>Rule_380ce769-ddd8-4ef3-b260-953a4ae3136b</name><isCNF>false</isCNF><external-data><priority>500</priority></external-data><configuration-action><filteringAction><filtering-action-type>DENY</filtering-action-type></filteringAction></configuration-action><configuration-condition><filtering-configuration-condition><packet-filter-condition><source-port>22</source-port></packet-filter-condition></filtering-configuration-condition></configuration-condition></configuration-rule></rule-set-configuration></configuration></mspl>']
+INFO:root:Adding new TMUD to database
+INFO:root:Sending TMUD File in MSPL 
+INFO:werkzeug:127.0.0.1 - - [18/Jun/2025 10:38:40] "POST /tmud HTTP/1.1" 200 -
+INFO:root:Checking if some MUDFile content changes
+INFO:root:Checking TMUDFiles process complete
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8889
+ * Running on http://155.54.95.211:8889
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:root:Received new message from REST API
+INFO:root:Message:
+{'tmudurl': 'http://localhost:8091/cb4d19e3-f51b-15cd-1278-a53533312401'}
+INFO:root:Parsing message
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost:8091
+DEBUG:urllib3.connectionpool:http://localhost:8091 "GET /cb4d19e3-f51b-15cd-1278-a53533312401 HTTP/1.1" 200 2615
+INFO:root:Translating tmudfile: http://localhost:8091/cb4d19e3-f51b-15cd-1278-a53533312401
+INFO:root:Transaltion from http://localhost:8091/cb4d19e3-f51b-15cd-1278-a53533312401 -> ['<?xml version="1.0" encoding="utf-8"?>\n<mspl><name>mspl_cb4d19e3-f51b-15cd-1278-a53533312401</name><threatid>cb4d19e3-f51b-15cd-1278-a53533312401</threatid><type>software-mspl-type</type><models-affected>JOpenSSH</models-affected><configuration><capability>software-protection</capability><rule-set-configuration><name>mspl_set_03be639a-53a8-4385-8df3-7b9a48331033</name><configuration-rule><name>Rule_aaee7b7e-a150-401e-b067-acaae1f9cadd</name><isCNF>false</isCNF><external-data><priority>500</priority></external-data><configuration-action><software-protection-action><software-protection-type>UPDATE</software-protection-type><software-fixed-version>2.16</software-fixed-version><software-fix-url>https://sr.certify.digital-worx.de/firmware/QmVJwv27ieRuya36ztgkRyP77ArbizmcuUajd52pf9wcYP</software-fix-url><software-fix-url>https://sr.certify.digital-worx.de/firmware/</software-fix-url></software-protection-action></configuration-action><configuration-condition><software-configuration-condition><software-identification-condition><software-id>QmVJwv27ieRuya36ztgkRyP77ArbizmcuUajd52pf9wcYP</software-id><software-name>OpenSSH</software-name><software-version>2.15.0</software-version></software-identification-condition></software-configuration-condition></configuration-condition></configuration-rule></rule-set-configuration></configuration></mspl>', '<?xml version="1.0" encoding="utf-8"?>\n<mspl><name>mspl_62eed5de-5710-49d5-b7a0-bb88433404cf</name><type>ipv4-mspl-type</type><configuration><capability>Filtering_L4</capability><rule-set-configuration><name>mspl_set_d3802715-2abd-440b-8220-aa1be8dcd7d5</name><configuration-rule><name>Rule_380ce769-ddd8-4ef3-b260-953a4ae3136b</name><isCNF>false</isCNF><external-data><priority>500</priority></external-data><configuration-action><filteringAction><filtering-action-type>DENY</filtering-action-type></filteringAction></configuration-action><configuration-condition><filtering-configuration-condition><packet-filter-condition><source-port>22</source-port></packet-filter-condition></filtering-configuration-condition></configuration-condition></configuration-rule></rule-set-configuration></configuration></mspl>']
+INFO:root:Adding new TMUD to database
+INFO:root:Sending TMUD File in MSPL 
+INFO:werkzeug:127.0.0.1 - - [18/Jun/2025 10:39:32] "POST /tmud HTTP/1.1" 200 -
+INFO:root:Received new message from REST API
+INFO:root:Message:
+{'tmudurl': 'http://localhost:8091/cb4d19e3-f51b-15cd-1278-a53533312401'}
+INFO:root:Parsing message
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost:8091
+DEBUG:urllib3.connectionpool:http://localhost:8091 "GET /cb4d19e3-f51b-15cd-1278-a53533312401 HTTP/1.1" 200 2614
+INFO:root:Translating tmudfile: http://localhost:8091/cb4d19e3-f51b-15cd-1278-a53533312401
+INFO:root:Transaltion from http://localhost:8091/cb4d19e3-f51b-15cd-1278-a53533312401 -> ['<?xml version="1.0" encoding="utf-8"?>\n<mspl><name>mspl_cb4d19e3-f51b-15cd-1278-a53533312401</name><threatid>cb4d19e3-f51b-15cd-1278-a53533312401</threatid><type>software-mspl-type</type><models-affected>OpenSSH</models-affected><configuration><capability>software-protection</capability><rule-set-configuration><name>mspl_set_03be639a-53a8-4385-8df3-7b9a48331033</name><configuration-rule><name>Rule_aaee7b7e-a150-401e-b067-acaae1f9cadd</name><isCNF>false</isCNF><external-data><priority>500</priority></external-data><configuration-action><software-protection-action><software-protection-type>UPDATE</software-protection-type><software-fixed-version>2.16</software-fixed-version><software-fix-url>https://sr.certify.digital-worx.de/firmware/QmVJwv27ieRuya36ztgkRyP77ArbizmcuUajd52pf9wcYP</software-fix-url><software-fix-url>https://sr.certify.digital-worx.de/firmware/</software-fix-url></software-protection-action></configuration-action><configuration-condition><software-configuration-condition><software-identification-condition><software-id>QmVJwv27ieRuya36ztgkRyP77ArbizmcuUajd52pf9wcYP</software-id><software-name>OpenSSH</software-name><software-version>2.15.0</software-version></software-identification-condition></software-configuration-condition></configuration-condition></configuration-rule></rule-set-configuration></configuration></mspl>', '<?xml version="1.0" encoding="utf-8"?>\n<mspl><name>mspl_62eed5de-5710-49d5-b7a0-bb88433404cf</name><type>ipv4-mspl-type</type><configuration><capability>Filtering_L4</capability><rule-set-configuration><name>mspl_set_d3802715-2abd-440b-8220-aa1be8dcd7d5</name><configuration-rule><name>Rule_380ce769-ddd8-4ef3-b260-953a4ae3136b</name><isCNF>false</isCNF><external-data><priority>500</priority></external-data><configuration-action><filteringAction><filtering-action-type>DENY</filtering-action-type></filteringAction></configuration-action><configuration-condition><filtering-configuration-condition><packet-filter-condition><source-port>22</source-port></packet-filter-condition></filtering-configuration-condition></configuration-condition></configuration-rule></rule-set-configuration></configuration></mspl>']
+INFO:root:Adding new TMUD to database
+INFO:root:Sending TMUD File in MSPL 
+INFO:werkzeug:127.0.0.1 - - [18/Jun/2025 10:39:47] "POST /tmud HTTP/1.1" 200 -
+INFO:root:Checking if some MUDFile content changes
+INFO:root:Checking TMUDFiles process complete
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8889
+ * Running on http://155.54.95.211:8889
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:root:Received new message from REST API
+INFO:root:Message:
+{'tmudurl': 'http://localhost:8091/cb4d19e3-f51b-15cd-1278-a53533312401'}
+INFO:root:Parsing message
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost:8091
+DEBUG:urllib3.connectionpool:http://localhost:8091 "GET /cb4d19e3-f51b-15cd-1278-a53533312401 HTTP/1.1" 200 2614
+INFO:root:Translating tmudfile: http://localhost:8091/cb4d19e3-f51b-15cd-1278-a53533312401
+INFO:root:Transaltion from http://localhost:8091/cb4d19e3-f51b-15cd-1278-a53533312401 -> ['<?xml version="1.0" encoding="utf-8"?>\n<mspl><name>mspl_cb4d19e3-f51b-15cd-1278-a53533312401</name><threatid>cb4d19e3-f51b-15cd-1278-a53533312401</threatid><type>software-mspl-type</type><models-affected>OpenSSH</models-affected><configuration><capability>software-protection</capability><rule-set-configuration><name>mspl_set_03be639a-53a8-4385-8df3-7b9a48331033</name><configuration-rule><name>Rule_aaee7b7e-a150-401e-b067-acaae1f9cadd</name><isCNF>false</isCNF><external-data><priority>500</priority></external-data><configuration-action><software-protection-action><software-protection-type>UPDATE</software-protection-type><software-fixed-version>2.16</software-fixed-version><software-fix-url>https://sr.certify.digital-worx.de/firmware/QmVJwv27ieRuya36ztgkRyP77ArbizmcuUajd52pf9wcYP</software-fix-url><software-fix-url>https://sr.certify.digital-worx.de/firmware/</software-fix-url></software-protection-action></configuration-action><configuration-condition><software-configuration-condition><software-identification-condition><software-id>QmVJwv27ieRuya36ztgkRyP77ArbizmcuUajd52pf9wcYP</software-id><software-name>OpenSSH</software-name><software-version>2.15.0</software-version></software-identification-condition></software-configuration-condition></configuration-condition></configuration-rule></rule-set-configuration></configuration></mspl>', '<?xml version="1.0" encoding="utf-8"?>\n<mspl><name>mspl_62eed5de-5710-49d5-b7a0-bb88433404cf</name><type>ipv4-mspl-type</type><configuration><capability>Filtering_L4</capability><rule-set-configuration><name>mspl_set_d3802715-2abd-440b-8220-aa1be8dcd7d5</name><configuration-rule><name>Rule_380ce769-ddd8-4ef3-b260-953a4ae3136b</name><isCNF>false</isCNF><external-data><priority>500</priority></external-data><configuration-action><filteringAction><filtering-action-type>DENY</filtering-action-type></filteringAction></configuration-action><configuration-condition><filtering-configuration-condition><packet-filter-condition><source-port>22</source-port></packet-filter-condition></filtering-configuration-condition></configuration-condition></configuration-rule></rule-set-configuration></configuration></mspl>']
+INFO:root:Adding new TMUD to database
+INFO:root:Sending TMUD File in MSPL 
+INFO:werkzeug:127.0.0.1 - - [18/Jun/2025 11:15:07] "POST /tmud HTTP/1.1" 200 -
+INFO:root:Checking if some MUDFile content changes
+INFO:root:Checking TMUDFiles process complete
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8889
+ * Running on http://155.54.95.211:8889
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:root:Received new message from REST API
+INFO:root:Message:
+{'tmudurl': 'http://localhost:8091/cb4d19e3-f51b-15cd-1278-a53533312401'}
+INFO:root:Parsing message
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost:8091
+DEBUG:urllib3.connectionpool:http://localhost:8091 "GET /cb4d19e3-f51b-15cd-1278-a53533312401 HTTP/1.1" 200 2614
+INFO:root:Translating tmudfile: http://localhost:8091/cb4d19e3-f51b-15cd-1278-a53533312401
+INFO:root:Transaltion from http://localhost:8091/cb4d19e3-f51b-15cd-1278-a53533312401 -> ['<?xml version="1.0" encoding="utf-8"?>\n<mspl><name>mspl_cb4d19e3-f51b-15cd-1278-a53533312401</name><threatid>cb4d19e3-f51b-15cd-1278-a53533312401</threatid><type>software-mspl-type</type><models-affected>OpenSSH</models-affected><configuration><capability>software-protection</capability><rule-set-configuration><name>mspl_set_03be639a-53a8-4385-8df3-7b9a48331033</name><configuration-rule><name>Rule_aaee7b7e-a150-401e-b067-acaae1f9cadd</name><isCNF>false</isCNF><external-data><priority>500</priority></external-data><configuration-action><software-protection-action><software-protection-type>UPDATE</software-protection-type><software-fixed-version>2.16</software-fixed-version><software-fix-url>https://sr.certify.digital-worx.de/firmware/QmVJwv27ieRuya36ztgkRyP77ArbizmcuUajd52pf9wcYP</software-fix-url><software-fix-url>https://sr.certify.digital-worx.de/firmware/</software-fix-url></software-protection-action></configuration-action><configuration-condition><software-configuration-condition><software-identification-condition><software-id>QmVJwv27ieRuya36ztgkRyP77ArbizmcuUajd52pf9wcYP</software-id><software-name>OpenSSH</software-name><software-version>2.15.0</software-version></software-identification-condition></software-configuration-condition></configuration-condition></configuration-rule></rule-set-configuration></configuration></mspl>', '<?xml version="1.0" encoding="utf-8"?>\n<mspl><name>mspl_62eed5de-5710-49d5-b7a0-bb88433404cf</name><type>ipv4-mspl-type</type><configuration><capability>Filtering_L4</capability><rule-set-configuration><name>mspl_set_d3802715-2abd-440b-8220-aa1be8dcd7d5</name><configuration-rule><name>Rule_380ce769-ddd8-4ef3-b260-953a4ae3136b</name><isCNF>false</isCNF><external-data><priority>500</priority></external-data><configuration-action><filteringAction><filtering-action-type>DENY</filtering-action-type></filteringAction></configuration-action><configuration-condition><filtering-configuration-condition><packet-filter-condition><source-port>22</source-port></packet-filter-condition></filtering-configuration-condition></configuration-condition></configuration-rule></rule-set-configuration></configuration></mspl>']
+INFO:root:Adding new TMUD to database
+INFO:root:Sending TMUD File in MSPL 
+INFO:werkzeug:127.0.0.1 - - [18/Jun/2025 11:15:44] "POST /tmud HTTP/1.1" 200 -
+ERROR:werkzeug:167.71.150.185 - - [18/Jun/2025 11:50:44] code 400, message Bad request syntax ('JRMI\x00\x02K')
+INFO:werkzeug:167.71.150.185 - - [18/Jun/2025 11:50:44] "[31m[1mJRMI\x00\x02K[0m" 400 -
+INFO:werkzeug:167.71.150.185 - - [18/Jun/2025 11:50:44] "[33mGET / HTTP/1.0[0m" 404 -
+INFO:root:Checking if some MUDFile content changes
+INFO:root:Checking TMUDFiles process complete
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8889
+ * Running on http://155.54.95.211:8889
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:root:Received new message from REST API
+INFO:root:Message:
+{'tmudurl': 'http://localhost:8091/cb4d19e3-f51b-15cd-1278-a53533312401'}
+INFO:root:Parsing message
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost:8091
+DEBUG:urllib3.connectionpool:http://localhost:8091 "GET /cb4d19e3-f51b-15cd-1278-a53533312401 HTTP/1.1" 200 2614
+INFO:root:Translating tmudfile: http://localhost:8091/cb4d19e3-f51b-15cd-1278-a53533312401
+INFO:root:Transaltion from http://localhost:8091/cb4d19e3-f51b-15cd-1278-a53533312401 -> ['<?xml version="1.0" encoding="utf-8"?>\n<mspl><name>mspl_cb4d19e3-f51b-15cd-1278-a53533312401</name><threatid>cb4d19e3-f51b-15cd-1278-a53533312401</threatid><type>software-mspl-type</type><models-affected>OpenSSH</models-affected><configuration><capability>software-protection</capability><rule-set-configuration><name>mspl_set_03be639a-53a8-4385-8df3-7b9a48331033</name><configuration-rule><name>Rule_aaee7b7e-a150-401e-b067-acaae1f9cadd</name><isCNF>false</isCNF><external-data><priority>500</priority></external-data><configuration-action><software-protection-action><software-protection-type>UPDATE</software-protection-type><software-fixed-version>2.16</software-fixed-version><software-fix-url>https://sr.certify.digital-worx.de/firmware/QmVJwv27ieRuya36ztgkRyP77ArbizmcuUajd52pf9wcYP</software-fix-url><software-fix-url>https://sr.certify.digital-worx.de/firmware/</software-fix-url></software-protection-action></configuration-action><configuration-condition><software-configuration-condition><software-identification-condition><software-id>QmVJwv27ieRuya36ztgkRyP77ArbizmcuUajd52pf9wcYP</software-id><software-name>OpenSSH</software-name><software-version>2.15.0</software-version></software-identification-condition></software-configuration-condition></configuration-condition></configuration-rule></rule-set-configuration></configuration></mspl>', '<?xml version="1.0" encoding="utf-8"?>\n<mspl><name>mspl_62eed5de-5710-49d5-b7a0-bb88433404cf</name><type>ipv4-mspl-type</type><configuration><capability>Filtering_L4</capability><rule-set-configuration><name>mspl_set_d3802715-2abd-440b-8220-aa1be8dcd7d5</name><configuration-rule><name>Rule_380ce769-ddd8-4ef3-b260-953a4ae3136b</name><isCNF>false</isCNF><external-data><priority>500</priority></external-data><configuration-action><filteringAction><filtering-action-type>DENY</filtering-action-type></filteringAction></configuration-action><configuration-condition><filtering-configuration-condition><packet-filter-condition><source-port>22</source-port></packet-filter-condition></filtering-configuration-condition></configuration-condition></configuration-rule></rule-set-configuration></configuration></mspl>']
+INFO:root:Adding new TMUD to database
+INFO:root:Sending TMUD File in MSPL 
+INFO:werkzeug:127.0.0.1 - - [19/Jun/2025 07:05:55] "POST /tmud HTTP/1.1" 200 -
+INFO:root:Received new message from REST API
+INFO:root:Message:
+{'tmudurl': 'http://localhost:8091/cb4d19e3-f51b-15cd-1278-a53533312401'}
+INFO:root:Parsing message
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost:8091
+DEBUG:urllib3.connectionpool:http://localhost:8091 "GET /cb4d19e3-f51b-15cd-1278-a53533312401 HTTP/1.1" 200 2614
+INFO:root:Translating tmudfile: http://localhost:8091/cb4d19e3-f51b-15cd-1278-a53533312401
+INFO:root:Transaltion from http://localhost:8091/cb4d19e3-f51b-15cd-1278-a53533312401 -> ['<?xml version="1.0" encoding="utf-8"?>\n<mspl><name>mspl_cb4d19e3-f51b-15cd-1278-a53533312401</name><threatid>cb4d19e3-f51b-15cd-1278-a53533312401</threatid><type>software-mspl-type</type><models-affected>OpenSSH</models-affected><configuration><capability>software-protection</capability><rule-set-configuration><name>mspl_set_03be639a-53a8-4385-8df3-7b9a48331033</name><configuration-rule><name>Rule_aaee7b7e-a150-401e-b067-acaae1f9cadd</name><isCNF>false</isCNF><external-data><priority>500</priority></external-data><configuration-action><software-protection-action><software-protection-type>UPDATE</software-protection-type><software-fixed-version>2.16</software-fixed-version><software-fix-url>https://sr.certify.digital-worx.de/firmware/QmVJwv27ieRuya36ztgkRyP77ArbizmcuUajd52pf9wcYP</software-fix-url><software-fix-url>https://sr.certify.digital-worx.de/firmware/</software-fix-url></software-protection-action></configuration-action><configuration-condition><software-configuration-condition><software-identification-condition><software-id>QmVJwv27ieRuya36ztgkRyP77ArbizmcuUajd52pf9wcYP</software-id><software-name>OpenSSH</software-name><software-version>2.15.0</software-version></software-identification-condition></software-configuration-condition></configuration-condition></configuration-rule></rule-set-configuration></configuration></mspl>', '<?xml version="1.0" encoding="utf-8"?>\n<mspl><name>mspl_62eed5de-5710-49d5-b7a0-bb88433404cf</name><type>ipv4-mspl-type</type><configuration><capability>Filtering_L4</capability><rule-set-configuration><name>mspl_set_d3802715-2abd-440b-8220-aa1be8dcd7d5</name><configuration-rule><name>Rule_380ce769-ddd8-4ef3-b260-953a4ae3136b</name><isCNF>false</isCNF><external-data><priority>500</priority></external-data><configuration-action><filteringAction><filtering-action-type>DENY</filtering-action-type></filteringAction></configuration-action><configuration-condition><filtering-configuration-condition><packet-filter-condition><source-port>22</source-port></packet-filter-condition></filtering-configuration-condition></configuration-condition></configuration-rule></rule-set-configuration></configuration></mspl>']
+INFO:root:Adding new TMUD to database
+INFO:root:Sending TMUD File in MSPL 
+INFO:werkzeug:127.0.0.1 - - [19/Jun/2025 07:08:12] "POST /tmud HTTP/1.1" 200 -
+INFO:root:Received new message from REST API
+INFO:root:Message:
+{'tmudurl': 'http://localhost:8091/cb4d19e3-f51b-15cd-1278-a53533312401'}
+INFO:root:Parsing message
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost:8091
+DEBUG:urllib3.connectionpool:http://localhost:8091 "GET /cb4d19e3-f51b-15cd-1278-a53533312401 HTTP/1.1" 200 2614
+INFO:root:Translating tmudfile: http://localhost:8091/cb4d19e3-f51b-15cd-1278-a53533312401
+INFO:root:Transaltion from http://localhost:8091/cb4d19e3-f51b-15cd-1278-a53533312401 -> ['<?xml version="1.0" encoding="utf-8"?>\n<mspl><name>mspl_cb4d19e3-f51b-15cd-1278-a53533312401</name><threatid>cb4d19e3-f51b-15cd-1278-a53533312401</threatid><type>software-mspl-type</type><models-affected>OpenSSH</models-affected><configuration><capability>software-protection</capability><rule-set-configuration><name>mspl_set_03be639a-53a8-4385-8df3-7b9a48331033</name><configuration-rule><name>Rule_aaee7b7e-a150-401e-b067-acaae1f9cadd</name><isCNF>false</isCNF><external-data><priority>500</priority></external-data><configuration-action><software-protection-action><software-protection-type>UPDATE</software-protection-type><software-fixed-version>2.16</software-fixed-version><software-fix-url>https://sr.certify.digital-worx.de/firmware/QmVJwv27ieRuya36ztgkRyP77ArbizmcuUajd52pf9wcYP</software-fix-url><software-fix-url>https://sr.certify.digital-worx.de/firmware/</software-fix-url></software-protection-action></configuration-action><configuration-condition><software-configuration-condition><software-identification-condition><software-id>QmVJwv27ieRuya36ztgkRyP77ArbizmcuUajd52pf9wcYP</software-id><software-name>OpenSSH</software-name><software-version>2.15.0</software-version></software-identification-condition></software-configuration-condition></configuration-condition></configuration-rule></rule-set-configuration></configuration></mspl>', '<?xml version="1.0" encoding="utf-8"?>\n<mspl><name>mspl_62eed5de-5710-49d5-b7a0-bb88433404cf</name><type>ipv4-mspl-type</type><configuration><capability>Filtering_L4</capability><rule-set-configuration><name>mspl_set_d3802715-2abd-440b-8220-aa1be8dcd7d5</name><configuration-rule><name>Rule_380ce769-ddd8-4ef3-b260-953a4ae3136b</name><isCNF>false</isCNF><external-data><priority>500</priority></external-data><configuration-action><filteringAction><filtering-action-type>DENY</filtering-action-type></filteringAction></configuration-action><configuration-condition><filtering-configuration-condition><packet-filter-condition><source-port>22</source-port></packet-filter-condition></filtering-configuration-condition></configuration-condition></configuration-rule></rule-set-configuration></configuration></mspl>']
+INFO:root:Adding new TMUD to database
+INFO:root:Sending TMUD File in MSPL 
+INFO:werkzeug:127.0.0.1 - - [19/Jun/2025 07:09:33] "POST /tmud HTTP/1.1" 200 -
+INFO:root:Received new message from REST API
+INFO:root:Message:
+{'tmudurl': 'http://localhost:8091/cb4d19e3-f51b-15cd-1278-a53533312401'}
+INFO:root:Parsing message
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost:8091
+DEBUG:urllib3.connectionpool:http://localhost:8091 "GET /cb4d19e3-f51b-15cd-1278-a53533312401 HTTP/1.1" 200 2614
+INFO:root:Translating tmudfile: http://localhost:8091/cb4d19e3-f51b-15cd-1278-a53533312401
+INFO:root:Transaltion from http://localhost:8091/cb4d19e3-f51b-15cd-1278-a53533312401 -> ['<?xml version="1.0" encoding="utf-8"?>\n<mspl><name>mspl_cb4d19e3-f51b-15cd-1278-a53533312401</name><threatid>cb4d19e3-f51b-15cd-1278-a53533312401</threatid><type>software-mspl-type</type><models-affected>OpenSSH</models-affected><configuration><capability>software-protection</capability><rule-set-configuration><name>mspl_set_03be639a-53a8-4385-8df3-7b9a48331033</name><configuration-rule><name>Rule_aaee7b7e-a150-401e-b067-acaae1f9cadd</name><isCNF>false</isCNF><external-data><priority>500</priority></external-data><configuration-action><software-protection-action><software-protection-type>UPDATE</software-protection-type><software-fixed-version>2.16</software-fixed-version><software-fix-url>https://sr.certify.digital-worx.de/firmware/QmVJwv27ieRuya36ztgkRyP77ArbizmcuUajd52pf9wcYP</software-fix-url><software-fix-url>https://sr.certify.digital-worx.de/firmware/</software-fix-url></software-protection-action></configuration-action><configuration-condition><software-configuration-condition><software-identification-condition><software-id>QmVJwv27ieRuya36ztgkRyP77ArbizmcuUajd52pf9wcYP</software-id><software-name>OpenSSH</software-name><software-version>2.15.0</software-version></software-identification-condition></software-configuration-condition></configuration-condition></configuration-rule></rule-set-configuration></configuration></mspl>', '<?xml version="1.0" encoding="utf-8"?>\n<mspl><name>mspl_62eed5de-5710-49d5-b7a0-bb88433404cf</name><type>ipv4-mspl-type</type><configuration><capability>Filtering_L4</capability><rule-set-configuration><name>mspl_set_d3802715-2abd-440b-8220-aa1be8dcd7d5</name><configuration-rule><name>Rule_380ce769-ddd8-4ef3-b260-953a4ae3136b</name><isCNF>false</isCNF><external-data><priority>500</priority></external-data><configuration-action><filteringAction><filtering-action-type>DENY</filtering-action-type></filteringAction></configuration-action><configuration-condition><filtering-configuration-condition><packet-filter-condition><source-port>22</source-port></packet-filter-condition></filtering-configuration-condition></configuration-condition></configuration-rule></rule-set-configuration></configuration></mspl>']
+INFO:root:Adding new TMUD to database
+INFO:root:Sending TMUD File in MSPL 
+INFO:werkzeug:127.0.0.1 - - [19/Jun/2025 07:12:20] "POST /tmud HTTP/1.1" 200 -
+INFO:root:Checking if some MUDFile content changes
+INFO:root:Checking TMUDFiles process complete
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8889
+ * Running on http://155.54.95.211:8889
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:root:Received new message from REST API
+INFO:root:Message:
+{'tmudurl': 'http://localhost:8091/cb4d19e3-f51b-15cd-1278-a53533312401'}
+INFO:root:Parsing message
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost:8091
+DEBUG:urllib3.connectionpool:http://localhost:8091 "GET /cb4d19e3-f51b-15cd-1278-a53533312401 HTTP/1.1" 200 2614
+INFO:root:Translating tmudfile: http://localhost:8091/cb4d19e3-f51b-15cd-1278-a53533312401
+INFO:root:Transaltion from http://localhost:8091/cb4d19e3-f51b-15cd-1278-a53533312401 -> ['<?xml version="1.0" encoding="utf-8"?>\n<mspl><name>mspl_cb4d19e3-f51b-15cd-1278-a53533312401</name><threatid>cb4d19e3-f51b-15cd-1278-a53533312401</threatid><type>software-mspl-type</type><models-affected>OpenSSH</models-affected><configuration><capability>software-protection</capability><rule-set-configuration><name>mspl_set_03be639a-53a8-4385-8df3-7b9a48331033</name><configuration-rule><name>Rule_aaee7b7e-a150-401e-b067-acaae1f9cadd</name><isCNF>false</isCNF><external-data><priority>500</priority></external-data><configuration-action><software-protection-action><software-protection-type>UPDATE</software-protection-type><software-fixed-version>2.16</software-fixed-version><software-fix-url>https://sr.certify.digital-worx.de/firmware/QmVJwv27ieRuya36ztgkRyP77ArbizmcuUajd52pf9wcYP</software-fix-url><software-fix-url>https://sr.certify.digital-worx.de/firmware/</software-fix-url></software-protection-action></configuration-action><configuration-condition><software-configuration-condition><software-identification-condition><software-id>QmVJwv27ieRuya36ztgkRyP77ArbizmcuUajd52pf9wcYP</software-id><software-name>OpenSSH</software-name><software-version>2.15.0</software-version></software-identification-condition></software-configuration-condition></configuration-condition></configuration-rule></rule-set-configuration></configuration></mspl>', '<?xml version="1.0" encoding="utf-8"?>\n<mspl><name>mspl_62eed5de-5710-49d5-b7a0-bb88433404cf</name><type>ipv4-mspl-type</type><configuration><capability>Filtering_L4</capability><rule-set-configuration><name>mspl_set_d3802715-2abd-440b-8220-aa1be8dcd7d5</name><configuration-rule><name>Rule_380ce769-ddd8-4ef3-b260-953a4ae3136b</name><isCNF>false</isCNF><external-data><priority>500</priority></external-data><configuration-action><filteringAction><filtering-action-type>DENY</filtering-action-type></filteringAction></configuration-action><configuration-condition><filtering-configuration-condition><packet-filter-condition><source-port>22</source-port></packet-filter-condition></filtering-configuration-condition></configuration-condition></configuration-rule></rule-set-configuration></configuration></mspl>']
+INFO:root:Adding new TMUD to database
+INFO:root:Sending TMUD File in MSPL 
+INFO:werkzeug:127.0.0.1 - - [19/Jun/2025 07:18:14] "POST /tmud HTTP/1.1" 200 -
+INFO:root:Received new message from REST API
+INFO:root:Message:
+{'tmudurl': 'http://localhost:8091/cb4d19e3-f51b-15cd-1278-a53533312401'}
+INFO:root:Parsing message
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost:8091
+DEBUG:urllib3.connectionpool:http://localhost:8091 "GET /cb4d19e3-f51b-15cd-1278-a53533312401 HTTP/1.1" 200 2614
+INFO:root:Translating tmudfile: http://localhost:8091/cb4d19e3-f51b-15cd-1278-a53533312401
+INFO:root:Transaltion from http://localhost:8091/cb4d19e3-f51b-15cd-1278-a53533312401 -> ['<?xml version="1.0" encoding="utf-8"?>\n<mspl><name>mspl_cb4d19e3-f51b-15cd-1278-a53533312401</name><threatid>cb4d19e3-f51b-15cd-1278-a53533312401</threatid><type>software-mspl-type</type><models-affected>OpenSSH</models-affected><configuration><capability>software-protection</capability><rule-set-configuration><name>mspl_set_03be639a-53a8-4385-8df3-7b9a48331033</name><configuration-rule><name>Rule_aaee7b7e-a150-401e-b067-acaae1f9cadd</name><isCNF>false</isCNF><external-data><priority>500</priority></external-data><configuration-action><software-protection-action><software-protection-type>UPDATE</software-protection-type><software-fixed-version>2.16</software-fixed-version><software-fix-url>https://sr.certify.digital-worx.de/firmware/QmVJwv27ieRuya36ztgkRyP77ArbizmcuUajd52pf9wcYP</software-fix-url><software-fix-url>https://sr.certify.digital-worx.de/firmware/</software-fix-url></software-protection-action></configuration-action><configuration-condition><software-configuration-condition><software-identification-condition><software-id>QmVJwv27ieRuya36ztgkRyP77ArbizmcuUajd52pf9wcYP</software-id><software-name>OpenSSH</software-name><software-version>2.15.0</software-version></software-identification-condition></software-configuration-condition></configuration-condition></configuration-rule></rule-set-configuration></configuration></mspl>', '<?xml version="1.0" encoding="utf-8"?>\n<mspl><name>mspl_62eed5de-5710-49d5-b7a0-bb88433404cf</name><type>ipv4-mspl-type</type><configuration><capability>Filtering_L4</capability><rule-set-configuration><name>mspl_set_d3802715-2abd-440b-8220-aa1be8dcd7d5</name><configuration-rule><name>Rule_380ce769-ddd8-4ef3-b260-953a4ae3136b</name><isCNF>false</isCNF><external-data><priority>500</priority></external-data><configuration-action><filteringAction><filtering-action-type>DENY</filtering-action-type></filteringAction></configuration-action><configuration-condition><filtering-configuration-condition><packet-filter-condition><source-port>22</source-port></packet-filter-condition></filtering-configuration-condition></configuration-condition></configuration-rule></rule-set-configuration></configuration></mspl>']
+INFO:root:Adding new TMUD to database
+INFO:root:Sending TMUD File in MSPL 
+INFO:werkzeug:127.0.0.1 - - [19/Jun/2025 07:22:41] "POST /tmud HTTP/1.1" 200 -
+INFO:root:Received new message from REST API
+INFO:root:Message:
+{'tmudurl': 'http://localhost:8091/cb4d19e3-f51b-15cd-1278-a53533312401'}
+INFO:root:Parsing message
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost:8091
+DEBUG:urllib3.connectionpool:http://localhost:8091 "GET /cb4d19e3-f51b-15cd-1278-a53533312401 HTTP/1.1" 200 2614
+INFO:root:Translating tmudfile: http://localhost:8091/cb4d19e3-f51b-15cd-1278-a53533312401
+INFO:root:Transaltion from http://localhost:8091/cb4d19e3-f51b-15cd-1278-a53533312401 -> ['<?xml version="1.0" encoding="utf-8"?>\n<mspl><name>mspl_cb4d19e3-f51b-15cd-1278-a53533312401</name><threatid>cb4d19e3-f51b-15cd-1278-a53533312401</threatid><type>software-mspl-type</type><models-affected>OpenSSH</models-affected><configuration><capability>software-protection</capability><rule-set-configuration><name>mspl_set_03be639a-53a8-4385-8df3-7b9a48331033</name><configuration-rule><name>Rule_aaee7b7e-a150-401e-b067-acaae1f9cadd</name><isCNF>false</isCNF><external-data><priority>500</priority></external-data><configuration-action><software-protection-action><software-protection-type>UPDATE</software-protection-type><software-fixed-version>2.16</software-fixed-version><software-fix-url>https://sr.certify.digital-worx.de/firmware/QmVJwv27ieRuya36ztgkRyP77ArbizmcuUajd52pf9wcYP</software-fix-url><software-fix-url>https://sr.certify.digital-worx.de/firmware/</software-fix-url></software-protection-action></configuration-action><configuration-condition><software-configuration-condition><software-identification-condition><software-id>QmVJwv27ieRuya36ztgkRyP77ArbizmcuUajd52pf9wcYP</software-id><software-name>OpenSSH</software-name><software-version>2.15.0</software-version></software-identification-condition></software-configuration-condition></configuration-condition></configuration-rule></rule-set-configuration></configuration></mspl>', '<?xml version="1.0" encoding="utf-8"?>\n<mspl><name>mspl_62eed5de-5710-49d5-b7a0-bb88433404cf</name><type>ipv4-mspl-type</type><configuration><capability>Filtering_L4</capability><rule-set-configuration><name>mspl_set_d3802715-2abd-440b-8220-aa1be8dcd7d5</name><configuration-rule><name>Rule_380ce769-ddd8-4ef3-b260-953a4ae3136b</name><isCNF>false</isCNF><external-data><priority>500</priority></external-data><configuration-action><filteringAction><filtering-action-type>DENY</filtering-action-type></filteringAction></configuration-action><configuration-condition><filtering-configuration-condition><packet-filter-condition><source-port>22</source-port></packet-filter-condition></filtering-configuration-condition></configuration-condition></configuration-rule></rule-set-configuration></configuration></mspl>']
+INFO:root:Adding new TMUD to database
+INFO:root:Sending TMUD File in MSPL 
+INFO:werkzeug:127.0.0.1 - - [19/Jun/2025 07:24:26] "POST /tmud HTTP/1.1" 200 -
+INFO:root:Received new message from REST API
+INFO:root:Message:
+{'tmudurl': 'http://localhost:8091/cb4d19e3-f51b-15cd-1278-a53533312401'}
+INFO:root:Parsing message
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost:8091
+DEBUG:urllib3.connectionpool:http://localhost:8091 "GET /cb4d19e3-f51b-15cd-1278-a53533312401 HTTP/1.1" 200 2614
+INFO:root:Translating tmudfile: http://localhost:8091/cb4d19e3-f51b-15cd-1278-a53533312401
+INFO:root:Transaltion from http://localhost:8091/cb4d19e3-f51b-15cd-1278-a53533312401 -> ['<?xml version="1.0" encoding="utf-8"?>\n<mspl><name>mspl_cb4d19e3-f51b-15cd-1278-a53533312401</name><threatid>cb4d19e3-f51b-15cd-1278-a53533312401</threatid><type>software-mspl-type</type><models-affected>OpenSSH</models-affected><configuration><capability>software-protection</capability><rule-set-configuration><name>mspl_set_03be639a-53a8-4385-8df3-7b9a48331033</name><configuration-rule><name>Rule_aaee7b7e-a150-401e-b067-acaae1f9cadd</name><isCNF>false</isCNF><external-data><priority>500</priority></external-data><configuration-action><software-protection-action><software-protection-type>UPDATE</software-protection-type><software-fixed-version>2.16</software-fixed-version><software-fix-url>https://sr.certify.digital-worx.de/firmware/QmVJwv27ieRuya36ztgkRyP77ArbizmcuUajd52pf9wcYP</software-fix-url><software-fix-url>https://sr.certify.digital-worx.de/firmware/</software-fix-url></software-protection-action></configuration-action><configuration-condition><software-configuration-condition><software-identification-condition><software-id>QmVJwv27ieRuya36ztgkRyP77ArbizmcuUajd52pf9wcYP</software-id><software-name>OpenSSH</software-name><software-version>2.15.0</software-version></software-identification-condition></software-configuration-condition></configuration-condition></configuration-rule></rule-set-configuration></configuration></mspl>', '<?xml version="1.0" encoding="utf-8"?>\n<mspl><name>mspl_62eed5de-5710-49d5-b7a0-bb88433404cf</name><type>ipv4-mspl-type</type><configuration><capability>Filtering_L4</capability><rule-set-configuration><name>mspl_set_d3802715-2abd-440b-8220-aa1be8dcd7d5</name><configuration-rule><name>Rule_380ce769-ddd8-4ef3-b260-953a4ae3136b</name><isCNF>false</isCNF><external-data><priority>500</priority></external-data><configuration-action><filteringAction><filtering-action-type>DENY</filtering-action-type></filteringAction></configuration-action><configuration-condition><filtering-configuration-condition><packet-filter-condition><source-port>22</source-port></packet-filter-condition></filtering-configuration-condition></configuration-condition></configuration-rule></rule-set-configuration></configuration></mspl>']
+INFO:root:Adding new TMUD to database
+INFO:root:Sending TMUD File in MSPL 
+INFO:werkzeug:127.0.0.1 - - [19/Jun/2025 07:25:37] "POST /tmud HTTP/1.1" 200 -
+INFO:root:Received new message from REST API
+INFO:root:Message:
+{'tmudurl': 'http://localhost:8091/cb4d19e3-f51b-15cd-1278-a53533312401'}
+INFO:root:Parsing message
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost:8091
+DEBUG:urllib3.connectionpool:http://localhost:8091 "GET /cb4d19e3-f51b-15cd-1278-a53533312401 HTTP/1.1" 200 2614
+INFO:root:Translating tmudfile: http://localhost:8091/cb4d19e3-f51b-15cd-1278-a53533312401
+INFO:root:Transaltion from http://localhost:8091/cb4d19e3-f51b-15cd-1278-a53533312401 -> ['<?xml version="1.0" encoding="utf-8"?>\n<mspl><name>mspl_cb4d19e3-f51b-15cd-1278-a53533312401</name><threatid>cb4d19e3-f51b-15cd-1278-a53533312401</threatid><type>software-mspl-type</type><models-affected>OpenSSH</models-affected><configuration><capability>software-protection</capability><rule-set-configuration><name>mspl_set_03be639a-53a8-4385-8df3-7b9a48331033</name><configuration-rule><name>Rule_aaee7b7e-a150-401e-b067-acaae1f9cadd</name><isCNF>false</isCNF><external-data><priority>500</priority></external-data><configuration-action><software-protection-action><software-protection-type>UPDATE</software-protection-type><software-fixed-version>2.16</software-fixed-version><software-fix-url>https://sr.certify.digital-worx.de/firmware/QmVJwv27ieRuya36ztgkRyP77ArbizmcuUajd52pf9wcYP</software-fix-url><software-fix-url>https://sr.certify.digital-worx.de/firmware/</software-fix-url></software-protection-action></configuration-action><configuration-condition><software-configuration-condition><software-identification-condition><software-id>QmVJwv27ieRuya36ztgkRyP77ArbizmcuUajd52pf9wcYP</software-id><software-name>OpenSSH</software-name><software-version>2.15.0</software-version></software-identification-condition></software-configuration-condition></configuration-condition></configuration-rule></rule-set-configuration></configuration></mspl>', '<?xml version="1.0" encoding="utf-8"?>\n<mspl><name>mspl_62eed5de-5710-49d5-b7a0-bb88433404cf</name><type>ipv4-mspl-type</type><configuration><capability>Filtering_L4</capability><rule-set-configuration><name>mspl_set_d3802715-2abd-440b-8220-aa1be8dcd7d5</name><configuration-rule><name>Rule_380ce769-ddd8-4ef3-b260-953a4ae3136b</name><isCNF>false</isCNF><external-data><priority>500</priority></external-data><configuration-action><filteringAction><filtering-action-type>DENY</filtering-action-type></filteringAction></configuration-action><configuration-condition><filtering-configuration-condition><packet-filter-condition><source-port>22</source-port></packet-filter-condition></filtering-configuration-condition></configuration-condition></configuration-rule></rule-set-configuration></configuration></mspl>']
+INFO:root:Adding new TMUD to database
+INFO:root:Sending TMUD File in MSPL 
+INFO:werkzeug:127.0.0.1 - - [19/Jun/2025 07:28:24] "POST /tmud HTTP/1.1" 200 -
+INFO:root:Received new message from REST API
+INFO:root:Message:
+{'tmudurl': 'http://localhost:8091/cb4d19e3-f51b-15cd-1278-a53533312401'}
+INFO:root:Parsing message
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost:8091
+DEBUG:urllib3.connectionpool:http://localhost:8091 "GET /cb4d19e3-f51b-15cd-1278-a53533312401 HTTP/1.1" 200 2614
+INFO:root:Translating tmudfile: http://localhost:8091/cb4d19e3-f51b-15cd-1278-a53533312401
+INFO:root:Transaltion from http://localhost:8091/cb4d19e3-f51b-15cd-1278-a53533312401 -> ['<?xml version="1.0" encoding="utf-8"?>\n<mspl><name>mspl_cb4d19e3-f51b-15cd-1278-a53533312401</name><threatid>cb4d19e3-f51b-15cd-1278-a53533312401</threatid><type>software-mspl-type</type><models-affected>OpenSSH</models-affected><configuration><capability>software-protection</capability><rule-set-configuration><name>mspl_set_03be639a-53a8-4385-8df3-7b9a48331033</name><configuration-rule><name>Rule_aaee7b7e-a150-401e-b067-acaae1f9cadd</name><isCNF>false</isCNF><external-data><priority>500</priority></external-data><configuration-action><software-protection-action><software-protection-type>UPDATE</software-protection-type><software-fixed-version>2.16</software-fixed-version><software-fix-url>https://sr.certify.digital-worx.de/firmware/QmVJwv27ieRuya36ztgkRyP77ArbizmcuUajd52pf9wcYP</software-fix-url><software-fix-url>https://sr.certify.digital-worx.de/firmware/</software-fix-url></software-protection-action></configuration-action><configuration-condition><software-configuration-condition><software-identification-condition><software-id>QmVJwv27ieRuya36ztgkRyP77ArbizmcuUajd52pf9wcYP</software-id><software-name>OpenSSH</software-name><software-version>2.15.0</software-version></software-identification-condition></software-configuration-condition></configuration-condition></configuration-rule></rule-set-configuration></configuration></mspl>', '<?xml version="1.0" encoding="utf-8"?>\n<mspl><name>mspl_62eed5de-5710-49d5-b7a0-bb88433404cf</name><type>ipv4-mspl-type</type><configuration><capability>Filtering_L4</capability><rule-set-configuration><name>mspl_set_d3802715-2abd-440b-8220-aa1be8dcd7d5</name><configuration-rule><name>Rule_380ce769-ddd8-4ef3-b260-953a4ae3136b</name><isCNF>false</isCNF><external-data><priority>500</priority></external-data><configuration-action><filteringAction><filtering-action-type>DENY</filtering-action-type></filteringAction></configuration-action><configuration-condition><filtering-configuration-condition><packet-filter-condition><source-port>22</source-port></packet-filter-condition></filtering-configuration-condition></configuration-condition></configuration-rule></rule-set-configuration></configuration></mspl>']
+INFO:root:Adding new TMUD to database
+INFO:root:Sending TMUD File in MSPL 
+INFO:werkzeug:127.0.0.1 - - [19/Jun/2025 07:48:28] "POST /tmud HTTP/1.1" 200 -
+INFO:root:Received new message from REST API
+INFO:root:Message:
+{'tmudurl': 'http://localhost:8091/cb4d19e3-f51b-15cd-1278-a53533312401'}
+INFO:root:Parsing message
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost:8091
+DEBUG:urllib3.connectionpool:http://localhost:8091 "GET /cb4d19e3-f51b-15cd-1278-a53533312401 HTTP/1.1" 200 2614
+INFO:root:Translating tmudfile: http://localhost:8091/cb4d19e3-f51b-15cd-1278-a53533312401
+INFO:root:Transaltion from http://localhost:8091/cb4d19e3-f51b-15cd-1278-a53533312401 -> ['<?xml version="1.0" encoding="utf-8"?>\n<mspl><name>mspl_cb4d19e3-f51b-15cd-1278-a53533312401</name><threatid>cb4d19e3-f51b-15cd-1278-a53533312401</threatid><type>software-mspl-type</type><models-affected>OpenSSH</models-affected><configuration><capability>software-protection</capability><rule-set-configuration><name>mspl_set_03be639a-53a8-4385-8df3-7b9a48331033</name><configuration-rule><name>Rule_aaee7b7e-a150-401e-b067-acaae1f9cadd</name><isCNF>false</isCNF><external-data><priority>500</priority></external-data><configuration-action><software-protection-action><software-protection-type>UPDATE</software-protection-type><software-fixed-version>2.16</software-fixed-version><software-fix-url>https://sr.certify.digital-worx.de/firmware/QmVJwv27ieRuya36ztgkRyP77ArbizmcuUajd52pf9wcYP</software-fix-url><software-fix-url>https://sr.certify.digital-worx.de/firmware/</software-fix-url></software-protection-action></configuration-action><configuration-condition><software-configuration-condition><software-identification-condition><software-id>QmVJwv27ieRuya36ztgkRyP77ArbizmcuUajd52pf9wcYP</software-id><software-name>OpenSSH</software-name><software-version>2.15.0</software-version></software-identification-condition></software-configuration-condition></configuration-condition></configuration-rule></rule-set-configuration></configuration></mspl>', '<?xml version="1.0" encoding="utf-8"?>\n<mspl><name>mspl_62eed5de-5710-49d5-b7a0-bb88433404cf</name><type>ipv4-mspl-type</type><configuration><capability>Filtering_L4</capability><rule-set-configuration><name>mspl_set_d3802715-2abd-440b-8220-aa1be8dcd7d5</name><configuration-rule><name>Rule_380ce769-ddd8-4ef3-b260-953a4ae3136b</name><isCNF>false</isCNF><external-data><priority>500</priority></external-data><configuration-action><filteringAction><filtering-action-type>DENY</filtering-action-type></filteringAction></configuration-action><configuration-condition><filtering-configuration-condition><packet-filter-condition><source-port>22</source-port></packet-filter-condition></filtering-configuration-condition></configuration-condition></configuration-rule></rule-set-configuration></configuration></mspl>']
+INFO:root:Adding new TMUD to database
+INFO:root:Sending TMUD File in MSPL 
+INFO:werkzeug:127.0.0.1 - - [19/Jun/2025 07:49:06] "POST /tmud HTTP/1.1" 200 -
+INFO:root:Received new message from REST API
+INFO:root:Message:
+{'tmudurl': 'http://localhost:8091/cb4d19e3-f51b-15cd-1278-a53533312401'}
+INFO:root:Parsing message
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost:8091
+DEBUG:urllib3.connectionpool:http://localhost:8091 "GET /cb4d19e3-f51b-15cd-1278-a53533312401 HTTP/1.1" 200 2614
+INFO:root:Translating tmudfile: http://localhost:8091/cb4d19e3-f51b-15cd-1278-a53533312401
+INFO:root:Transaltion from http://localhost:8091/cb4d19e3-f51b-15cd-1278-a53533312401 -> ['<?xml version="1.0" encoding="utf-8"?>\n<mspl><name>mspl_cb4d19e3-f51b-15cd-1278-a53533312401</name><threatid>cb4d19e3-f51b-15cd-1278-a53533312401</threatid><type>software-mspl-type</type><models-affected>OpenSSH</models-affected><configuration><capability>software-protection</capability><rule-set-configuration><name>mspl_set_03be639a-53a8-4385-8df3-7b9a48331033</name><configuration-rule><name>Rule_aaee7b7e-a150-401e-b067-acaae1f9cadd</name><isCNF>false</isCNF><external-data><priority>500</priority></external-data><configuration-action><software-protection-action><software-protection-type>UPDATE</software-protection-type><software-fixed-version>2.16</software-fixed-version><software-fix-url>https://sr.certify.digital-worx.de/firmware/QmVJwv27ieRuya36ztgkRyP77ArbizmcuUajd52pf9wcYP</software-fix-url><software-fix-url>https://sr.certify.digital-worx.de/firmware/</software-fix-url></software-protection-action></configuration-action><configuration-condition><software-configuration-condition><software-identification-condition><software-id>QmVJwv27ieRuya36ztgkRyP77ArbizmcuUajd52pf9wcYP</software-id><software-name>OpenSSH</software-name><software-version>2.15.0</software-version></software-identification-condition></software-configuration-condition></configuration-condition></configuration-rule></rule-set-configuration></configuration></mspl>', '<?xml version="1.0" encoding="utf-8"?>\n<mspl><name>mspl_62eed5de-5710-49d5-b7a0-bb88433404cf</name><type>ipv4-mspl-type</type><configuration><capability>Filtering_L4</capability><rule-set-configuration><name>mspl_set_d3802715-2abd-440b-8220-aa1be8dcd7d5</name><configuration-rule><name>Rule_380ce769-ddd8-4ef3-b260-953a4ae3136b</name><isCNF>false</isCNF><external-data><priority>500</priority></external-data><configuration-action><filteringAction><filtering-action-type>DENY</filtering-action-type></filteringAction></configuration-action><configuration-condition><filtering-configuration-condition><packet-filter-condition><source-port>22</source-port></packet-filter-condition></filtering-configuration-condition></configuration-condition></configuration-rule></rule-set-configuration></configuration></mspl>']
+INFO:root:Adding new TMUD to database
+INFO:root:Sending TMUD File in MSPL 
+INFO:werkzeug:127.0.0.1 - - [19/Jun/2025 07:50:05] "POST /tmud HTTP/1.1" 200 -
+INFO:root:Checking if some MUDFile content changes
+INFO:root:Checking TMUDFiles process complete
+INFO:root:Received new message from REST API
+INFO:root:Message:
+{'tmudurl': 'http://localhost:8091/cb4d19e3-f51b-15cd-1278-a53533312401'}
+INFO:root:Parsing message
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost:8091
+DEBUG:urllib3.connectionpool:http://localhost:8091 "GET /cb4d19e3-f51b-15cd-1278-a53533312401 HTTP/1.1" 200 2614
+INFO:root:Translating tmudfile: http://localhost:8091/cb4d19e3-f51b-15cd-1278-a53533312401
+INFO:root:Transaltion from http://localhost:8091/cb4d19e3-f51b-15cd-1278-a53533312401 -> ['<?xml version="1.0" encoding="utf-8"?>\n<mspl><name>mspl_cb4d19e3-f51b-15cd-1278-a53533312401</name><threatid>cb4d19e3-f51b-15cd-1278-a53533312401</threatid><type>software-mspl-type</type><models-affected>OpenSSH</models-affected><configuration><capability>software-protection</capability><rule-set-configuration><name>mspl_set_03be639a-53a8-4385-8df3-7b9a48331033</name><configuration-rule><name>Rule_aaee7b7e-a150-401e-b067-acaae1f9cadd</name><isCNF>false</isCNF><external-data><priority>500</priority></external-data><configuration-action><software-protection-action><software-protection-type>UPDATE</software-protection-type><software-fixed-version>2.16</software-fixed-version><software-fix-url>https://sr.certify.digital-worx.de/firmware/QmVJwv27ieRuya36ztgkRyP77ArbizmcuUajd52pf9wcYP</software-fix-url><software-fix-url>https://sr.certify.digital-worx.de/firmware/</software-fix-url></software-protection-action></configuration-action><configuration-condition><software-configuration-condition><software-identification-condition><software-id>QmVJwv27ieRuya36ztgkRyP77ArbizmcuUajd52pf9wcYP</software-id><software-name>OpenSSH</software-name><software-version>2.15.0</software-version></software-identification-condition></software-configuration-condition></configuration-condition></configuration-rule></rule-set-configuration></configuration></mspl>', '<?xml version="1.0" encoding="utf-8"?>\n<mspl><name>mspl_62eed5de-5710-49d5-b7a0-bb88433404cf</name><type>ipv4-mspl-type</type><configuration><capability>Filtering_L4</capability><rule-set-configuration><name>mspl_set_d3802715-2abd-440b-8220-aa1be8dcd7d5</name><configuration-rule><name>Rule_380ce769-ddd8-4ef3-b260-953a4ae3136b</name><isCNF>false</isCNF><external-data><priority>500</priority></external-data><configuration-action><filteringAction><filtering-action-type>DENY</filtering-action-type></filteringAction></configuration-action><configuration-condition><filtering-configuration-condition><packet-filter-condition><source-port>22</source-port></packet-filter-condition></filtering-configuration-condition></configuration-condition></configuration-rule></rule-set-configuration></configuration></mspl>']
+INFO:root:Adding new TMUD to database
+INFO:root:Sending TMUD File in MSPL 
+INFO:werkzeug:127.0.0.1 - - [19/Jun/2025 08:18:56] "POST /tmud HTTP/1.1" 200 -
+INFO:root:Checking if some MUDFile content changes
+INFO:root:Checking TMUDFiles process complete
+INFO:root:Checking if some MUDFile content changes
+INFO:root:Checking TMUDFiles process complete
+INFO:root:Checking if some MUDFile content changes
+INFO:root:Checking TMUDFiles process complete
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8889
+ * Running on http://155.54.95.211:8889
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:root:Checking if some MUDFile content changes
+INFO:root:Checking TMUDFiles process complete
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8889
+ * Running on http://155.54.95.211:8889
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:root:Checking if some MUDFile content changes
+INFO:root:Checking TMUDFiles process complete
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8889
+ * Running on http://155.54.95.211:8889
+INFO:werkzeug:[33mPress CTRL+C to quit[0m

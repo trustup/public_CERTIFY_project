@@ -1,0 +1,9 @@
+confluent_kafka==2.3.0
+Flask==3.0.3
+lxml==5.2.2
+python-dotenv==1.0.1
+PyYAML==6.0.1
+PyYAML==6.0.1
+Requests==2.32.1
+scapy==2.5.0
+SQLAlchemy==2.0.28

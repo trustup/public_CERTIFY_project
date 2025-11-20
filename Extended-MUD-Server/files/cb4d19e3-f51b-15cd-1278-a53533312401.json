@@ -1,0 +1,116 @@
+{
+    "ietf-threatmud:mud": {
+        "threat-mud-version": 1,
+        "threat-mud-url": "https://ThreatMudServer/cb4d19e3-f51b-15cd-1278-a53533312401",
+        "threat-id": "cb4d19e3-f51b-15cd-1278-a53533312401",
+        "last-update": "2024-02-16T11:35:25+01:00",
+        "cache-validity": 48,
+	      "models-affected": "OpenSSH",
+        "is-supported": true,
+        "systeminfo": "OpenSSH 6.2 through 8.x before 8.8, when certain non-default configurations are used, allows privilege escalation because supplemental groups are not initialized as expected. Helper programs for AuthorizedKeysCommand and AuthorizedPrincipalsCommand may run with privileges associated with group memberships of the sshd process, if the configuration specifies running the command as a different user. Users are advised to upgrade.",
+        "from-device-policy": {
+            "access-lists": {
+                "access-list": [
+                ]
+            },
+            "mspl-list": {
+                "mspls": [
+                    {
+                        "name": "mspl_cb4d19e3-f51b-15cd-1278-a53533312401"
+                    }
+                ]
+            }
+        },
+        "to-device-policy": {
+            "access-lists": {
+                "access-list": [
+                ]
+            },
+            "mspl-list": {
+                "mspls": [
+                    {
+                        "name": "mspl_cb4d19e3-f51b-15cd-1278-a53533312401"
+                    }
+                ]
+            }
+        }
+    },
+    "ietf-access-control-list:acls": {
+        "acl": []
+    },
+    "umu-mspl-list:mspls": {
+        "mspl": [
+            {
+                "name": "mspl_cb4d19e3-f51b-15cd-1278-a53533312401",
+                "threatid": "cb4d19e3-f51b-15cd-1278-a53533312401",
+                "type": "software-mspl-type",
+                "models-affected": [
+                  "OpenSSH"
+                ],
+                "configuration": {
+                  "capability": "software-protection",
+                  "rule-set-configuration": {
+                    "name": "mspl_set_03be639a-53a8-4385-8df3-7b9a48331033",
+                    "configuration-rule": {
+                      "name": "Rule_aaee7b7e-a150-401e-b067-acaae1f9cadd",
+                      "isCNF": false,
+                      "external-data": {
+                        "priority": 500
+                      },
+                      "configuration-action": {
+                        "software-protection-action": {
+                          "software-protection-type": "UPDATE",
+                          "software-fixed-version": "2.16",
+                          "software-fix-url": [
+                            "https://sr.certify.digital-worx.de/firmware/QmVJwv27ieRuya36ztgkRyP77ArbizmcuUajd52pf9wcYP",
+                            "https://sr.certify.digital-worx.de/firmware/"
+                          ]
+                        }
+                      },
+                      "configuration-condition": {
+                        "software-configuration-condition": {
+                          "software-identification-condition": {
+                            "software-id": "QmVJwv27ieRuya36ztgkRyP77ArbizmcuUajd52pf9wcYP",
+                            "software-name": "OpenSSH",
+                            "software-version": "2.15.0"
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              {
+                "name": "mspl_62eed5de-5710-49d5-b7a0-bb88433404cf",
+                "type": "ipv4-mspl-type",
+                "configuration": {
+                    "capability": "Filtering_L4",
+                    "rule-set-configuration": {
+                        "name": "mspl_set_d3802715-2abd-440b-8220-aa1be8dcd7d5",
+                        "configuration-rule": 
+                            {
+                                "name": "Rule_380ce769-ddd8-4ef3-b260-953a4ae3136b",
+                                "isCNF": false,
+                                "external-data": {
+                                    "priority": 500
+                                },
+                                "configuration-action": {
+                                    "filteringAction": {
+                                        "filtering-action-type": "DENY"
+                                    }
+                                },
+                                "configuration-condition": {
+                                    "filtering-configuration-condition": {
+                                        "packet-filter-condition": {
+                                             "source-port": 22
+                                        }
+                                    }
+                                }
+                            }
+                        
+                    }
+                }
+            }
+        ]
+    }
+}

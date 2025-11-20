@@ -1,0 +1,31 @@
+appName: CERTIFY
+
+MUDManager:
+  IPListening: 0.0.0.0
+  Port: 8090
+  SetInterval: True
+  Interval: 10
+  CheckInterval: 2
+  broker: "10.0.0.8:9092"
+  receivetopic: "sendMUDURL"
+  sendtopic: "sendMUDFile"
+
+BBDD:
+  Hostname: localhost
+  Port: 3306
+  User: root
+  Password: Elect411_
+  Database: ELECTRON
+
+TMUDManager:
+  SetInterval: True
+  Interval : 3600
+  CheckInterval: 2
+  broker: "10.0.0.8:9092"
+  receivetopic: "TMM_THREATREQUEST"
+  sendtopic: "TMM_MSPL"
+
+PolicyTranslator:
+  Hostname: 127.0.0.1
+  Port: 5001
+  Endpoint: "translate"

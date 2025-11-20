@@ -1,0 +1,85 @@
+{
+    "ietf-threatmud:mud": {
+        "threat-mud-version": 1,
+        "threat-mud-url": "https://ThreatMudServer/afcf19e3-750b-45ab-adce-b535afe1200d",
+        "threat-id": "afcf19e3-750b-45ab-adce-b535afe1200d",
+        "last-update": "2024-02-16T11:35:25+01:00",
+        "cache-validity": 48,
+	"models-affected": "Log4j",
+        "is-supported": true,
+        "systeminfo": "Apache Log4j2 2.0-beta9 through 2.15.0 (excluding security releases 2.12.2, 2.12.3, and 2.3.1) JNDI features used in configuration, log messages, and parameters do not protect against attacker controlled LDAP and other JNDI related endpoints. An attacker who can control log messages or log message parameters can execute arbitrary code loaded from LDAP servers when message lookup substitution is enabled. From log4j 2.15.0, this behavior has been disabled by default.",
+        "from-device-policy": {
+            "access-lists": {
+                "access-list": [
+                ]
+            },
+            "mspl-list": {
+                "mspls": [
+                    {
+                        "name": "mspl_afcf19e3-750b-45ab-adce-b535afe1200d"
+                    }
+                ]
+            }
+        },
+        "to-device-policy": {
+            "access-lists": {
+                "access-list": [
+                ]
+            },
+            "mspl-list": {
+                "mspls": [
+                    {
+                        "name": "mspl_afcf19e3-750b-45ab-adce-b535afe1200d"
+                    }
+                ]
+            }
+        }
+    },
+    "ietf-access-control-list:acls": {
+        "acl": []
+    },
+    "umu-mspl-list:mspls": {
+        "mspl": [
+            {
+                "name": "mspl_afcf19e3-750b-45ab-adce-b535afe1200d",
+                "threatid": "afcf19e3-750b-45ab-adce-b535afe1200d",
+                "type": "software-mspl-type",
+                "models-affected": [
+                  "Log4j"
+                ],
+                "configuration": {
+                  "capability": "software-protection",
+                  "rule-set-configuration": {
+                    "name": "mspl_set_03be639a-53a8-4385-8df3-7b9a48331033",
+                    "configuration-rule": {
+                      "name": "Rule_aaee7b7e-a150-401e-b067-acaae1f9cadd",
+                      "isCNF": false,
+                      "external-data": {
+                        "priority": 500
+                      },
+                      "configuration-action": {
+                        "software-protection-action": {
+                          "software-protection-type": "UPDATE",
+                          "software-fixed-version": "2.16",
+                          "software-fix-url": [
+                            "https://sr.certify.digital-worx.de/firmware/QmVJwv27ieRuya36ztgkRyP77ArbizmcuUajd52pf9wcYP",
+                            "https://sr.certify.digital-worx.de/firmware/"
+                          ]
+                        }
+                      },
+                      "configuration-condition": {
+                        "software-configuration-condition": {
+                          "software-identification-condition": {
+                            "software-id": "QmVJwv27ieRuya36ztgkRyP77ArbizmcuUajd52pf9wcYP",
+                            "software-name": "Log4j",
+                            "software-version": "2.15.0"
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+        ]
+    }
+}

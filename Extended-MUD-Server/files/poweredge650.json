@@ -1,0 +1,51 @@
+{
+    "ietf-mud:mud": {
+        "mud-version": 1,
+        "mud-url": "https://mudfileserver.electron-project.eu/poweredge650",
+        "last-update": "2023-09-17T09:47:00+00:00",
+        "cache-validity": 48,
+        "is-supported": true,
+        "systeminfo": "Dell PowerEdge R650",
+        "mfg-name": "Dell Technologies",
+        "documentation": "https://www.dell.com/es-es/shop/servidores-dell-poweredge/poweredge-r650-full-configuration/spd/poweredge-r650/emea_r650",
+        "model-name": "PowerEdge R650"
+    },
+    "umu-mspl-list:mspls": {
+        "mspl": [
+            {
+                "name": "mspl_d7134586-591e-11ee-8c99-0242ac120002",
+                "type": "firmware-mspl-type",
+                "configuration": {
+                    "capability": "Filtering_L4",
+                    "rule-set-configuration": {
+                        "name": "mspl_set_d713481a-591e-11ee-8c99-0242ac120002",
+                        "configuration-rule": [
+                            {
+                                "name": "Rule_d713495a-591e-11ee-8c99-0242ac120002",
+                                "isCNF": false,
+                                "external-data": {
+                                    "priority": 500
+                                },
+                                "configuration-action": {
+                                    "firmware-protection-action": {
+                                        "firmware-protection-type": "UPDATE",
+                                        "firmware-fixed-version": ">=e2010600",
+                                        "firmware-fix-url": "https://www.intel.com/content/www/us/en/products/sku/129969/intel-optane-ssd-dc-d4800x-series-375gb-2-5in-pcie-2x2-3d-xpoint/downloads.html"
+                                    }
+                                },
+                                "configuration-condition": {
+                                    "filtering-configuration-condition": {
+                                        "firmware-identification-condition": {
+                                            "hardware-name": "intel:optane_ssd_dc_p4800x_firmware",
+                                            "firmware-version": "<e2010600"
+                                        }
+                                    }
+                                }
+                            }
+                        ]
+                    }
+                }
+            }
+        ]
+    }
+}

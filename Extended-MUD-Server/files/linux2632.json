@@ -1,0 +1,50 @@
+{
+    "ietf-mud:mud": {
+        "mud-version": 1,
+        "mud-url": "http://mudfileserver.electron-project.eu/linux2632",
+        "last-update": "2023-09-17T09:47:00+00:00",
+        "cache-validity": 48,
+        "is-supported": true,
+        "systeminfo": "Linux Kernel",
+        "mfg-name": "Linux Foundation",
+        "documentation": "https://docs.kernel.org/",
+        "model-name": "Linux"
+    },
+    "umu-mspl-list:mspls": {
+        "mspl": [
+            {
+                "name": "mspl_269bc22c-5933-11ee-8c99-0242ac120002",
+                "type": "software-mspl-type",
+                "configuration": {
+                    "capability": "Filtering_L4",
+                    "rule-set-configuration": {
+                        "name": "mspl_set_269bc33a-5933-11ee-8c99-0242ac120002",
+                        "configuration-rule": [
+                            {
+                                "name": "Rule_269bc65a-5933-11ee-8c99-0242ac120002",
+                                "isCNF": false,
+                                "external-data": {
+                                    "priority": 500
+                                },
+                                "configuration-action": {
+                                    "sofware-protection-action": {
+                                        "software-protection-type": "DISABLE",
+                                        "software-fixed-version": "Linux kernel version 4.13.2"
+                                    }
+                                },
+                                "configuration-condition": {
+                                    "filtering-configuration-condition": {
+                                        "software-identification-condition": {
+                                            "software-name": "Bluetooth stack BlueZ",
+                                            "software-version": "Linux kernel version 2.6.32 and up to and including 4.13.1"
+                                        }
+                                    }
+                                }
+                            }
+                        ]
+                    }
+                }
+            }
+        ]
+    }
+}

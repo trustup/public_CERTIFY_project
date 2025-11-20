@@ -1,0 +1,12 @@
+{
+    "name": "3002-v2fr",
+    "type": "ipv4-mspl-type",
+    "configuration": {
+        "capability": "Filtering_L4",
+        "rule-set-configuration": {
+            "name": "mspl_46bdc9a9035540d4b257bd686a7e6c31",
+            "configuration-rule": [
+            ]
+        }
+    }
+}

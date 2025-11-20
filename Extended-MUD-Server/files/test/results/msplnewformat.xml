@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mspl>
+    <name type="str">mspl_example</name>
+    <configuration type="dict">
+        <capability type="str">Filtering_L4</capability>
+        <rule_set_configuration type="dict">
+            <name type="str">rule_set348b8b2f-fbff-4964-80fc-d7dcb621f9dc</name>
+            <default_action type="str">deny</default_action>
+            <configuration_rule type="dict">
+                <cl0-todev type="dict">
+                    <external_data type="dict">
+                        <priority type="int">1</priority>
+                    </external_data>
+                    <configuration_action type="dict">
+                        <filtering_action type="dict">
+                            <filtering_action_type type="str">allow</filtering_action_type>
+                        </filtering_action>
+                    </configuration_action>
+                    <configuration_condition type="dict">
+                        <filtering_configuration_condition type="dict">
+                            <packet_filter_condition type="dict">
+                                <source_dnsname type="str">test.example.com</source_dnsname>
+                                <source_port type="str">eq 443</source_port>
+                                <direction type="str">INBOUND</direction>
+                                <protocol_type type="str">6</protocol_type>
+                            </packet_filter_condition>
+                        </filtering_configuration_condition>
+                    </configuration_condition>
+                    <name type="str">cl0-todev</name>
+                </cl0-todev>
+                <cl0-frdev type="dict">
+                    <external_data type="dict">
+                        <priority type="int">1</priority>
+                    </external_data>
+                    <configuration_action type="dict">
+                        <filtering_action type="dict">
+                            <filtering_action_type type="str">allow</filtering_action_type>
+                        </filtering_action>
+                    </configuration_action>
+                    <configuration_condition type="dict">
+                        <filtering_configuration_condition type="dict">
+                            <packet_filter_condition type="dict">
+                                <destination_dnsname type="str">test.example.com</destination_dnsname>
+                                <destination_port type="str">eq 443</destination_port>
+                                <direction type="str">OUTBOUND</direction>
+                                <protocol_type type="str">6</protocol_type>
+                            </packet_filter_condition>
+                        </filtering_configuration_condition>
+                    </configuration_condition>
+                    <name type="str">cl0-frdev</name>
+                </cl0-frdev>
+            </configuration_rule>
+        </rule_set_configuration>
+    </configuration>
+</mspl>

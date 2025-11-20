@@ -1,0 +1,71 @@
+{
+    "ietf-mud:mud": {
+        "mud-version": 1,
+        "mud-url": "http://mudfileserver.electron-project.eu/linux2632",
+        "last-update": "2023-09-17T09:47:00+00:00",
+        "cache-validity": 48,
+        "is-supported": true,
+        "systeminfo": "Raspberry pi 4b 2GB",
+        "mfg-name": "Raspberry foundation",
+        "documentation": "https://www.raspberrypi.com/documentation/",
+        "model-name": "Raspberry pi 4b"
+    },
+    "umu-mspl-list:mspls": {
+        "mspl": [
+            {
+                "name": "mspl_269bc790-5933-11ee-8c99-0242ac120002",
+                "type": "software-mspl-type",
+                "configuration": {
+                    "capability": "Filtering_L4",
+                    "rule-set-configuration": {
+                        "name": "mspl_set_269bcf24-5933-11ee-8c99-0242ac120002",
+                        "configuration-rule": [
+                            {
+                                "name": "Rule_269bd4ec-5933-11ee-8c99-0242ac120002",
+                                "isCNF": false,
+                                "external-data": {
+                                    "priority": 100
+                                },
+                                "configuration-action": {
+                                    "sofware-protection-action": {
+                                        "software-protection-type": "CHANGE DEFAULT CREDENTIAL",
+                                        "software-fixed-version": "Raspberry Pi OS 5.11"
+                                    }
+                                },
+                                "configuration-condition": {
+                                    "filtering-configuration-condition": {
+                                        "software-identification-condition": {
+                                            "software-name": "Raspbian Pi OS",
+                                            "software-version": "5.10"
+                                        }
+                                    }
+                                }
+                            },
+                            {
+                                "name": "Rule_269bd6ea-5933-11ee-8c99-0242ac120002",
+                                "isCNF": false,
+                                "external-data": {
+                                    "priority": 500
+                                },
+                                "configuration-action": {
+                                    "sofware-protection-action": {
+                                        "software-protection-type": "UPDATE",
+                                        "software-fixed-version": "Raspberry Pi OS 5.11"
+                                    }
+                                },
+                                "configuration-condition": {
+                                    "filtering-configuration-condition": {
+                                        "software-identification-condition": {
+                                            "software-name": "Raspbian Pi OS",
+                                            "software-version": "5.10"
+                                        }
+                                    }
+                                }
+                            }
+                        ]
+                    }
+                }
+            }
+        ]
+    }
+}

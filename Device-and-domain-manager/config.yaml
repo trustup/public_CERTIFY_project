@@ -1,0 +1,12 @@
+appName: CERTIFY
+
+DeviceDomainManager:
+  topicsendMUDFile: "CC_DADM_MSPL"
+  topicTMUDFile: "CC_DADM_THREAT_MSPL"
+  topicThreatRequest: "CC_DADM_REQUEST"
+  topicKnownDevice: "CC_NBM_ACK"
+  topicSIEMACK: "DADM_SIEMACK"
+  topicDADMNotification: "CC_DADM_NOTIFICATION"
+  Broker: "10.0.0.8:9092"
+  EnrolmentIP: "localhost:9092"
+  

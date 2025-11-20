@@ -1,0 +1,97 @@
+{
+    "ietf-mud:mud": {
+        "mud-version": 1,
+        "mud-url": "https://fronius/iot_devices/fronius1551.json",
+        "last-update": "2022-07-17T09:47:00+00:00",
+        "cache-validity": 48,
+        "is-supported": true,
+        "systeminfo": "Fronius Solar IoT device",
+        "mfg-name": "Fronius International GmbH",
+        "documentation": "http://froniusManufacturer_1551.net",
+        "model-name": "iot_broker",
+        "from-device-policy": {
+            "access-lists": {
+                "access-list": [
+                    {
+                        "name": "mud-1551-v1fr"
+                    }
+                ]
+            }
+        },
+        "to-device-policy": {
+            "access-lists": {
+                "access-list": [
+                    {
+                        "name": "mud-1551-v1to"
+                    }
+                ]
+            }
+        }
+    },
+    "ietf-access-control-list:acls": {
+        "acl": [
+            {
+                "name": "mud-1551-v1to",
+                "type": "dns-acl-type",
+                "aces": {
+                    "ace": [
+                        {
+                            "name": "ent0-todev",
+                            "matches": {
+                                "ietf-mud:mud": {
+                                    "my-controller": [
+                                        null
+                                    ]
+                                },
+                                "ipv6": {
+                                    "protocol": 6,
+                                    "dst-dnsname":  "fronius_solar_api.net"
+                                },
+                                "tcp": {
+                                    "destination-port": {
+                                        "operator": "eq",
+                                        "port": 5683
+                                    }
+                                }
+                            },
+                            "actions": {
+                                "forwarding": "accept"
+                            }
+                        }
+                    ]
+                }
+            },
+            {
+                "name": "mud-1551-v1fr",
+                "type": "dns-acl-type",
+                "aces": {
+                    "ace": [
+                        {
+                            "name": "ent0-frdev",
+                            "matches": {
+                                "ietf-mud:mud": {
+                                    "same-manufacturer": [
+                                        null
+                                    ]
+                                },
+                                "ipv6": {
+                                    "protocol": 6,
+                                    "source-dnsname": "fronius_solar_api.net"
+                                },
+                                "tcp": {
+                                    "source-port": {
+                                        "operator": "eq",
+                                        "port": 5683
+                                    }
+                                }
+                            },
+                            "actions": {
+                                "forwarding": "accept"
+                            }
+                        }
+                    ]
+                }
+            }
+        ]
+    }
+}

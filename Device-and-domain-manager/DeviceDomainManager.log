@@ -1,0 +1,30 @@
+INFO:root:Device and Domain Manager is starting
+INFO:root:Starting broker interface
+INFO:root:Broker topics: bootstrap,pttopic,sendMUDFile
+INFO:root:New Bootstrap message received
+INFO:root:New device in bootsrap process with identifier: 12345XYZ1111
+INFO:root:Retrieving MUD File from device with identifier: 12345XYZ1111 | mudurl: http://localhost:8091/linux2632
+INFO:root:New message received from MUD Manager
+INFO:root:New MUDFile comming from MUD Manager for device: 12345XYZ1111
+INFO:root:Updating device MUD File in database
+INFO:root:Sending new MUD File to translation
+INFO:root:New Bootstrap message received
+INFO:root:Device already registered in network
+INFO:root:None
+INFO:root:Device and Domain manager is closing
+INFO:root:Device and Domain Manager is starting
+INFO:root:Starting broker interface
+INFO:root:Broker topics: bootstrap,pttopic,sendMUDFile
+INFO:root:New Bootstrap message received
+INFO:root:New device in bootsrap process with identifier: 12345XYZ1111
+INFO:root:Retrieving MUD File from device with identifier: 12345XYZ1111 | mudurl: http://localhost:8091/linux2632
+INFO:root:New message received from MUD Manager
+INFO:root:New MUDFile comming from MUD Manager for device: 12345XYZ1111
+INFO:root:Updating device MUD File in database
+INFO:root:Sending new MUD File to translation
+INFO:root:New message received from MUD Manager
+INFO:root:New MUDFile comming from MUD Manager for device: 12345XYZ1111
+INFO:root:Updating device MUD File in database
+INFO:root:Sending new MUD File to translation
+INFO:root:None
+INFO:root:Device and Domain manager is closing

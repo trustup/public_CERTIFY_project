@@ -1,0 +1,170 @@
+{
+    "ietf-threatmud:mud": {
+        "threat-mud-version": 1,
+        "threat-mud-url": "https://ThreatMudServer/b0f62e766810b48fe19cc05a90e9997aae94df55b6ea9cef83ec4da0d3239116",
+        "threat-id": "b0f62e766810b48fe19cc05a90e9997aae94df55b6ea9cef83ec4da0d3239116",
+        "last-update": "2019-04-17T09:47:00+00:00",
+        "cache-validity": 48,
+        "is-supported": true,
+        "Threat-Intelligence-Providers": [
+            "IP or identifier of threat explorer",
+            "some other threat explorer"
+        ],
+        "cvss-vector": "¿?",
+        "systeminfo": "Dangerous behaviour, seems DGA domain that can contain malware",
+        "from-device-policy": {
+            "access-lists": {
+                "access-list": [
+                    {
+                        "name": "threatmud_62eed5de-5710-49d5-b7a0-bb88433404cf-fr"
+                    }
+                ]
+            },
+            "mspl-list": {
+                "mspls": [
+                    {
+                        "name": "mspl_62eed5de-5710-49d5-b7a0-bb88433404cf"
+                    }
+                ]
+            }
+        },
+        "to-device-policy": {
+            "access-lists": {
+                "access-list": [
+                    {
+                        "name": "threatmud_42c0f156-6ee5-4e86-93d9-bfe568d267ae-to"
+                    }
+                ]
+            },
+            "mspl-list": {
+                "mspls": [
+                    {
+                        "name": "mspl_42c0f156-6ee5-4e86-93d9-bfe568d267ae"
+                    }
+                ]
+            }
+        }
+    },
+    "ietf-access-control-list:acls": {
+        "acl": [
+            {
+                "name": "threatmud_62eed5de-5710-49d5-b7a0-bb88433404cf-fr",
+                "type": "ipv4-acl-type",
+                "aces": {
+                    "ace": [
+                        {
+                            "name": "Rule_380ce769-ddd8-4ef3-b260-953a4ae3136b",
+                            "matches": {
+                                "ietf-mud:mud": {
+                                    "my-controller": [
+                                        null
+                                    ]
+                                },
+                                "ipv4": {
+                                    "protocol": 6,
+                                    "src-dnsname": "mtb-user8login.viewdns.net"
+                                }
+                            },
+                            "actions": {
+                                "forwarding": "deny"
+                            }
+                        }
+                    ]
+                }
+            },
+            {
+                "name": "threatmud_42c0f156-6ee5-4e86-93d9-bfe568d267ae-to",
+                "type": "ipv4-acl-type",
+                "aces": {
+                    "ace": [
+                        {
+                            "name": "Rule_d748f2a9-ed32-4b4d-bd87-a1cf5e9854f5",
+                            "matches": {
+                                "ietf-mud:mud": {
+                                    "my-controller": [
+                                        null
+                                    ]
+                                },
+                                "ipv4": {
+                                    "protocol": 6,
+                                    "dst-dnsname": "mtb-user8login.viewdns.net"
+                                }
+                            },
+                            "actions": {
+                                "forwarding": "deny"
+                            }
+                        }
+                    ]
+                }
+            }
+        ]
+    },
+    "umu-mspl-list:mspls": {
+        "mspl": [
+            {
+                "name": "mspl_62eed5de-5710-49d5-b7a0-bb88433404cf",
+                "type": "ipv4-mspl-type",
+                "configuration": {
+                    "capability": "Filtering_L4",
+                    "rule-set-configuration": {
+                        "name": "mspl_set_d3802715-2abd-440b-8220-aa1be8dcd7d5",
+                        "configuration-rule": [
+                            {
+                                "name": "Rule_380ce769-ddd8-4ef3-b260-953a4ae3136b",
+                                "isCNF": false,
+                                "external-data": {
+                                    "priority": 500
+                                },
+                                "configuration-action": {
+                                    "filtering-action": {
+                                        "filtering-action-type": "DENY"
+                                    }
+                                },
+                                "configuration-condition": {
+                                    "filtering-configuration-condition": {
+                                        "packet-filter-condition": {
+                                            "source-dnsname": "mtb-user8login.viewdns.net",
+                                             "source-port": 6031
+                                        }
+                                    }
+                                }
+                            }
+                        ]
+                    }
+                }
+            },
+            {
+                "name": "mspl_42c0f156-6ee5-4e86-93d9-bfe568d267ae",
+                "type": "ipv4-mspl-type",
+                "configuration": {
+                    "capability": "Filtering_L4",
+                    "rule-set-configuration": {
+                        "name": "mspl_set_653cb05e-1a92-4ce7-bafe-01f265436ff3",
+                        "configuration-rule": [
+                            {
+                                "name": "Rule_d748f2a9-ed32-4b4d-bd87-a1cf5e9854f5",
+                                "isCNF": false,
+                                "external-data": {
+                                    "priority": 500
+                                },
+                                "configuration-action": {
+                                    "filtering-action": {
+                                        "filtering-action-type": "DENY"
+                                    }
+                                },
+                                "configuration-condition": {
+                                    "filtering-configuration-condition": {
+                                        "packet-filter-condition": {
+                                            "destination-dnsname": "mtb-user8login.viewdns.net",
+                                             "dst-port": 6031
+                                        }
+                                    }
+                                }
+                            }
+                        ]
+                    }
+                }
+            }
+        ]
+    }
+}

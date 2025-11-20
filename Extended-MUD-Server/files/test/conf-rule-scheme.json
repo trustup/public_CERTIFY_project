@@ -1,0 +1,19 @@
+{
+    "name": "Rule0",
+    "isCNF": false,
+    "external-data": {
+        "priority": 500
+    },
+    "configuration-action": {
+        "filteringAction": {
+            "filtering-action-type": "DENY"
+        }
+    },
+    "configuration-condition": {
+        "filtering-configuration-condition": {
+            "packet-filter-condition": {
+                "source-address": "2001:720:1710:4::5001/128"
+            }
+        }
+    }
+}

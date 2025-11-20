@@ -1,0 +1,73 @@
+{
+    "ietf-mud:mud": {
+      "mud-version": 1,
+      "mud-url": "https://mud.manufacturer.com/device_uuid",
+      "last-update": "2025-02-16T11:35:25+01:00",
+      "cache-validity": 48,
+      "is-supported": true,
+      "modelname": "Aria",
+      "systeminfo": "The Aria device Current MUD File",
+      "extensions": [
+        "umu-mspl-list:mspls"
+      ],
+      "from-device-policy": {
+        "access-lists": {
+          "access-list": []
+        },
+        "mspl-list": {
+          "mspls":[
+            {
+                "name": "mspl_6ccf1735-d981-4e30-87ad-34a43d5f72fa"
+              }]
+        }
+      },
+      "to-device-policy": {
+        "access-lists": {
+          "access-list": []
+        },
+        "mspl-list": {
+          "mspls":[
+            {
+              "name": "mspl_6ccf1735-d981-4e30-87ad-34a43d5f72fa"
+              }]
+        }
+      }
+    },
+    "ietf-access-control-list:acls": {
+      "acl": []
+    },
+    "umu-mspl-list:mspls": {
+      "mspl":[
+        {
+          "name": "mspl_6ccf1735-d981-4e30-87ad-34a43d5f72fa",
+          "type": "boostrapping-mspl-type",
+          "configuration": {
+              "capability": "bootstrapping",
+              "rule-set-configuration": {
+                  "name": "mspl_set_11868758-2e8f-4674-8a20-685ce351d3d1",
+                  "configuration-rule": [
+                      {
+                          "name": "Rule_71405326-8629-42f5-92aa-391b4de1a841",
+                          "isCNF": false,
+                          "external-data": {
+                              "priority": 500
+                          },
+                          "configuration-action": {
+                              "bootstrapping-action": {
+                                  "bootstrapping-action-type": "BOOTSTRAPPING",
+                                  "bootstrapping-model-version": "0.1",
+                                  "network-bootstrapping-model": "((PortclSrc-42,UDP-45)=([1.0,1.0],[0.0,0.0]) OR (PortclSrc-42,UDP-45)=([0.0,0.0],[-1.0,-1.0]) OR (PortclSrc-42,UDP-45)=([2.0,2.0],[1.0,1.0])) AND ((PortclSrc-42,DHCP-45)=([1.0,1.0],[0.0,0.0]) OR (PortclSrc-42,DHCP-45)=([0.0,0.0],[-1.0,-1.0]) OR (PortclSrc-42,DHCP-45)=([2.0,2.0],[1.0,1.0]))",
+                                  "network-bootstrapping-model-signature": "3ca5d818857d9f13efe6d78864f88a37d726d4c71"
+                              }
+                          },
+                          "configuration-condition": {
+                              "bootstrapping-configuration-condition": {}
+                          }
+                      }
+                  ]
+              }
+          }
+      }
+      ]
+    }
+  }

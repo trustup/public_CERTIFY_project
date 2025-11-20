@@ -1,0 +1,182 @@
+{
+    "ietf-threatmud:mud": {
+        "threat-mud-version": 1,
+        "threat-mud-url": "https://ThreatMudServer/62ebf801bbba70bc1ef2825ca08804bd28fac765c6ab969edb0a5ce0b31d6b4d",
+        "threat-id": "62ebf801bbba70bc1ef2825ca08804bd28fac765c6ab969edb0a5ce0b31d6b4d",
+        "last-update": "2019-04-17T09:47:00+00:00",
+        "cache-validity": 48,
+        "is-supported": true,
+        "Threat-Intelligence-Providers": [
+            "IP or identifier of threat explorer",
+            "some other threat explorer"
+        ],
+        "cvss-vector": "¿?",
+        "systeminfo": "Constantly scans to SMB port 445, high risk of botnet",
+        "from-device-policy": {
+            "access-lists": {
+                "access-list": [
+                    {
+                        "name": "threatmud_581720fd-836f-41ba-b51a-64baf75263a6-fr"
+                    }
+                ]
+            },
+            "mspl-list": {
+                "mspls": [
+                    {
+                        "name": "mspl_581720fd-836f-41ba-b51a-64baf75263a6"
+                    }
+                ]
+            }
+        },
+        "to-device-policy": {
+            "access-lists": {
+                "access-list": [
+                    {
+                        "name": "threatmud_6770a8a6-c4c7-4789-abbb-9fc3937a4021-to"
+                    }
+                ]
+            },
+            "mspl-list": {
+                "mspls": [
+                    {
+                        "name": "mspl_6770a8a6-c4c7-4789-abbb-9fc3937a4021"
+                    }
+                ]
+            }
+        }
+    },
+    "ietf-access-control-list:acls": {
+        "acl": [
+            {
+                "name": "threatmud_581720fd-836f-41ba-b51a-64baf75263a6-fr",
+                "type": "ipv4-acl-type",
+                "aces": {
+                    "ace": [
+                        {
+                            "name": "Rule_3001278d-c2e3-4199-98d1-85df8abcb246",
+                            "matches": {
+                                "ietf-mud:mud": {
+                                    "my-controller": [
+                                        null
+                                    ]
+                                },
+                                "ipv4": {
+                                    "protocol": 6,
+                                    "src-address": "95.170.145.242"
+                                },
+                                "tcp": {
+                                    "source-port": {
+                                        "operator": "eq",
+                                        "port": 6031
+                                    }
+                                }
+                            },
+                            "actions": {
+                                "forwarding": "deny"
+                            }
+                        }
+                    ]
+                }
+            },
+            {
+                "name": "threatmud_6770a8a6-c4c7-4789-abbb-9fc3937a4021-to",
+                "type": "ipv4-acl-type",
+                "aces": {
+                    "ace": [
+                        {
+                            "name": "Rule_711c7f13-f5f4-4f9b-8183-40753502d6a3",
+                            "matches": {
+                                "ietf-mud:mud": {
+                                    "my-controller": [
+                                        null
+                                    ]
+                                },
+                                "ipv4": {
+                                    "protocol": 6,
+                                    "dst-address": "95.170.145.242"
+                                },
+                                "tcp": {
+                                    "destination-port": {
+                                        "operator": "eq",
+                                        "port": 6031
+                                    }
+                                }
+                            },
+                            "actions": {
+                                "forwarding": "deny"
+                            }
+                        }
+                    ]
+                }
+            }
+        ]
+    },
+    "umu-mspl-list:mspls": {
+        "mspl": [
+            {
+                "name": "mspl_581720fd-836f-41ba-b51a-64baf75263a6",
+                "type": "ipv4-mspl-type",
+                "configuration": {
+                    "capability": "Filtering_L4",
+                    "rule-set-configuration": {
+                        "name": "mspl_set_46bdc9a9035540d4b257bd686a7e6c31",
+                        "configuration-rule": [
+                            {
+                                "name": "Rule_3001278d-c2e3-4199-98d1-85df8abcb246",
+                                "isCNF": false,
+                                "external-data": {
+                                    "priority": 500
+                                },
+                                "configuration-action": {
+                                    "filteringAction": {
+                                        "filtering-action-type": "DENY"
+                                    }
+                                },
+                                "configuration-condition": {
+                                    "filtering-configuration-condition": {
+                                        "packet-filter-condition": {
+                                            "source-address": "95.170.145.242",
+                                             "source-port": 6031
+                                        }
+                                    }
+                                }
+                            }
+                        ]
+                    }
+                }
+            },
+            {
+                "name": "mspl_6770a8a6-c4c7-4789-abbb-9fc3937a4021",
+                "type": "ipv4-mspl-type",
+                "configuration": {
+                    "capability": "Filtering_L4",
+                    "rule-set-configuration": {
+                        "name": "mspl_set_876c6efd-964c-474b-810d-ceb4e040e69c",
+                        "configuration-rule": [
+                            {
+                                "name": "Rule_711c7f13-f5f4-4f9b-8183-40753502d6a3",
+                                "isCNF": false,
+                                "external-data": {
+                                    "priority": 500
+                                },
+                                "configuration-action": {
+                                    "filteringAction": {
+                                        "filtering-action-type": "DENY"
+                                    }
+                                },
+                                "configuration-condition": {
+                                    "filtering-configuration-condition": {
+                                        "packet-filter-condition": {
+                                            "destination-address": "95.170.145.242",
+                                             "dst-port": 6031
+                                        }
+                                    }
+                                }
+                            }
+                        ]
+                    }
+                }
+            }
+        ]
+    }
+}

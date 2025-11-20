@@ -1,0 +1,582 @@
+//******************************************************************************
+// Copyright (c) 2018, The Regents of the University of California (Regents).
+// All Rights Reserved. See LICENSE for license details.
+//------------------------------------------------------------------------------
+#include "eapp_utils.h"
+#include "string.h"
+#include "edge_call.h"
+#include <syscall.h>
+#include "app/syscall.h"
+#include "app/string.h"
+#include <stdio.h>
+#include "aes.h"
+#include "util.h"
+#include "app/malloc.h"
+
+// Comandos
+#define CMD_INSTALL_PSK        1
+#define CMD_INSTALL_MUD_URL    2
+#define CMD_GET_MUD_URL        3
+#define CMD_INSTALL_CERT       4
+#define CMD_GET_CERT           5
+#define CMD_DERIVE_KEY         6
+#define CMD_SIGN               7
+#define CMD_ENCRYPT            8
+#define CMD_DECRYPT            9
+#define CMD_GEN_RANDOM         10
+#define CMD_RECONFIGURE        11
+
+#define SEALING_KEY_BITS_LEN   128
+
+#define KEY_ID_KEY_MATERIAL "identifier1"
+#define KEY_ID_MUD_URL "identifier2"
+#define KEY_ID_CERTIFICATE "identifier3"
+
+// Definicion de estructura para la sesión de AES
+typedef struct {
+  struct AES_ctx ctx;     // Contexto de tiny-AES
+  uint8_t iv[16];         // IV (para modos CBC/CTR)
+  uint32_t mode;          // Ej: AES_ENCRYPT/AES_DECRYPT
+  uint32_t key_size;      // Tamaño de clave (128/192/256 bits)
+} aes_session;
+
+
+unsigned long ocall_send_mudUrl_string(char ocall_data[64]);
+key_material_t installPSK(unsigned char* pSKValue);
+unsigned long ocall_send_key_material(key_material_t* keys);
+void ocall_wait_for_message(struct edge_data *msg);
+unsigned long ocall_print_string(char* string);
+unsigned long ocall_send_random(int random_value);
+
+// XOR bit a bit de bloques de 16 bytes
+static void xor_128(const uint8_t *a, const uint8_t *b, uint8_t *out) {
+  for(int i = 0; i < 16; i++) out[i] = a[i] ^ b[i];
+}
+
+// Corrimiento de 1 bit hacia la izquierda en un bloque de 16 bytes
+static void leftshift_onebit(const uint8_t *in, uint8_t *out) {
+  uint8_t overflow = 0;
+  for(int i = 15; i >= 0; i--) {
+      out[i] = (in[i] << 1) | overflow;
+      overflow = (in[i] & 0x80) ? 1 : 0;
+  }
+}
+
+// Genera subclaves K1 y K2 a partir de la clave AES de 16 bytes
+static void generate_subkey(const uint8_t *key, uint8_t *K1, uint8_t *K2) {
+  uint8_t L[16], Z[16] = {0}, tmp[16];
+  struct AES_ctx ctx;
+  AES_init_ctx(&ctx, key);
+  // Cifrar bloque cero
+  memcpy(tmp, Z, 16);
+  AES_ECB_encrypt(&ctx, tmp);
+  memcpy(L, tmp, 16);
+  // Constante Rb = 0x87 (solo último byte)
+  uint8_t const_Rb[16] = {0};
+  const_Rb[15] = 0x87;
+  // K1 = (L << 1) ^ (Rb if MSB(L)==1)
+  if (L[0] & 0x80) {
+      leftshift_onebit(L, tmp);
+      xor_128(tmp, const_Rb, K1);
+  } else {
+      leftshift_onebit(L, K1);
+  }
+  // K2 = (K1 << 1) ^ (Rb if MSB(K1)==1)
+  if (K1[0] & 0x80) {
+      leftshift_onebit(K1, tmp);
+      xor_128(tmp, const_Rb, K2);
+  } else {
+      leftshift_onebit(K1, K2);
+  }
+}
+
+// Función principal: calcula CMAC-AES sobre input (length bytes) con clave key (16 bytes)
+void AES_CMAC(const uint8_t *key, const uint8_t *input, uint32_t length, uint8_t *mac) {
+  uint8_t K1[16], K2[16];
+  generate_subkey(key, K1, K2);
+
+  // Número de bloques (ceil)
+  uint32_t n = (length + 15) / 16;
+  if (n == 0) n = 1;
+  // Determinar si el último bloque está completo
+  int last_full = (length % 16 == 0 && length != 0);
+
+  // Construir M_last
+  uint8_t M_last[16], padded[16];
+  if (last_full) {
+      // Último bloque completo: M_last = M[n-1] XOR K1
+      xor_128(input + 16*(n-1), K1, M_last);
+  } else {
+      // Último bloque incompleto: aplicar padding 0x80 seguido de ceros
+      uint32_t last_len = length % 16;
+      memset(padded, 0, 16);
+      if (last_len > 0) {
+          memcpy(padded, input + 16*(n-1), last_len);
+      }
+      padded[last_len] = 0x80;
+      // M_last = padded XOR K2
+      xor_128(padded, K2, M_last);
+  }
+
+  // Iterar CBC sobre los primeros n-1 bloques
+  struct AES_ctx ctx;
+  AES_init_ctx(&ctx, key);
+  uint8_t X[16] = {0}, Y[16];
+  for(uint32_t i = 0; i < n-1; i++) {
+      xor_128(X, input + 16*i, Y);
+      memcpy(X, Y, 16);
+      AES_ECB_encrypt(&ctx, X);
+  }
+  // Última iteración con M_last
+  xor_128(X, M_last, Y);
+  memcpy(X, Y, 16);
+  AES_ECB_encrypt(&ctx, X);
+  // Copiar resultado en mac
+  memcpy(mac, X, 16);
+}
+
+unsigned long ocall_send_mudUrl_string(char ocall_data[64]){
+  unsigned long retval;
+  ocall(OCALL_RECIVE_MUD_URL, ocall_data, 64, &retval, sizeof(unsigned long));
+  return retval;
+}
+
+unsigned long ocall_send_key_material(key_material_t* keys){
+  unsigned long retval;
+  ocall(OCALL_RECIVE_KEY_MATERIALS, keys, sizeof(key_material_t), &retval ,sizeof(unsigned long));
+  return retval;
+}
+
+void ocall_wait_for_message(struct edge_data *msg){
+  ocall(OCALL_WAIT_FOR_MESSAGE, NULL, 0, msg, sizeof(struct edge_data));
+}
+
+unsigned long ocall_print_string(char* string){
+  unsigned long retval;
+  ocall(OCALL_PRINT_STRING, string, strlen(string)+1, &retval ,sizeof(unsigned long));
+  return retval;
+}
+
+unsigned long ocall_send_certificate_string(char ocall_data[32]){
+  unsigned long retval;
+  ocall(OCALL_RECIVE_CERTIFICATE, ocall_data, 32, &retval, sizeof(unsigned long));
+  return retval;
+}
+
+unsigned long ocall_send_random(int random_value) {
+  unsigned long retval;
+  ocall(OCALL_SEND_RANDOM, &random_value, sizeof(int), &retval, sizeof(unsigned long));
+  return retval;
+}
+
+void print_hex(const char* label, const uint8_t* data, size_t len) {
+  const char hex_chars[] = "0123456789abcdef";
+  static char hex_str[512];  // Asegúrate de que sea lo suficientemente grande
+  size_t max_len = sizeof(hex_str) - 1;
+
+  size_t pos = 0;
+
+  // Copiar etiqueta
+  if (label) {
+      while (*label && pos < max_len) {
+          hex_str[pos++] = *label++;
+      }
+      if (pos < max_len) hex_str[pos++] = ':';  // Separador
+      if (pos < max_len) hex_str[pos++] = ' ';
+  }
+
+  // Convertir datos a hex
+  for (size_t i = 0; i < len && pos + 2 < max_len; i++) {
+      hex_str[pos++] = hex_chars[(data[i] >> 4) & 0xF];
+      hex_str[pos++] = hex_chars[data[i] & 0xF];
+  }
+
+  hex_str[pos] = '\0';
+  ocall_print_string(hex_str);
+}
+
+int encrypt_with_sealing_key(const char* key_identifier, const uint8_t* input, size_t input_len, uint8_t* output) {
+  struct sealing_key key_buffer;
+
+  if (get_sealing_key(&key_buffer, sizeof(key_buffer), (void *)key_identifier, strlen(key_identifier)) != 0) {
+    //ocall_print("Error obteniendo sealing key");
+    return -1;
+  }
+  print_hex("Sealing key utilizada para cifrado", key_buffer.key, 16);
+  aes_session seal_sess;
+  if (AES_init(key_buffer.key, &seal_sess, SEALING_KEY_BITS_LEN, 1,  0) == -1) {
+    ocall_print_string("Error inicializando sesión de cifrado con sealing key");
+    return -1;
+  }
+
+  if (AES_cipher(&seal_sess, input, input_len, output) == -1) {
+    ocall_print_string("Error cifrando con sealing key");
+    AES_terminate(&seal_sess);
+    return -1;
+  }
+
+  AES_terminate(&seal_sess);
+  return 0;
+}
+
+int decrypt_with_sealing_key(const char* key_identifier, const uint8_t* input, size_t input_len, uint8_t* output) {
+  struct sealing_key key_buffer;
+
+  if (get_sealing_key(&key_buffer, sizeof(key_buffer), (void *)key_identifier, strlen(key_identifier)) != 0) {
+    //ocall_print("Error obteniendo sealing key");
+    return -1;
+  }
+  print_hex("Sealing key utilizada para descifrado", key_buffer.key, 16);
+  aes_session desseal_sess;
+  if (AES_init(key_buffer.key, &desseal_sess, SEALING_KEY_BITS_LEN, 1,  1) == -1) {
+    //ocall_print("Error inicializando sesión de descifrado con sealing key");
+    return -1;
+  }
+
+  if (AES_cipher(&desseal_sess, input, input_len, output) == -1) {
+    //ocall_print("Error descifrando con sealing key");
+    AES_terminate(&desseal_sess);
+    return -1;
+  }
+
+  AES_terminate(&desseal_sess);
+  return 0;
+}
+
+
+// Criptography Functions
+key_material_t installPSK(unsigned char* pSKValue){
+  key_material_t keys;
+  if (!pSKValue) {
+    ocall_print_string("Invalid PSK input");
+    return;
+  }
+
+  char input_block[AES128_BLOCK_SIZE] = { 0 };
+	char inter_block[AES128_BLOCK_SIZE] = { 0 };
+	char inter_block_b[AES128_BLOCK_SIZE] = { 0 };
+	char ak[AES128_BLOCK_SIZE] = { 0 };
+	char kdk[AES128_BLOCK_SIZE] = { 0 };
+
+  size_t dst_sz;
+
+  aes_session sess; 
+  int res = AES_init(pSKValue, &sess, AES128_BLOCK_SIZE * 8, 1, 0);
+  if(res == -1){
+    ocall_print_string("Error on init Install PSK");
+    return;
+  }
+  dst_sz = AES128_BLOCK_SIZE;
+	res = AES_cipher(&sess, input_block, AES128_BLOCK_SIZE, inter_block);
+    if (res == -1) {
+        ocall_print_string("AES cipher failed");
+        return;
+    }
+
+  memmove(inter_block_b,inter_block,AES128_BLOCK_SIZE);
+
+  inter_block_b[AES128_BLOCK_SIZE-1] ^= 0x01;
+  // Cifrar para obtener AK
+  res = AES_cipher(&sess, inter_block_b, AES128_BLOCK_SIZE, ak);
+  if (res == -1) {
+    ocall_print_string("AES cipher failed");
+    return;
+  }
+
+  print_hex("AK generado", (uint8_t*)ak, AES128_BLOCK_SIZE);
+
+  memmove(inter_block_b, inter_block, AES128_BLOCK_SIZE);
+  inter_block_b[AES128_BLOCK_SIZE-1] ^= 0x02;
+
+  res = AES_cipher(&sess, inter_block_b, AES128_BLOCK_SIZE, kdk);
+  if (res == -1) {
+    ocall_print_string("AES cipher failed");
+    return;
+  }
+  print_hex("KDK generado", (uint8_t*)kdk, AES128_BLOCK_SIZE);
+
+  AES_terminate(&sess);
+
+  unsigned char encrypted_ak[AES128_BLOCK_SIZE];
+  unsigned char encrypted_kdk[AES128_BLOCK_SIZE];
+
+  if (encrypt_with_sealing_key(KEY_ID_KEY_MATERIAL, (uint8_t*)ak, AES128_BLOCK_SIZE, encrypted_ak) == -1 ||
+    encrypt_with_sealing_key(KEY_ID_KEY_MATERIAL, (uint8_t*)kdk, AES128_BLOCK_SIZE, encrypted_kdk) == -1) {
+    return;
+  }
+
+  memcpy(keys.ak, encrypted_ak, AES128_BLOCK_SIZE);
+  memcpy(keys.kdk, encrypted_kdk, AES128_BLOCK_SIZE);
+
+
+  print_hex("AK cifrado", (uint8_t*)encrypted_ak, AES128_BLOCK_SIZE);
+  print_hex("kdk cifrado", (uint8_t*)encrypted_kdk, AES128_BLOCK_SIZE);
+
+  unsigned char desencrypted_ak[AES128_BLOCK_SIZE];
+  unsigned char desencrypted_kdk[AES128_BLOCK_SIZE];
+
+  // Descifrar (debug)
+  if (decrypt_with_sealing_key(KEY_ID_KEY_MATERIAL, encrypted_kdk, AES128_BLOCK_SIZE, desencrypted_kdk) == -1 || 
+  decrypt_with_sealing_key(KEY_ID_KEY_MATERIAL, encrypted_ak, AES128_BLOCK_SIZE, desencrypted_ak) == -1 ) {
+    return;
+  }
+
+  print_hex("AK descifrado", (uint8_t*)desencrypted_ak, AES128_BLOCK_SIZE);
+  print_hex("kdk descifrado", (uint8_t*)desencrypted_kdk, AES128_BLOCK_SIZE);
+
+  return keys;
+}
+
+char* installMudURL(char* mUDuRLValue) {
+  // Calcular el tamaño necesario con padding
+  unsigned char encrypted_mudUrl[64];
+  size_t original_len = strlen(mUDuRLValue);
+  print_hex("mudUrl hex sin cifrar", (uint8_t*)mUDuRLValue, strlen(mUDuRLValue));
+
+  encrypt_with_sealing_key(KEY_ID_MUD_URL, mUDuRLValue, 64, encrypted_mudUrl);
+  print_hex("mudUrl hex cifrado", (uint8_t*)encrypted_mudUrl, sizeof(encrypted_mudUrl));
+
+  ocall_send_mudUrl_string(encrypted_mudUrl);
+
+  unsigned char decrypted_mudUrl[64];  // Igual al tamaño cifrado
+
+  
+  decrypt_with_sealing_key(KEY_ID_MUD_URL, encrypted_mudUrl, 64, decrypted_mudUrl);
+  ocall_print_string("mudUrl descifrado:");
+  ocall_print_string(decrypted_mudUrl);
+
+  return (char *)encrypted_mudUrl;
+}
+
+char* installCertificate(char* certificate, size_t len_certificate){
+  // Calcular el tamaño necesario con padding
+   unsigned char * encrypted_certificate = malloc(len_certificate);
+  size_t original_len = strlen(certificate);
+  print_hex("certificado hex sin cifrar", (uint8_t*)certificate, strlen(certificate));
+
+  encrypt_with_sealing_key(KEY_ID_CERTIFICATE, certificate, len_certificate, encrypted_certificate);
+  print_hex("certificado hex cifrado", (uint8_t*)encrypted_certificate, sizeof(encrypted_certificate));
+
+  ocall_send_certificate_string(encrypted_certificate);
+
+  unsigned char * decrypted_certificate = malloc(len_certificate);
+
+  
+  decrypt_with_sealing_key(KEY_ID_CERTIFICATE, encrypted_certificate, len_certificate, decrypted_certificate);
+  ocall_print_string("certificado descifrado:");
+  ocall_print_string(decrypted_certificate);
+
+  return (char *)decrypted_certificate;
+}
+
+int AES_init(const uint8_t *key, aes_session *session, uint32_t key_size_bits, int requires_iv, uint32_t operation_mode) {
+	// Validar tamaño de clave
+	if (key_size_bits != 128 && key_size_bits != 192 && key_size_bits != 256)
+	{
+    ocall_print_string("key size PSK error");
+		return -1;
+	}
+  session->mode = operation_mode;
+  session->key_size = key_size_bits;
+  memset(session->iv, 0, sizeof(session->iv));
+  
+	// Inicializar contexto AES
+	if (requires_iv)
+	{
+		AES_init_ctx_iv(&session->ctx, key, session->iv);
+	}
+	else
+	{
+		AES_init_ctx(&session->ctx, key);
+	}
+
+	session->key_size = key_size_bits;
+	session->mode = operation_mode;
+  return 0;
+}
+
+int AES_cipher(aes_session *session, const uint8_t *src, size_t src_sz, uint8_t *dst) {
+    size_t padded_sz = src_sz;
+    uint8_t padded_input[256]; // Asumiendo un máximo de 240 bytes + 16 de padding. Ajusta según necesidad.
+
+    if (session->mode == 0) // Modo cifrado
+    {
+        // Calcular cuántos bytes de padding se necesitan (PKCS#7)
+        size_t padding_len = AES_BLOCKLEN - (src_sz % AES_BLOCKLEN);
+        if (padding_len == 0) padding_len = AES_BLOCKLEN;
+
+        padded_sz = src_sz + padding_len;
+
+        // Copiar datos originales
+        if (padded_sz > sizeof(padded_input)) {
+            return -1; // Error: buffer interno insuficiente
+        }
+
+        memcpy(padded_input, src, src_sz);
+
+        // Aplicar padding PKCS#7
+        memset(padded_input + src_sz, padding_len, padding_len);
+
+        // Copiar a dst para que tinyAES opere in-place
+        memcpy(dst, padded_input, padded_sz);
+
+        AES_CBC_encrypt_buffer(&session->ctx, dst, padded_sz);
+    }
+    else if (session->mode == 1) // Modo descifrado
+    {
+        if (src_sz % AES_BLOCKLEN != 0)
+        {
+            return -1; // El tamaño cifrado debe ser múltiplo de bloque
+        }
+
+        memcpy(dst, src, src_sz);
+        AES_CBC_decrypt_buffer(&session->ctx, dst, src_sz);
+
+        // Remover el padding PKCS#7 después del descifradoS
+        size_t pad_len = dst[src_sz - 1];
+        if (pad_len > 0 && pad_len <= AES_BLOCKLEN)
+            src_sz -= pad_len;
+    }
+
+    return 0;
+}
+
+int AES_terminate(aes_session *session) {
+	memset(&session->ctx, 0, sizeof(session->ctx));
+	memset(session->iv, 0, sizeof(session->iv));
+	return 0;
+}
+
+EAPP_ENTRY eapp_entry(){
+  int offset_shared_mem = 0;
+  char op_buf[4];  // Tamaño máximo esperado
+  // offset 0 porque el host escribe desde el inicio
+  int ret = copy_from_shared(op_buf, offset_shared_mem, sizeof(op_buf));
+
+  if(ret != 0){
+    //ocall_print("Error, reading op param)");
+    EAPP_RETURN(1);
+  }else{
+    offset_shared_mem = offset_shared_mem + 4;
+    op_buf[sizeof(op_buf) - 1] = '\0';
+    //ocall_print_string(op_buf);
+  }
+
+  int cmd = atoi(op_buf); // Usamos nuestra versión de atoi
+
+  switch (cmd) {
+    case CMD_INSTALL_PSK:
+      ocall_print_string("Ejecutando CMD_INSTALL_PSK");
+      struct edge_data msg1;
+      ocall_wait_for_message(&msg1);
+      void * psk_buf = malloc(msg1.size);
+
+      copy_from_shared(psk_buf, msg1.offset, msg1.size);
+
+      ocall_print_string("PSK recibido:");
+      ocall_print_string(psk_buf);
+
+      key_material_t key_material = installPSK(psk_buf);
+
+      ocall_send_key_material(&key_material);
+
+      break;
+    case CMD_INSTALL_MUD_URL:
+      ocall_print_string("Ejecutando CMD_INSTALL_MUD_URL");
+      struct edge_data msg;
+      ocall_wait_for_message(&msg);
+      void * mudUrl_buf = malloc(msg.size);
+
+      copy_from_shared(mudUrl_buf, msg.offset, msg.size);
+
+      ocall_print_string("MUD URL recibido:");
+      ocall_print_string(mudUrl_buf);
+
+      char* encrypted_mudUrl = installMudURL(mudUrl_buf);
+     
+      break;
+    case CMD_GET_MUD_URL:
+      ocall_print_string("Ejecutando CMD_GET_MUD_URL");
+      struct edge_data msg2;
+      ocall_wait_for_message(&msg2);
+       void * encrypt_mudUrl_buf = malloc(msg2.size);
+
+      copy_from_shared(encrypt_mudUrl_buf, msg2.offset, msg2.size);
+
+      print_hex("MudUrl Cifrado",encrypt_mudUrl_buf,msg2.size);
+
+       void * decrypted_mudUrl = malloc(msg2.size);
+  
+      decrypt_with_sealing_key(KEY_ID_MUD_URL, encrypt_mudUrl_buf, msg2.size, decrypted_mudUrl);
+      ocall_print_string("mudUrl descifrado:");
+      ocall_print_string(decrypted_mudUrl);
+      break;
+    case CMD_INSTALL_CERT:
+      ocall_print_string("Ejecutando CMD_INSTALL_CERT");
+      struct edge_data msg3;
+      ocall_wait_for_message(&msg3);
+      // char cert_buf[64];
+      void * cert_buf = malloc(msg3.size);
+
+      copy_from_shared(cert_buf, msg3.offset, msg3.size);
+
+      ocall_print_string("Certificado recibido:");
+      ocall_print_string(cert_buf);
+
+      char* encrypted_cert = installCertificate(cert_buf, msg3.size);
+      break;
+    case CMD_GET_CERT:
+      ocall_print_string("Ejecutando CMD_GET_CERT");
+      struct edge_data msg4;
+      ocall_wait_for_message(&msg4);
+      void * encrypt_cert_buf = malloc(msg4.size);
+
+
+      copy_from_shared(encrypt_cert_buf, msg4.offset, msg4.size);
+
+      print_hex("Certificado Cifrado",encrypt_cert_buf,msg4.size);
+
+       void * decrypted_cert = malloc(msg4.size);
+  
+      decrypt_with_sealing_key(KEY_ID_CERTIFICATE, encrypt_cert_buf, msg4.size, decrypted_cert);
+      ocall_print_string("Certificado descifrado:");
+      ocall_print_string(decrypted_cert);
+      break;
+    case CMD_DERIVE_KEY:
+      ocall_print_string("Ejecutando CMD_DERIVE_KEY");
+      break;
+    case CMD_SIGN:
+      ocall_print_string("Ejecutando CMD_SIGN");
+      uint8_t key[16] = {
+        0x2b,0x7e,0x15,0x16, 0x28,0xae,0xd2,0xa6,
+        0xab,0xf7,0x15,0x88, 0x09,0xcf,0x4f,0x3c
+      }; // Clave de ejemplo (AES-128)
+      uint8_t message[16] = {
+          0x6b,0xc1,0xbe,0xe2, 0x2e,0x40,0x9f,0x96,
+          0xe9,0x3d,0x7e,0x11, 0x73,0x93,0x17,0x2a
+      }; // Mensaje de ejemplo de 16 bytes
+      uint8_t mac[16];
+
+      AES_CMAC(key, message, sizeof(message), mac);
+      break;
+    case CMD_ENCRYPT:
+      ocall_print_string("Ejecutando CMD_ENCRYPT");
+      break;
+    case CMD_DECRYPT:
+      ocall_print_string("Ejecutando CMD_DECRYPT");
+      break;
+    case CMD_GEN_RANDOM:
+      ocall_print_string("Ejecutando CMD_GEN_RANDOM");
+      int random = get_random();
+      ocall_send_random(random);
+      break;
+    case CMD_RECONFIGURE:
+      ocall_print_string("Ejecutando CMD_RECONFIGURE");
+      break;
+    default:
+      ocall_print_string("Comando desconocido");
+      break;
+  }
+
+  EAPP_RETURN(0);
+}

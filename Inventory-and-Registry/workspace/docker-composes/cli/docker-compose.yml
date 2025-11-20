@@ -1,0 +1,35 @@
+version: '3.4'
+
+networks:
+  local:
+    name: fabric_local
+
+volumes:
+  cli:
+
+
+services:
+  cli:
+      container_name: cli
+      image: hyperledger/fabric-tools:2.4
+      tty: true
+      stdin_open: true
+
+      environment:
+
+        - GOPATH=/opt/gopath
+        - CORE_VM_ENDPOINT=unix:///host/var/run/docker.sock
+        - FABRIC_LOGGING_SPEC=INFO
+        - CORE_PEER_ID=cli
+        - CORE_PEER_TLS_ENABLED=true
+      working_dir: /etc/
+      restart: always
+      command: /bin/bash
+      volumes:
+          - /var/run/:/host/var/run/
+          - /home/deploy/dadm/Implementation/Inventory-and-Registry/workspace/chaincode:/etc/chaincode:rw
+          - /home/deploy/dadm/Implementation/Inventory-and-Registry/workspace/crypto-config:/etc/crypto-config
+          - /home/deploy/dadm/Implementation/Inventory-and-Registry/workspace/scripts:/etc/scripts
+          - /home/deploy/dadm/Implementation/Inventory-and-Registry/workspace/channel-artifacts:/etc/channel-artifacts
+      networks:
+        - local

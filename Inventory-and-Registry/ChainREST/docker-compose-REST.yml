@@ -1,0 +1,13 @@
+version: '3.4'
+networks:
+  local:
+    name: fabric_local
+
+services:
+  chainREST.odins.com:
+    image: chainapi/node-web-app
+    restart: always
+    ports:
+      - "3000:3000"
+    networks:
+      - local

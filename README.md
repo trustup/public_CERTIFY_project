@@ -4,18 +4,9 @@ This repository contains the software components developed under the CERTIFY res
 
 ## Structure
 
-- `plane-1/`
-  - `component-1/`  
-    - `package/` – Code, executables, Docker configurations, or other run-related files  
-    - `data/` – Datasets or scripts related to input/output handling  
-    - `README.md` – Description of the component  
-  - `component-2/`  
-    - `package/`  
-    - `data/`  
-    - `README.md`  
-- `plane-2/`
-  - `component-X/`  
-    - ...
+Each folder holds an open-source component developed within the CERTIFY research project. The partner responsible for the component oversees the folder’s content.
+
+For questions, don't hesitate to get in touch with the contacts listed below.
 
 ## Access
 
